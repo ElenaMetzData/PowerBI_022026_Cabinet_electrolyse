@@ -1,0 +1,100 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 31.25
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 1125.5000019073486,
+            "y": 111.25
+          },
+          "nodeIndex": "banque_transactions_36_mois",
+          "nodeLineageTag": "a0823922-ee1c-41cb-9d42-976c226b69f1",
+          "size": {
+            "height": 215,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 315.25,
+            "y": 313.5
+          },
+          "nodeIndex": "clients_36_mois",
+          "nodeLineageTag": "2873060b-1093-4c7c-ba21-ba9451952dad",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 568,
+            "y": 87
+          },
+          "nodeIndex": "google_analytics_36_mois",
+          "nodeLineageTag": "83fae81c-662c-4523-9dc9-6a2d36646849",
+          "size": {
+            "height": 186,
+            "width": 234
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 855.75,
+            "y": 356.25
+          },
+          "nodeIndex": "planity_rdv_36_mois",
+          "nodeLineageTag": "7798b9ec-babd-488e-91be-6e6b16415901",
+          "size": {
+            "height": 332.5,
+            "width": 234
+          },
+          "zIndex": 6
+        },
+        {
+          "location": {
+            "x": 848.4999942779541,
+            "y": 0
+          },
+          "nodeIndex": "Calendrier",
+          "nodeLineageTag": "ceb0fff3-5b37-45f9-9e64-870ef1f27f82",
+          "size": {
+            "height": 293.75,
+            "width": 234
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 29.75,
+            "y": 116.25
+          },
+          "nodeIndex": "Mesures",
+          "nodeLineageTag": "5ec9c2b6-cbae-403a-8412-70ec3be84bf5",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "Toutes les tables",
+      "zoomValue": 80,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "Toutes les tables",
+  "defaultDiagram": "Toutes les tables"
+}

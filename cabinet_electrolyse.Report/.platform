@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "cabinet_electrolyse"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "1fdf8c69-ba54-499f-8e13-4eaae0bd72b2"
+  }
+}

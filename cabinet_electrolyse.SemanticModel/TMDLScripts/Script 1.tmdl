@@ -1,0 +1,11 @@
+createOrReplace
+
+	ref table Mesures
+
+		measure 'Date Début M-1 (today)' =
+				
+				VAR EndDate = [Date Fin M-1 (today)]
+				RETURN DATE(YEAR(EndDate), MONTH(EndDate), 1)
+			formatString: General Date
+			lineageTag: 0f9f6aac-489c-4137-b902-10097ab3c752
+

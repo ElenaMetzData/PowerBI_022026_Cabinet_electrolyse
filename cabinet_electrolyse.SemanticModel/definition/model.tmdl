@@ -1,0 +1,27 @@
+model Model
+	culture: fr-FR
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: fr-FR
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["banque_transactions_36_mois","clients_36_mois","google_analytics_36_mois","planity_rdv_36_mois"]
+
+annotation PBI_ProTooling = ["TMDLView_Desktop","DevMode"]
+
+ref table banque_transactions_36_mois
+ref table DateTableTemplate_5acda690-7043-4be3-8af1-4c6eae36faf7
+ref table clients_36_mois
+ref table LocalDateTable_95985ade-ea90-4d4a-8ad6-e86504771cc0
+ref table google_analytics_36_mois
+ref table LocalDateTable_49bd91aa-9bd6-41f7-8840-afed6aaf4b21
+ref table planity_rdv_36_mois
+ref table Mesures
+ref table Calendrier
+ref table LocalDateTable_71ba8576-5693-4647-9007-68f435cbe8d1
+
+ref cultureInfo fr-FR
+

@@ -1,0 +1,22 @@
+createOrReplace
+
+	ref table Mesures
+
+		measure 'Sous-titre Var YoY' =
+				
+				VAR VarYoY = [Var % YoY]
+				VAR Sign = IF(VarYoY > 0, "+", "")
+				VAR TxtPct =
+				    IF(
+				        ISBLANK(VarYoY),
+				        "—",
+				        Sign & FORMAT(VarYoY, "0%")
+				    )
+				RETURN
+				IF(
+				    ISBLANK(VarYoY),
+				    "Pas de comparaison Y-1 disponible",
+				    TxtPct & " par rapport à Y-1"
+				)
+			lineageTag: db5e8677-1196-4cef-bd0f-c5d2a121e5b0
+

@@ -1,0 +1,265 @@
+table Mesures
+	lineageTag: 5ec9c2b6-cbae-403a-8412-70ec3be84bf5
+
+	measure CA =
+			
+			CALCULATE(
+			    SUM(planity_rdv_36_mois[montant_recu_eur])
+			)
+		formatString: #,0.###############\ "€";-#,0.###############\ "€";#,0.###############\ "€"
+		lineageTag: cbb77961-fb1e-4d61-a9c9-c3adf5604335
+
+		annotation PBI_FormatHint = {"currencyCulture":"fr-FR"}
+
+	measure 'Titre Dernier Mois Terminé' =
+			
+			FORMAT(
+			    [Date Dernier Mois Terminé],
+			    "mmmm"
+			)
+		lineageTag: c598f2ad-419c-4d86-b7e3-309fee3dfaf3
+
+	measure 'CA M-2' =
+			
+			VAR EndDate   = EOMONTH(TODAY(), -2)
+			VAR StartDate = DATE(YEAR(EndDate), MONTH(EndDate), 1)
+			RETURN
+			CALCULATE(
+			    [CA],
+			    DATESBETWEEN(Calendrier[Date], StartDate, EndDate)
+			)
+		formatString: #,0.###############\ "€";-#,0.###############\ "€";#,0.###############\ "€"
+		lineageTag: dc94ecf0-30ca-4149-a2fe-0744e3fd2d27
+
+		annotation PBI_FormatHint = {"currencyCulture":"fr-FR"}
+
+	measure 'CA M-1 N-1' =
+			
+			VAR EndDate   = EOMONTH(TODAY(), -13)
+			VAR StartDate = DATE(YEAR(EndDate), MONTH(EndDate), 1)
+			RETURN
+			CALCULATE(
+			    [CA],
+			    DATESBETWEEN(Calendrier[Date], StartDate, EndDate)
+			)
+		formatString: #,0.###############\ "€";-#,0.###############\ "€";#,0.###############\ "€"
+		lineageTag: 38590d18-ef3d-4ac6-bf14-d60a661cca01
+
+		annotation PBI_FormatHint = {"currencyCulture":"fr-FR"}
+
+	measure 'Var % MoM' =
+			
+			DIVIDE(
+			    [CA M-1] - [CA M-2],
+			    [CA M-2]
+			)
+		lineageTag: 13fa3000-11c7-49ec-8f74-f507a21470d9
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Var % YoY' =
+			
+			DIVIDE(
+			    [CA M-1] - [CA M-1 N-1],
+			    [CA M-1 N-1]
+			)
+		lineageTag: 8707c1ad-931a-486c-ac0c-02427016dc98
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Date Dernier Mois Terminé' =
+			
+			EOMONTH(TODAY(), -1)
+		formatString: General Date
+		lineageTag: 4022b8ae-f152-4aac-91f5-b575568f2504
+
+	measure 'Couleur Var' =
+			
+			IF(
+			    [Var % MoM] >= 0,
+			    "#1A9B4F",   -- vert
+			    "#D64541"    -- rouge
+			)
+		lineageTag: e3d97334-3c63-4d98-bf36-8b8363c76552
+
+	measure 'CA M-1' =
+			
+			VAR EndDate   = [Date Fin M-1 (today)]
+			VAR StartDate = DATE(YEAR(EndDate), MONTH(EndDate), 1)
+			RETURN
+			CALCULATE(
+			    [CA],
+			    DATESBETWEEN(Calendrier[Date], StartDate, EndDate)
+			)
+		formatString: #,0.###############\ "€";-#,0.###############\ "€";#,0.###############\ "€"
+		lineageTag: c5ac98f4-f4d9-4bd8-b7b9-85d3c633ac52
+
+		annotation PBI_FormatHint = {"currencyCulture":"fr-FR"}
+
+	measure 'Date Fin M-1 (today)' =
+			
+			EOMONTH(TODAY(), -1)
+		formatString: General Date
+		lineageTag: 1ec3014f-eb03-495a-9e26-a4b5543339d2
+
+	measure 'Date Début M-1 (today)' =
+			
+			VAR EndDate = [Date Fin M-1 (today)]
+			RETURN DATE(YEAR(EndDate), MONTH(EndDate), 1)
+		formatString: General Date
+		lineageTag: 0f9f6aac-489c-4137-b902-10097ab3c752
+
+	measure 'Sous-titre Var MoM' =
+			
+			VAR VarMoM = [Var % MoM]
+			VAR Sign = IF(VarMoM > 0, "+", "")
+			VAR TxtPct =
+			    IF(
+			        ISBLANK(VarMoM),
+			        "—",
+			        Sign & FORMAT(VarMoM, "0%")
+			    )
+			RETURN
+			IF(
+			    ISBLANK(VarMoM),
+			    "Pas de comparaison disponible",
+			    TxtPct & " VS M-1")
+		lineageTag: 959792f6-2004-475d-9a8f-5f9ae2106f0a
+
+	measure 'Sous-titre Var YoY' =
+			
+			VAR VarYoY = [Var % YoY]
+			VAR Sign = IF(VarYoY > 0, "+", "")
+			VAR TxtPct =
+			    IF(
+			        ISBLANK(VarYoY),
+			        "—",
+			        Sign & FORMAT(VarYoY, "0%")
+			    )
+			RETURN
+			IF(
+			    ISBLANK(VarYoY),
+			    "Pas de comparaison Y-1 disponible",
+			    TxtPct & " par rapport à Y-1"
+			)
+		lineageTag: db5e8677-1196-4cef-bd0f-c5d2a121e5b0
+
+	measure Paiements =
+			CALCULATE(
+			    SUM(banque_transactions_36_mois[montant_eur]),
+			    banque_transactions_36_mois[type] = "Recette"
+			)
+		formatString: #,0.###############\ "€";-#,0.###############\ "€";#,0.###############\ "€"
+		lineageTag: 1de25ef5-c899-4be8-84c5-8adc239eb1e5
+
+		annotation PBI_FormatHint = {"currencyCulture":"fr-FR"}
+
+	measure Charges =
+			
+			ABS(
+			    CALCULATE(
+			        SUM(banque_transactions_36_mois[montant_eur]),
+			        banque_transactions_36_mois[type] = "Charge"
+			    )
+			)
+		formatString: #,0.###############\ "€";-#,0.###############\ "€";#,0.###############\ "€"
+		lineageTag: f0b7b65c-0954-4b1d-96fb-f01bc5088332
+
+		annotation PBI_FormatHint = {"currencyCulture":"fr-FR"}
+
+	measure 'Résultat net' = [Paiements]-[Charges]
+		formatString: #,0.###############\ "€";-#,0.###############\ "€";#,0.###############\ "€"
+		lineageTag: 15b6ea8b-3740-4599-8a49-0c5f85f72dc8
+
+		annotation PBI_FormatHint = {"currencyCulture":"fr-FR"}
+
+	measure 'Heures RDV réalisés' =
+			
+			DIVIDE(
+			    CALCULATE(
+			        SUM(planity_rdv_36_mois[duree_prestation_min]),
+			        planity_rdv_36_mois[statut] IN {"Réalisé","Honoré"}
+			    ),
+			    60
+			)
+		lineageTag: beebefd2-93aa-4f0e-9af9-96a8a55adb81
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Heures ouverture théoriques' =
+			
+			SUMX(
+			    VALUES(Calendrier[Date]),
+			    VAR dow = WEEKDAY(Calendrier[Date], 2)  -- 1=Lun ... 7=Dim
+			    RETURN
+			        SWITCH(
+			            TRUE(),
+			            dow >= 1 && dow <= 5, 10,
+			            dow = 6, 5,
+			            0
+			        )
+			)
+		formatString: 0
+		lineageTag: 516b9257-ec3b-4e31-abbb-99a4ebd5dd42
+
+	measure 'Taux de remplissage' =
+			
+			DIVIDE([Heures RDV réalisés], [Heures ouverture théoriques])
+		lineageTag: 43f9c6c3-a7f3-42b1-892a-6717431fb694
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Clients actifs (6M)' =
+			
+			VAR DateFin = MAX(Calendrier[Date])
+			VAR DateDebut = EDATE(DateFin, -6)
+			RETURN
+			CALCULATE(
+			    DISTINCTCOUNT(planity_rdv_36_mois[client_id]),
+			    planity_rdv_36_mois[statut] IN {"Réalisé","Honoré"},
+			    DATESBETWEEN(Calendrier[Date], DateDebut, DateFin)
+			)
+		formatString: 0
+		lineageTag: a5e7fceb-2efc-47c0-893c-8a9cd58a7f26
+
+	measure 'Nouveaux clients du mois' =
+			
+			VAR MoisDebut = DATE(YEAR(MAX(Calendrier[Date])), MONTH(MAX(Calendrier[Date])), 1)
+			VAR MoisFin = EOMONTH(MAX(Calendrier[Date]), 0)
+			RETURN
+			CALCULATE(
+			    DISTINCTCOUNT(planity_rdv_36_mois[client_id]),
+			    FILTER(
+			        VALUES(planity_rdv_36_mois[client_id]),
+			        VAR FirstVisit =
+			            CALCULATE(
+			                MIN(planity_rdv_36_mois[date]),
+			                planity_rdv_36_mois[statut] IN {"Réalisé","Honoré"},
+			                ALL(Calendrier)
+			            )
+			        RETURN FirstVisit >= MoisDebut && FirstVisit <= MoisFin
+			    )
+			)
+		formatString: 0
+		lineageTag: 67689c97-5459-49f3-bf51-26c9e5ada81d
+
+	column Placeholder
+		isHidden
+		lineageTag: eb838ea6-440d-4f28-ab20-681de9989c74
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Placeholder]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Mesures = calculated
+		mode: import
+		source =
+				
+				DATATABLE(
+				    "Placeholder", STRING,
+				    { {"X"} }
+				)
+
+	annotation PBI_Id = b61b37aa52d94a28aea5cd28dba662c4
+

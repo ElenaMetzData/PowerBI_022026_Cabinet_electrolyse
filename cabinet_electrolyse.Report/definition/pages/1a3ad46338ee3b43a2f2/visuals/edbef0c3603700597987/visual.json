@@ -1,0 +1,112 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "edbef0c3603700597987",
+  "position": {
+    "x": 329.64932645844016,
+    "y": 17.415436114785518,
+    "z": 2000,
+    "height": 328.40536673595551,
+    "width": 901.870798801393,
+    "tabOrder": 2000
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mesures"
+                    }
+                  },
+                  "Property": "Heures RDV réalisés"
+                }
+              },
+              "queryRef": "Mesures.Heures RDV réalisés",
+              "nativeQueryRef": "Heures RDV réalisés"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mesures"
+                    }
+                  },
+                  "Property": "Heures ouverture théoriques"
+                }
+              },
+              "queryRef": "Mesures.Heures ouverture théoriques",
+              "nativeQueryRef": "Heures ouverture théoriques"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mesures"
+                    }
+                  },
+                  "Property": "Taux de remplissage"
+                }
+              },
+              "queryRef": "Mesures.Taux de remplissage",
+              "nativeQueryRef": "Taux de remplissage"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mesures"
+                    }
+                  },
+                  "Property": "Clients actifs (6M)"
+                }
+              },
+              "queryRef": "Mesures.Clients actifs (6M)",
+              "nativeQueryRef": "Clients actifs (6M)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mesures"
+                    }
+                  },
+                  "Property": "Nouveaux clients du mois"
+                }
+              },
+              "queryRef": "Mesures.Nouveaux clients du mois",
+              "nativeQueryRef": "Nouveaux clients du mois"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Mesures"
+                  }
+                },
+                "Property": "Heures RDV réalisés"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

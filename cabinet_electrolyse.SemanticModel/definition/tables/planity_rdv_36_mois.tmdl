@@ -1,0 +1,102 @@
+table planity_rdv_36_mois
+	lineageTag: 7798b9ec-babd-488e-91be-6e6b16415901
+
+	column nom_client
+		dataType: string
+		lineageTag: 4b8cb725-3ca4-4334-b98f-491fabbed824
+		summarizeBy: none
+		sourceColumn: nom_client
+
+		annotation SummarizationSetBy = Automatic
+
+	column client_id
+		dataType: int64
+		formatString: 0
+		lineageTag: cd152674-6219-43ea-8d2b-90cbd8755458
+		summarizeBy: none
+		sourceColumn: client_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column zone
+		dataType: string
+		lineageTag: 640eb7f4-a60e-4398-8d8f-1a185c8c6aba
+		summarizeBy: none
+		sourceColumn: zone
+
+		annotation SummarizationSetBy = Automatic
+
+	column type_prestation
+		dataType: string
+		lineageTag: 8a154e6e-a8c1-4556-965a-54c0f6243d3a
+		summarizeBy: none
+		sourceColumn: type_prestation
+
+		annotation SummarizationSetBy = Automatic
+
+	column duree_prestation_min
+		dataType: int64
+		formatString: 0
+		lineageTag: d9c3251b-7243-46c2-bf13-fbfd93128ff0
+		summarizeBy: sum
+		sourceColumn: duree_prestation_min
+
+		annotation SummarizationSetBy = Automatic
+
+	column montant_recu_eur
+		dataType: decimal
+		formatString: 0
+		lineageTag: 29901670-cf77-4705-8377-a8e5a0f3942b
+		summarizeBy: none
+		sourceColumn: montant_recu_eur
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	column statut
+		dataType: string
+		lineageTag: fe88c441-4707-4890-adcb-60b029fc7f8e
+		summarizeBy: none
+		sourceColumn: statut
+
+		annotation SummarizationSetBy = Automatic
+
+	column temps_non_facture_min
+		dataType: int64
+		formatString: 0
+		lineageTag: 3a463e8a-1879-42a5-96d2-854336e9b1fc
+		summarizeBy: sum
+		sourceColumn: temps_non_facture_min
+
+		annotation SummarizationSetBy = Automatic
+
+	column date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 66b0a942-8e67-43b7-a4e2-e541e469410e
+		summarizeBy: none
+		sourceColumn: date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition planity_rdv_36_mois = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\User\TheFreelanceWay\Cas pratiques\022026_Cabinet_electrolyse\planity_rdv_36_mois.csv"),[Delimiter=",", Columns=10, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"En-têtes promus" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Type modifié" = Table.TransformColumnTypes(#"En-têtes promus",{{"date_heure", type datetime}, {"date_heure_fin", type datetime}, {"nom_client", type text}, {"client_id", Int64.Type}, {"zone", type text}, {"type_prestation", type text}, {"duree_prestation_min", Int64.Type}, {"montant_recu_eur", Currency.Type}, {"statut", type text}, {"temps_non_facture_min", Int64.Type}}),
+				    #"Fractionner la colonne par délimiteur" = Table.SplitColumn(Table.TransformColumnTypes(#"Type modifié", {{"date_heure", type text}}, "fr-FR"), "date_heure", Splitter.SplitTextByDelimiter(" ", QuoteStyle.Csv), {"date_heure.1", "date_heure.2"}),
+				    #"Type modifié1" = Table.TransformColumnTypes(#"Fractionner la colonne par délimiteur",{{"date_heure.1", type date}, {"date_heure.2", type time}}),
+				    #"Colonnes supprimées" = Table.RemoveColumns(#"Type modifié1",{"date_heure.2", "date_heure_fin"}),
+				    #"Colonnes renommées" = Table.RenameColumns(#"Colonnes supprimées",{{"date_heure.1", "date"}})
+				in
+				    #"Colonnes renommées"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

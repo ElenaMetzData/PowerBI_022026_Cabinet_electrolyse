@@ -1,0 +1,13 @@
+createOrReplace
+
+	ref table Mesures
+
+		measure 'Couleur Var' =
+				
+				IF(
+				    [Var % MoM] >= 0,
+				    "#1A9B4F",   -- vert
+				    "#D64541"    -- rouge
+				)
+			lineageTag: e3d97334-3c63-4d98-bf36-8b8363c76552
+

@@ -1,0 +1,18 @@
+createOrReplace
+
+	ref table Mesures
+
+		measure 'CA M-2' =
+				
+				VAR EndDate   = EOMONTH(TODAY(), -2)
+				VAR StartDate = DATE(YEAR(EndDate), MONTH(EndDate), 1)
+				RETURN
+				CALCULATE(
+				    [CA],
+				    DATESBETWEEN(Calendrier[Date], StartDate, EndDate)
+				)
+			formatString: #,0.###############\ "€";-#,0.###############\ "€";#,0.###############\ "€"
+			lineageTag: dc94ecf0-30ca-4149-a2fe-0744e3fd2d27
+
+			annotation PBI_FormatHint = {"currencyCulture":"fr-FR"}
+

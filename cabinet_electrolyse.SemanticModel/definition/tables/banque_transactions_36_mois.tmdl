@@ -1,0 +1,68 @@
+table banque_transactions_36_mois
+	lineageTag: a0823922-ee1c-41cb-9d42-976c226b69f1
+
+	column libelle
+		dataType: string
+		lineageTag: 142073c0-1151-43eb-8ba9-7f39eddbc5e4
+		summarizeBy: none
+		sourceColumn: libelle
+
+		annotation SummarizationSetBy = Automatic
+
+	column montant_eur
+		dataType: decimal
+		formatString: #,0.###############\ "€";-#,0.###############\ "€";#,0.###############\ "€"
+		lineageTag: 52cbe7a5-92a8-4c60-9fd1-210f5462b14d
+		summarizeBy: sum
+		sourceColumn: montant_eur
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"fr-FR"}
+
+	column type
+		dataType: string
+		lineageTag: 52753730-493f-438d-aefb-bdf2a2f46e33
+		summarizeBy: none
+		sourceColumn: type
+
+		annotation SummarizationSetBy = Automatic
+
+	column categorie
+		dataType: string
+		lineageTag: 27d346be-0d6b-4e79-bfee-3a9cbf35527e
+		summarizeBy: none
+		sourceColumn: categorie
+
+		annotation SummarizationSetBy = Automatic
+
+	column date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: a60af8c7-9171-4d54-801b-9decc7100381
+		summarizeBy: none
+		sourceColumn: date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition banque_transactions_36_mois = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\User\TheFreelanceWay\Cas pratiques\022026_Cabinet_electrolyse\banque_transactions_36_mois.csv"),[Delimiter=",", Columns=5, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"En-têtes promus" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Valeur remplacée" = Table.ReplaceValue(#"En-têtes promus",".",",",Replacer.ReplaceText,{"montant_eur"}),
+				    #"Type modifié" = Table.TransformColumnTypes(#"Valeur remplacée",{{"montant_eur", Currency.Type}, {"date_heure", type datetime}}),
+				    #"Fractionner la colonne par délimiteur" = Table.SplitColumn(Table.TransformColumnTypes(#"Type modifié", {{"date_heure", type text}}, "fr-FR"), "date_heure", Splitter.SplitTextByDelimiter(" ", QuoteStyle.Csv), {"date_heure.1", "date_heure.2"}),
+				    #"Type modifié1" = Table.TransformColumnTypes(#"Fractionner la colonne par délimiteur",{{"date_heure.1", type date}, {"date_heure.2", type time}, {"libelle", type text}, {"type", type text}, {"categorie", type text}}),
+				    #"Colonnes supprimées" = Table.RemoveColumns(#"Type modifié1",{"date_heure.2"}),
+				    #"Colonnes renommées" = Table.RenameColumns(#"Colonnes supprimées",{{"date_heure.1", "date"}})
+				in
+				    #"Colonnes renommées"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

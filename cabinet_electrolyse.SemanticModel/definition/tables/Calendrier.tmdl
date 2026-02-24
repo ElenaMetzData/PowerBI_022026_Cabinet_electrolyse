@@ -1,0 +1,116 @@
+table Calendrier
+	lineageTag: ceb0fff3-5b37-45f9-9e64-870ef1f27f82
+
+	column Date
+		formatString: General Date
+		lineageTag: 817c1f4c-037e-4d0d-b29a-01d7e101ff9c
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Date]
+
+		variation Variation
+			isDefault
+			relationship: 3764d210-708b-4754-9f93-f6fb7cf2c052
+			defaultHierarchy: LocalDateTable_71ba8576-5693-4647-9007-68f435cbe8d1.'Hiérarchie de dates'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Annee
+		lineageTag: 8d72d3cf-41b8-4e81-a86d-f6e94ea0ca60
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Annee]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Trimestre
+		lineageTag: 798a3aba-5f21-49e5-8c41-11774b9fde3e
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Trimestre]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Annee mois'
+		lineageTag: 50446bd6-6711-4c69-93fa-e960e1bc3adc
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Annee mois]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Nom du mois'
+		lineageTag: af92600f-f271-4ad6-be4b-2e3ddfd4edc6
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Nom du mois]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Numero du mois'
+		formatString: 0
+		lineageTag: bc3eacda-8d3d-43cd-8045-70c944bcfaff
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Numero du mois]
+
+		annotation SummarizationSetBy = User
+
+	column Semaine
+		lineageTag: af3978b3-1b56-446b-a181-68a3845524ee
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Semaine]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Nom du jour'
+		lineageTag: 6a3cca9b-6e1d-4672-a4cb-419ceaeb95de
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Nom du jour]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Numero du jour'
+		formatString: 0
+		lineageTag: 543dfbb7-f2b5-4a35-b8fc-9eb275533715
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Numero du jour]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Jour ouvre'
+		lineageTag: 8c0c42bd-bcb7-4c7e-af34-07f85e1deacc
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Jour ouvre]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Calendrier = calculated
+		mode: import
+		source =
+				
+				
+				// penser a changer les annees en fonctions des transactions
+				
+				ADDCOLUMNS(
+				    CALENDAR(
+				        DATE(2023,3,1),
+				        DATE(2026,2,28)
+				    ),
+				    "Annee", FORMAT([Date],"YYYY"),
+				    "Trimestre" , "T"&FORMAT([Date],"Q"),
+				    "Annee mois", FORMAT([Date],"YYYYMM"),
+				    "Nom du mois", FORMAT([Date],"MMM") ,
+				    "Numero du mois", MONTH([Date]),
+				    "Semaine", YEAR([Date])&"S"&WEEKNUM([Date],21),
+				    "Nom du jour", FORMAT([Date],"DDDD"),
+				    "Numero du jour" , WEEKDAY([Date],2),
+				    "Jour ouvre" , IF(WEEKDAY([Date],2)>6,"Week-end")
+				)
+
+	annotation PBI_Id = 5ff9992ccaa44874b79390d2d14917b7
+

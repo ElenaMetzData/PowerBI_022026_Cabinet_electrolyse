@@ -1,0 +1,2844 @@
+date_heure,libelle,montant_eur,type,categorie
+2023-03-01 09:00:00,Loyer cabinet,-1200.0,Charge,Loyer
+2023-03-01 09:00:00,Abonnement Planity,-80.0,Charge,Logiciel / abonnement
+2023-03-01 09:00:00,Frais compte pro,-15.0,Charge,Frais bancaires
+2023-03-01 09:15:00,CB - Manon Michel,25.0,Recette,Paiement client
+2023-03-02 09:15:00,CB - Léa Thomas,25.0,Recette,Paiement client
+2023-03-05 09:00:00,Assurance professionnelle,-45.0,Charge,Assurance
+2023-03-06 09:00:00,Achats consommables,-10.0,Charge,Consommables
+2023-03-08 09:15:00,CB - Charlotte Robert,25.0,Recette,Paiement client
+2023-03-10 09:00:00,Électricité,-120.0,Charge,Énergie
+2023-03-12 09:00:00,Hébergement site web,-12.0,Charge,Site web
+2023-03-13 09:00:00,Achats consommables,-10.0,Charge,Consommables
+2023-03-14 09:15:00,CB - Clara Bernard,25.0,Recette,Paiement client
+2023-03-15 09:00:00,Entretien machine électrolyse,-250.0,Charge,Maintenance
+2023-03-20 09:00:00,Achats consommables,-10.0,Charge,Consommables
+2023-03-21 09:15:00,CB - Amina Roux,25.0,Recette,Paiement client
+2023-03-27 09:00:00,Achats consommables,-10.0,Charge,Consommables
+2023-03-27 09:15:00,CB - Elise Vincent,25.0,Recette,Paiement client
+2023-04-01 09:00:00,Abonnement Planity,-80.0,Charge,Logiciel / abonnement
+2023-04-01 09:00:00,Frais compte pro,-15.0,Charge,Frais bancaires
+2023-04-01 09:00:00,Loyer cabinet,-1200.0,Charge,Loyer
+2023-04-03 09:00:00,Achats consommables,-10.0,Charge,Consommables
+2023-04-04 09:15:00,CB - Nina Thomas,25.0,Recette,Paiement client
+2023-04-05 09:00:00,Assurance professionnelle,-45.0,Charge,Assurance
+2023-04-05 09:50:00,CB - Manon Michel,130.0,Recette,Paiement client
+2023-04-06 10:00:00,CB - Léa Thomas,150.0,Recette,Paiement client
+2023-04-10 09:00:00,Électricité,-120.0,Charge,Énergie
+2023-04-10 09:00:00,Achats consommables,-10.0,Charge,Consommables
+2023-04-12 09:00:00,Hébergement site web,-12.0,Charge,Site web
+2023-04-13 09:15:00,CB - Julie Garcia,25.0,Recette,Paiement client
+2023-04-14 09:15:00,CB - Emma Bernard,25.0,Recette,Paiement client
+2023-04-17 09:00:00,Achats consommables,-10.0,Charge,Consommables
+2023-04-18 09:55:00,CB - Clara Bernard,140.0,Recette,Paiement client
+2023-04-20 09:15:00,CB - Léa Lambert,25.0,Recette,Paiement client
+2023-04-24 09:00:00,Achats consommables,-10.0,Charge,Consommables
+2023-04-25 10:00:00,CB - Amina Roux,150.0,Recette,Paiement client
+2023-04-27 09:15:00,CB - Chloé Garcia,25.0,Recette,Paiement client
+2023-04-29 10:55:00,CB - Léa Thomas,140.0,Recette,Paiement client
+2023-05-01 09:00:00,Achats consommables,-10.0,Charge,Consommables
+2023-05-01 09:00:00,Abonnement Planity,-80.0,Charge,Logiciel / abonnement
+2023-05-01 09:00:00,Frais compte pro,-15.0,Charge,Frais bancaires
+2023-05-01 09:00:00,Loyer cabinet,-1200.0,Charge,Loyer
+2023-05-03 10:15:00,CB - Lucie Girard,180.0,Recette,Paiement client
+2023-05-05 09:00:00,Assurance professionnelle,-45.0,Charge,Assurance
+2023-05-05 09:15:00,CB - Léa Fournier,25.0,Recette,Paiement client
+2023-05-05 10:43:00,CB - Charlotte Robert,180.0,Recette,Paiement client
+2023-05-06 10:50:00,CB - Jade Thomas,130.0,Recette,Paiement client
+2023-05-08 09:00:00,Achats consommables,-10.0,Charge,Consommables
+2023-05-08 09:15:00,CB - Eva Fournier,25.0,Recette,Paiement client
+2023-05-09 09:55:00,CB - Nina Thomas,140.0,Recette,Paiement client
+2023-05-10 09:00:00,Électricité,-120.0,Charge,Énergie
+2023-05-11 09:50:00,CB - Clara Bernard,130.0,Recette,Paiement client
+2023-05-12 09:00:00,Hébergement site web,-12.0,Charge,Site web
+2023-05-12 09:15:00,CB - Jade Girard,25.0,Recette,Paiement client
+2023-05-15 09:00:00,Achats consommables,-15.55,Charge,Consommables
+2023-05-15 09:15:00,CB - Clara Petit,25.0,Recette,Paiement client
+2023-05-18 09:25:00,CB - Julie Garcia,75.0,Recette,Paiement client
+2023-05-18 09:58:00,CB - Léa Dubois,25.0,Recette,Paiement client
+2023-05-18 11:05:00,CB - Amina Roux,130.0,Recette,Paiement client
+2023-05-19 09:45:00,CB - Emma Bernard,120.0,Recette,Paiement client
+2023-05-22 09:00:00,Achats consommables,-16.45,Charge,Consommables
+2023-05-23 09:35:00,CB - Manon Michel,100.0,Recette,Paiement client
+2023-05-24 09:55:00,CB - Elise Vincent,140.0,Recette,Paiement client
+2023-05-24 11:00:00,CB - Léa Thomas,140.0,Recette,Paiement client
+2023-05-25 09:45:00,CB - Léa Lambert,120.0,Recette,Paiement client
+2023-05-26 09:55:00,CB - Lucie Girard,140.0,Recette,Paiement client
+2023-05-29 09:00:00,Achats consommables,-13.51,Charge,Consommables
+2023-05-29 09:40:00,CB - Jade Thomas,110.0,Recette,Paiement client
+2023-05-30 10:00:00,CB - Charlotte Robert,150.0,Recette,Paiement client
+2023-05-30 10:26:00,CB - Clara Lefèvre,25.0,Recette,Paiement client
+2023-06-01 09:00:00,Frais compte pro,-15.0,Charge,Frais bancaires
+2023-06-01 09:00:00,Abonnement Planity,-80.0,Charge,Logiciel / abonnement
+2023-06-01 09:00:00,Loyer cabinet,-1200.0,Charge,Loyer
+2023-06-01 09:55:00,CB - Nina Thomas,140.0,Recette,Paiement client
+2023-06-01 11:28:00,CB - Chloé Garcia,180.0,Recette,Paiement client
+2023-06-05 09:00:00,Achats consommables,-14.21,Charge,Consommables
+2023-06-05 09:00:00,Assurance professionnelle,-45.0,Charge,Assurance
+2023-06-05 09:40:00,CB - Clara Bernard,110.0,Recette,Paiement client
+2023-06-08 09:15:00,CB - Eva Durand,25.0,Recette,Paiement client
+2023-06-09 10:15:00,CB - Léa Fournier,180.0,Recette,Paiement client
+2023-06-09 10:44:00,CB - Sarah Vincent,25.0,Recette,Paiement client
+2023-06-10 09:00:00,Électricité,-120.0,Charge,Énergie
+2023-06-10 10:15:00,CB - Julie Garcia,50.0,Recette,Paiement client
+2023-06-12 09:00:00,Hébergement site web,-12.0,Charge,Site web
+2023-06-12 09:00:00,Achats consommables,-16.49,Charge,Consommables
+2023-06-12 09:40:00,CB - Emma Bernard,110.0,Recette,Paiement client
+2023-06-12 10:34:00,CB - Amina Roux,110.0,Recette,Paiement client
+2023-06-12 11:44:00,CB - Eva Fournier,140.0,Recette,Paiement client
+2023-06-15 09:00:00,Entretien machine électrolyse,-250.0,Charge,Maintenance
+2023-06-16 10:00:00,CB - Jade Girard,150.0,Recette,Paiement client
+2023-06-16 10:25:00,CB - Hana Robert,25.0,Recette,Paiement client
+2023-06-17 10:45:00,CB - Léa Lambert,120.0,Recette,Paiement client
+2023-06-19 09:00:00,Achats consommables,-36.35,Charge,Consommables
+2023-06-19 09:50:00,CB - Elise Vincent,130.0,Recette,Paiement client
+2023-06-19 11:15:00,CB - Clara Petit,180.0,Recette,Paiement client
+2023-06-20 10:00:00,CB - Lucie Girard,150.0,Recette,Paiement client
+2023-06-20 11:00:00,CB - Manon Michel,110.0,Recette,Paiement client
+2023-06-21 09:45:00,CB - Léa Thomas,120.0,Recette,Paiement client
+2023-06-22 09:45:00,CB - Léa Dubois,120.0,Recette,Paiement client
+2023-06-23 09:50:00,CB - Jade Thomas,130.0,Recette,Paiement client
+2023-06-23 10:15:00,CB - Clara Fournier,25.0,Recette,Paiement client
+2023-06-24 10:55:00,CB - Chloé Garcia,140.0,Recette,Paiement client
+2023-06-24 11:20:00,CB - Inès Petit,25.0,Recette,Paiement client
+2023-06-26 09:00:00,Achats consommables,-14.52,Charge,Consommables
+2023-06-26 09:45:00,CB - Nina Thomas,120.0,Recette,Paiement client
+2023-06-27 10:14:00,CB - Charlotte Robert,130.0,Recette,Paiement client
+2023-06-28 09:15:00,CB - Zoé Vincent,25.0,Recette,Paiement client
+2023-06-29 09:15:00,CB - Manon Fournier,25.0,Recette,Paiement client
+2023-06-30 09:15:00,CB - Elise André,25.0,Recette,Paiement client
+2023-07-01 09:00:00,Frais compte pro,-15.0,Charge,Frais bancaires
+2023-07-01 09:00:00,Loyer cabinet,-1200.0,Charge,Loyer
+2023-07-01 09:00:00,Abonnement Planity,-80.0,Charge,Logiciel / abonnement
+2023-07-03 09:00:00,Achats consommables,-22.45,Charge,Consommables
+2023-07-03 10:00:00,CB - Léa Fournier,150.0,Recette,Paiement client
+2023-07-03 10:50:00,CB - Clara Bernard,110.0,Recette,Paiement client
+2023-07-03 11:25:00,CB - Léa Morel,25.0,Recette,Paiement client
+2023-07-04 09:35:00,CB - Clara Lefèvre,100.0,Recette,Paiement client
+2023-07-05 09:00:00,Assurance professionnelle,-45.0,Charge,Assurance
+2023-07-05 09:30:00,CB - Julie Garcia,90.0,Recette,Paiement client
+2023-07-05 10:40:00,CB - Eva Fournier,130.0,Recette,Paiement client
+2023-07-06 09:41:00,CB - Chloé Fournier,25.0,Recette,Paiement client
+2023-07-06 10:31:00,CB - Emma Bernard,100.0,Recette,Paiement client
+2023-07-10 09:00:00,Achats consommables,-24.04,Charge,Consommables
+2023-07-10 09:00:00,Électricité,-120.0,Charge,Énergie
+2023-07-10 10:00:00,CB - Jade Girard,150.0,Recette,Paiement client
+2023-07-10 10:36:00,CB - Charlotte David,25.0,Recette,Paiement client
+2023-07-10 11:28:00,CB - Amina Roux,100.0,Recette,Paiement client
+2023-07-12 09:00:00,Hébergement site web,-12.0,Charge,Site web
+2023-07-12 10:00:00,CB - Clara Petit,150.0,Recette,Paiement client
+2023-07-12 10:45:00,CB - Léa Lambert,90.0,Recette,Paiement client
+2023-07-12 11:15:00,CB - Emma Bertrand,25.0,Recette,Paiement client
+2023-07-13 09:55:00,CB - Eva Durand,140.0,Recette,Paiement client
+2023-07-14 09:55:00,CB - Sarah Vincent,140.0,Recette,Paiement client
+2023-07-17 09:00:00,Achats consommables,-16.51,Charge,Consommables
+2023-07-17 09:40:00,CB - Elise Vincent,110.0,Recette,Paiement client
+2023-07-18 09:55:00,CB - Lucie Girard,140.0,Recette,Paiement client
+2023-07-19 10:00:00,CB - Chloé Garcia,150.0,Recette,Paiement client
+2023-07-20 09:59:00,CB - Nina Mercier,25.0,Recette,Paiement client
+2023-07-21 09:30:00,CB - Jade Thomas,90.0,Recette,Paiement client
+2023-07-24 09:00:00,Achats consommables,-21.07,Charge,Consommables
+2023-07-24 09:55:00,CB - Léa Vincent,140.0,Recette,Paiement client
+2023-07-24 10:45:00,CB - Nina Thomas,110.0,Recette,Paiement client
+2023-07-25 09:15:00,CB - Anaïs Petit,25.0,Recette,Paiement client
+2023-07-27 09:45:00,CB - Léa Fournier,120.0,Recette,Paiement client
+2023-07-27 11:14:00,CB - Clara Lefèvre,90.0,Recette,Paiement client
+2023-07-28 09:15:00,CB - Océane Vincent,25.0,Recette,Paiement client
+2023-07-28 10:24:00,CB - Clara Fournier,130.0,Recette,Paiement client
+2023-07-31 09:00:00,Achats consommables,-17.89,Charge,Consommables
+2023-07-31 09:40:00,CB - Eva Fournier,110.0,Recette,Paiement client
+2023-08-01 09:00:00,Abonnement Planity,-80.0,Charge,Logiciel / abonnement
+2023-08-01 09:00:00,Frais compte pro,-15.0,Charge,Frais bancaires
+2023-08-01 09:00:00,Loyer cabinet,-1200.0,Charge,Loyer
+2023-08-02 09:15:00,CB - Clara Legrand,25.0,Recette,Paiement client
+2023-08-02 10:16:00,CB - Zoé Vincent,130.0,Recette,Paiement client
+2023-08-02 10:49:00,CB - Julie Garcia,65.0,Recette,Paiement client
+2023-08-03 09:35:00,CB - Emma Bernard,100.0,Recette,Paiement client
+2023-08-03 10:35:00,CB - Jade Girard,130.0,Recette,Paiement client
+2023-08-03 11:35:00,CB - Manon Fournier,120.0,Recette,Paiement client
+2023-08-04 09:40:00,CB - Elise André,110.0,Recette,Paiement client
+2023-08-05 09:00:00,Assurance professionnelle,-45.0,Charge,Assurance
+2023-08-07 09:00:00,Achats consommables,-26.67,Charge,Consommables
+2023-08-07 10:47:00,CB - Sarah Vincent,120.0,Recette,Paiement client
+2023-08-07 11:43:00,CB - Léa Morel,120.0,Recette,Paiement client
+2023-08-07 12:11:00,CB - Zoé Dubois,25.0,Recette,Paiement client
+2023-08-09 09:15:00,CB - Maëlys Mercier,25.0,Recette,Paiement client
+2023-08-09 10:12:00,CB - Amina Roux,120.0,Recette,Paiement client
+2023-08-09 11:55:00,CB - Léa Dubois,90.0,Recette,Paiement client
+2023-08-10 09:00:00,Électricité,-120.0,Charge,Énergie
+2023-08-10 10:42:00,CB - Alice Michel,25.0,Recette,Paiement client
+2023-08-10 11:39:00,CB - Chloé Fournier,110.0,Recette,Paiement client
+2023-08-11 09:15:00,CB - Jade Thomas,25.0,Recette,Paiement client
+2023-08-12 09:00:00,Hébergement site web,-12.0,Charge,Site web
+2023-08-14 09:00:00,Achats consommables,-18.35,Charge,Consommables
+2023-08-14 10:00:00,CB - Hana Robert,150.0,Recette,Paiement client
+2023-08-14 10:58:00,CB - Charlotte David,120.0,Recette,Paiement client
+2023-08-15 09:45:00,CB - Elise Vincent,120.0,Recette,Paiement client
+2023-08-16 09:15:00,CB - Margaux Richard,25.0,Recette,Paiement client
+2023-08-16 10:35:00,CB - Chloé Garcia,150.0,Recette,Paiement client
+2023-08-16 12:20:00,CB - Emma Bertrand,220.0,Recette,Paiement client
+2023-08-21 09:00:00,Achats consommables,-27.9,Charge,Consommables
+2023-08-21 10:31:00,CB - Léa Vincent,120.0,Recette,Paiement client
+2023-08-21 11:29:00,CB - Clara Fournier,110.0,Recette,Paiement client
+2023-08-21 13:45:00,CB - Manon Michel,90.0,Recette,Paiement client
+2023-08-21 14:32:00,CB - Clara Lefèvre,75.0,Recette,Paiement client
+2023-08-21 15:30:00,CB - Inès Petit,120.0,Recette,Paiement client
+2023-08-22 09:30:00,CB - Léa Thomas,90.0,Recette,Paiement client
+2023-08-23 09:35:00,CB - Nina Thomas,100.0,Recette,Paiement client
+2023-08-24 10:55:00,CB - Nina Mercier,150.0,Recette,Paiement client
+2023-08-24 11:42:00,CB - Zoé Garcia,90.0,Recette,Paiement client
+2023-08-25 09:50:00,CB - Zoé Vincent,130.0,Recette,Paiement client
+2023-08-28 09:00:00,Achats consommables,-41.6,Charge,Consommables
+2023-08-28 10:14:00,CB - Elise André,100.0,Recette,Paiement client
+2023-08-28 11:02:00,CB - Charlotte Robert,100.0,Recette,Paiement client
+2023-08-29 10:00:00,CB - Anaïs Petit,150.0,Recette,Paiement client
+2023-08-30 09:45:00,CB - Jade Girard,120.0,Recette,Paiement client
+2023-08-30 11:42:00,CB - Léa Morel,110.0,Recette,Paiement client
+2023-08-31 10:31:00,CB - Clara Bernard,100.0,Recette,Paiement client
+2023-09-01 09:00:00,Loyer cabinet,-1200.0,Charge,Loyer
+2023-09-01 09:00:00,Frais compte pro,-15.0,Charge,Frais bancaires
+2023-09-01 09:00:00,Abonnement Planity,-80.0,Charge,Logiciel / abonnement
+2023-09-01 09:25:00,CB - Julie Garcia,75.0,Recette,Paiement client
+2023-09-01 11:45:00,CB - Océane Vincent,280.0,Recette,Paiement client
+2023-09-01 12:10:00,CB - Maya Simon,25.0,Recette,Paiement client
+2023-09-02 11:52:00,CB - Julie Leroy,180.0,Recette,Paiement client
+2023-09-02 12:34:00,CB - Chloé Fournier,90.0,Recette,Paiement client
+2023-09-04 09:00:00,Achats consommables,-20.5,Charge,Consommables
+2023-09-04 09:45:00,CB - Clara Petit,120.0,Recette,Paiement client
+2023-09-04 10:15:00,CB - Marine Bertrand,25.0,Recette,Paiement client
+2023-09-05 09:00:00,Assurance professionnelle,-45.0,Charge,Assurance
+2023-09-06 09:30:00,CB - Léa Dubois,90.0,Recette,Paiement client
+2023-09-06 10:24:00,CB - Charlotte David,110.0,Recette,Paiement client
+2023-09-06 11:37:00,CB - Clara Legrand,150.0,Recette,Paiement client
+2023-09-07 10:00:00,CB - Hana Robert,150.0,Recette,Paiement client
+2023-09-08 09:35:00,CB - Léa Lambert,100.0,Recette,Paiement client
+2023-09-08 11:06:00,CB - Emma Bertrand,180.0,Recette,Paiement client
+2023-09-10 09:00:00,Électricité,-120.0,Charge,Énergie
+2023-09-11 09:00:00,Achats consommables,-19.7,Charge,Consommables
+2023-09-11 10:32:00,CB - Zoé Dubois,150.0,Recette,Paiement client
+2023-09-12 09:00:00,Hébergement site web,-12.0,Charge,Site web
+2023-09-12 09:15:00,CB - Clara Laurent,25.0,Recette,Paiement client
+2023-09-13 10:00:00,CB - Maëlys Mercier,150.0,Recette,Paiement client
+2023-09-14 09:40:00,CB - Clara Fournier,110.0,Recette,Paiement client
+2023-09-14 11:52:00,CB - Alice Michel,280.0,Recette,Paiement client
+2023-09-15 09:00:00,Entretien machine électrolyse,-250.0,Charge,Maintenance
+2023-09-15 09:35:00,CB - Inès Petit,100.0,Recette,Paiement client
+2023-09-15 11:37:00,CB - Chloé Garcia,110.0,Recette,Paiement client
+2023-09-16 10:55:00,CB - Nina Mercier,140.0,Recette,Paiement client
+2023-09-16 11:48:00,CB - Elise Vincent,100.0,Recette,Paiement client
+2023-09-18 09:00:00,Achats consommables,-34.83,Charge,Consommables
+2023-09-18 09:30:00,CB - Clara Lefèvre,90.0,Recette,Paiement client
+2023-09-18 10:10:00,CB - Lucie Girard,90.0,Recette,Paiement client
+2023-09-18 10:53:00,CB - Zoé Garcia,90.0,Recette,Paiement client
+2023-09-18 11:54:00,CB - Léa Vincent,130.0,Recette,Paiement client
+2023-09-18 12:23:00,CB - Zoé Morel,25.0,Recette,Paiement client
+2023-09-20 09:15:00,CB - Chloé Petit,25.0,Recette,Paiement client
+2023-09-20 10:05:00,CB - Manon Fournier,100.0,Recette,Paiement client
+2023-09-20 10:53:00,CB - Margaux Richard,90.0,Recette,Paiement client
+2023-09-21 09:15:00,CB - Agathe David,25.0,Recette,Paiement client
+2023-09-21 10:03:00,CB - Jade Thomas,90.0,Recette,Paiement client
+2023-09-21 10:54:00,CB - Elise André,100.0,Recette,Paiement client
+2023-09-23 10:45:00,CB - Léa Fournier,120.0,Recette,Paiement client
+2023-09-25 09:00:00,Achats consommables,-30.3,Charge,Consommables
+2023-09-25 09:40:00,CB - Léa Morel,110.0,Recette,Paiement client
+2023-09-25 11:54:00,CB - Océane Vincent,280.0,Recette,Paiement client
+2023-09-25 13:50:00,CB - Nina Thomas,100.0,Recette,Paiement client
+2023-09-25 14:21:00,CB - Manon Michel,65.0,Recette,Paiement client
+2023-09-26 09:35:00,CB - Léa Thomas,100.0,Recette,Paiement client
+2023-09-26 10:23:00,CB - Eva Fournier,90.0,Recette,Paiement client
+2023-09-27 10:15:00,CB - Julie Leroy,180.0,Recette,Paiement client
+2023-09-27 11:12:00,CB - Chloé Fournier,120.0,Recette,Paiement client
+2023-09-27 12:09:00,CB - Eva Durand,120.0,Recette,Paiement client
+2023-09-28 10:41:00,CB - Sarah Vincent,120.0,Recette,Paiement client
+2023-09-29 10:00:00,CB - Clara Legrand,150.0,Recette,Paiement client
+2023-10-01 09:00:00,Loyer cabinet,-1200.0,Charge,Loyer
+2023-10-01 09:00:00,Abonnement Planity,-80.0,Charge,Logiciel / abonnement
+2023-10-01 09:00:00,Frais compte pro,-15.0,Charge,Frais bancaires
+2023-10-02 09:00:00,Achats consommables,-43.26,Charge,Consommables
+2023-10-02 09:30:00,CB - Charlotte David,90.0,Recette,Paiement client
+2023-10-02 10:25:00,CB - Charlotte Robert,110.0,Recette,Paiement client
+2023-10-03 09:50:00,CB - Clara Petit,130.0,Recette,Paiement client
+2023-10-03 11:16:00,CB - Emma Bertrand,180.0,Recette,Paiement client
+2023-10-03 12:00:00,CB - Clara Bernard,90.0,Recette,Paiement client
+2023-10-03 13:35:00,CB - Julie Garcia,65.0,Recette,Paiement client
+2023-10-04 10:00:00,CB - Zoé Dubois,150.0,Recette,Paiement client
+2023-10-04 10:59:00,CB - Hana Robert,120.0,Recette,Paiement client
+2023-10-04 11:37:00,CB - Emma Bernard,75.0,Recette,Paiement client
+2023-10-05 09:00:00,Assurance professionnelle,-45.0,Charge,Assurance
+2023-10-06 09:55:00,CB - Maya Simon,140.0,Recette,Paiement client
+2023-10-06 11:02:00,CB - Maëlys Mercier,140.0,Recette,Paiement client
+2023-10-06 11:56:00,CB - Léa Dubois,90.0,Recette,Paiement client
+2023-10-07 10:15:00,CB - Inès Mercier,25.0,Recette,Paiement client
+2023-10-07 11:57:00,CB - Alice Michel,220.0,Recette,Paiement client
+2023-10-07 12:28:00,CB - Océane Thomas,25.0,Recette,Paiement client
+2023-10-09 09:00:00,Achats consommables,-31.12,Charge,Consommables
+2023-10-09 09:50:00,CB - Jade Thomas,130.0,Recette,Paiement client
+2023-10-09 10:48:00,CB - Marine Bertrand,110.0,Recette,Paiement client
+2023-10-10 09:00:00,Électricité,-120.0,Charge,Énergie
+2023-10-11 09:15:00,CB - Marine Garcia,25.0,Recette,Paiement client
+2023-10-11 10:24:00,CB - Nina Mercier,140.0,Recette,Paiement client
+2023-10-12 09:00:00,Hébergement site web,-12.0,Charge,Site web
+2023-10-12 09:15:00,CB - Nina Bernard,25.0,Recette,Paiement client
+2023-10-12 10:10:00,CB - Clara Fournier,110.0,Recette,Paiement client
+2023-10-13 09:35:00,CB - Inès Petit,100.0,Recette,Paiement client
+2023-10-13 10:08:00,CB - Margaux Richard,65.0,Recette,Paiement client
+2023-10-16 09:00:00,Achats consommables,-40.54,Charge,Consommables
+2023-10-16 09:20:00,CB - Amina Roux,65.0,Recette,Paiement client
+2023-10-16 10:25:00,CB - Anaïs Petit,130.0,Recette,Paiement client
+2023-10-16 11:06:00,CB - Zoé Garcia,75.0,Recette,Paiement client
+2023-10-16 11:44:00,CB - Clara Lefèvre,65.0,Recette,Paiement client
+2023-10-17 09:20:00,CB - Clara Laurent,65.0,Recette,Paiement client
+2023-10-17 10:10:00,CB - Zoé Vincent,110.0,Recette,Paiement client
+2023-10-17 10:45:00,CB - Chloé Garcia,75.0,Recette,Paiement client
+2023-10-18 09:40:00,CB - Manon Fournier,110.0,Recette,Paiement client
+2023-10-19 09:35:00,CB - Léa Vincent,100.0,Recette,Paiement client
+2023-10-19 10:30:00,CB - Elise André,100.0,Recette,Paiement client
+2023-10-19 12:15:00,CB - Océane Vincent,220.0,Recette,Paiement client
+2023-10-21 10:15:00,CB - Elise Vincent,50.0,Recette,Paiement client
+2023-10-23 09:00:00,Achats consommables,-41.78,Charge,Consommables
+2023-10-23 09:35:00,CB - Léa Morel,100.0,Recette,Paiement client
+2023-10-23 10:22:00,CB - Lucie Girard,90.0,Recette,Paiement client
+2023-10-23 12:11:00,CB - Amina Bertrand,25.0,Recette,Paiement client
+2023-10-24 09:35:00,CB - Chloé Fournier,100.0,Recette,Paiement client
+2023-10-24 10:41:00,CB - Julie Leroy,130.0,Recette,Paiement client
+2023-10-24 11:52:00,CB - Clara Legrand,150.0,Recette,Paiement client
+2023-10-25 09:35:00,CB - Léa Fournier,100.0,Recette,Paiement client
+2023-10-25 10:00:00,CB - Lina Vincent,25.0,Recette,Paiement client
+2023-10-25 11:01:00,CB - Chloé Petit,130.0,Recette,Paiement client
+2023-10-26 09:20:00,CB - Jade Thomas,65.0,Recette,Paiement client
+2023-10-26 10:23:00,CB - Agathe David,130.0,Recette,Paiement client
+2023-10-27 09:50:00,CB - Eva Durand,130.0,Recette,Paiement client
+2023-10-28 10:50:00,CB - Sarah Vincent,130.0,Recette,Paiement client
+2023-10-28 11:31:00,CB - Eva Fournier,90.0,Recette,Paiement client
+2023-10-30 09:00:00,Achats consommables,-59.32,Charge,Consommables
+2023-10-30 10:00:00,CB - Maya Simon,150.0,Recette,Paiement client
+2023-10-30 11:10:00,CB - Zoé Dubois,150.0,Recette,Paiement client
+2023-10-30 11:50:00,CB - Nina Thomas,90.0,Recette,Paiement client
+2023-10-30 13:45:00,CB - Charlotte David,90.0,Recette,Paiement client
+2023-10-30 14:31:00,CB - Jade Girard,90.0,Recette,Paiement client
+2023-10-30 15:01:00,CB - Charlotte Robert,25.0,Recette,Paiement client
+2023-10-31 10:56:00,CB - Maëlys Mercier,130.0,Recette,Paiement client
+2023-11-01 09:00:00,Loyer cabinet,-1200.0,Charge,Loyer
+2023-11-01 09:00:00,Frais compte pro,-15.0,Charge,Frais bancaires
+2023-11-01 09:00:00,Abonnement Planity,-80.0,Charge,Logiciel / abonnement
+2023-11-01 09:15:00,CB - Charlotte Simon,25.0,Recette,Paiement client
+2023-11-01 11:02:00,CB - Alice Michel,220.0,Recette,Paiement client
+2023-11-01 11:32:00,CB - Maya Lambert,25.0,Recette,Paiement client
+2023-11-01 12:25:00,CB - Marine Bertrand,110.0,Recette,Paiement client
+2023-11-01 13:40:00,CB - Manon Michel,75.0,Recette,Paiement client
+2023-11-02 09:30:00,CB - Léa Thomas,90.0,Recette,Paiement client
+2023-11-02 10:04:00,CB - Maëlys Michel,25.0,Recette,Paiement client
+2023-11-02 10:57:00,CB - Jade Thomas,110.0,Recette,Paiement client
+2023-11-02 11:48:00,CB - Hana Robert,110.0,Recette,Paiement client
+2023-11-04 10:30:00,CB - Clara Petit,90.0,Recette,Paiement client
+2023-11-05 09:00:00,Assurance professionnelle,-45.0,Charge,Assurance
+2023-11-06 09:00:00,Achats consommables,-30.89,Charge,Consommables
+2023-11-07 09:25:00,CB - Julie Garcia,75.0,Recette,Paiement client
+2023-11-07 10:06:00,CB - Clara Bernard,90.0,Recette,Paiement client
+2023-11-07 10:55:00,CB - Léa Dubois,90.0,Recette,Paiement client
+2023-11-07 11:32:00,CB - Margaux Richard,75.0,Recette,Paiement client
+2023-11-08 09:40:00,CB - Nina Mercier,110.0,Recette,Paiement client
+2023-11-08 10:22:00,CB - Charlotte Robert,75.0,Recette,Paiement client
+2023-11-09 09:20:00,CB - Clara Laurent,65.0,Recette,Paiement client
+2023-11-10 09:00:00,Électricité,-120.0,Charge,Énergie
+2023-11-10 09:15:00,CB - Louise Bertrand,25.0,Recette,Paiement client
+2023-11-11 10:35:00,CB - Inès Mercier,100.0,Recette,Paiement client
+2023-11-11 11:19:00,CB - Clara Fournier,90.0,Recette,Paiement client
+2023-11-11 12:29:00,CB - Océane Thomas,150.0,Recette,Paiement client
+2023-11-12 09:00:00,Hébergement site web,-12.0,Charge,Site web
+2023-11-13 09:00:00,Achats consommables,-42.64,Charge,Consommables
+2023-11-13 09:35:00,CB - Inès Petit,100.0,Recette,Paiement client
+2023-11-13 10:42:00,CB - Anaïs Petit,120.0,Recette,Paiement client
+2023-11-13 11:07:00,CB - Elise Thomas,25.0,Recette,Paiement client
+2023-11-14 09:20:00,CB - Léa Lambert,65.0,Recette,Paiement client
+2023-11-15 11:02:00,CB - Zoé Morel,150.0,Recette,Paiement client
+2023-11-15 11:41:00,CB - Zoé Garcia,75.0,Recette,Paiement client
+2023-11-16 11:04:00,CB - Clara Lefèvre,75.0,Recette,Paiement client
+2023-11-16 11:37:00,CB - Clara Dupont,25.0,Recette,Paiement client
+2023-11-16 14:45:00,CB - Nina Bernard,220.0,Recette,Paiement client
+2023-11-17 09:45:00,CB - Chloé Petit,120.0,Recette,Paiement client
+2023-11-17 10:29:00,CB - Manon Fournier,90.0,Recette,Paiement client
+2023-11-18 10:35:00,CB - Elise André,100.0,Recette,Paiement client
+2023-11-18 11:43:00,CB - Agathe David,140.0,Recette,Paiement client
+2023-11-20 09:00:00,Achats consommables,-20.67,Charge,Consommables
+2023-11-21 09:45:00,CB - Clara Legrand,120.0,Recette,Paiement client
+2023-11-21 10:23:00,CB - Léa Morel,75.0,Recette,Paiement client
+2023-11-21 11:16:00,CB - Léa Vincent,100.0,Recette,Paiement client
+2023-11-21 11:46:00,CB - Amina Roux,65.0,Recette,Paiement client
+2023-11-21 13:45:00,CB - Chloé Garcia,90.0,Recette,Paiement client
+2023-11-22 10:37:00,CB - Julie Leroy,140.0,Recette,Paiement client
+2023-11-23 09:50:00,CB - Maya Simon,130.0,Recette,Paiement client
+2023-11-24 09:15:00,CB - Maëlys André,25.0,Recette,Paiement client
+2023-11-27 09:00:00,Achats consommables,-49.55,Charge,Consommables
+2023-11-27 09:50:00,CB - Zoé Dubois,130.0,Recette,Paiement client
+2023-11-27 11:46:00,CB - Amina Bertrand,140.0,Recette,Paiement client
+2023-11-27 12:11:00,CB - Elise Vincent,50.0,Recette,Paiement client
+2023-11-27 13:30:00,CB - Alice Thomas,25.0,Recette,Paiement client
+2023-11-28 09:45:00,CB - Eva Durand,120.0,Recette,Paiement client
+2023-11-28 10:13:00,CB - Pauline Bertrand,25.0,Recette,Paiement client
+2023-11-28 11:20:00,CB - Maëlys Mercier,130.0,Recette,Paiement client
+2023-11-28 13:50:00,CB - Charlotte David,100.0,Recette,Paiement client
+2023-11-29 10:30:00,CB - Alice Michel,220.0,Recette,Paiement client
+2023-11-29 11:00:00,CB - Lucie Girard,65.0,Recette,Paiement client
+2023-11-29 12:11:00,CB - Lina Vincent,130.0,Recette,Paiement client
+2023-11-29 14:35:00,CB - Sarah Vincent,100.0,Recette,Paiement client
+2023-11-30 09:15:00,CB - Chloé Bernard,25.0,Recette,Paiement client
+2023-11-30 09:48:00,CB - Clara Dupont,25.0,Recette,Paiement client
+2023-11-30 11:48:00,CB - Jade Thomas,120.0,Recette,Paiement client
+2023-12-01 09:00:00,Loyer cabinet,-1200.0,Charge,Loyer
+2023-12-01 09:00:00,Frais compte pro,-15.0,Charge,Frais bancaires
+2023-12-01 09:00:00,Abonnement Planity,-80.0,Charge,Logiciel / abonnement
+2023-12-02 10:25:00,CB - Eva Fournier,75.0,Recette,Paiement client
+2023-12-02 11:28:00,CB - Zoé Girard,25.0,Recette,Paiement client
+2023-12-04 09:00:00,Achats consommables,-44.47,Charge,Consommables
+2023-12-04 09:40:00,CB - Hana Robert,110.0,Recette,Paiement client
+2023-12-04 10:11:00,CB - Clara Laurent,65.0,Recette,Paiement client
+2023-12-04 10:54:00,CB - Margaux Richard,75.0,Recette,Paiement client
+2023-12-04 12:18:00,CB - Océane Thomas,150.0,Recette,Paiement client
+2023-12-04 13:45:00,CB - Charlotte Robert,90.0,Recette,Paiement client
+2023-12-05 09:00:00,Assurance professionnelle,-45.0,Charge,Assurance
+2023-12-05 09:15:00,CB - Nina Thomas,50.0,Recette,Paiement client
+2023-12-06 10:00:00,CB - Charlotte Simon,150.0,Recette,Paiement client
+2023-12-06 11:46:00,CB - Maya Lambert,220.0,Recette,Paiement client
+2023-12-07 10:15:00,CB - Maëlys Michel,180.0,Recette,Paiement client
+2023-12-08 10:32:00,CB - Nina Mercier,120.0,Recette,Paiement client
+2023-12-09 10:15:00,CB - Elise David,25.0,Recette,Paiement client
+2023-12-09 11:07:00,CB - Clara Petit,100.0,Recette,Paiement client
+2023-12-09 12:52:00,CB - Nina Bernard,220.0,Recette,Paiement client
+2023-12-10 09:00:00,Électricité,-120.0,Charge,Énergie
+2023-12-11 09:00:00,Achats consommables,-31.95,Charge,Consommables
+2023-12-11 09:20:00,CB - Manon Michel,65.0,Recette,Paiement client
+2023-12-11 10:21:00,CB - Zoé Morel,130.0,Recette,Paiement client
+2023-12-11 11:09:00,CB - Léa Thomas,75.0,Recette,Paiement client
+2023-12-12 09:00:00,Hébergement site web,-12.0,Charge,Site web
+2023-12-12 09:40:00,CB - Chloé Petit,110.0,Recette,Paiement client
+2023-12-12 10:24:00,CB - Léa Dubois,75.0,Recette,Paiement client
+2023-12-13 09:45:00,CB - Anaïs Petit,120.0,Recette,Paiement client
+2023-12-13 10:41:00,CB - Clara Fournier,100.0,Recette,Paiement client
+2023-12-14 09:20:00,CB - Inès Petit,65.0,Recette,Paiement client
+2023-12-14 10:08:00,CB - Julie Garcia,75.0,Recette,Paiement client
+2023-12-14 10:51:00,CB - Clara Bernard,75.0,Recette,Paiement client
+2023-12-14 11:25:00,CB - Agathe Leroy,25.0,Recette,Paiement client
+2023-12-15 09:00:00,Entretien machine électrolyse,-250.0,Charge,Maintenance
+2023-12-15 09:15:00,CB - Emma Bernard,50.0,Recette,Paiement client
+2023-12-15 10:24:00,CB - Louise Bertrand,140.0,Recette,Paiement client
+2023-12-16 11:15:00,CB - Océane Vincent,180.0,Recette,Paiement client
+2023-12-18 09:00:00,Achats consommables,-39.92,Charge,Consommables
+2023-12-18 09:25:00,CB - Charlotte Robert,75.0,Recette,Paiement client
+2023-12-18 09:54:00,CB - Zoé Garcia,50.0,Recette,Paiement client
+2023-12-18 10:38:00,CB - Elise Thomas,90.0,Recette,Paiement client
+2023-12-18 11:18:00,CB - Zoé Vincent,90.0,Recette,Paiement client
+2023-12-19 09:30:00,CB - Manon Fournier,90.0,Recette,Paiement client
+2023-12-19 10:05:00,CB - Clara Lefèvre,75.0,Recette,Paiement client
+2023-12-20 09:30:00,CB - Elise André,90.0,Recette,Paiement client
+2023-12-21 09:40:00,CB - Clara Legrand,110.0,Recette,Paiement client
+2023-12-21 10:35:00,CB - Clara Dupont,120.0,Recette,Paiement client
+2023-12-21 11:08:00,CB - Léa Lambert,50.0,Recette,Paiement client
+2023-12-21 12:13:00,CB - Maya Simon,130.0,Recette,Paiement client
+2023-12-22 09:15:00,CB - Clara André,25.0,Recette,Paiement client
+2023-12-22 10:21:00,CB - Lina Vincent,130.0,Recette,Paiement client
+2023-12-23 10:30:00,CB - Léa Morel,90.0,Recette,Paiement client
+2023-12-23 11:28:00,CB - Julie Leroy,120.0,Recette,Paiement client
+2023-12-23 12:04:00,CB - Chloé Fournier,75.0,Recette,Paiement client
+2023-12-25 09:00:00,Achats consommables,-26.81,Charge,Consommables
+2023-12-25 09:25:00,CB - Marine Bertrand,75.0,Recette,Paiement client
+2023-12-26 10:29:00,CB - Zoé Dubois,120.0,Recette,Paiement client
+2023-12-28 09:30:00,CB - Chloé Garcia,90.0,Recette,Paiement client
+2023-12-28 10:26:00,CB - Maëlys Mercier,120.0,Recette,Paiement client
+2023-12-29 10:00:00,CB - Alice Michel,150.0,Recette,Paiement client
+2023-12-29 11:55:00,CB - Inès Mercier,90.0,Recette,Paiement client
+2023-12-29 15:50:00,CB - Maya Lambert,220.0,Recette,Paiement client
+2023-12-29 16:57:00,CB - Charlotte Simon,130.0,Recette,Paiement client
+2023-12-30 11:55:00,CB - Charlotte David,90.0,Recette,Paiement client
+2023-12-30 12:57:00,CB - Jade Thomas,110.0,Recette,Paiement client
+2024-01-01 09:00:00,Loyer cabinet,-1200.0,Charge,Loyer
+2024-01-01 09:00:00,Achats consommables,-50.07,Charge,Consommables
+2024-01-01 09:00:00,Frais compte pro,-15.0,Charge,Frais bancaires
+2024-01-01 09:00:00,Abonnement Planity,-80.0,Charge,Logiciel / abonnement
+2024-01-01 09:20:00,CB - Clara Laurent,65.0,Recette,Paiement client
+2024-01-01 10:15:00,CB - Emma Bertrand,120.0,Recette,Paiement client
+2024-01-01 11:26:00,CB - Alice Thomas,150.0,Recette,Paiement client
+2024-01-02 09:45:00,CB - Pauline Bertrand,120.0,Recette,Paiement client
+2024-01-02 10:28:00,CB - Marine Garcia,90.0,Recette,Paiement client
+2024-01-02 11:12:00,CB - Eva Durand,75.0,Recette,Paiement client
+2024-01-02 11:47:00,CB - Margaux Richard,75.0,Recette,Paiement client
+2024-01-02 13:30:00,CB - Lucie Francois,25.0,Recette,Paiement client
+2024-01-03 09:30:00,CB - Sarah Vincent,90.0,Recette,Paiement client
+2024-01-03 11:04:00,CB - Nina Bernard,180.0,Recette,Paiement client
+2024-01-04 10:00:00,CB - Chloé Bernard,150.0,Recette,Paiement client
+2024-01-05 09:00:00,Assurance professionnelle,-45.0,Charge,Assurance
+2024-01-05 09:15:00,CB - Emma Mercier,25.0,Recette,Paiement client
+2024-01-05 10:22:00,CB - Elise Vincent,50.0,Recette,Paiement client
+2024-01-05 10:54:00,CB - Zoé Leroy,25.0,Recette,Paiement client
+2024-01-05 11:53:00,CB - Hana Robert,120.0,Recette,Paiement client
+2024-01-05 13:50:00,CB - Jade Girard,100.0,Recette,Paiement client
+2024-01-06 11:30:00,CB - Zoé Girard,220.0,Recette,Paiement client
+2024-01-08 09:00:00,Achats consommables,-24.02,Charge,Consommables
+2024-01-08 09:20:00,CB - Lucie Girard,65.0,Recette,Paiement client
+2024-01-08 10:21:00,CB - Louise Bertrand,120.0,Recette,Paiement client
+2024-01-08 11:26:00,CB - Zoé Morel,140.0,Recette,Paiement client
+2024-01-08 11:52:00,CB - Eva Fournier,50.0,Recette,Paiement client
+2024-01-09 09:45:00,CB - Chloé Petit,120.0,Recette,Paiement client
+2024-01-09 10:13:00,CB - Noémie Bernard,25.0,Recette,Paiement client
+2024-01-09 10:58:00,CB - Nina Mercier,100.0,Recette,Paiement client
+2024-01-10 09:00:00,Électricité,-120.0,Charge,Énergie
+2024-01-10 09:35:00,CB - Elise Thomas,100.0,Recette,Paiement client
+2024-01-12 09:00:00,Hébergement site web,-12.0,Charge,Site web
+2024-01-13 10:40:00,CB - Clara Dupont,110.0,Recette,Paiement client
+2024-01-13 11:15:00,CB - Nina Thomas,65.0,Recette,Paiement client
+2024-01-15 09:00:00,Achats consommables,-48.26,Charge,Consommables
+2024-01-15 09:55:00,CB - Amina Bertrand,140.0,Recette,Paiement client
+2024-01-15 10:51:00,CB - Anaïs Petit,110.0,Recette,Paiement client
+2024-01-15 11:34:00,CB - Clara Petit,75.0,Recette,Paiement client
+2024-01-15 12:05:00,CB - Anaïs Richard,25.0,Recette,Paiement client
+2024-01-15 13:30:00,CB - Zoé Robert,25.0,Recette,Paiement client
+2024-01-16 09:35:00,CB - Lina Vincent,100.0,Recette,Paiement client
+2024-01-16 10:09:00,CB - Océane Michel,25.0,Recette,Paiement client
+2024-01-17 10:37:00,CB - Océane Vincent,150.0,Recette,Paiement client
+2024-01-18 09:35:00,CB - Léa Dubois,100.0,Recette,Paiement client
+2024-01-18 10:15:00,CB - Agathe Leroy,90.0,Recette,Paiement client
+2024-01-18 10:56:00,CB - Inès Petit,75.0,Recette,Paiement client
+2024-01-20 10:45:00,CB - Maya Simon,120.0,Recette,Paiement client
+2024-01-22 09:00:00,Achats consommables,-83.9,Charge,Consommables
+2024-01-22 09:25:00,CB - Charlotte Robert,75.0,Recette,Paiement client
+2024-01-22 09:55:00,CB - Manon Michel,50.0,Recette,Paiement client
+2024-01-22 10:43:00,CB - Zoé Garcia,90.0,Recette,Paiement client
+2024-01-22 11:51:00,CB - Maëlys André,140.0,Recette,Paiement client
+2024-01-22 14:03:00,CB - Julie Garcia,50.0,Recette,Paiement client
+2024-01-22 14:40:00,CB - Clara Bernard,75.0,Recette,Paiement client
+2024-01-22 16:06:00,CB - Clara Legrand,110.0,Recette,Paiement client
+2024-01-23 09:50:00,CB - Marine Bertrand,130.0,Recette,Paiement client
+2024-01-23 10:37:00,CB - Manon Fournier,90.0,Recette,Paiement client
+2024-01-23 11:04:00,CB - Lucie Lefèvre,25.0,Recette,Paiement client
+2024-01-23 14:30:00,CB - Maya Lambert,180.0,Recette,Paiement client
+2024-01-23 14:52:00,CB - Clara Lefèvre,35.0,Recette,Paiement client
+2024-01-23 16:08:00,CB - Charlotte Simon,150.0,Recette,Paiement client
+2024-01-23 16:50:00,CB - Emma Bernard,75.0,Recette,Paiement client
+2024-01-24 10:00:00,CB - Alice Thomas,150.0,Recette,Paiement client
+2024-01-24 11:05:00,CB - Maëlys Michel,120.0,Recette,Paiement client
+2024-01-24 11:40:00,CB - Elise André,65.0,Recette,Paiement client
+2024-01-25 09:45:00,CB - Pauline Bertrand,120.0,Recette,Paiement client
+2024-01-25 10:13:00,CB - Pauline Petit,25.0,Recette,Paiement client
+2024-01-25 11:13:00,CB - Julie Leroy,120.0,Recette,Paiement client
+2024-01-25 12:16:00,CB - Océane Thomas,130.0,Recette,Paiement client
+2024-01-25 13:40:00,CB - Chloé Fournier,75.0,Recette,Paiement client
+2024-01-26 09:25:00,CB - Inès Mercier,75.0,Recette,Paiement client
+2024-01-26 10:51:00,CB - Clara André,180.0,Recette,Paiement client
+2024-01-27 10:40:00,CB - Chloé Bernard,110.0,Recette,Paiement client
+2024-01-27 12:10:00,CB - Zoé Dubois,110.0,Recette,Paiement client
+2024-01-29 09:00:00,Achats consommables,-36.96,Charge,Consommables
+2024-01-29 09:10:00,CB - Charlotte Robert,35.0,Recette,Paiement client
+2024-01-29 09:37:00,CB - Léa Lambert,50.0,Recette,Paiement client
+2024-01-29 11:23:00,CB - Zoé Girard,220.0,Recette,Paiement client
+2024-01-29 12:19:00,CB - Maëlys Mercier,100.0,Recette,Paiement client
+2024-01-29 13:25:00,CB - Clara Laurent,35.0,Recette,Paiement client
+2024-01-30 09:30:00,CB - Marine Garcia,90.0,Recette,Paiement client
+2024-01-31 09:45:00,CB - Jade Thomas,120.0,Recette,Paiement client
+2024-02-01 09:00:00,Loyer cabinet,-1200.0,Charge,Loyer
+2024-02-01 09:00:00,Frais compte pro,-15.0,Charge,Frais bancaires
+2024-02-01 09:00:00,Abonnement Planity,-80.0,Charge,Logiciel / abonnement
+2024-02-01 09:25:00,CB - Léa Vincent,75.0,Recette,Paiement client
+2024-02-01 10:23:00,CB - Louise Bertrand,110.0,Recette,Paiement client
+2024-02-01 10:59:00,CB - Amina Bonnet,25.0,Recette,Paiement client
+2024-02-02 09:30:00,CB - Margaux Richard,90.0,Recette,Paiement client
+2024-02-03 10:10:00,CB - Charlotte David,35.0,Recette,Paiement client
+2024-02-05 09:00:00,Assurance professionnelle,-45.0,Charge,Assurance
+2024-02-05 09:00:00,Achats consommables,-48.61,Charge,Consommables
+2024-02-05 09:45:00,CB - Chloé Garcia,35.0,Recette,Paiement client
+2024-02-05 10:39:00,CB - Emma Bertrand,110.0,Recette,Paiement client
+2024-02-05 11:53:00,CB - Elise David,140.0,Recette,Paiement client
+2024-02-05 12:18:00,CB - Nina Bonnet,25.0,Recette,Paiement client
+2024-02-06 09:45:00,CB - Zoé Morel,120.0,Recette,Paiement client
+2024-02-06 11:00:00,CB - Lucie Francois,150.0,Recette,Paiement client
+2024-02-07 09:45:00,CB - Clara Dupont,120.0,Recette,Paiement client
+2024-02-08 09:35:00,CB - Eva Durand,100.0,Recette,Paiement client
+2024-02-08 10:10:00,CB - Chloé Petit,75.0,Recette,Paiement client
+2024-02-09 09:20:00,CB - Sarah Vincent,65.0,Recette,Paiement client
+2024-02-09 10:00:00,CB - Agathe David,90.0,Recette,Paiement client
+2024-02-09 10:47:00,CB - Zoé Leroy,100.0,Recette,Paiement client
+2024-02-09 11:35:00,CB - Hana Robert,90.0,Recette,Paiement client
+2024-02-09 14:00:00,CB - Emma Mercier,120.0,Recette,Paiement client
+2024-02-10 09:00:00,Électricité,-120.0,Charge,Énergie
+2024-02-10 10:10:00,CB - Amina Roux,35.0,Recette,Paiement client
+2024-02-12 09:00:00,Hébergement site web,-12.0,Charge,Site web
+2024-02-12 09:00:00,Achats consommables,-30.25,Charge,Consommables
+2024-02-12 09:45:00,CB - Amina Bertrand,120.0,Recette,Paiement client
+2024-02-12 10:21:00,CB - Jade Girard,65.0,Recette,Paiement client
+2024-02-13 09:20:00,CB - Léa Fournier,65.0,Recette,Paiement client
+2024-02-13 10:10:00,CB - Lina Vincent,110.0,Recette,Paiement client
+2024-02-13 10:42:00,CB - Noémie Thomas,25.0,Recette,Paiement client
+2024-02-13 11:22:00,CB - Nina Mercier,90.0,Recette,Paiement client
+2024-02-13 14:10:00,CB - Noémie Bernard,140.0,Recette,Paiement client
+2024-02-15 09:45:00,CB - Maëlys André,120.0,Recette,Paiement client
+2024-02-15 10:24:00,CB - Sarah Lambert,25.0,Recette,Paiement client
+2024-02-16 09:10:00,CB - Eva Fournier,35.0,Recette,Paiement client
+2024-02-16 09:30:00,CB - Elise Vincent,25.0,Recette,Paiement client
+2024-02-19 09:00:00,Achats consommables,-80.73,Charge,Consommables
+2024-02-19 09:50:00,CB - Alice Thomas,130.0,Recette,Paiement client
+2024-02-19 11:15:00,CB - Clara André,180.0,Recette,Paiement client
+2024-02-19 11:56:00,CB - Charlotte Robert,75.0,Recette,Paiement client
+2024-02-19 13:50:00,CB - Anaïs Petit,100.0,Recette,Paiement client
+2024-02-19 16:04:00,CB - Zoé Robert,280.0,Recette,Paiement client
+2024-02-19 16:48:00,CB - Pauline Bertrand,90.0,Recette,Paiement client
+2024-02-19 17:59:00,CB - Anaïs Richard,150.0,Recette,Paiement client
+2024-02-20 09:45:00,CB - Charlotte Simon,120.0,Recette,Paiement client
+2024-02-20 10:11:00,CB - Louise Francois,25.0,Recette,Paiement client
+2024-02-20 11:36:00,CB - Maya Lambert,180.0,Recette,Paiement client
+2024-02-20 12:14:00,CB - Océane Michel,75.0,Recette,Paiement client
+2024-02-21 09:50:00,CB - Océane Vincent,130.0,Recette,Paiement client
+2024-02-21 10:40:00,CB - Chloé Bernard,110.0,Recette,Paiement client
+2024-02-21 11:28:00,CB - Maëlys Michel,100.0,Recette,Paiement client
+2024-02-21 11:46:00,CB - Jade Thomas,25.0,Recette,Paiement client
+2024-02-21 13:50:00,CB - Maya Simon,100.0,Recette,Paiement client
+2024-02-21 14:21:00,CB - Clara Dupont,65.0,Recette,Paiement client
+2024-02-21 14:49:00,CB - Lucie Vincent,25.0,Recette,Paiement client
+2024-02-23 10:15:00,CB - Zoé Girard,180.0,Recette,Paiement client
+2024-02-23 11:21:00,CB - Inès David,25.0,Recette,Paiement client
+2024-02-23 14:05:00,CB - Océane Thomas,130.0,Recette,Paiement client
+2024-02-23 14:37:00,CB - Clara Petit,65.0,Recette,Paiement client
+2024-02-24 10:30:00,CB - Marine Bertrand,90.0,Recette,Paiement client
+2024-02-24 10:56:00,CB - Nina Thomas,50.0,Recette,Paiement client
+2024-02-24 11:27:00,CB - Inès Petit,50.0,Recette,Paiement client
+2024-02-26 09:00:00,Achats consommables,-66.33,Charge,Consommables
+2024-02-26 09:20:00,CB - Inès Mercier,65.0,Recette,Paiement client
+2024-02-26 10:00:00,CB - Clara Legrand,90.0,Recette,Paiement client
+2024-02-26 10:41:00,CB - Léa Dubois,75.0,Recette,Paiement client
+2024-02-27 09:55:00,CB - Camille David,140.0,Recette,Paiement client
+2024-02-27 11:11:00,CB - Lucie Lefèvre,150.0,Recette,Paiement client
+2024-02-27 11:47:00,CB - Zoé Garcia,65.0,Recette,Paiement client
+2024-02-27 14:00:00,CB - Agathe Dubois,120.0,Recette,Paiement client
+2024-02-28 09:15:00,CB - Zoé Vincent,50.0,Recette,Paiement client
+2024-02-29 09:15:00,CB - Clara Laurent,50.0,Recette,Paiement client
+2024-02-29 09:38:00,CB - Clara Lefèvre,35.0,Recette,Paiement client
+2024-02-29 11:24:00,CB - Marine Garcia,75.0,Recette,Paiement client
+2024-02-29 12:14:00,CB - Julie Leroy,100.0,Recette,Paiement client
+2024-02-29 13:50:00,CB - Louise Bertrand,100.0,Recette,Paiement client
+2024-02-29 15:24:00,CB - Pauline Petit,110.0,Recette,Paiement client
+2024-02-29 15:51:00,CB - Chloé Fournier,50.0,Recette,Paiement client
+2024-03-01 09:00:00,Frais compte pro,-15.0,Charge,Frais bancaires
+2024-03-01 09:00:00,Loyer cabinet,-1200.0,Charge,Loyer
+2024-03-01 09:00:00,Abonnement Planity,-80.0,Charge,Logiciel / abonnement
+2024-03-01 09:50:00,CB - Elise David,130.0,Recette,Paiement client
+2024-03-01 10:59:00,CB - Nina Bernard,140.0,Recette,Paiement client
+2024-03-02 10:35:00,CB - Zoé Dubois,100.0,Recette,Paiement client
+2024-03-04 09:00:00,Achats consommables,-28.9,Charge,Consommables
+2024-03-04 09:50:00,CB - Emma Mercier,130.0,Recette,Paiement client
+2024-03-04 12:11:00,CB - Julie Garcia,35.0,Recette,Paiement client
+2024-03-04 13:30:00,CB - Léa Morel,50.0,Recette,Paiement client
+2024-03-04 14:10:00,CB - Maëlys Mercier,90.0,Recette,Paiement client
+2024-03-05 09:00:00,Assurance professionnelle,-45.0,Charge,Assurance
+2024-03-05 09:45:00,CB - Alice Michel,120.0,Recette,Paiement client
+2024-03-05 10:11:00,CB - Emma Bernard,35.0,Recette,Paiement client
+2024-03-06 09:55:00,CB - Agathe Leroy,65.0,Recette,Paiement client
+2024-03-06 10:25:00,CB - Chloé Richard,25.0,Recette,Paiement client
+2024-03-06 11:07:00,CB - Jade Thomas,75.0,Recette,Paiement client
+2024-03-07 10:15:00,CB - Amina Bonnet,180.0,Recette,Paiement client
+2024-03-07 11:31:00,CB - Noémie Bernard,140.0,Recette,Paiement client
+2024-03-09 10:35:00,CB - Zoé Morel,100.0,Recette,Paiement client
+2024-03-10 09:00:00,Électricité,-120.0,Charge,Énergie
+2024-03-11 09:00:00,Achats consommables,-52.22,Charge,Consommables
+2024-03-11 11:00:00,CB - Nina Bonnet,280.0,Recette,Paiement client
+2024-03-11 11:27:00,CB - Léa Vincent,50.0,Recette,Paiement client
+2024-03-11 11:55:00,CB - Léa Lambert,35.0,Recette,Paiement client
+2024-03-11 12:23:00,CB - Charlotte David,50.0,Recette,Paiement client
+2024-03-11 13:45:00,CB - Chloé Petit,90.0,Recette,Paiement client
+2024-03-12 09:00:00,Hébergement site web,-12.0,Charge,Site web
+2024-03-12 09:15:00,CB - Jade Robert,25.0,Recette,Paiement client
+2024-03-12 10:07:00,CB - Agathe David,100.0,Recette,Paiement client
+2024-03-12 10:41:00,CB - Julie Moreau,25.0,Recette,Paiement client
+2024-03-13 09:35:00,CB - Emma Bertrand,100.0,Recette,Paiement client
+2024-03-13 14:05:00,CB - Anaïs Richard,130.0,Recette,Paiement client
+2024-03-14 10:50:00,CB - Clara André,150.0,Recette,Paiement client
+2024-03-14 11:28:00,CB - Océane Michel,75.0,Recette,Paiement client
+2024-03-14 12:12:00,CB - Lina Vincent,90.0,Recette,Paiement client
+2024-03-15 09:00:00,Entretien machine électrolyse,-250.0,Charge,Maintenance
+2024-03-18 09:00:00,Achats consommables,-72.67,Charge,Consommables
+2024-03-18 09:20:00,CB - Hana Robert,65.0,Recette,Paiement client
+2024-03-18 10:23:00,CB - Alice Thomas,120.0,Recette,Paiement client
+2024-03-18 11:00:00,CB - Eva Durand,75.0,Recette,Paiement client
+2024-03-18 11:27:00,CB - Maya Lefèvre,25.0,Recette,Paiement client
+2024-03-18 13:50:00,CB - Pauline Bertrand,100.0,Recette,Paiement client
+2024-03-18 14:26:00,CB - Chloé Garcia,65.0,Recette,Paiement client
+2024-03-19 09:20:00,CB - Charlotte Robert,65.0,Recette,Paiement client
+2024-03-19 10:25:00,CB - Noémie Thomas,130.0,Recette,Paiement client
+2024-03-19 10:50:00,CB - Sarah Vincent,50.0,Recette,Paiement client
+2024-03-20 09:25:00,CB - Clara Dupont,75.0,Recette,Paiement client
+2024-03-20 10:33:00,CB - Chloé Bernard,130.0,Recette,Paiement client
+2024-03-21 11:00:00,CB - Sarah Lambert,280.0,Recette,Paiement client
+2024-03-21 12:07:00,CB - Charlotte Simon,130.0,Recette,Paiement client
+2024-03-21 13:40:00,CB - Nina Mercier,75.0,Recette,Paiement client
+2024-03-21 14:12:00,CB - Jade Girard,65.0,Recette,Paiement client
+2024-03-21 17:34:00,CB - Camille David,150.0,Recette,Paiement client
+2024-03-22 10:15:00,CB - Zoé Girard,180.0,Recette,Paiement client
+2024-03-22 11:28:00,CB - Maëlys Garcia,25.0,Recette,Paiement client
+2024-03-23 10:15:00,CB - Anaïs André,25.0,Recette,Paiement client
+2024-03-23 11:03:00,CB - Pauline Petit,90.0,Recette,Paiement client
+2024-03-25 09:00:00,Achats consommables,-50.2,Charge,Consommables
+2024-03-25 09:30:00,CB - Océane Thomas,90.0,Recette,Paiement client
+2024-03-26 09:05:00,CB - Léa Fournier,25.0,Recette,Paiement client
+2024-03-26 09:50:00,CB - Anaïs Petit,75.0,Recette,Paiement client
+2024-03-26 10:57:00,CB - Louise Francois,140.0,Recette,Paiement client
+2024-03-27 09:45:00,CB - Lucie Vincent,120.0,Recette,Paiement client
+2024-03-28 09:40:00,CB - Zoé Leroy,110.0,Recette,Paiement client
+2024-03-28 10:22:00,CB - Inès Mercier,75.0,Recette,Paiement client
+2024-03-28 11:23:00,CB - Emma Mercier,120.0,Recette,Paiement client
+2024-03-28 11:53:00,CB - Sarah Dubois,25.0,Recette,Paiement client
+2024-03-29 09:40:00,CB - Elise David,110.0,Recette,Paiement client
+2024-03-29 10:37:00,CB - Océane Vincent,100.0,Recette,Paiement client
+2024-03-29 11:00:00,CB - Eva Fournier,25.0,Recette,Paiement client
+2024-03-29 12:00:00,CB - Inès David,120.0,Recette,Paiement client
+2024-03-30 10:35:00,CB - Louise Bertrand,100.0,Recette,Paiement client
+2024-03-30 11:10:00,CB - Marine Bertrand,75.0,Recette,Paiement client
+2024-04-01 09:00:00,Frais compte pro,-15.0,Charge,Frais bancaires
+2024-04-01 09:00:00,Loyer cabinet,-1200.0,Charge,Loyer
+2024-04-01 09:00:00,Achats consommables,-54.79,Charge,Consommables
+2024-04-01 09:00:00,Abonnement Planity,-80.0,Charge,Logiciel / abonnement
+2024-04-01 09:45:00,CB - Noémie Bernard,120.0,Recette,Paiement client
+2024-04-01 10:32:00,CB - Marine Garcia,75.0,Recette,Paiement client
+2024-04-02 09:15:00,CB - Clara Fournier,50.0,Recette,Paiement client
+2024-04-02 09:47:00,CB - Clara Laurent,65.0,Recette,Paiement client
+2024-04-02 11:09:00,CB - Camille Bertrand,25.0,Recette,Paiement client
+2024-04-02 11:54:00,CB - Elise Thomas,100.0,Recette,Paiement client
+2024-04-03 09:20:00,CB - Inès Petit,65.0,Recette,Paiement client
+2024-04-03 10:07:00,CB - Clara Dupont,90.0,Recette,Paiement client
+2024-04-03 10:48:00,CB - Agathe Leroy,65.0,Recette,Paiement client
+2024-04-03 11:32:00,CB - Clara Legrand,75.0,Recette,Paiement client
+2024-04-05 09:00:00,Assurance professionnelle,-45.0,Charge,Assurance
+2024-04-05 09:05:00,CB - Clara Petit,25.0,Recette,Paiement client
+2024-04-06 10:20:00,CB - Zoé Garcia,65.0,Recette,Paiement client
+2024-04-06 10:55:00,CB - Julie Leroy,65.0,Recette,Paiement client
+2024-04-06 11:42:00,CB - Chloé Fournier,90.0,Recette,Paiement client
+2024-04-08 09:00:00,Achats consommables,-68.23,Charge,Consommables
+2024-04-08 10:30:00,CB - Zoé Robert,220.0,Recette,Paiement client
+2024-04-08 11:05:00,CB - Zoé Vincent,75.0,Recette,Paiement client
+2024-04-08 12:09:00,CB - Anaïs Richard,120.0,Recette,Paiement client
+2024-04-08 13:35:00,CB - Océane Michel,65.0,Recette,Paiement client
+2024-04-08 14:12:00,CB - Manon Fournier,75.0,Recette,Paiement client
+2024-04-08 14:32:00,CB - Clara Lefèvre,25.0,Recette,Paiement client
+2024-04-08 15:12:00,CB - Zoé Dubois,75.0,Recette,Paiement client
+2024-04-08 15:39:00,CB - Léa Dubois,35.0,Recette,Paiement client
+2024-04-09 09:20:00,CB - Elise André,65.0,Recette,Paiement client
+2024-04-10 09:00:00,Électricité,-120.0,Charge,Énergie
+2024-04-10 09:20:00,CB - Maëlys Mercier,65.0,Recette,Paiement client
+2024-04-10 11:15:00,CB - Margaux Richard,65.0,Recette,Paiement client
+2024-04-11 10:37:00,CB - Alice Michel,90.0,Recette,Paiement client
+2024-04-11 11:49:00,CB - Noémie Thomas,140.0,Recette,Paiement client
+2024-04-12 09:00:00,Hébergement site web,-12.0,Charge,Site web
+2024-04-12 09:15:00,CB - Léa Morel,50.0,Recette,Paiement client
+2024-04-12 09:52:00,CB - Jade Thomas,75.0,Recette,Paiement client
+2024-04-13 11:30:00,CB - Sarah Lambert,220.0,Recette,Paiement client
+2024-04-13 12:17:00,CB - Maëlys André,100.0,Recette,Paiement client
+2024-04-13 12:54:00,CB - Zoé Morel,75.0,Recette,Paiement client
+2024-04-13 13:47:00,CB - Amina Bertrand,100.0,Recette,Paiement client
+2024-04-15 09:00:00,Achats consommables,-36.92,Charge,Consommables
+2024-04-15 09:20:00,CB - Chloé Petit,65.0,Recette,Paiement client
+2024-04-15 10:19:00,CB - Agathe Dubois,120.0,Recette,Paiement client
+2024-04-15 11:33:00,CB - Lucie Lefèvre,150.0,Recette,Paiement client
+2024-04-15 14:00:00,CB - Camille David,120.0,Recette,Paiement client
+2024-04-16 09:30:00,CB - Agathe David,90.0,Recette,Paiement client
+2024-04-16 11:05:00,CB - Julie Michel,25.0,Recette,Paiement client
+2024-04-16 12:02:00,CB - Julie Moreau,100.0,Recette,Paiement client
+2024-04-16 14:00:00,CB - Alice Thomas,120.0,Recette,Paiement client
+2024-04-17 09:35:00,CB - Pauline Petit,100.0,Recette,Paiement client
+2024-04-17 10:23:00,CB - Pauline Bertrand,100.0,Recette,Paiement client
+2024-04-18 09:50:00,CB - Louise Francois,130.0,Recette,Paiement client
+2024-04-19 09:10:00,CB - Charlotte David,35.0,Recette,Paiement client
+2024-04-19 09:58:00,CB - Chloé Bernard,90.0,Recette,Paiement client
+2024-04-19 10:29:00,CB - Zoé Martin,25.0,Recette,Paiement client
+2024-04-19 11:24:00,CB - Lucie Vincent,120.0,Recette,Paiement client
+2024-04-19 12:01:00,CB - Clara Dupont,75.0,Recette,Paiement client
+2024-04-20 10:30:00,CB - Charlotte Robert,90.0,Recette,Paiement client
+2024-04-22 09:00:00,Achats consommables,-43.51,Charge,Consommables
+2024-04-22 09:50:00,CB - Inès David,130.0,Recette,Paiement client
+2024-04-22 10:43:00,CB - Emma Bertrand,100.0,Recette,Paiement client
+2024-04-22 11:52:00,CB - Zoé Girard,140.0,Recette,Paiement client
+2024-04-22 14:10:00,CB - Maya Lambert,140.0,Recette,Paiement client
+2024-04-22 14:40:00,CB - Léa Vincent,50.0,Recette,Paiement client
+2024-04-22 15:40:00,CB - Charlotte Simon,130.0,Recette,Paiement client
+2024-04-22 16:39:00,CB - Lucie Francois,120.0,Recette,Paiement client
+2024-04-22 17:12:00,CB - Inès Moreau,25.0,Recette,Paiement client
+2024-04-23 09:30:00,CB - Maëlys Michel,90.0,Recette,Paiement client
+2024-04-24 10:00:00,CB - Amina Bonnet,150.0,Recette,Paiement client
+2024-04-24 11:00:00,CB - Zoé Leroy,100.0,Recette,Paiement client
+2024-04-25 09:15:00,CB - Hana Robert,50.0,Recette,Paiement client
+2024-04-25 10:12:00,CB - Emma Mercier,110.0,Recette,Paiement client
+2024-04-26 09:50:00,CB - Maëlys Garcia,130.0,Recette,Paiement client
+2024-04-27 10:40:00,CB - Anaïs André,110.0,Recette,Paiement client
+2024-04-27 11:07:00,CB - Pauline Fournier,25.0,Recette,Paiement client
+2024-04-27 11:58:00,CB - Océane Thomas,100.0,Recette,Paiement client
+2024-04-29 09:00:00,Achats consommables,-45.01,Charge,Consommables
+2024-04-29 09:45:00,CB - Elise David,120.0,Recette,Paiement client
+2024-04-29 11:34:00,CB - Nina Bonnet,220.0,Recette,Paiement client
+2024-04-29 12:13:00,CB - Nina Mercier,75.0,Recette,Paiement client
+2024-04-29 13:40:00,CB - Eva Durand,75.0,Recette,Paiement client
+2024-04-29 14:11:00,CB - Elise Fournier,25.0,Recette,Paiement client
+2024-04-29 14:56:00,CB - Noémie Bernard,100.0,Recette,Paiement client
+2024-04-30 09:20:00,CB - Sarah Vincent,65.0,Recette,Paiement client
+2024-05-01 09:00:00,Frais compte pro,-15.0,Charge,Frais bancaires
+2024-05-01 09:00:00,Abonnement Planity,-80.0,Charge,Logiciel / abonnement
+2024-05-01 09:00:00,Loyer cabinet,-1200.0,Charge,Loyer
+2024-05-01 09:30:00,CB - Louise Bertrand,90.0,Recette,Paiement client
+2024-05-02 09:35:00,CB - Jade Girard,35.0,Recette,Paiement client
+2024-05-02 10:35:00,CB - Sarah Dubois,130.0,Recette,Paiement client
+2024-05-03 10:15:00,CB - Chloé Richard,120.0,Recette,Paiement client
+2024-05-03 10:48:00,CB - Alice Francois,25.0,Recette,Paiement client
+2024-05-03 11:22:00,CB - Maya Simon,65.0,Recette,Paiement client
+2024-05-04 10:25:00,CB - Elise Thomas,75.0,Recette,Paiement client
+2024-05-04 10:50:00,CB - Anaïs Petit,50.0,Recette,Paiement client
+2024-05-04 11:41:00,CB - Clara Dupont,100.0,Recette,Paiement client
+2024-05-05 09:00:00,Assurance professionnelle,-45.0,Charge,Assurance
+2024-05-06 09:00:00,Achats consommables,-34.06,Charge,Consommables
+2024-05-06 09:30:00,CB - Océane Michel,90.0,Recette,Paiement client
+2024-05-06 11:51:00,CB - Zoé Robert,180.0,Recette,Paiement client
+2024-05-07 09:25:00,CB - Nina Bernard,75.0,Recette,Paiement client
+2024-05-07 10:05:00,CB - Océane Vincent,90.0,Recette,Paiement client
+2024-05-07 11:15:00,CB - Camille Bertrand,150.0,Recette,Paiement client
+2024-05-07 11:47:00,CB - Clara Laurent,50.0,Recette,Paiement client
+2024-05-07 12:23:00,CB - Charlotte Robert,25.0,Recette,Paiement client
+2024-05-08 10:30:00,CB - Sarah Lambert,220.0,Recette,Paiement client
+2024-05-09 09:35:00,CB - Julie Moreau,100.0,Recette,Paiement client
+2024-05-09 10:38:00,CB - Jade Robert,130.0,Recette,Paiement client
+2024-05-10 09:00:00,Électricité,-120.0,Charge,Énergie
+2024-05-11 10:50:00,CB - Clara André,130.0,Recette,Paiement client
+2024-05-12 09:00:00,Hébergement site web,-12.0,Charge,Site web
+2024-05-13 09:00:00,Achats consommables,-57.35,Charge,Consommables
+2024-05-13 09:20:00,CB - Clara Legrand,65.0,Recette,Paiement client
+2024-05-13 10:18:00,CB - Agathe Dubois,110.0,Recette,Paiement client
+2024-05-13 11:19:00,CB - Louise Francois,120.0,Recette,Paiement client
+2024-05-13 12:11:00,CB - Lucie Lefèvre,100.0,Recette,Paiement client
+2024-05-13 14:00:00,CB - Camille David,120.0,Recette,Paiement client
+2024-05-14 11:05:00,CB - Sarah Garcia,180.0,Recette,Paiement client
+2024-05-14 11:41:00,CB - Clara Fournier,65.0,Recette,Paiement client
+2024-05-15 09:15:00,CB - Inès Petit,50.0,Recette,Paiement client
+2024-05-15 09:40:00,CB - Eva André,25.0,Recette,Paiement client
+2024-05-15 10:06:00,CB - Julie Leroy,50.0,Recette,Paiement client
+2024-05-15 10:51:00,CB - Maëlys André,90.0,Recette,Paiement client
+2024-05-15 14:15:00,CB - Maya Lefèvre,150.0,Recette,Paiement client
+2024-05-15 14:53:00,CB - Chloé Fournier,75.0,Recette,Paiement client
+2024-05-16 09:45:00,CB - Inès David,120.0,Recette,Paiement client
+2024-05-16 10:15:00,CB - Hana Mercier,25.0,Recette,Paiement client
+2024-05-17 09:15:00,CB - Zoé Dubois,50.0,Recette,Paiement client
+2024-05-17 09:40:00,CB - Margaux Richard,50.0,Recette,Paiement client
+2024-05-18 10:25:00,CB - Zoé Garcia,75.0,Recette,Paiement client
+2024-05-18 10:55:00,CB - Marine Morel,25.0,Recette,Paiement client
+2024-05-18 11:40:00,CB - Amina Bertrand,90.0,Recette,Paiement client
+2024-05-18 12:31:00,CB - Alice Thomas,110.0,Recette,Paiement client
+2024-05-20 09:00:00,Achats consommables,-70.17,Charge,Consommables
+2024-05-20 09:30:00,CB - Pauline Bertrand,90.0,Recette,Paiement client
+2024-05-20 10:05:00,CB - Zoé Vincent,50.0,Recette,Paiement client
+2024-05-20 11:05:00,CB - Maëlys Garcia,130.0,Recette,Paiement client
+2024-05-20 11:42:00,CB - Maëlys Mercier,75.0,Recette,Paiement client
+2024-05-20 12:22:00,CB - Manon Fournier,50.0,Recette,Paiement client
+2024-05-20 13:30:00,CB - Alice Michel,50.0,Recette,Paiement client
+2024-05-20 14:06:00,CB - Anaïs André,75.0,Recette,Paiement client
+2024-05-20 14:41:00,CB - Zoé Morel,75.0,Recette,Paiement client
+2024-05-20 15:19:00,CB - Lina Vincent,75.0,Recette,Paiement client
+2024-05-21 09:40:00,CB - Chloé Bernard,110.0,Recette,Paiement client
+2024-05-21 10:56:00,CB - Julie Michel,150.0,Recette,Paiement client
+2024-05-21 11:22:00,CB - Agathe Bernard,25.0,Recette,Paiement client
+2024-05-21 12:01:00,CB - Elise André,75.0,Recette,Paiement client
+2024-05-21 13:35:00,CB - Jade Thomas,65.0,Recette,Paiement client
+2024-05-21 14:22:00,CB - Clara Dupont,100.0,Recette,Paiement client
+2024-05-22 09:52:00,CB - Maëlys Bonnet,25.0,Recette,Paiement client
+2024-05-22 10:52:00,CB - Lucie Francois,120.0,Recette,Paiement client
+2024-05-22 11:49:00,CB - Amina Bonnet,120.0,Recette,Paiement client
+2024-05-23 09:20:00,CB - Zoé Leroy,65.0,Recette,Paiement client
+2024-05-23 09:55:00,CB - Agathe David,65.0,Recette,Paiement client
+2024-05-23 11:03:00,CB - Zoé Girard,130.0,Recette,Paiement client
+2024-05-23 11:45:00,CB - Océane Dubois,90.0,Recette,Paiement client
+2024-05-24 10:00:00,CB - Zoé Martin,150.0,Recette,Paiement client
+2024-05-24 10:33:00,CB - Léa Morel,65.0,Recette,Paiement client
+2024-05-25 10:35:00,CB - Emma Mercier,100.0,Recette,Paiement client
+2024-05-25 11:45:00,CB - Sarah Dubois,150.0,Recette,Paiement client
+2024-05-25 12:24:00,CB - Charlotte Robert,75.0,Recette,Paiement client
+2024-05-27 09:00:00,Achats consommables,-24.51,Charge,Consommables
+2024-05-27 10:30:00,CB - Nina Bonnet,220.0,Recette,Paiement client
+2024-05-27 11:30:00,CB - Maya Lambert,110.0,Recette,Paiement client
+2024-05-27 13:50:00,CB - Charlotte Simon,100.0,Recette,Paiement client
+2024-05-27 15:25:00,CB - Inès Moreau,180.0,Recette,Paiement client
+2024-05-28 09:45:00,CB - Chloé Richard,120.0,Recette,Paiement client
+2024-05-28 10:32:00,CB - Maëlys Michel,90.0,Recette,Paiement client
+2024-05-29 09:40:00,CB - Noémie Bernard,110.0,Recette,Paiement client
+2024-05-30 10:15:00,CB - Camille Bertrand,180.0,Recette,Paiement client
+2024-05-31 09:10:00,CB - Charlotte David,35.0,Recette,Paiement client
+2024-06-01 09:00:00,Loyer cabinet,-1200.0,Charge,Loyer
+2024-06-01 09:00:00,Frais compte pro,-15.0,Charge,Frais bancaires
+2024-06-01 09:00:00,Abonnement Planity,-80.0,Charge,Logiciel / abonnement
+2024-06-01 10:25:00,CB - Océane Thomas,75.0,Recette,Paiement client
+2024-06-01 11:53:00,CB - Pauline Fournier,180.0,Recette,Paiement client
+2024-06-03 09:00:00,Achats consommables,-57.6,Charge,Consommables
+2024-06-03 09:15:00,CB - Emma Bertrand,50.0,Recette,Paiement client
+2024-06-03 10:26:00,CB - Océane Michel,75.0,Recette,Paiement client
+2024-06-03 11:16:00,CB - Jade Robert,100.0,Recette,Paiement client
+2024-06-03 12:14:00,CB - Elise Fournier,110.0,Recette,Paiement client
+2024-06-03 13:45:00,CB - Julie Moreau,90.0,Recette,Paiement client
+2024-06-04 09:45:00,CB - Anaïs Richard,120.0,Recette,Paiement client
+2024-06-04 10:29:00,CB - Agathe Leroy,75.0,Recette,Paiement client
+2024-06-04 11:48:00,CB - Zoé Robert,150.0,Recette,Paiement client
+2024-06-04 12:17:00,CB - Pauline Bernard,25.0,Recette,Paiement client
+2024-06-05 09:00:00,Assurance professionnelle,-45.0,Charge,Assurance
+2024-06-05 09:15:00,CB - Léa Durand,25.0,Recette,Paiement client
+2024-06-05 10:07:00,CB - Louise Bertrand,110.0,Recette,Paiement client
+2024-06-05 11:21:00,CB - Sarah Lambert,150.0,Recette,Paiement client
+2024-06-06 09:15:00,CB - Alice Richard,25.0,Recette,Paiement client
+2024-06-06 09:35:00,CB - Hana Robert,35.0,Recette,Paiement client
+2024-06-06 10:14:00,CB - Clara Dupont,65.0,Recette,Paiement client
+2024-06-06 11:39:00,CB - Sarah Garcia,180.0,Recette,Paiement client
+2024-06-07 10:20:00,CB - Alice Francois,140.0,Recette,Paiement client
+2024-06-08 10:10:00,CB - Inès Mercier,35.0,Recette,Paiement client
+2024-06-08 10:38:00,CB - Chloé Durand,25.0,Recette,Paiement client
+2024-06-08 11:21:00,CB - Elise Thomas,75.0,Recette,Paiement client
+2024-06-10 09:00:00,Achats consommables,-67.04,Charge,Consommables
+2024-06-10 09:00:00,Électricité,-120.0,Charge,Énergie
+2024-06-10 10:53:00,CB - Louise Francois,120.0,Recette,Paiement client
+2024-06-10 11:31:00,CB - Nina Mercier,65.0,Recette,Paiement client
+2024-06-11 09:25:00,CB - Maya Simon,75.0,Recette,Paiement client
+2024-06-11 10:19:00,CB - Lucie Vincent,100.0,Recette,Paiement client
+2024-06-11 10:57:00,CB - Charlotte Robert,75.0,Recette,Paiement client
+2024-06-12 09:00:00,Hébergement site web,-12.0,Charge,Site web
+2024-06-12 10:32:00,CB - Camille David,130.0,Recette,Paiement client
+2024-06-12 12:02:00,CB - Lucie Lefèvre,120.0,Recette,Paiement client
+2024-06-12 13:55:00,CB - Clara André,110.0,Recette,Paiement client
+2024-06-13 09:55:00,CB - Maëlys Garcia,140.0,Recette,Paiement client
+2024-06-13 10:45:00,CB - Inès David,110.0,Recette,Paiement client
+2024-06-13 11:28:00,CB - Nina Bernard,90.0,Recette,Paiement client
+2024-06-13 11:54:00,CB - Clara Laurent,35.0,Recette,Paiement client
+2024-06-13 14:15:00,CB - Julie Michel,150.0,Recette,Paiement client
+2024-06-14 09:25:00,CB - Anaïs André,75.0,Recette,Paiement client
+2024-06-14 10:10:00,CB - Marine Bertrand,75.0,Recette,Paiement client
+2024-06-14 10:45:00,CB - Pauline Petit,75.0,Recette,Paiement client
+2024-06-15 09:00:00,Entretien machine électrolyse,-250.0,Charge,Maintenance
+2024-06-15 10:25:00,CB - Océane Dubois,75.0,Recette,Paiement client
+2024-06-15 11:22:00,CB - Anaïs Petit,75.0,Recette,Paiement client
+2024-06-17 09:00:00,Achats consommables,-49.31,Charge,Consommables
+2024-06-17 09:50:00,CB - Zoé Martin,130.0,Recette,Paiement client
+2024-06-17 10:19:00,CB - Manon Bertrand,25.0,Recette,Paiement client
+2024-06-18 09:15:00,CB - Océane Vincent,50.0,Recette,Paiement client
+2024-06-19 10:40:00,CB - Manon Martin,25.0,Recette,Paiement client
+2024-06-19 12:18:00,CB - Inès Moreau,180.0,Recette,Paiement client
+2024-06-19 13:30:00,CB - Lucie Lefèvre,25.0,Recette,Paiement client
+2024-06-19 14:10:00,CB - Maëlys André,75.0,Recette,Paiement client
+2024-06-19 15:16:00,CB - Sarah Dubois,130.0,Recette,Paiement client
+2024-06-20 09:45:00,CB - Hana Mercier,120.0,Recette,Paiement client
+2024-06-21 09:15:00,CB - Hana André,25.0,Recette,Paiement client
+2024-06-21 09:43:00,CB - Julie Petit,25.0,Recette,Paiement client
+2024-06-21 10:42:00,CB - Amina Bonnet,120.0,Recette,Paiement client
+2024-06-22 10:30:00,CB - Alice Thomas,90.0,Recette,Paiement client
+2024-06-22 11:26:00,CB - Marine Morel,110.0,Recette,Paiement client
+2024-06-24 09:00:00,Achats consommables,-62.86,Charge,Consommables
+2024-06-24 09:10:00,CB - Clara Legrand,35.0,Recette,Paiement client
+2024-06-24 09:53:00,CB - Lucie Francois,75.0,Recette,Paiement client
+2024-06-24 10:30:00,CB - Zoé Leroy,75.0,Recette,Paiement client
+2024-06-24 11:10:00,CB - Pauline Bertrand,90.0,Recette,Paiement client
+2024-06-24 12:02:00,CB - Chloé Richard,110.0,Recette,Paiement client
+2024-06-24 13:45:00,CB - Amina Bertrand,90.0,Recette,Paiement client
+2024-06-24 14:20:00,CB - Margaux Vincent,25.0,Recette,Paiement client
+2024-06-24 15:30:00,CB - Camille Bertrand,150.0,Recette,Paiement client
+2024-06-24 16:37:00,CB - Pauline Fournier,140.0,Recette,Paiement client
+2024-06-25 09:10:00,CB - Clara Dupont,35.0,Recette,Paiement client
+2024-06-25 10:27:00,CB - Agathe Bernard,150.0,Recette,Paiement client
+2024-06-25 12:11:00,CB - Nina Bonnet,180.0,Recette,Paiement client
+2024-06-25 13:40:00,CB - Margaux Richard,75.0,Recette,Paiement client
+2024-06-26 09:15:00,CB - Lucie Lefèvre,25.0,Recette,Paiement client
+2024-06-26 09:54:00,CB - Emma Mercier,75.0,Recette,Paiement client
+2024-06-26 10:33:00,CB - Lina Vincent,75.0,Recette,Paiement client
+2024-06-26 11:55:00,CB - Chloé Fournier,35.0,Recette,Paiement client
+2024-06-26 15:37:00,CB - Julie Leroy,35.0,Recette,Paiement client
+2024-06-28 09:15:00,CB - Zoé Morel,50.0,Recette,Paiement client
+2024-06-28 09:43:00,CB - Zoé Dubois,35.0,Recette,Paiement client
+2024-06-29 10:15:00,CB - Eva Lefèvre,25.0,Recette,Paiement client
+2024-07-01 09:00:00,Loyer cabinet,-1200.0,Charge,Loyer
+2024-07-01 09:00:00,Frais compte pro,-15.0,Charge,Frais bancaires
+2024-07-01 09:00:00,Abonnement Planity,-80.0,Charge,Logiciel / abonnement
+2024-07-01 09:00:00,Achats consommables,-72.4,Charge,Consommables
+2024-07-01 10:00:00,CB - Alice Francois,150.0,Recette,Paiement client
+2024-07-01 11:17:00,CB - Chloé Petit,90.0,Recette,Paiement client
+2024-07-01 12:07:00,CB - Noémie Bernard,100.0,Recette,Paiement client
+2024-07-01 14:00:00,CB - Jade Robert,120.0,Recette,Paiement client
+2024-07-01 14:51:00,CB - Julie Moreau,110.0,Recette,Paiement client
+2024-07-01 15:40:00,CB - Noémie Thomas,100.0,Recette,Paiement client
+2024-07-01 15:56:00,CB - Alice Michel,25.0,Recette,Paiement client
+2024-07-01 17:15:00,CB - Sarah Garcia,150.0,Recette,Paiement client
+2024-07-01 17:35:00,CB - Agathe David,35.0,Recette,Paiement client
+2024-07-01 18:11:00,CB - Charlotte Robert,50.0,Recette,Paiement client
+2024-07-02 09:10:00,CB - Jade Thomas,35.0,Recette,Paiement client
+2024-07-03 09:15:00,CB - Pauline Lefèvre,25.0,Recette,Paiement client
+2024-07-03 10:31:00,CB - Maya Lambert,75.0,Recette,Paiement client
+2024-07-04 09:40:00,CB - Elise David,110.0,Recette,Paiement client
+2024-07-04 10:13:00,CB - Océane Michel,65.0,Recette,Paiement client
+2024-07-04 11:07:00,CB - Charlotte Robert,110.0,Recette,Paiement client
+2024-07-04 11:54:00,CB - Maëlys Michel,90.0,Recette,Paiement client
+2024-07-05 09:00:00,Assurance professionnelle,-45.0,Charge,Assurance
+2024-07-05 09:55:00,CB - Sarah Lambert,140.0,Recette,Paiement client
+2024-07-06 10:45:00,CB - Anaïs Richard,120.0,Recette,Paiement client
+2024-07-06 11:50:00,CB - Zoé Robert,140.0,Recette,Paiement client
+2024-07-08 09:00:00,Achats consommables,-49.03,Charge,Consommables
+2024-07-08 09:50:00,CB - Maya Lefèvre,130.0,Recette,Paiement client
+2024-07-08 10:38:00,CB - Louise Francois,90.0,Recette,Paiement client
+2024-07-08 12:17:00,CB - Julie Michel,130.0,Recette,Paiement client
+2024-07-08 13:35:00,CB - Océane Thomas,65.0,Recette,Paiement client
+2024-07-09 10:08:00,CB - Agathe Leroy,65.0,Recette,Paiement client
+2024-07-10 09:00:00,Électricité,-120.0,Charge,Énergie
+2024-07-10 09:25:00,CB - Océane Dubois,75.0,Recette,Paiement client
+2024-07-10 10:40:00,CB - Léa Durand,150.0,Recette,Paiement client
+2024-07-11 09:35:00,CB - Zoé Martin,100.0,Recette,Paiement client
+2024-07-11 10:06:00,CB - Clara Dupont,65.0,Recette,Paiement client
+2024-07-11 10:46:00,CB - Anaïs André,75.0,Recette,Paiement client
+2024-07-11 12:01:00,CB - Alice Richard,150.0,Recette,Paiement client
+2024-07-12 09:00:00,Hébergement site web,-12.0,Charge,Site web
+2024-07-12 10:00:00,CB - Eva André,150.0,Recette,Paiement client
+2024-07-12 10:31:00,CB - Camille Thomas,25.0,Recette,Paiement client
+2024-07-12 11:20:00,CB - Louise Bertrand,90.0,Recette,Paiement client
+2024-07-12 14:05:00,CB - Manon Simon,130.0,Recette,Paiement client
+2024-07-13 10:35:00,CB - Chloé Durand,100.0,Recette,Paiement client
+2024-07-13 11:32:00,CB - Hana Mercier,120.0,Recette,Paiement client
+2024-07-13 12:21:00,CB - Inès David,90.0,Recette,Paiement client
+2024-07-15 09:00:00,Achats consommables,-26.2,Charge,Consommables
+2024-07-15 09:30:00,CB - Agathe Dubois,90.0,Recette,Paiement client
+2024-07-15 11:22:00,CB - Inès Moreau,150.0,Recette,Paiement client
+2024-07-15 13:50:00,CB - Marine Morel,100.0,Recette,Paiement client
+2024-07-15 14:32:00,CB - Elise Thomas,90.0,Recette,Paiement client
+2024-07-16 09:40:00,CB - Sarah Dubois,110.0,Recette,Paiement client
+2024-07-16 10:25:00,CB - Pauline Petit,100.0,Recette,Paiement client
+2024-07-17 09:45:00,CB - Clara André,120.0,Recette,Paiement client
+2024-07-18 09:55:00,CB - Agathe Bernard,140.0,Recette,Paiement client
+2024-07-19 10:30:00,CB - Maëlys Bonnet,220.0,Recette,Paiement client
+2024-07-19 11:40:00,CB - Pauline Fournier,140.0,Recette,Paiement client
+2024-07-20 11:00:00,CB - Clara Robert,150.0,Recette,Paiement client
+2024-07-22 09:00:00,Achats consommables,-60.15,Charge,Consommables
+2024-07-22 09:50:00,CB - Camille Bertrand,130.0,Recette,Paiement client
+2024-07-22 10:39:00,CB - Elise Fournier,100.0,Recette,Paiement client
+2024-07-22 11:06:00,CB - Marine Garcia,50.0,Recette,Paiement client
+2024-07-22 11:36:00,CB - Clara Laurent,35.0,Recette,Paiement client
+2024-07-22 12:05:00,CB - Nina Bernard,35.0,Recette,Paiement client
+2024-07-22 13:50:00,CB - Manon Bertrand,100.0,Recette,Paiement client
+2024-07-23 09:30:00,CB - Chloé Richard,90.0,Recette,Paiement client
+2024-07-23 10:30:00,CB - Maya Simon,25.0,Recette,Paiement client
+2024-07-24 10:15:00,CB - Lucie Lefèvre,180.0,Recette,Paiement client
+2024-07-24 10:57:00,CB - Manon Martin,90.0,Recette,Paiement client
+2024-07-25 09:15:00,CB - Hana Durand,25.0,Recette,Paiement client
+2024-07-25 10:17:00,CB - Alice Francois,110.0,Recette,Paiement client
+2024-07-26 09:35:00,CB - Zoé Leroy,100.0,Recette,Paiement client
+2024-07-26 10:28:00,CB - Hana André,110.0,Recette,Paiement client
+2024-07-26 15:15:00,CB - Julie Petit,280.0,Recette,Paiement client
+2024-07-27 10:55:00,CB - Nina Bonnet,140.0,Recette,Paiement client
+2024-07-29 09:00:00,Achats consommables,-43.11,Charge,Consommables
+2024-07-29 09:40:00,CB - Lucie Francois,110.0,Recette,Paiement client
+2024-07-29 10:57:00,CB - Sarah Garcia,150.0,Recette,Paiement client
+2024-07-29 11:36:00,CB - Alice Thomas,65.0,Recette,Paiement client
+2024-07-29 13:50:00,CB - Charlotte Robert,100.0,Recette,Paiement client
+2024-07-30 09:25:00,CB - Pauline Bertrand,75.0,Recette,Paiement client
+2024-07-31 09:40:00,CB - Julie Moreau,110.0,Recette,Paiement client
+2024-07-31 11:03:00,CB - Emma Mercier,90.0,Recette,Paiement client
+2024-07-31 14:45:00,CB - Lucie Lefèvre,220.0,Recette,Paiement client
+2024-08-01 09:00:00,Abonnement Planity,-80.0,Charge,Logiciel / abonnement
+2024-08-01 09:00:00,Frais compte pro,-15.0,Charge,Frais bancaires
+2024-08-01 09:00:00,Loyer cabinet,-1200.0,Charge,Loyer
+2024-08-01 09:57:00,CB - Clara Dupont,75.0,Recette,Paiement client
+2024-08-01 10:38:00,CB - Noémie Thomas,90.0,Recette,Paiement client
+2024-08-01 11:23:00,CB - Pauline Bernard,75.0,Recette,Paiement client
+2024-08-02 09:20:00,CB - Amina Bertrand,65.0,Recette,Paiement client
+2024-08-02 10:34:00,CB - Léa Durand,140.0,Recette,Paiement client
+2024-08-03 10:40:00,CB - Zoé Girard,110.0,Recette,Paiement client
+2024-08-03 11:13:00,CB - Eva Lefèvre,65.0,Recette,Paiement client
+2024-08-03 12:08:00,CB - Alice Richard,120.0,Recette,Paiement client
+2024-08-05 09:00:00,Assurance professionnelle,-45.0,Charge,Assurance
+2024-08-05 09:00:00,Achats consommables,-48.29,Charge,Consommables
+2024-08-05 09:30:00,CB - Noémie Bernard,90.0,Recette,Paiement client
+2024-08-05 10:51:00,CB - Manon Simon,130.0,Recette,Paiement client
+2024-08-05 11:40:00,CB - Chloé Durand,100.0,Recette,Paiement client
+2024-08-06 09:55:00,CB - Sarah Lambert,140.0,Recette,Paiement client
+2024-08-06 11:01:00,CB - Maya Lefèvre,130.0,Recette,Paiement client
+2024-08-06 11:36:00,CB - Océane Michel,50.0,Recette,Paiement client
+2024-08-06 14:50:00,CB - Margaux Richard,65.0,Recette,Paiement client
+2024-08-07 09:35:00,CB - Hana Mercier,100.0,Recette,Paiement client
+2024-08-07 10:29:00,CB - Zoé Martin,110.0,Recette,Paiement client
+2024-08-07 11:44:00,CB - Pauline Lefèvre,150.0,Recette,Paiement client
+2024-08-09 09:10:00,CB - Zoé Morel,35.0,Recette,Paiement client
+2024-08-09 09:35:00,CB - Charlotte Robert,50.0,Recette,Paiement client
+2024-08-09 10:57:00,CB - Anaïs André,65.0,Recette,Paiement client
+2024-08-10 09:00:00,Électricité,-120.0,Charge,Énergie
+2024-08-10 10:40:00,CB - Maëlys Garcia,110.0,Recette,Paiement client
+2024-08-10 11:44:00,CB - Zoé Robert,120.0,Recette,Paiement client
+2024-08-10 12:29:00,CB - Elise David,100.0,Recette,Paiement client
+2024-08-10 13:14:00,CB - Anaïs Richard,90.0,Recette,Paiement client
+2024-08-12 09:00:00,Achats consommables,-42.4,Charge,Consommables
+2024-08-12 09:00:00,Hébergement site web,-12.0,Charge,Site web
+2024-08-12 09:25:00,CB - Chloé Petit,75.0,Recette,Paiement client
+2024-08-12 10:35:00,CB - Inès Moreau,130.0,Recette,Paiement client
+2024-08-12 11:36:00,CB - Maya Lambert,75.0,Recette,Paiement client
+2024-08-12 14:02:00,CB - Agathe David,35.0,Recette,Paiement client
+2024-08-12 15:57:00,CB - Clara Robert,150.0,Recette,Paiement client
+2024-08-12 16:48:00,CB - Agathe Bernard,110.0,Recette,Paiement client
+2024-08-13 10:30:00,CB - Maëlys Bonnet,220.0,Recette,Paiement client
+2024-08-14 09:15:00,CB - Sarah Girard,25.0,Recette,Paiement client
+2024-08-14 10:05:00,CB - Manon Bertrand,110.0,Recette,Paiement client
+2024-08-14 11:00:00,CB - Sarah Dubois,120.0,Recette,Paiement client
+2024-08-14 11:51:00,CB - Inès David,90.0,Recette,Paiement client
+2024-08-15 09:10:00,CB - Agathe Leroy,35.0,Recette,Paiement client
+2024-08-16 09:20:00,CB - Manon Martin,65.0,Recette,Paiement client
+2024-08-16 09:55:00,CB - Océane Thomas,50.0,Recette,Paiement client
+2024-08-16 11:06:00,CB - Camille Thomas,150.0,Recette,Paiement client
+2024-08-16 14:30:00,CB - Lucie Lefèvre,180.0,Recette,Paiement client
+2024-08-17 10:15:00,CB - Clara Dupont,50.0,Recette,Paiement client
+2024-08-17 10:54:00,CB - Elise Fournier,75.0,Recette,Paiement client
+2024-08-19 09:00:00,Achats consommables,-37.59,Charge,Consommables
+2024-08-19 09:35:00,CB - Hana André,100.0,Recette,Paiement client
+2024-08-19 13:40:00,CB - Agathe Dubois,75.0,Recette,Paiement client
+2024-08-19 14:57:00,CB - Camille David,75.0,Recette,Paiement client
+2024-08-19 15:52:00,CB - Camille Bertrand,120.0,Recette,Paiement client
+2024-08-20 09:25:00,CB - Louise Bertrand,75.0,Recette,Paiement client
+2024-08-20 10:05:00,CB - Pauline Petit,90.0,Recette,Paiement client
+2024-08-21 09:40:00,CB - Alice Francois,110.0,Recette,Paiement client
+2024-08-21 10:48:00,CB - Margaux Vincent,120.0,Recette,Paiement client
+2024-08-23 11:06:00,CB - Lucie Lefèvre,220.0,Recette,Paiement client
+2024-08-23 12:04:00,CB - Clara André,100.0,Recette,Paiement client
+2024-08-23 13:40:00,CB - Elise Thomas,75.0,Recette,Paiement client
+2024-08-26 09:00:00,Achats consommables,-35.89,Charge,Consommables
+2024-08-26 09:20:00,CB - Charlotte Robert,65.0,Recette,Paiement client
+2024-08-26 10:03:00,CB - Eva Lefèvre,90.0,Recette,Paiement client
+2024-08-27 09:30:00,CB - Amina Bonnet,90.0,Recette,Paiement client
+2024-08-27 10:35:00,CB - Léa Durand,140.0,Recette,Paiement client
+2024-08-28 09:50:00,CB - Sarah Garcia,130.0,Recette,Paiement client
+2024-08-28 10:18:00,CB - Inès Mercier,35.0,Recette,Paiement client
+2024-08-28 11:17:00,CB - Alice Richard,110.0,Recette,Paiement client
+2024-08-29 10:43:00,CB - Hana Durand,150.0,Recette,Paiement client
+2024-08-30 09:20:00,CB - Zoé Leroy,65.0,Recette,Paiement client
+2024-08-30 10:34:00,CB - Pauline Lefèvre,150.0,Recette,Paiement client
+2024-09-01 09:00:00,Loyer cabinet,-1200.0,Charge,Loyer
+2024-09-01 09:00:00,Frais compte pro,-15.0,Charge,Frais bancaires
+2024-09-01 09:00:00,Abonnement Planity,-80.0,Charge,Logiciel / abonnement
+2024-09-02 09:00:00,Achats consommables,-83.0,Charge,Consommables
+2024-09-02 09:10:00,CB - Marine Garcia,35.0,Recette,Paiement client
+2024-09-02 09:41:00,CB - Julie Moreau,65.0,Recette,Paiement client
+2024-09-02 10:25:00,CB - Jade Robert,90.0,Recette,Paiement client
+2024-09-02 10:45:00,CB - Clara Laurent,35.0,Recette,Paiement client
+2024-09-02 11:10:00,CB - Nina Bernard,35.0,Recette,Paiement client
+2024-09-02 12:21:00,CB - Eva André,150.0,Recette,Paiement client
+2024-09-02 13:30:00,CB - Sarah Petit,25.0,Recette,Paiement client
+2024-09-03 09:15:00,CB - Noémie Petit,25.0,Recette,Paiement client
+2024-09-03 09:41:00,CB - Maëlys André,50.0,Recette,Paiement client
+2024-09-03 10:21:00,CB - Lucie Francois,65.0,Recette,Paiement client
+2024-09-03 10:59:00,CB - Noémie Thomas,75.0,Recette,Paiement client
+2024-09-04 09:50:00,CB - Julie Michel,130.0,Recette,Paiement client
+2024-09-04 10:37:00,CB - Océane Dubois,90.0,Recette,Paiement client
+2024-09-04 11:17:00,CB - Hana Mercier,90.0,Recette,Paiement client
+2024-09-04 12:12:00,CB - Anaïs Morel,100.0,Recette,Paiement client
+2024-09-05 09:00:00,Assurance professionnelle,-45.0,Charge,Assurance
+2024-09-05 09:30:00,CB - Marine Morel,90.0,Recette,Paiement client
+2024-09-05 10:26:00,CB - Zoé Martin,110.0,Recette,Paiement client
+2024-09-06 10:08:00,CB - Alice Thomas,75.0,Recette,Paiement client
+2024-09-06 11:21:00,CB - Clara Robert,150.0,Recette,Paiement client
+2024-09-07 10:40:00,CB - Maya Lefèvre,110.0,Recette,Paiement client
+2024-09-07 11:11:00,CB - Noémie David,25.0,Recette,Paiement client
+2024-09-07 11:48:00,CB - Pauline Bertrand,75.0,Recette,Paiement client
+2024-09-09 09:00:00,Achats consommables,-47.73,Charge,Consommables
+2024-09-09 09:55:00,CB - Camille Thomas,140.0,Recette,Paiement client
+2024-09-09 10:41:00,CB - Manon Bertrand,90.0,Recette,Paiement client
+2024-09-09 12:21:00,CB - Agathe Bernard,130.0,Recette,Paiement client
+2024-09-09 13:20:00,CB - Clara Dupont,25.0,Recette,Paiement client
+2024-09-09 13:57:00,CB - Chloé Bernard,65.0,Recette,Paiement client
+2024-09-10 09:00:00,Électricité,-120.0,Charge,Énergie
+2024-09-10 09:25:00,CB - Manon Martin,75.0,Recette,Paiement client
+2024-09-10 10:39:00,CB - Lucie Lefèvre,150.0,Recette,Paiement client
+2024-09-10 11:10:00,CB - Océane Michel,50.0,Recette,Paiement client
+2024-09-10 13:35:00,CB - Noémie Bernard,65.0,Recette,Paiement client
+2024-09-10 14:05:00,CB - Pauline Michel,25.0,Recette,Paiement client
+2024-09-10 15:35:00,CB - Maëlys Bonnet,180.0,Recette,Paiement client
+2024-09-10 16:36:00,CB - Sarah Lambert,120.0,Recette,Paiement client
+2024-09-10 17:37:00,CB - Inès Moreau,120.0,Recette,Paiement client
+2024-09-11 09:15:00,CB - Manon Bonnet,25.0,Recette,Paiement client
+2024-09-11 09:55:00,CB - Maëlys Garcia,90.0,Recette,Paiement client
+2024-09-11 10:33:00,CB - Zoé Girard,75.0,Recette,Paiement client
+2024-09-12 09:00:00,Hébergement site web,-12.0,Charge,Site web
+2024-09-12 10:30:00,CB - Julie Petit,220.0,Recette,Paiement client
+2024-09-12 11:15:00,CB - Hana André,90.0,Recette,Paiement client
+2024-09-13 09:52:00,CB - Amina Bertrand,75.0,Recette,Paiement client
+2024-09-14 10:40:00,CB - Sarah Dubois,110.0,Recette,Paiement client
+2024-09-15 09:00:00,Entretien machine électrolyse,-250.0,Charge,Maintenance
+2024-09-16 09:00:00,Achats consommables,-50.15,Charge,Consommables
+2024-09-16 09:05:00,CB - Lina Vincent,25.0,Recette,Paiement client
+2024-09-16 10:33:00,CB - Elise Fournier,90.0,Recette,Paiement client
+2024-09-16 11:22:00,CB - Margaux Vincent,90.0,Recette,Paiement client
+2024-09-16 12:07:00,CB - Anaïs Richard,90.0,Recette,Paiement client
+2024-09-16 13:40:00,CB - Lucie Vincent,75.0,Recette,Paiement client
+2024-09-16 14:29:00,CB - Zoé Robert,90.0,Recette,Paiement client
+2024-09-17 10:15:00,CB - Lucie Lefèvre,180.0,Recette,Paiement client
+2024-09-18 09:20:00,CB - Elise David,65.0,Recette,Paiement client
+2024-09-18 10:17:00,CB - Sarah Girard,110.0,Recette,Paiement client
+2024-09-18 11:10:00,CB - Inès David,100.0,Recette,Paiement client
+2024-09-19 10:23:00,CB - Alice Francois,110.0,Recette,Paiement client
+2024-09-20 09:30:00,CB - Eva Lefèvre,90.0,Recette,Paiement client
+2024-09-20 09:56:00,CB - Charlotte Robert,50.0,Recette,Paiement client
+2024-09-21 10:50:00,CB - Hana Durand,130.0,Recette,Paiement client
+2024-09-23 09:00:00,Achats consommables,-40.23,Charge,Consommables
+2024-09-23 09:30:00,CB - Charlotte Simon,90.0,Recette,Paiement client
+2024-09-23 09:53:00,CB - Maya Lambert,35.0,Recette,Paiement client
+2024-09-23 10:44:00,CB - Charlotte Robert,90.0,Recette,Paiement client
+2024-09-23 11:22:00,CB - Agathe Leroy,75.0,Recette,Paiement client
+2024-09-23 12:01:00,CB - Maëlys Michel,50.0,Recette,Paiement client
+2024-09-23 13:55:00,CB - Pauline Bernard,110.0,Recette,Paiement client
+2024-09-24 09:15:00,CB - Zoé Thomas,25.0,Recette,Paiement client
+2024-09-24 09:53:00,CB - Agathe Dubois,75.0,Recette,Paiement client
+2024-09-24 10:57:00,CB - Léa Durand,110.0,Recette,Paiement client
+2024-09-24 12:16:00,CB - Lucie Lefèvre,75.0,Recette,Paiement client
+2024-09-24 14:52:00,CB - Alice Richard,90.0,Recette,Paiement client
+2024-09-25 09:30:00,CB - Chloé Richard,90.0,Recette,Paiement client
+2024-09-25 10:05:00,CB - Clara Dupont,50.0,Recette,Paiement client
+2024-09-26 10:02:00,CB - Pauline Petit,75.0,Recette,Paiement client
+2024-09-30 09:00:00,Achats consommables,-51.69,Charge,Consommables
+2024-09-30 09:45:00,CB - Sarah Garcia,120.0,Recette,Paiement client
+2024-10-01 09:00:00,Frais compte pro,-15.0,Charge,Frais bancaires
+2024-10-01 09:00:00,Loyer cabinet,-1200.0,Charge,Loyer
+2024-10-01 09:00:00,Abonnement Planity,-80.0,Charge,Logiciel / abonnement
+2024-10-01 09:15:00,CB - Louise Bertrand,50.0,Recette,Paiement client
+2024-10-01 10:22:00,CB - Eva André,130.0,Recette,Paiement client
+2024-10-01 11:03:00,CB - Clara André,75.0,Recette,Paiement client
+2024-10-03 09:50:00,CB - Camille Thomas,130.0,Recette,Paiement client
+2024-10-03 10:15:00,CB - Amina Bonnet,50.0,Recette,Paiement client
+2024-10-04 09:15:00,CB - Elise Thomas,50.0,Recette,Paiement client
+2024-10-04 11:25:00,CB - Louise Michel,280.0,Recette,Paiement client
+2024-10-04 14:00:00,CB - Clara Robert,120.0,Recette,Paiement client
+2024-10-04 14:45:00,CB - Hana Mercier,100.0,Recette,Paiement client
+2024-10-04 15:25:00,CB - Marine Morel,90.0,Recette,Paiement client
+2024-10-05 09:00:00,Assurance professionnelle,-45.0,Charge,Assurance
+2024-10-05 10:25:00,CB - Océane Dubois,75.0,Recette,Paiement client
+2024-10-05 10:50:00,CB - Maëlys Vincent,25.0,Recette,Paiement client
+2024-10-05 11:15:00,CB - Marine Martin,25.0,Recette,Paiement client
+2024-10-05 11:55:00,CB - Manon Bertrand,75.0,Recette,Paiement client
+2024-10-07 09:00:00,Achats consommables,-38.2,Charge,Consommables
+2024-10-07 09:40:00,CB - Julie Michel,110.0,Recette,Paiement client
+2024-10-07 10:19:00,CB - Julie Moreau,65.0,Recette,Paiement client
+2024-10-07 10:58:00,CB - Zoé Leroy,75.0,Recette,Paiement client
+2024-10-07 11:32:00,CB - Jade Robert,65.0,Recette,Paiement client
+2024-10-07 12:20:00,CB - Zoé Martin,100.0,Recette,Paiement client
+2024-10-07 14:26:00,CB - Sarah Petit,90.0,Recette,Paiement client
+2024-10-08 10:49:00,CB - Noémie Thomas,90.0,Recette,Paiement client
+2024-10-08 11:48:00,CB - Lucie Lefèvre,120.0,Recette,Paiement client
+2024-10-09 09:35:00,CB - Agathe Bernard,100.0,Recette,Paiement client
+2024-10-10 09:00:00,Électricité,-120.0,Charge,Énergie
+2024-10-10 14:15:00,CB - Maëlys Bonnet,150.0,Recette,Paiement client
+2024-10-11 09:45:00,CB - Sarah Girard,120.0,Recette,Paiement client
+2024-10-12 09:00:00,Hébergement site web,-12.0,Charge,Site web
+2024-10-12 10:35:00,CB - Maya Lefèvre,100.0,Recette,Paiement client
+2024-10-12 11:41:00,CB - Noémie David,130.0,Recette,Paiement client
+2024-10-12 12:19:00,CB - Anaïs André,50.0,Recette,Paiement client
+2024-10-12 13:08:00,CB - Inès Moreau,100.0,Recette,Paiement client
+2024-10-12 13:43:00,CB - Lucie Francois,75.0,Recette,Paiement client
+2024-10-14 09:00:00,Achats consommables,-41.53,Charge,Consommables
+2024-10-14 09:40:00,CB - Margaux Vincent,110.0,Recette,Paiement client
+2024-10-14 11:05:00,CB - Lucie Lefèvre,180.0,Recette,Paiement client
+2024-10-14 11:37:00,CB - Emma Roux,25.0,Recette,Paiement client
+2024-10-15 09:40:00,CB - Pauline Michel,110.0,Recette,Paiement client
+2024-10-15 10:20:00,CB - Louise Francois,90.0,Recette,Paiement client
+2024-10-15 11:03:00,CB - Emma Mercier,90.0,Recette,Paiement client
+2024-10-15 11:28:00,CB - Maëlys André,50.0,Recette,Paiement client
+2024-10-16 09:30:00,CB - Elise Fournier,90.0,Recette,Paiement client
+2024-10-16 10:22:00,CB - Manon Bonnet,110.0,Recette,Paiement client
+2024-10-16 10:58:00,CB - Maëlys Garcia,75.0,Recette,Paiement client
+2024-10-16 11:28:00,CB - Lina Roux,25.0,Recette,Paiement client
+2024-10-16 14:05:00,CB - Hana Durand,130.0,Recette,Paiement client
+2024-10-17 09:35:00,CB - Sarah Dubois,100.0,Recette,Paiement client
+2024-10-17 10:05:00,CB - Océane Michel,35.0,Recette,Paiement client
+2024-10-17 10:46:00,CB - Sarah Lambert,90.0,Recette,Paiement client
+2024-10-17 11:39:00,CB - Pauline Fournier,110.0,Recette,Paiement client
+2024-10-18 09:20:00,CB - Alice Thomas,65.0,Recette,Paiement client
+2024-10-18 09:54:00,CB - Eva Lefèvre,65.0,Recette,Paiement client
+2024-10-18 11:41:00,CB - Noémie Bertrand,220.0,Recette,Paiement client
+2024-10-19 10:25:00,CB - Noémie Bernard,75.0,Recette,Paiement client
+2024-10-21 09:00:00,Achats consommables,-48.65,Charge,Consommables
+2024-10-21 09:40:00,CB - Alice Francois,110.0,Recette,Paiement client
+2024-10-21 10:45:00,CB - Pauline Lefèvre,140.0,Recette,Paiement client
+2024-10-21 11:14:00,CB - Chloé Bernard,35.0,Recette,Paiement client
+2024-10-21 11:37:00,CB - Clara Dupont,35.0,Recette,Paiement client
+2024-10-22 09:15:00,CB - Anaïs Robert,25.0,Recette,Paiement client
+2024-10-22 10:01:00,CB - Camille Bertrand,100.0,Recette,Paiement client
+2024-10-23 09:15:00,CB - Lucie Vincent,50.0,Recette,Paiement client
+2024-10-23 10:26:00,CB - Alice Richard,140.0,Recette,Paiement client
+2024-10-23 11:00:00,CB - Zoé Girard,50.0,Recette,Paiement client
+2024-10-23 11:35:00,CB - Pauline Bernard,75.0,Recette,Paiement client
+2024-10-24 09:40:00,CB - Léa Durand,110.0,Recette,Paiement client
+2024-10-25 09:25:00,CB - Chloé Durand,75.0,Recette,Paiement client
+2024-10-25 09:49:00,CB - Anaïs Richard,35.0,Recette,Paiement client
+2024-10-25 10:26:00,CB - Zoé Robert,65.0,Recette,Paiement client
+2024-10-25 10:59:00,CB - Inès David,65.0,Recette,Paiement client
+2024-10-26 10:59:00,CB - Manon Simon,100.0,Recette,Paiement client
+2024-10-28 09:00:00,Achats consommables,-41.72,Charge,Consommables
+2024-10-28 11:36:00,CB - Louise Michel,280.0,Recette,Paiement client
+2024-10-29 09:15:00,CB - Amina Martin,25.0,Recette,Paiement client
+2024-10-29 10:29:00,CB - Zoé Thomas,140.0,Recette,Paiement client
+2024-10-30 09:25:00,CB - Elise David,75.0,Recette,Paiement client
+2024-10-30 10:01:00,CB - Sarah Petit,75.0,Recette,Paiement client
+2024-10-31 09:50:00,CB - Camille Thomas,130.0,Recette,Paiement client
+2024-10-31 10:18:00,CB - Agathe Moreau,25.0,Recette,Paiement client
+2024-10-31 10:56:00,CB - Noémie Petit,75.0,Recette,Paiement client
+2024-10-31 11:27:00,CB - Noémie Lambert,25.0,Recette,Paiement client
+2024-11-01 09:00:00,Frais compte pro,-15.0,Charge,Frais bancaires
+2024-11-01 09:00:00,Loyer cabinet,-1200.0,Charge,Loyer
+2024-11-01 09:00:00,Abonnement Planity,-80.0,Charge,Logiciel / abonnement
+2024-11-01 09:50:00,CB - Eva André,130.0,Recette,Paiement client
+2024-11-02 10:10:00,CB - Lucie Lefèvre,35.0,Recette,Paiement client
+2024-11-02 10:58:00,CB - Camille David,65.0,Recette,Paiement client
+2024-11-04 09:00:00,Achats consommables,-58.52,Charge,Consommables
+2024-11-04 09:45:00,CB - Clara Robert,120.0,Recette,Paiement client
+2024-11-04 10:42:00,CB - Sarah Garcia,110.0,Recette,Paiement client
+2024-11-04 11:12:00,CB - Manon Bertrand,65.0,Recette,Paiement client
+2024-11-04 11:42:00,CB - Pauline Petit,65.0,Recette,Paiement client
+2024-11-04 12:12:00,CB - Marine Morel,65.0,Recette,Paiement client
+2024-11-04 13:35:00,CB - Agathe Leroy,65.0,Recette,Paiement client
+2024-11-04 14:47:00,CB - Noémie David,140.0,Recette,Paiement client
+2024-11-05 09:00:00,Assurance professionnelle,-45.0,Charge,Assurance
+2024-11-05 10:12:00,CB - Sarah Girard,100.0,Recette,Paiement client
+2024-11-06 09:15:00,CB - Clara Dupont,50.0,Recette,Paiement client
+2024-11-07 09:45:00,CB - Lucie Lefèvre,120.0,Recette,Paiement client
+2024-11-07 10:21:00,CB - Manon Martin,65.0,Recette,Paiement client
+2024-11-07 11:52:00,CB - Océane Dubois,75.0,Recette,Paiement client
+2024-11-08 09:43:00,CB - Louise Roux,25.0,Recette,Paiement client
+2024-11-08 10:41:00,CB - Manon Bonnet,120.0,Recette,Paiement client
+2024-11-09 12:00:00,CB - Marine Martin,280.0,Recette,Paiement client
+2024-11-09 12:45:00,CB - Hana André,90.0,Recette,Paiement client
+2024-11-09 14:17:00,CB - Julie Petit,180.0,Recette,Paiement client
+2024-11-10 09:00:00,Électricité,-120.0,Charge,Énergie
+2024-11-11 09:00:00,Achats consommables,-66.09,Charge,Consommables
+2024-11-11 09:25:00,CB - Maëlys Vincent,75.0,Recette,Paiement client
+2024-11-11 10:11:00,CB - Agathe Bernard,100.0,Recette,Paiement client
+2024-11-11 11:46:00,CB - Noémie Bertrand,180.0,Recette,Paiement client
+2024-11-11 13:45:00,CB - Julie Michel,90.0,Recette,Paiement client
+2024-11-11 14:01:00,CB - Amina Bonnet,25.0,Recette,Paiement client
+2024-11-11 15:15:00,CB - Maëlys Bonnet,150.0,Recette,Paiement client
+2024-11-12 09:00:00,Hébergement site web,-12.0,Charge,Site web
+2024-11-12 10:00:00,CB - Lucie Lefèvre,150.0,Recette,Paiement client
+2024-11-12 11:01:00,CB - Jade Robert,35.0,Recette,Paiement client
+2024-11-12 11:46:00,CB - Julie Moreau,90.0,Recette,Paiement client
+2024-11-12 12:17:00,CB - Clara André,65.0,Recette,Paiement client
+2024-11-13 09:45:00,CB - Hana Durand,120.0,Recette,Paiement client
+2024-11-14 09:20:00,CB - Noémie Thomas,65.0,Recette,Paiement client
+2024-11-14 09:56:00,CB - Zoé Leroy,65.0,Recette,Paiement client
+2024-11-15 09:15:00,CB - Hana Thomas,25.0,Recette,Paiement client
+2024-11-15 09:55:00,CB - Nina Bonnet,75.0,Recette,Paiement client
+2024-11-16 10:15:00,CB - Zoé Girard,25.0,Recette,Paiement client
+2024-11-16 10:43:00,CB - Anaïs André,50.0,Recette,Paiement client
+2024-11-16 11:40:00,CB - Inès Moreau,110.0,Recette,Paiement client
+2024-11-18 09:00:00,Achats consommables,-42.9,Charge,Consommables
+2024-11-18 09:15:00,CB - Eva Lefèvre,50.0,Recette,Paiement client
+2024-11-18 09:54:00,CB - Maya Lefèvre,75.0,Recette,Paiement client
+2024-11-18 11:20:00,CB - Emma Roux,110.0,Recette,Paiement client
+2024-11-19 09:50:00,CB - Pauline Lefèvre,130.0,Recette,Paiement client
+2024-11-20 09:55:00,CB - Lina Roux,140.0,Recette,Paiement client
+2024-11-21 10:30:00,CB - Louise Michel,220.0,Recette,Paiement client
+2024-11-21 11:21:00,CB - Pauline Fournier,90.0,Recette,Paiement client
+2024-11-21 14:00:00,CB - Zoé Thomas,120.0,Recette,Paiement client
+2024-11-21 14:49:00,CB - Sarah Dubois,90.0,Recette,Paiement client
+2024-11-22 09:58:00,CB - Alice Francois,90.0,Recette,Paiement client
+2024-11-23 10:30:00,CB - Alice Richard,90.0,Recette,Paiement client
+2024-11-23 10:54:00,CB - Lucie Francois,35.0,Recette,Paiement client
+2024-11-25 09:00:00,Achats consommables,-48.51,Charge,Consommables
+2024-11-25 09:30:00,CB - Pauline Bernard,90.0,Recette,Paiement client
+2024-11-25 10:02:00,CB - Sarah Petit,65.0,Recette,Paiement client
+2024-11-25 10:39:00,CB - Chloé Durand,65.0,Recette,Paiement client
+2024-11-25 11:17:00,CB - Océane Michel,65.0,Recette,Paiement client
+2024-11-25 11:53:00,CB - Sarah Lambert,65.0,Recette,Paiement client
+2024-11-25 13:40:00,CB - Noémie Petit,75.0,Recette,Paiement client
+2024-11-25 14:15:00,CB - Anaïs Legrand,25.0,Recette,Paiement client
+2024-11-25 14:58:00,CB - Léa Durand,90.0,Recette,Paiement client
+2024-11-26 09:30:00,CB - Anaïs Morel,90.0,Recette,Paiement client
+2024-11-26 10:03:00,CB - Charlotte Robert,50.0,Recette,Paiement client
+2024-11-26 10:29:00,CB - Lina Dubois,25.0,Recette,Paiement client
+2024-11-26 11:45:00,CB - Anaïs Robert,150.0,Recette,Paiement client
+2024-11-26 13:40:00,CB - Camille Bertrand,75.0,Recette,Paiement client
+2024-11-26 14:17:00,CB - Emma Mercier,65.0,Recette,Paiement client
+2024-11-27 09:30:00,CB - Manon Simon,90.0,Recette,Paiement client
+2024-11-27 09:57:00,CB - Inès Michel,25.0,Recette,Paiement client
+2024-11-29 09:15:00,CB - Maëlys Bonnet,25.0,Recette,Paiement client
+2024-11-29 10:15:00,CB - Noémie David,120.0,Recette,Paiement client
+2024-11-30 10:35:00,CB - Camille Thomas,100.0,Recette,Paiement client
+2024-11-30 10:56:00,CB - Noémie Bernard,35.0,Recette,Paiement client
+2024-11-30 12:01:00,CB - Agathe Simon,140.0,Recette,Paiement client
+2024-12-01 09:00:00,Frais compte pro,-15.0,Charge,Frais bancaires
+2024-12-01 09:00:00,Abonnement Planity,-80.0,Charge,Logiciel / abonnement
+2024-12-01 09:00:00,Loyer cabinet,-1200.0,Charge,Loyer
+2024-12-02 09:00:00,Achats consommables,-68.3,Charge,Consommables
+2024-12-02 09:15:00,CB - Lucie Vincent,50.0,Recette,Paiement client
+2024-12-02 09:51:00,CB - Maëlys Vincent,75.0,Recette,Paiement client
+2024-12-02 12:03:00,CB - Marine Martin,280.0,Recette,Paiement client
+2024-12-03 09:30:00,CB - Maëlys Richard,90.0,Recette,Paiement client
+2024-12-03 09:57:00,CB - Inès David,50.0,Recette,Paiement client
+2024-12-03 10:47:00,CB - Amina Martin,100.0,Recette,Paiement client
+2024-12-03 11:34:00,CB - Sarah Girard,100.0,Recette,Paiement client
+2024-12-03 14:00:00,CB - Manon Bonnet,120.0,Recette,Paiement client
+2024-12-04 09:15:00,CB - Margaux Dupont,25.0,Recette,Paiement client
+2024-12-04 09:52:00,CB - Manon Bertrand,65.0,Recette,Paiement client
+2024-12-05 09:00:00,Assurance professionnelle,-45.0,Charge,Assurance
+2024-12-05 09:35:00,CB - Clara Robert,100.0,Recette,Paiement client
+2024-12-05 10:54:00,CB - Noémie Lambert,150.0,Recette,Paiement client
+2024-12-05 13:55:00,CB - Agathe Moreau,110.0,Recette,Paiement client
+2024-12-06 09:15:00,CB - Anaïs Richard,50.0,Recette,Paiement client
+2024-12-06 09:35:00,CB - Zoé Robert,25.0,Recette,Paiement client
+2024-12-06 10:02:00,CB - Chloé Richard,50.0,Recette,Paiement client
+2024-12-07 10:15:00,CB - Charlotte Girard,25.0,Recette,Paiement client
+2024-12-07 10:48:00,CB - Marine Morel,50.0,Recette,Paiement client
+2024-12-09 09:00:00,Achats consommables,-56.65,Charge,Consommables
+2024-12-09 09:50:00,CB - Lucie Lefèvre,130.0,Recette,Paiement client
+2024-12-09 10:27:00,CB - Manon Martin,65.0,Recette,Paiement client
+2024-12-10 09:00:00,Électricité,-120.0,Charge,Énergie
+2024-12-10 09:25:00,CB - Hana Mercier,75.0,Recette,Paiement client
+2024-12-10 10:20:00,CB - Sarah Garcia,110.0,Recette,Paiement client
+2024-12-11 09:40:00,CB - Emma Roux,110.0,Recette,Paiement client
+2024-12-12 09:00:00,Hébergement site web,-12.0,Charge,Site web
+2024-12-12 09:54:00,CB - Jade Lambert,25.0,Recette,Paiement client
+2024-12-13 09:35:00,CB - Hana Durand,100.0,Recette,Paiement client
+2024-12-13 10:30:00,CB - Lina Roux,120.0,Recette,Paiement client
+2024-12-13 15:15:00,CB - Louise Roux,280.0,Recette,Paiement client
+2024-12-13 15:52:00,CB - Lina Bonnet,25.0,Recette,Paiement client
+2024-12-13 17:01:00,CB - Lucie Lefèvre,140.0,Recette,Paiement client
+2024-12-13 17:48:00,CB - Zoé Martin,75.0,Recette,Paiement client
+2024-12-14 10:30:00,CB - Margaux Vincent,90.0,Recette,Paiement client
+2024-12-14 11:27:00,CB - Camille David,50.0,Recette,Paiement client
+2024-12-14 11:54:00,CB - Agathe Dubois,25.0,Recette,Paiement client
+2024-12-14 12:15:00,CB - Lucie Lefèvre,35.0,Recette,Paiement client
+2024-12-15 09:00:00,Entretien machine électrolyse,-250.0,Charge,Maintenance
+2024-12-16 09:00:00,Achats consommables,-30.2,Charge,Consommables
+2024-12-16 10:42:00,CB - Maëlys Bonnet,130.0,Recette,Paiement client
+2024-12-16 11:12:00,CB - Pauline Petit,65.0,Recette,Paiement client
+2024-12-16 12:16:00,CB - Zoé Thomas,120.0,Recette,Paiement client
+2024-12-17 09:40:00,CB - Julie Michel,110.0,Recette,Paiement client
+2024-12-18 10:30:00,CB - Louise Michel,220.0,Recette,Paiement client
+2024-12-18 10:55:00,CB - Julie Vincent,25.0,Recette,Paiement client
+2024-12-19 09:25:00,CB - Eva Lefèvre,75.0,Recette,Paiement client
+2024-12-19 10:27:00,CB - Anaïs Robert,130.0,Recette,Paiement client
+2024-12-20 09:45:00,CB - Hana Thomas,120.0,Recette,Paiement client
+2024-12-20 10:41:00,CB - Pauline Lefèvre,110.0,Recette,Paiement client
+2024-12-21 10:45:00,CB - Zoé Girard,120.0,Recette,Paiement client
+2024-12-21 11:11:00,CB - Jade Robert,50.0,Recette,Paiement client
+2024-12-21 11:39:00,CB - Julie Moreau,35.0,Recette,Paiement client
+2024-12-23 09:00:00,Achats consommables,-41.31,Charge,Consommables
+2024-12-23 09:53:00,CB - Noémie Petit,90.0,Recette,Paiement client
+2024-12-23 11:51:00,CB - Anaïs André,65.0,Recette,Paiement client
+2024-12-23 13:35:00,CB - Elise Fournier,65.0,Recette,Paiement client
+2024-12-23 14:49:00,CB - Agathe Simon,140.0,Recette,Paiement client
+2024-12-25 09:15:00,CB - Lina Roux,25.0,Recette,Paiement client
+2024-12-26 10:39:00,CB - Alice Richard,90.0,Recette,Paiement client
+2024-12-26 11:22:00,CB - Maëlys Richard,90.0,Recette,Paiement client
+2024-12-27 09:25:00,CB - Nina Bonnet,75.0,Recette,Paiement client
+2024-12-27 10:21:00,CB - Noémie David,120.0,Recette,Paiement client
+2024-12-27 12:10:00,CB - Marine Martin,220.0,Recette,Paiement client
+2024-12-27 13:40:00,CB - Alice Francois,75.0,Recette,Paiement client
+2024-12-27 14:18:00,CB - Maëlys Vincent,75.0,Recette,Paiement client
+2024-12-27 15:04:00,CB - Maya Lefèvre,75.0,Recette,Paiement client
+2024-12-28 10:55:00,CB - Noémie Lambert,140.0,Recette,Paiement client
+2024-12-28 11:37:00,CB - Sarah Dubois,75.0,Recette,Paiement client
+2024-12-28 12:07:00,CB - Pauline Fournier,65.0,Recette,Paiement client
+2024-12-28 12:43:00,CB - Anaïs Morel,75.0,Recette,Paiement client
+2024-12-28 13:53:00,CB - Agathe Moreau,90.0,Recette,Paiement client
+2024-12-30 09:00:00,Achats consommables,-43.45,Charge,Consommables
+2024-12-30 09:25:00,CB - Pauline Bernard,75.0,Recette,Paiement client
+2024-12-30 10:16:00,CB - Pauline Michel,90.0,Recette,Paiement client
+2024-12-30 11:03:00,CB - Manon Bonnet,100.0,Recette,Paiement client
+2024-12-30 11:22:00,CB - Louise Francois,25.0,Recette,Paiement client
+2024-12-30 14:10:00,CB - Anaïs Legrand,140.0,Recette,Paiement client
+2024-12-30 14:57:00,CB - Léa Durand,90.0,Recette,Paiement client
+2024-12-31 09:15:00,CB - Maëlys Garcia,50.0,Recette,Paiement client
+2024-12-31 10:08:00,CB - Lina Dubois,110.0,Recette,Paiement client
+2024-12-31 11:00:00,CB - Lucie Renaud,25.0,Recette,Paiement client
+2025-01-01 09:00:00,Abonnement Planity,-80.0,Charge,Logiciel / abonnement
+2025-01-01 09:00:00,Frais compte pro,-15.0,Charge,Frais bancaires
+2025-01-01 09:00:00,Loyer cabinet,-1200.0,Charge,Loyer
+2025-01-01 09:15:00,CB - Manon Simon,50.0,Recette,Paiement client
+2025-01-01 10:23:00,CB - Inès Michel,140.0,Recette,Paiement client
+2025-01-01 11:18:00,CB - Camille Thomas,110.0,Recette,Paiement client
+2025-01-02 09:30:00,CB - Sarah Girard,90.0,Recette,Paiement client
+2025-01-02 10:47:00,CB - Noémie Bertrand,150.0,Recette,Paiement client
+2025-01-02 11:19:00,CB - Camille Bertrand,65.0,Recette,Paiement client
+2025-01-03 10:00:00,CB - Maëlys Bonnet,150.0,Recette,Paiement client
+2025-01-05 09:00:00,Assurance professionnelle,-45.0,Charge,Assurance
+2025-01-06 09:00:00,Achats consommables,-28.93,Charge,Consommables
+2025-01-06 10:30:00,CB - Louise Roux,220.0,Recette,Paiement client
+2025-01-06 11:31:00,CB - Emma Roux,120.0,Recette,Paiement client
+2025-01-06 12:06:00,CB - Sarah Lambert,65.0,Recette,Paiement client
+2025-01-06 13:35:00,CB - Manon Bertrand,65.0,Recette,Paiement client
+2025-01-06 14:06:00,CB - Océane Michel,50.0,Recette,Paiement client
+2025-01-07 09:45:00,CB - Lina Roux,120.0,Recette,Paiement client
+2025-01-08 09:40:00,CB - Eva André,110.0,Recette,Paiement client
+2025-01-08 10:35:00,CB - Margaux Dupont,120.0,Recette,Paiement client
+2025-01-10 09:00:00,Électricité,-120.0,Charge,Énergie
+2025-01-10 09:15:00,CB - Emma Roux,25.0,Recette,Paiement client
+2025-01-11 11:33:00,CB - Marine Morel,75.0,Recette,Paiement client
+2025-01-12 09:00:00,Hébergement site web,-12.0,Charge,Site web
+2025-01-13 09:00:00,Achats consommables,-54.74,Charge,Consommables
+2025-01-13 09:45:00,CB - Zoé Thomas,120.0,Recette,Paiement client
+2025-01-13 10:12:00,CB - Lucie Vincent,50.0,Recette,Paiement client
+2025-01-13 10:57:00,CB - Hana Thomas,100.0,Recette,Paiement client
+2025-01-13 14:39:00,CB - Lucie Lefèvre,100.0,Recette,Paiement client
+2025-01-13 15:44:00,CB - Anaïs Robert,130.0,Recette,Paiement client
+2025-01-14 10:03:00,CB - Inès David,50.0,Recette,Paiement client
+2025-01-14 10:35:00,CB - Chloé Richard,50.0,Recette,Paiement client
+2025-01-15 10:34:00,CB - Hana André,90.0,Recette,Paiement client
+2025-01-15 11:39:00,CB - Lucie Lefèvre,130.0,Recette,Paiement client
+2025-01-16 09:15:00,CB - Camille Dupont,25.0,Recette,Paiement client
+2025-01-16 10:43:00,CB - Louise Michel,180.0,Recette,Paiement client
+2025-01-16 11:23:00,CB - Hana Mercier,90.0,Recette,Paiement client
+2025-01-16 14:05:00,CB - Jade Lambert,130.0,Recette,Paiement client
+2025-01-17 10:15:00,CB - Lina Bonnet,180.0,Recette,Paiement client
+2025-01-17 10:59:00,CB - Charlotte Robert,75.0,Recette,Paiement client
+2025-01-17 14:00:00,CB - Agathe Simon,120.0,Recette,Paiement client
+2025-01-18 10:20:00,CB - Océane Dubois,65.0,Recette,Paiement client
+2025-01-18 11:00:00,CB - Margaux Vincent,90.0,Recette,Paiement client
+2025-01-18 12:03:00,CB - Emma Dupont,130.0,Recette,Paiement client
+2025-01-18 12:48:00,CB - Sarah Garcia,75.0,Recette,Paiement client
+2025-01-20 09:00:00,Achats consommables,-41.57,Charge,Consommables
+2025-01-20 09:30:00,CB - Zoé Martin,90.0,Recette,Paiement client
+2025-01-20 10:19:00,CB - Maëlys Richard,90.0,Recette,Paiement client
+2025-01-20 11:04:00,CB - Amina Martin,90.0,Recette,Paiement client
+2025-01-20 11:49:00,CB - Noémie Petit,75.0,Recette,Paiement client
+2025-01-21 09:10:00,CB - Sarah Petit,35.0,Recette,Paiement client
+2025-01-21 10:37:00,CB - Noémie Michel,25.0,Recette,Paiement client
+2025-01-22 09:25:00,CB - Maëlys Bonnet,75.0,Recette,Paiement client
+2025-01-22 10:15:00,CB - Julie Vincent,110.0,Recette,Paiement client
+2025-01-22 11:04:00,CB - Agathe Moreau,100.0,Recette,Paiement client
+2025-01-22 12:11:00,CB - Anaïs Legrand,130.0,Recette,Paiement client
+2025-01-22 13:55:00,CB - Pauline Lefèvre,110.0,Recette,Paiement client
+2025-01-22 14:56:00,CB - Noémie Lambert,110.0,Recette,Paiement client
+2025-01-23 10:08:00,CB - Eva Lefèvre,50.0,Recette,Paiement client
+2025-01-24 09:15:00,CB - Maëlys Vincent,50.0,Recette,Paiement client
+2025-01-24 10:33:00,CB - Inès Michel,150.0,Recette,Paiement client
+2025-01-24 12:13:00,CB - Marine Martin,220.0,Recette,Paiement client
+2025-01-25 10:30:00,CB - Julie Michel,90.0,Recette,Paiement client
+2025-01-27 09:00:00,Achats consommables,-46.05,Charge,Consommables
+2025-01-27 09:50:00,CB - Noémie David,130.0,Recette,Paiement client
+2025-01-27 10:53:00,CB - Maëlys Bonnet,130.0,Recette,Paiement client
+2025-01-27 11:21:00,CB - Agathe Martin,25.0,Recette,Paiement client
+2025-01-28 09:58:00,CB - Margaux Dubois,25.0,Recette,Paiement client
+2025-01-29 09:25:00,CB - Elise Fournier,75.0,Recette,Paiement client
+2025-01-29 11:26:00,CB - Pauline Michel,90.0,Recette,Paiement client
+2025-01-30 10:30:00,CB - Louise Roux,220.0,Recette,Paiement client
+2025-01-30 11:11:00,CB - Alice Richard,75.0,Recette,Paiement client
+2025-01-31 09:20:00,CB - Anaïs André,65.0,Recette,Paiement client
+2025-01-31 09:47:00,CB - Inès Moreau,50.0,Recette,Paiement client
+2025-02-01 09:00:00,Abonnement Planity,-80.0,Charge,Logiciel / abonnement
+2025-02-01 09:00:00,Frais compte pro,-15.0,Charge,Frais bancaires
+2025-02-01 09:00:00,Loyer cabinet,-1200.0,Charge,Loyer
+2025-02-01 10:25:00,CB - Julie Moreau,75.0,Recette,Paiement client
+2025-02-01 11:35:00,CB - Noémie Bertrand,140.0,Recette,Paiement client
+2025-02-01 12:09:00,CB - Chloé Durand,65.0,Recette,Paiement client
+2025-02-01 12:47:00,CB - Anaïs Morel,50.0,Recette,Paiement client
+2025-02-03 09:00:00,Achats consommables,-55.05,Charge,Consommables
+2025-02-03 09:25:00,CB - Alice Francois,75.0,Recette,Paiement client
+2025-02-03 10:14:00,CB - Emma Roux,90.0,Recette,Paiement client
+2025-02-03 14:00:00,CB - Lina Roux,120.0,Recette,Paiement client
+2025-02-03 14:35:00,CB - Sarah Girard,75.0,Recette,Paiement client
+2025-02-04 09:15:00,CB - Jade Petit,25.0,Recette,Paiement client
+2025-02-04 10:11:00,CB - Lucie Renaud,120.0,Recette,Paiement client
+2025-02-04 10:57:00,CB - Pauline Bernard,75.0,Recette,Paiement client
+2025-02-05 09:00:00,Assurance professionnelle,-45.0,Charge,Assurance
+2025-02-05 09:15:00,CB - Agathe Michel,25.0,Recette,Paiement client
+2025-02-05 10:15:00,CB - Camille Thomas,120.0,Recette,Paiement client
+2025-02-05 10:43:00,CB - Margaux Legrand,25.0,Recette,Paiement client
+2025-02-05 11:23:00,CB - Sarah Dubois,75.0,Recette,Paiement client
+2025-02-05 12:06:00,CB - Pauline Fournier,90.0,Recette,Paiement client
+2025-02-05 13:30:00,CB - Léa Durand,50.0,Recette,Paiement client
+2025-02-06 09:25:00,CB - Charlotte Robert,75.0,Recette,Paiement client
+2025-02-06 10:00:00,CB - Hana Thomas,75.0,Recette,Paiement client
+2025-02-07 09:52:00,CB - Manon Simon,65.0,Recette,Paiement client
+2025-02-07 10:45:00,CB - Zoé Girard,90.0,Recette,Paiement client
+2025-02-07 11:17:00,CB - Louise Durand,25.0,Recette,Paiement client
+2025-02-08 10:35:00,CB - Jade Lambert,100.0,Recette,Paiement client
+2025-02-10 09:00:00,Achats consommables,-29.45,Charge,Consommables
+2025-02-10 09:00:00,Électricité,-120.0,Charge,Énergie
+2025-02-10 10:00:00,CB - Lina Bonnet,150.0,Recette,Paiement client
+2025-02-10 10:53:00,CB - Jade Morel,100.0,Recette,Paiement client
+2025-02-10 12:11:00,CB - Emma Dupont,130.0,Recette,Paiement client
+2025-02-10 13:30:00,CB - Manon Bertrand,50.0,Recette,Paiement client
+2025-02-10 14:06:00,CB - Camille Bertrand,75.0,Recette,Paiement client
+2025-02-10 14:56:00,CB - Zoé Thomas,110.0,Recette,Paiement client
+2025-02-10 15:49:00,CB - Anaïs Robert,110.0,Recette,Paiement client
+2025-02-12 09:00:00,Hébergement site web,-12.0,Charge,Site web
+2025-02-14 11:00:00,CB - Emma Roux,280.0,Recette,Paiement client
+2025-02-14 13:50:00,CB - Julie Vincent,100.0,Recette,Paiement client
+2025-02-14 14:44:00,CB - Agathe Simon,110.0,Recette,Paiement client
+2025-02-15 10:15:00,CB - Clara Robert,50.0,Recette,Paiement client
+2025-02-17 09:00:00,Achats consommables,-48.65,Charge,Consommables
+2025-02-17 10:00:00,CB - Louise Michel,150.0,Recette,Paiement client
+2025-02-17 11:05:00,CB - Anaïs Legrand,130.0,Recette,Paiement client
+2025-02-17 12:02:00,CB - Lina Dubois,120.0,Recette,Paiement client
+2025-02-17 13:50:00,CB - Maëlys Richard,100.0,Recette,Paiement client
+2025-02-17 14:31:00,CB - Marine Morel,75.0,Recette,Paiement client
+2025-02-17 15:12:00,CB - Amina Martin,75.0,Recette,Paiement client
+2025-02-18 09:30:00,CB - Hana Durand,90.0,Recette,Paiement client
+2025-02-18 10:01:00,CB - Anaïs David,25.0,Recette,Paiement client
+2025-02-18 11:07:00,CB - Inès Michel,140.0,Recette,Paiement client
+2025-02-19 09:20:00,CB - Agathe Moreau,65.0,Recette,Paiement client
+2025-02-19 09:44:00,CB - Manon Martin,35.0,Recette,Paiement client
+2025-02-19 10:18:00,CB - Lucie Lefèvre,50.0,Recette,Paiement client
+2025-02-19 11:26:00,CB - Lucie Lefèvre,130.0,Recette,Paiement client
+2025-02-19 12:13:00,CB - Noémie Lambert,100.0,Recette,Paiement client
+2025-02-20 11:15:00,CB - Camille Dupont,180.0,Recette,Paiement client
+2025-02-20 11:35:00,CB - Noémie Petit,35.0,Recette,Paiement client
+2025-02-21 09:10:00,CB - Chloé Garcia,35.0,Recette,Paiement client
+2025-02-21 10:07:00,CB - Julie Petit,110.0,Recette,Paiement client
+2025-02-21 10:46:00,CB - Hana André,50.0,Recette,Paiement client
+2025-02-22 10:20:00,CB - Sarah Petit,65.0,Recette,Paiement client
+2025-02-24 09:00:00,Achats consommables,-45.88,Charge,Consommables
+2025-02-24 09:30:00,CB - Maëlys Vincent,90.0,Recette,Paiement client
+2025-02-24 11:00:00,CB - Marine Martin,180.0,Recette,Paiement client
+2025-02-24 13:45:00,CB - Margaux Vincent,90.0,Recette,Paiement client
+2025-02-25 09:15:00,CB - Louise Bertrand,25.0,Recette,Paiement client
+2025-02-25 09:45:00,CB - Maëlys Morel,25.0,Recette,Paiement client
+2025-02-25 10:11:00,CB - Chloé Richard,35.0,Recette,Paiement client
+2025-02-25 11:28:00,CB - Noémie Michel,150.0,Recette,Paiement client
+2025-02-25 13:55:00,CB - Margaux Dupont,110.0,Recette,Paiement client
+2025-02-26 09:20:00,CB - Océane Dubois,65.0,Recette,Paiement client
+2025-02-26 10:18:00,CB - Pauline Lefèvre,110.0,Recette,Paiement client
+2025-02-27 09:40:00,CB - Lucie Renaud,110.0,Recette,Paiement client
+2025-02-27 10:00:00,CB - Zoé Martin,35.0,Recette,Paiement client
+2025-02-27 12:16:00,CB - Louise Roux,180.0,Recette,Paiement client
+2025-02-28 09:40:00,CB - Manon Bonnet,110.0,Recette,Paiement client
+2025-03-01 09:00:00,Abonnement Planity,-80.0,Charge,Logiciel / abonnement
+2025-03-01 09:00:00,Loyer cabinet,-1200.0,Charge,Loyer
+2025-03-01 09:00:00,Frais compte pro,-15.0,Charge,Frais bancaires
+2025-03-01 10:25:00,CB - Agathe Bernard,75.0,Recette,Paiement client
+2025-03-01 10:46:00,CB - Sarah Garcia,25.0,Recette,Paiement client
+2025-03-01 11:17:00,CB - Eva Lefèvre,50.0,Recette,Paiement client
+2025-03-03 09:00:00,Achats consommables,-38.58,Charge,Consommables
+2025-03-03 09:25:00,CB - Pauline Michel,75.0,Recette,Paiement client
+2025-03-03 09:56:00,CB - Maëlys Bonnet,65.0,Recette,Paiement client
+2025-03-03 12:11:00,CB - Agathe Martin,280.0,Recette,Paiement client
+2025-03-04 09:35:00,CB - Lina Roux,100.0,Recette,Paiement client
+2025-03-04 10:18:00,CB - Emma Roux,90.0,Recette,Paiement client
+2025-03-04 10:46:00,CB - Pauline Lambert,25.0,Recette,Paiement client
+2025-03-04 13:30:00,CB - Camille Bertrand,25.0,Recette,Paiement client
+2025-03-05 09:00:00,Assurance professionnelle,-45.0,Charge,Assurance
+2025-03-05 10:37:00,CB - Noémie Bertrand,110.0,Recette,Paiement client
+2025-03-06 10:00:00,CB - Lina Bonnet,150.0,Recette,Paiement client
+2025-03-06 10:29:00,CB - Anaïs Dupont,25.0,Recette,Paiement client
+2025-03-06 11:10:00,CB - Hana Thomas,75.0,Recette,Paiement client
+2025-03-06 11:50:00,CB - Jade Morel,90.0,Recette,Paiement client
+2025-03-07 09:45:00,CB - Emma Dupont,120.0,Recette,Paiement client
+2025-03-07 10:39:00,CB - Zoé Girard,110.0,Recette,Paiement client
+2025-03-08 10:15:00,CB - Julie Michel,50.0,Recette,Paiement client
+2025-03-08 10:57:00,CB - Alice Richard,75.0,Recette,Paiement client
+2025-03-10 09:00:00,Électricité,-120.0,Charge,Énergie
+2025-03-10 09:00:00,Achats consommables,-39.83,Charge,Consommables
+2025-03-10 11:00:00,CB - Emma Roux,280.0,Recette,Paiement client
+2025-03-10 11:38:00,CB - Elise Fournier,75.0,Recette,Paiement client
+2025-03-10 12:12:00,CB - Anaïs Morel,50.0,Recette,Paiement client
+2025-03-10 13:35:00,CB - Chloé Durand,65.0,Recette,Paiement client
+2025-03-10 14:21:00,CB - Sarah Girard,90.0,Recette,Paiement client
+2025-03-11 09:10:00,CB - Jade Thomas,35.0,Recette,Paiement client
+2025-03-11 10:29:00,CB - Jade Petit,150.0,Recette,Paiement client
+2025-03-11 11:24:00,CB - Julie Vincent,120.0,Recette,Paiement client
+2025-03-12 09:00:00,Hébergement site web,-12.0,Charge,Site web
+2025-03-12 09:25:00,CB - Margaux Legrand,75.0,Recette,Paiement client
+2025-03-12 10:29:00,CB - Agathe Michel,130.0,Recette,Paiement client
+2025-03-12 11:28:00,CB - Anaïs Robert,120.0,Recette,Paiement client
+2025-03-13 09:15:00,CB - Alice Francois,50.0,Recette,Paiement client
+2025-03-13 09:44:00,CB - Amina Girard,25.0,Recette,Paiement client
+2025-03-13 10:41:00,CB - Zoé Thomas,110.0,Recette,Paiement client
+2025-03-14 09:20:00,CB - Camille Thomas,65.0,Recette,Paiement client
+2025-03-14 09:51:00,CB - Anaïs André,50.0,Recette,Paiement client
+2025-03-14 11:03:00,CB - Louise Durand,150.0,Recette,Paiement client
+2025-03-15 09:00:00,Entretien machine électrolyse,-250.0,Charge,Maintenance
+2025-03-15 11:15:00,CB - Camille Dupont,180.0,Recette,Paiement client
+2025-03-15 11:53:00,CB - Pauline Bernard,65.0,Recette,Paiement client
+2025-03-17 09:00:00,Achats consommables,-55.37,Charge,Consommables
+2025-03-17 09:35:00,CB - Agathe Simon,100.0,Recette,Paiement client
+2025-03-17 10:57:00,CB - Anaïs Legrand,110.0,Recette,Paiement client
+2025-03-17 11:29:00,CB - Charlotte Robert,50.0,Recette,Paiement client
+2025-03-17 14:00:00,CB - Lina Dubois,120.0,Recette,Paiement client
+2025-03-18 09:15:00,CB - Manon Simon,50.0,Recette,Paiement client
+2025-03-18 10:26:00,CB - Lina Roux,140.0,Recette,Paiement client
+2025-03-18 11:26:00,CB - Inès Michel,130.0,Recette,Paiement client
+2025-03-19 09:25:00,CB - Sarah Dubois,75.0,Recette,Paiement client
+2025-03-19 09:55:00,CB - Pauline Fournier,65.0,Recette,Paiement client
+2025-03-19 10:30:00,CB - Maëlys Richard,75.0,Recette,Paiement client
+2025-03-19 11:10:00,CB - Amina Martin,65.0,Recette,Paiement client
+2025-03-19 11:46:00,CB - Manon Bertrand,65.0,Recette,Paiement client
+2025-03-20 09:50:00,CB - Maëlys Bonnet,130.0,Recette,Paiement client
+2025-03-20 10:15:00,CB - Jade Bertrand,25.0,Recette,Paiement client
+2025-03-20 11:23:00,CB - Noémie Michel,140.0,Recette,Paiement client
+2025-03-21 10:00:00,CB - Louise Michel,150.0,Recette,Paiement client
+2025-03-21 10:52:00,CB - Noémie Lambert,110.0,Recette,Paiement client
+2025-03-21 11:24:00,CB - Agathe Moreau,50.0,Recette,Paiement client
+2025-03-24 09:00:00,Achats consommables,-58.61,Charge,Consommables
+2025-03-24 09:50:00,CB - Lucie Renaud,130.0,Recette,Paiement client
+2025-03-24 10:15:00,CB - Camille Bertrand,50.0,Recette,Paiement client
+2025-03-25 09:15:00,CB - Noémie Petit,50.0,Recette,Paiement client
+2025-03-25 10:04:00,CB - Margaux Dupont,100.0,Recette,Paiement client
+2025-03-25 11:12:00,CB - Anaïs David,65.0,Recette,Paiement client
+2025-03-25 11:42:00,CB - Emma Simon,25.0,Recette,Paiement client
+2025-03-26 09:30:00,CB - Clara Robert,90.0,Recette,Paiement client
+2025-03-26 09:56:00,CB - Pauline Francois,25.0,Recette,Paiement client
+2025-03-26 10:26:00,CB - Eva Thomas,25.0,Recette,Paiement client
+2025-03-26 12:17:00,CB - Agathe Martin,220.0,Recette,Paiement client
+2025-03-27 10:00:00,CB - Marine Martin,150.0,Recette,Paiement client
+2025-03-27 10:38:00,CB - Hana Durand,65.0,Recette,Paiement client
+2025-03-27 11:46:00,CB - Margaux Dubois,130.0,Recette,Paiement client
+2025-03-27 13:35:00,CB - Maëlys Vincent,65.0,Recette,Paiement client
+2025-03-28 09:50:00,CB - Charlotte Girard,130.0,Recette,Paiement client
+2025-03-28 10:20:00,CB - Marine Morel,65.0,Recette,Paiement client
+2025-03-28 11:09:00,CB - Lucie Lefèvre,100.0,Recette,Paiement client
+2025-03-29 10:15:00,CB - Sarah Petit,50.0,Recette,Paiement client
+2025-03-29 11:27:00,CB - Louise Roux,150.0,Recette,Paiement client
+2025-03-31 09:00:00,Achats consommables,-49.08,Charge,Consommables
+2025-03-31 09:15:00,CB - Manon Martin,50.0,Recette,Paiement client
+2025-03-31 09:50:00,CB - Lucie Lefèvre,75.0,Recette,Paiement client
+2025-03-31 10:56:00,CB - Anaïs Thomas,130.0,Recette,Paiement client
+2025-04-01 09:00:00,Abonnement Planity,-80.0,Charge,Logiciel / abonnement
+2025-04-01 09:00:00,Frais compte pro,-15.0,Charge,Frais bancaires
+2025-04-01 09:00:00,Loyer cabinet,-1200.0,Charge,Loyer
+2025-04-01 09:15:00,CB - Hana André,50.0,Recette,Paiement client
+2025-04-01 10:44:00,CB - Julie Petit,65.0,Recette,Paiement client
+2025-04-02 09:25:00,CB - Manon Bonnet,75.0,Recette,Paiement client
+2025-04-02 10:10:00,CB - Jade Lambert,90.0,Recette,Paiement client
+2025-04-02 10:35:00,CB - Camille Robert,25.0,Recette,Paiement client
+2025-04-03 11:02:00,CB - Jade Petit,150.0,Recette,Paiement client
+2025-04-03 11:54:00,CB - Noémie David,90.0,Recette,Paiement client
+2025-04-03 13:45:00,CB - Jade Morel,90.0,Recette,Paiement client
+2025-04-03 15:32:00,CB - Emma Roux,220.0,Recette,Paiement client
+2025-04-04 09:25:00,CB - Lina Roux,75.0,Recette,Paiement client
+2025-04-04 10:38:00,CB - Emma Dupont,90.0,Recette,Paiement client
+2025-04-04 12:00:00,CB - Margaux Vincent,65.0,Recette,Paiement client
+2025-04-04 13:45:00,CB - Margaux Legrand,90.0,Recette,Paiement client
+2025-04-05 09:00:00,Assurance professionnelle,-45.0,Charge,Assurance
+2025-04-05 10:15:00,CB - Nina Dupont,25.0,Recette,Paiement client
+2025-04-05 11:05:00,CB - Emma Roux,110.0,Recette,Paiement client
+2025-04-05 11:48:00,CB - Hana Thomas,75.0,Recette,Paiement client
+2025-04-07 09:00:00,Achats consommables,-52.44,Charge,Consommables
+2025-04-07 09:50:00,CB - Louise Durand,130.0,Recette,Paiement client
+2025-04-07 10:30:00,CB - Pauline Michel,90.0,Recette,Paiement client
+2025-04-07 11:45:00,CB - Maëlys Mercier,25.0,Recette,Paiement client
+2025-04-07 13:35:00,CB - Hana Mercier,65.0,Recette,Paiement client
+2025-04-07 14:07:00,CB - Eva Simon,25.0,Recette,Paiement client
+2025-04-07 14:38:00,CB - Lucie Dupont,25.0,Recette,Paiement client
+2025-04-07 15:35:00,CB - Julie Vincent,110.0,Recette,Paiement client
+2025-04-07 16:00:00,CB - Chloé Dupont,25.0,Recette,Paiement client
+2025-04-08 09:15:00,CB - Emma Bertrand,25.0,Recette,Paiement client
+2025-04-08 10:34:00,CB - Pauline Lambert,150.0,Recette,Paiement client
+2025-04-08 11:05:00,CB - Clara Francois,25.0,Recette,Paiement client
+2025-04-08 12:03:00,CB - Camille Bertrand,120.0,Recette,Paiement client
+2025-04-09 09:30:00,CB - Noémie Bertrand,90.0,Recette,Paiement client
+2025-04-09 10:35:00,CB - Océane Dubois,65.0,Recette,Paiement client
+2025-04-09 11:50:00,CB - Camille Dupont,150.0,Recette,Paiement client
+2025-04-10 09:00:00,Électricité,-120.0,Charge,Énergie
+2025-04-10 10:30:00,CB - Anaïs Dupont,220.0,Recette,Paiement client
+2025-04-10 11:01:00,CB - Manon Legrand,25.0,Recette,Paiement client
+2025-04-10 11:32:00,CB - Zoé Martin,50.0,Recette,Paiement client
+2025-04-12 09:00:00,Hébergement site web,-12.0,Charge,Site web
+2025-04-12 10:15:00,CB - Agathe Bernard,50.0,Recette,Paiement client
+2025-04-14 09:00:00,Achats consommables,-52.69,Charge,Consommables
+2025-04-14 09:40:00,CB - Anaïs Robert,110.0,Recette,Paiement client
+2025-04-14 10:20:00,CB - Maëlys Bonnet,65.0,Recette,Paiement client
+2025-04-14 11:33:00,CB - Noémie Michel,150.0,Recette,Paiement client
+2025-04-15 09:40:00,CB - Lina Roux,110.0,Recette,Paiement client
+2025-04-15 10:11:00,CB - Agathe Thomas,25.0,Recette,Paiement client
+2025-04-15 10:36:00,CB - Alice Lefèvre,25.0,Recette,Paiement client
+2025-04-15 11:32:00,CB - Zoé Thomas,110.0,Recette,Paiement client
+2025-04-15 12:17:00,CB - Anaïs Legrand,90.0,Recette,Paiement client
+2025-04-16 09:20:00,CB - Alice Richard,65.0,Recette,Paiement client
+2025-04-16 10:08:00,CB - Lina Dubois,100.0,Recette,Paiement client
+2025-04-16 10:41:00,CB - Sarah Girard,65.0,Recette,Paiement client
+2025-04-17 09:35:00,CB - Inès Michel,100.0,Recette,Paiement client
+2025-04-17 10:12:00,CB - Agathe Simon,75.0,Recette,Paiement client
+2025-04-17 10:54:00,CB - Anaïs David,65.0,Recette,Paiement client
+2025-04-17 14:30:00,CB - Amina Girard,180.0,Recette,Paiement client
+2025-04-18 09:10:00,CB - Anaïs Morel,35.0,Recette,Paiement client
+2025-04-18 09:36:00,CB - Chloé Durand,50.0,Recette,Paiement client
+2025-04-19 11:03:00,CB - Maëlys Bonnet,110.0,Recette,Paiement client
+2025-04-21 09:00:00,Achats consommables,-52.58,Charge,Consommables
+2025-04-21 11:07:00,CB - Amina Martin,65.0,Recette,Paiement client
+2025-04-21 11:22:00,CB - Elise Fournier,25.0,Recette,Paiement client
+2025-04-21 12:05:00,CB - Maëlys Richard,90.0,Recette,Paiement client
+2025-04-21 14:00:00,CB - Lucie Renaud,120.0,Recette,Paiement client
+2025-04-21 14:51:00,CB - Margaux Dubois,100.0,Recette,Paiement client
+2025-04-22 09:35:00,CB - Noémie Lambert,100.0,Recette,Paiement client
+2025-04-22 10:37:00,CB - Camille Thomas,50.0,Recette,Paiement client
+2025-04-23 09:15:00,CB - Maya Richard,25.0,Recette,Paiement client
+2025-04-23 10:16:00,CB - Anaïs Thomas,120.0,Recette,Paiement client
+2025-04-24 09:35:00,CB - Margaux Dupont,100.0,Recette,Paiement client
+2025-04-24 12:09:00,CB - Alice Francois,35.0,Recette,Paiement client
+2025-04-24 14:00:00,CB - Louise Bertrand,120.0,Recette,Paiement client
+2025-04-25 09:55:00,CB - Louise Michel,140.0,Recette,Paiement client
+2025-04-25 10:29:00,CB - Elise André,25.0,Recette,Paiement client
+2025-04-26 10:15:00,CB - Pauline Bernard,50.0,Recette,Paiement client
+2025-04-28 09:00:00,Achats consommables,-74.35,Charge,Consommables
+2025-04-28 09:45:00,CB - Charlotte Girard,120.0,Recette,Paiement client
+2025-04-28 10:08:00,CB - Manon Bertrand,35.0,Recette,Paiement client
+2025-04-28 10:28:00,CB - Léa Durand,35.0,Recette,Paiement client
+2025-04-28 10:52:00,CB - Charlotte Robert,25.0,Recette,Paiement client
+2025-04-28 12:23:00,CB - Jade Petit,140.0,Recette,Paiement client
+2025-04-29 10:16:00,CB - Emma Simon,150.0,Recette,Paiement client
+2025-04-29 10:53:00,CB - Margaux Legrand,65.0,Recette,Paiement client
+2025-04-29 11:24:00,CB - Noémie Petit,65.0,Recette,Paiement client
+2025-04-30 09:55:00,CB - Louise Roux,140.0,Recette,Paiement client
+2025-04-30 11:23:00,CB - Eva Thomas,180.0,Recette,Paiement client
+2025-04-30 14:45:00,CB - Pauline Francois,220.0,Recette,Paiement client
+2025-05-01 09:00:00,Frais compte pro,-15.0,Charge,Frais bancaires
+2025-05-01 09:00:00,Loyer cabinet,-1200.0,Charge,Loyer
+2025-05-01 09:00:00,Abonnement Planity,-80.0,Charge,Logiciel / abonnement
+2025-05-01 10:15:00,CB - Emma Roux,180.0,Recette,Paiement client
+2025-05-01 11:18:00,CB - Louise Durand,130.0,Recette,Paiement client
+2025-05-01 11:45:00,CB - Eva Robert,25.0,Recette,Paiement client
+2025-05-01 14:42:00,CB - Camille Bertrand,130.0,Recette,Paiement client
+2025-05-01 15:57:00,CB - Pauline Lambert,150.0,Recette,Paiement client
+2025-05-01 17:02:00,CB - Marine Martin,140.0,Recette,Paiement client
+2025-05-01 18:10:00,CB - Emma Bertrand,140.0,Recette,Paiement client
+2025-05-02 09:15:00,CB - Pauline Bertrand,25.0,Recette,Paiement client
+2025-05-02 09:50:00,CB - Jade Lambert,75.0,Recette,Paiement client
+2025-05-03 11:15:00,CB - Anaïs Dupont,180.0,Recette,Paiement client
+2025-05-03 12:02:00,CB - Jade Morel,90.0,Recette,Paiement client
+2025-05-05 09:00:00,Achats consommables,-55.28,Charge,Consommables
+2025-05-05 09:00:00,Assurance professionnelle,-45.0,Charge,Assurance
+2025-05-05 09:30:00,CB - Emma Dupont,90.0,Recette,Paiement client
+2025-05-05 10:06:00,CB - Sarah Petit,65.0,Recette,Paiement client
+2025-05-05 10:42:00,CB - Hana Durand,65.0,Recette,Paiement client
+2025-05-06 09:50:00,CB - Camille Dupont,130.0,Recette,Paiement client
+2025-05-06 10:33:00,CB - Julie Vincent,90.0,Recette,Paiement client
+2025-05-06 11:16:00,CB - Eva André,75.0,Recette,Paiement client
+2025-05-06 12:04:00,CB - Lucie Lefèvre,75.0,Recette,Paiement client
+2025-05-07 09:30:00,CB - Hana Thomas,90.0,Recette,Paiement client
+2025-05-07 11:01:00,CB - Lina Roux,100.0,Recette,Paiement client
+2025-05-07 12:11:00,CB - Camille Robert,120.0,Recette,Paiement client
+2025-05-07 13:40:00,CB - Clara Robert,75.0,Recette,Paiement client
+2025-05-08 09:15:00,CB - Zoé Garcia,50.0,Recette,Paiement client
+2025-05-08 10:02:00,CB - Zoé Girard,100.0,Recette,Paiement client
+2025-05-09 09:20:00,CB - Marine Morel,65.0,Recette,Paiement client
+2025-05-10 09:00:00,Électricité,-120.0,Charge,Énergie
+2025-05-10 10:30:00,CB - Noémie David,90.0,Recette,Paiement client
+2025-05-10 11:43:00,CB - Nina Dupont,150.0,Recette,Paiement client
+2025-05-10 12:30:00,CB - Emma Roux,100.0,Recette,Paiement client
+2025-05-10 13:55:00,CB - Amina Girard,180.0,Recette,Paiement client
+2025-05-12 09:00:00,Achats consommables,-62.93,Charge,Consommables
+2025-05-12 09:00:00,Hébergement site web,-12.0,Charge,Site web
+2025-05-12 09:20:00,CB - Lucie Lefèvre,65.0,Recette,Paiement client
+2025-05-12 09:50:00,CB - Manon Martin,50.0,Recette,Paiement client
+2025-05-12 11:10:00,CB - Lucie Dupont,150.0,Recette,Paiement client
+2025-05-12 14:30:00,CB - Eva Simon,180.0,Recette,Paiement client
+2025-05-12 15:06:00,CB - Clara Fournier,65.0,Recette,Paiement client
+2025-05-12 15:35:00,CB - Maëlys Mercier,50.0,Recette,Paiement client
+2025-05-12 16:17:00,CB - Anaïs David,90.0,Recette,Paiement client
+2025-05-12 17:22:00,CB - Chloé Dupont,140.0,Recette,Paiement client
+2025-05-12 18:26:00,CB - Noémie Michel,130.0,Recette,Paiement client
+2025-05-13 09:15:00,CB - Alice Dupont,25.0,Recette,Paiement client
+2025-05-13 09:52:00,CB - Pauline Lefèvre,65.0,Recette,Paiement client
+2025-05-13 10:23:00,CB - Océane Legrand,25.0,Recette,Paiement client
+2025-05-13 10:49:00,CB - Hana André,25.0,Recette,Paiement client
+2025-05-13 12:02:00,CB - Emma Bertrand,150.0,Recette,Paiement client
+2025-05-13 14:15:00,CB - Clara Francois,150.0,Recette,Paiement client
+2025-05-13 15:01:00,CB - Pauline Michel,90.0,Recette,Paiement client
+2025-05-13 15:34:00,CB - Julie Petit,65.0,Recette,Paiement client
+2025-05-15 09:40:00,CB - Lina Roux,110.0,Recette,Paiement client
+2025-05-15 10:30:00,CB - Manon Legrand,110.0,Recette,Paiement client
+2025-05-16 09:20:00,CB - Noémie Bertrand,65.0,Recette,Paiement client
+2025-05-17 10:35:00,CB - Anaïs Legrand,100.0,Recette,Paiement client
+2025-05-17 11:43:00,CB - Jade Bertrand,130.0,Recette,Paiement client
+2025-05-19 09:00:00,Achats consommables,-56.63,Charge,Consommables
+2025-05-19 09:40:00,CB - Lina Dubois,110.0,Recette,Paiement client
+2025-05-19 10:07:00,CB - Zoé Vincent,35.0,Recette,Paiement client
+2025-05-19 10:46:00,CB - Anaïs Robert,75.0,Recette,Paiement client
+2025-05-19 14:45:00,CB - Agathe Martin,220.0,Recette,Paiement client
+2025-05-19 15:35:00,CB - Anaïs Thomas,110.0,Recette,Paiement client
+2025-05-19 18:03:00,CB - Agathe Lefèvre,120.0,Recette,Paiement client
+2025-05-20 09:40:00,CB - Inès Michel,110.0,Recette,Paiement client
+2025-05-20 10:27:00,CB - Louise Bertrand,100.0,Recette,Paiement client
+2025-05-20 11:23:00,CB - Margaux Dubois,110.0,Recette,Paiement client
+2025-05-20 14:30:00,CB - Agathe Thomas,180.0,Recette,Paiement client
+2025-05-20 16:46:00,CB - Alice Lefèvre,280.0,Recette,Paiement client
+2025-05-21 09:25:00,CB - Eva Lefèvre,75.0,Recette,Paiement client
+2025-05-21 10:06:00,CB - Maëlys Bonnet,90.0,Recette,Paiement client
+2025-05-21 10:58:00,CB - Lucie Renaud,110.0,Recette,Paiement client
+2025-05-22 09:20:00,CB - Agathe Simon,65.0,Recette,Paiement client
+2025-05-22 10:42:00,CB - Emma Simon,150.0,Recette,Paiement client
+2025-05-23 11:28:00,CB - Pauline Francois,220.0,Recette,Paiement client
+2025-05-24 11:00:00,CB - Inès Robert,150.0,Recette,Paiement client
+2025-05-26 09:00:00,Achats consommables,-48.15,Charge,Consommables
+2025-05-26 09:20:00,CB - Amina Martin,65.0,Recette,Paiement client
+2025-05-26 09:38:00,CB - Sarah Girard,25.0,Recette,Paiement client
+2025-05-26 10:14:00,CB - Maëlys Richard,75.0,Recette,Paiement client
+2025-05-26 11:22:00,CB - Pauline Lambert,140.0,Recette,Paiement client
+2025-05-26 13:50:00,CB - Camille Bertrand,100.0,Recette,Paiement client
+2025-05-26 14:45:00,CB - Margaux Dupont,100.0,Recette,Paiement client
+2025-05-26 15:15:00,CB - Sarah Vincent,50.0,Recette,Paiement client
+2025-05-27 09:20:00,CB - Margaux Legrand,65.0,Recette,Paiement client
+2025-05-27 10:04:00,CB - Agathe Michel,90.0,Recette,Paiement client
+2025-05-27 11:26:00,CB - Agathe Moreau,65.0,Recette,Paiement client
+2025-05-28 10:30:00,CB - Maya Richard,220.0,Recette,Paiement client
+2025-05-28 10:58:00,CB - Pauline Lambert,25.0,Recette,Paiement client
+2025-05-28 12:13:00,CB - Anaïs Dupont,150.0,Recette,Paiement client
+2025-05-28 13:30:00,CB - Alice Richard,50.0,Recette,Paiement client
+2025-05-29 09:55:00,CB - Louise Durand,140.0,Recette,Paiement client
+2025-05-29 10:48:00,CB - Charlotte Girard,100.0,Recette,Paiement client
+2025-05-30 09:50:00,CB - Elise André,130.0,Recette,Paiement client
+2025-05-30 10:17:00,CB - Anaïs Robert,25.0,Recette,Paiement client
+2025-05-30 11:28:00,CB - Chloé Durand,25.0,Recette,Paiement client
+2025-05-30 11:51:00,CB - Anaïs Morel,25.0,Recette,Paiement client
+2025-06-01 09:00:00,Frais compte pro,-15.0,Charge,Frais bancaires
+2025-06-01 09:00:00,Abonnement Planity,-80.0,Charge,Logiciel / abonnement
+2025-06-01 09:00:00,Loyer cabinet,-1200.0,Charge,Loyer
+2025-06-02 09:00:00,Achats consommables,-68.65,Charge,Consommables
+2025-06-02 09:30:00,CB - Louise Michel,90.0,Recette,Paiement client
+2025-06-02 10:43:00,CB - Nina Dupont,150.0,Recette,Paiement client
+2025-06-02 11:28:00,CB - Agathe Richard,100.0,Recette,Paiement client
+2025-06-03 09:15:00,CB - Agathe Girard,25.0,Recette,Paiement client
+2025-06-03 09:42:00,CB - Camille Thomas,50.0,Recette,Paiement client
+2025-06-03 10:33:00,CB - Jade Lambert,90.0,Recette,Paiement client
+2025-06-04 09:45:00,CB - Camille Dupont,120.0,Recette,Paiement client
+2025-06-04 10:46:00,CB - Louise Roux,120.0,Recette,Paiement client
+2025-06-04 11:52:00,CB - Amina Girard,140.0,Recette,Paiement client
+2025-06-04 13:40:00,CB - Maëlys Mercier,75.0,Recette,Paiement client
+2025-06-04 14:56:00,CB - Eva Simon,140.0,Recette,Paiement client
+2025-06-04 15:52:00,CB - Lina Bonnet,100.0,Recette,Paiement client
+2025-06-04 16:35:00,CB - Jade Morel,90.0,Recette,Paiement client
+2025-06-04 17:50:00,CB - Chloé Dupont,140.0,Recette,Paiement client
+2025-06-05 09:00:00,Assurance professionnelle,-45.0,Charge,Assurance
+2025-06-05 11:26:00,CB - Emma Bertrand,150.0,Recette,Paiement client
+2025-06-05 14:15:00,CB - Eva Robert,150.0,Recette,Paiement client
+2025-06-05 14:39:00,CB - Noémie Petit,35.0,Recette,Paiement client
+2025-06-05 16:30:00,CB - Clara Francois,140.0,Recette,Paiement client
+2025-06-06 10:43:00,CB - Pauline Bertrand,130.0,Recette,Paiement client
+2025-06-06 11:36:00,CB - Julie Vincent,100.0,Recette,Paiement client
+2025-06-07 10:15:00,CB - Manon Fournier,50.0,Recette,Paiement client
+2025-06-07 11:19:00,CB - Marine Martin,120.0,Recette,Paiement client
+2025-06-07 11:44:00,CB - Maëlys Vincent,50.0,Recette,Paiement client
+2025-06-07 12:25:00,CB - Manon Legrand,90.0,Recette,Paiement client
+2025-06-09 09:00:00,Achats consommables,-43.19,Charge,Consommables
+2025-06-09 09:10:00,CB - Manon Bertrand,35.0,Recette,Paiement client
+2025-06-09 09:50:00,CB - Anaïs David,75.0,Recette,Paiement client
+2025-06-10 09:00:00,Électricité,-120.0,Charge,Énergie
+2025-06-11 09:20:00,CB - Hana Thomas,65.0,Recette,Paiement client
+2025-06-11 10:00:00,CB - Lina Roux,90.0,Recette,Paiement client
+2025-06-11 11:02:00,CB - Agathe Lefèvre,130.0,Recette,Paiement client
+2025-06-11 12:02:00,CB - Noémie Michel,110.0,Recette,Paiement client
+2025-06-11 14:00:00,CB - Jade Bertrand,120.0,Recette,Paiement client
+2025-06-11 14:27:00,CB - Julie Vincent,25.0,Recette,Paiement client
+2025-06-12 09:00:00,Hébergement site web,-12.0,Charge,Site web
+2025-06-12 09:25:00,CB - Zoé Girard,75.0,Recette,Paiement client
+2025-06-12 10:36:00,CB - Agathe Thomas,150.0,Recette,Paiement client
+2025-06-12 12:16:00,CB - Alice Lefèvre,220.0,Recette,Paiement client
+2025-06-13 09:20:00,CB - Manon Bonnet,65.0,Recette,Paiement client
+2025-06-13 09:48:00,CB - Sarah Garcia,25.0,Recette,Paiement client
+2025-06-13 10:29:00,CB - Sarah Petit,65.0,Recette,Paiement client
+2025-06-14 10:35:00,CB - Anaïs Thomas,100.0,Recette,Paiement client
+2025-06-15 09:00:00,Entretien machine électrolyse,-250.0,Charge,Maintenance
+2025-06-16 09:00:00,Achats consommables,-75.9,Charge,Consommables
+2025-06-16 11:13:00,CB - Alice Dupont,220.0,Recette,Paiement client
+2025-06-16 12:18:00,CB - Maëlys Morel,140.0,Recette,Paiement client
+2025-06-16 13:35:00,CB - Nina Mercier,65.0,Recette,Paiement client
+2025-06-16 14:05:00,CB - Emma Roux,65.0,Recette,Paiement client
+2025-06-16 15:19:00,CB - Inès Robert,150.0,Recette,Paiement client
+2025-06-16 15:59:00,CB - Lina Roux,90.0,Recette,Paiement client
+2025-06-16 17:41:00,CB - Emma Simon,130.0,Recette,Paiement client
+2025-06-17 09:15:00,CB - Hana Durand,25.0,Recette,Paiement client
+2025-06-17 10:48:00,CB - Pauline Francois,180.0,Recette,Paiement client
+2025-06-17 11:18:00,CB - Lucie Lefèvre,65.0,Recette,Paiement client
+2025-06-17 12:20:00,CB - Eva Thomas,120.0,Recette,Paiement client
+2025-06-17 14:05:00,CB - Océane Legrand,130.0,Recette,Paiement client
+2025-06-17 15:38:00,CB - Agathe Martin,180.0,Recette,Paiement client
+2025-06-18 09:40:00,CB - Margaux Dubois,110.0,Recette,Paiement client
+2025-06-18 10:20:00,CB - Noémie David,75.0,Recette,Paiement client
+2025-06-18 11:21:00,CB - Emma Bertrand,120.0,Recette,Paiement client
+2025-06-19 09:15:00,CB - Manon Roux,25.0,Recette,Paiement client
+2025-06-20 10:30:00,CB - Maya Richard,220.0,Recette,Paiement client
+2025-06-21 10:20:00,CB - Pauline Michel,65.0,Recette,Paiement client
+2025-06-21 10:55:00,CB - Anaïs Legrand,75.0,Recette,Paiement client
+2025-06-23 09:00:00,Achats consommables,-56.09,Charge,Consommables
+2025-06-23 09:55:00,CB - Elise André,140.0,Recette,Paiement client
+2025-06-23 10:45:00,CB - Lucie Renaud,90.0,Recette,Paiement client
+2025-06-23 13:35:00,CB - Lina Dubois,65.0,Recette,Paiement client
+2025-06-23 14:40:00,CB - Camille Bertrand,110.0,Recette,Paiement client
+2025-06-23 15:12:00,CB - Inès Michel,50.0,Recette,Paiement client
+2025-06-24 09:15:00,CB - Noémie Bertrand,50.0,Recette,Paiement client
+2025-06-24 09:42:00,CB - Anaïs Robert,50.0,Recette,Paiement client
+2025-06-24 10:12:00,CB - Pauline Lefèvre,65.0,Recette,Paiement client
+2025-06-24 11:22:00,CB - Anaïs Dupont,150.0,Recette,Paiement client
+2025-06-24 12:08:00,CB - Camille Robert,100.0,Recette,Paiement client
+2025-06-25 09:25:00,CB - Agathe Richard,75.0,Recette,Paiement client
+2025-06-25 10:23:00,CB - Jade Petit,120.0,Recette,Paiement client
+2025-06-25 11:12:00,CB - Maëlys Bonnet,90.0,Recette,Paiement client
+2025-06-26 10:47:00,CB - Zoé Thomas,90.0,Recette,Paiement client
+2025-06-26 11:22:00,CB - Camille Dupont,25.0,Recette,Paiement client
+2025-06-26 11:51:00,CB - Agathe Legrand,25.0,Recette,Paiement client
+2025-06-27 10:00:00,CB - Nina Dupont,150.0,Recette,Paiement client
+2025-06-28 11:17:00,CB - Agathe Simon,90.0,Recette,Paiement client
+2025-06-30 09:00:00,Achats consommables,-68.9,Charge,Consommables
+2025-06-30 09:45:00,CB - Lucie Dupont,120.0,Recette,Paiement client
+2025-06-30 10:39:00,CB - Chloé Dupont,110.0,Recette,Paiement client
+2025-06-30 11:11:00,CB - Maëlys Mercier,65.0,Recette,Paiement client
+2025-06-30 14:30:00,CB - Eva Simon,180.0,Recette,Paiement client
+2025-06-30 15:21:00,CB - Pauline Bertrand,110.0,Recette,Paiement client
+2025-06-30 16:26:00,CB - Emma Bertrand,120.0,Recette,Paiement client
+2025-06-30 17:39:00,CB - Clara Francois,140.0,Recette,Paiement client
+2025-06-30 18:08:00,CB - Margaux Dupont,50.0,Recette,Paiement client
+2025-07-01 09:00:00,Abonnement Planity,-80.0,Charge,Logiciel / abonnement
+2025-07-01 09:00:00,Loyer cabinet,-1200.0,Charge,Loyer
+2025-07-01 09:00:00,Frais compte pro,-15.0,Charge,Frais bancaires
+2025-07-01 09:50:00,CB - Amina Girard,130.0,Recette,Paiement client
+2025-07-01 10:10:00,CB - Amina Martin,25.0,Recette,Paiement client
+2025-07-01 10:37:00,CB - Louise Durand,25.0,Recette,Paiement client
+2025-07-02 09:55:00,CB - Pauline Lambert,140.0,Recette,Paiement client
+2025-07-02 12:02:00,CB - Emma Roux,180.0,Recette,Paiement client
+2025-07-03 09:10:00,CB - Agathe Moreau,35.0,Recette,Paiement client
+2025-07-03 10:00:00,CB - Charlotte Girard,100.0,Recette,Paiement client
+2025-07-03 10:37:00,CB - Noémie Lambert,75.0,Recette,Paiement client
+2025-07-04 10:00:00,CB - Anaïs Robert,150.0,Recette,Paiement client
+2025-07-05 09:00:00,Assurance professionnelle,-45.0,Charge,Assurance
+2025-07-05 10:40:00,CB - Camille Dupont,110.0,Recette,Paiement client
+2025-07-07 09:00:00,Achats consommables,-70.17,Charge,Consommables
+2025-07-07 09:15:00,CB - Sarah Girard,50.0,Recette,Paiement client
+2025-07-07 10:10:00,CB - Agathe Lefèvre,110.0,Recette,Paiement client
+2025-07-07 11:20:00,CB - Agathe Thomas,140.0,Recette,Paiement client
+2025-07-07 14:30:00,CB - Alice Lefèvre,180.0,Recette,Paiement client
+2025-07-08 09:20:00,CB - Jade Lambert,65.0,Recette,Paiement client
+2025-07-08 10:08:00,CB - Jade Bertrand,90.0,Recette,Paiement client
+2025-07-08 10:55:00,CB - Agathe Girard,100.0,Recette,Paiement client
+2025-07-09 09:30:00,CB - Anaïs David,90.0,Recette,Paiement client
+2025-07-09 10:14:00,CB - Lina Bonnet,90.0,Recette,Paiement client
+2025-07-09 14:30:00,CB - Alice Dupont,180.0,Recette,Paiement client
+2025-07-09 14:58:00,CB - Nina Lambert,25.0,Recette,Paiement client
+2025-07-10 09:00:00,Électricité,-120.0,Charge,Énergie
+2025-07-10 09:15:00,CB - Emma Martin,25.0,Recette,Paiement client
+2025-07-10 09:45:00,CB - Louise Michel,50.0,Recette,Paiement client
+2025-07-10 10:28:00,CB - Emma Dupont,75.0,Recette,Paiement client
+2025-07-11 10:00:00,CB - Inès Robert,150.0,Recette,Paiement client
+2025-07-11 10:36:00,CB - Louise Roux,75.0,Recette,Paiement client
+2025-07-11 11:36:00,CB - Elise Bonnet,130.0,Recette,Paiement client
+2025-07-11 13:55:00,CB - Sarah Martin,110.0,Recette,Paiement client
+2025-07-12 09:00:00,Hébergement site web,-12.0,Charge,Site web
+2025-07-12 10:15:00,CB - Jade Mercier,25.0,Recette,Paiement client
+2025-07-14 09:00:00,Achats consommables,-58.27,Charge,Consommables
+2025-07-14 09:35:00,CB - Noémie Michel,100.0,Recette,Paiement client
+2025-07-14 10:41:00,CB - Emma Simon,130.0,Recette,Paiement client
+2025-07-14 11:42:00,CB - Anaïs Thomas,120.0,Recette,Paiement client
+2025-07-14 12:17:00,CB - Sarah Bernard,25.0,Recette,Paiement client
+2025-07-14 13:50:00,CB - Louise Bertrand,100.0,Recette,Paiement client
+2025-07-14 14:28:00,CB - Noémie Petit,65.0,Recette,Paiement client
+2025-07-15 10:15:00,CB - Pauline Francois,180.0,Recette,Paiement client
+2025-07-15 13:50:00,CB - Eva Thomas,100.0,Recette,Paiement client
+2025-07-16 09:55:00,CB - Julie Vincent,140.0,Recette,Paiement client
+2025-07-16 11:03:00,CB - Maëlys Morel,130.0,Recette,Paiement client
+2025-07-16 12:08:00,CB - Maëlys Vincent,50.0,Recette,Paiement client
+2025-07-16 14:05:00,CB - Emma Bertrand,130.0,Recette,Paiement client
+2025-07-17 09:10:00,CB - Zoé Morel,35.0,Recette,Paiement client
+2025-07-17 10:13:00,CB - Elise André,120.0,Recette,Paiement client
+2025-07-18 09:20:00,CB - Sarah Garcia,65.0,Recette,Paiement client
+2025-07-18 09:56:00,CB - Lina Roux,75.0,Recette,Paiement client
+2025-07-19 10:15:00,CB - Julie Leroy,50.0,Recette,Paiement client
+2025-07-19 10:47:00,CB - Zoé Girard,65.0,Recette,Paiement client
+2025-07-19 12:07:00,CB - Agathe Martin,150.0,Recette,Paiement client
+2025-07-21 09:00:00,Achats consommables,-44.81,Charge,Consommables
+2025-07-21 10:10:00,CB - Agathe Richard,90.0,Recette,Paiement client
+2025-07-21 12:02:00,CB - Lina Roux,65.0,Recette,Paiement client
+2025-07-22 09:15:00,CB - Louise Vincent,25.0,Recette,Paiement client
+2025-07-22 09:52:00,CB - Manon Bonnet,65.0,Recette,Paiement client
+2025-07-22 11:15:00,CB - Hana Durand,150.0,Recette,Paiement client
+2025-07-22 11:43:00,CB - Maya Simon,50.0,Recette,Paiement client
+2025-07-22 13:55:00,CB - Camille Robert,110.0,Recette,Paiement client
+2025-07-23 09:50:00,CB - Eva Robert,130.0,Recette,Paiement client
+2025-07-23 10:39:00,CB - Camille Bertrand,100.0,Recette,Paiement client
+2025-07-23 11:47:00,CB - Anaïs Dupont,140.0,Recette,Paiement client
+2025-07-24 10:00:00,CB - Manon Roux,150.0,Recette,Paiement client
+2025-07-24 10:51:00,CB - Pauline Bertrand,100.0,Recette,Paiement client
+2025-07-25 10:00:00,CB - Pauline Lambert,150.0,Recette,Paiement client
+2025-07-25 10:28:00,CB - Sarah Petit,50.0,Recette,Paiement client
+2025-07-25 10:58:00,CB - Emma Roux,50.0,Recette,Paiement client
+2025-07-28 09:00:00,Achats consommables,-54.05,Charge,Consommables
+2025-07-28 10:34:00,CB - Lucie Dupont,120.0,Recette,Paiement client
+2025-07-28 13:45:00,CB - Lucie Renaud,90.0,Recette,Paiement client
+2025-07-28 14:47:00,CB - Eva Simon,120.0,Recette,Paiement client
+2025-07-28 15:58:00,CB - Chloé Dupont,90.0,Recette,Paiement client
+2025-07-28 16:53:00,CB - Emma Bertrand,110.0,Recette,Paiement client
+2025-07-28 17:28:00,CB - Margaux Legrand,50.0,Recette,Paiement client
+2025-07-28 18:04:00,CB - Agathe Michel,75.0,Recette,Paiement client
+2025-07-28 18:50:00,CB - Anaïs Legrand,75.0,Recette,Paiement client
+2025-07-29 09:40:00,CB - Clara Francois,110.0,Recette,Paiement client
+2025-07-29 10:12:00,CB - Lina Dubois,65.0,Recette,Paiement client
+2025-07-30 09:45:00,CB - Louise Durand,120.0,Recette,Paiement client
+2025-07-30 10:17:00,CB - Inès Michel,50.0,Recette,Paiement client
+2025-07-30 11:30:00,CB - Amina Girard,130.0,Recette,Paiement client
+2025-07-30 11:56:00,CB - Clara Simon,25.0,Recette,Paiement client
+2025-07-30 13:40:00,CB - Manon Legrand,75.0,Recette,Paiement client
+2025-07-30 14:13:00,CB - Noémie David,50.0,Recette,Paiement client
+2025-07-31 10:32:00,CB - Agathe Girard,65.0,Recette,Paiement client
+2025-07-31 11:54:00,CB - Camille Dupont,150.0,Recette,Paiement client
+2025-08-01 09:00:00,Abonnement Planity,-80.0,Charge,Logiciel / abonnement
+2025-08-01 09:00:00,Frais compte pro,-15.0,Charge,Frais bancaires
+2025-08-01 09:00:00,Loyer cabinet,-1200.0,Charge,Loyer
+2025-08-01 09:20:00,CB - Maëlys Bonnet,65.0,Recette,Paiement client
+2025-08-02 10:15:00,CB - Anaïs Robert,50.0,Recette,Paiement client
+2025-08-02 10:50:00,CB - Pauline Michel,65.0,Recette,Paiement client
+2025-08-04 09:00:00,Achats consommables,-49.08,Charge,Consommables
+2025-08-04 09:30:00,CB - Agathe Lefèvre,90.0,Recette,Paiement client
+2025-08-04 10:30:00,CB - Sarah Martin,120.0,Recette,Paiement client
+2025-08-04 11:48:00,CB - Alice Dupont,150.0,Recette,Paiement client
+2025-08-04 15:07:00,CB - Alice Lefèvre,150.0,Recette,Paiement client
+2025-08-04 15:43:00,CB - Zoé Thomas,65.0,Recette,Paiement client
+2025-08-04 16:36:00,CB - Océane Legrand,110.0,Recette,Paiement client
+2025-08-04 17:44:00,CB - Agathe Thomas,140.0,Recette,Paiement client
+2025-08-05 09:00:00,Assurance professionnelle,-45.0,Charge,Assurance
+2025-08-05 10:00:00,CB - Louise Durand,150.0,Recette,Paiement client
+2025-08-06 09:20:00,CB - Margaux Dupont,65.0,Recette,Paiement client
+2025-08-06 11:00:00,CB - Agathe Simon,65.0,Recette,Paiement client
+2025-08-07 09:30:00,CB - Camille Dupont,90.0,Recette,Paiement client
+2025-08-07 10:00:00,CB - Marine Roux,25.0,Recette,Paiement client
+2025-08-08 09:50:00,CB - Inès Robert,130.0,Recette,Paiement client
+2025-08-08 10:53:00,CB - Julie Vincent,120.0,Recette,Paiement client
+2025-08-09 10:15:00,CB - Amina Francois,25.0,Recette,Paiement client
+2025-08-09 11:27:00,CB - Charlotte Girard,90.0,Recette,Paiement client
+2025-08-09 11:53:00,CB - Amina Martin,35.0,Recette,Paiement client
+2025-08-10 09:00:00,Électricité,-120.0,Charge,Énergie
+2025-08-11 09:00:00,Achats consommables,-62.85,Charge,Consommables
+2025-08-11 09:20:00,CB - Sarah Garcia,65.0,Recette,Paiement client
+2025-08-11 10:01:00,CB - Anaïs David,75.0,Recette,Paiement client
+2025-08-11 11:37:00,CB - Emma Simon,120.0,Recette,Paiement client
+2025-08-12 09:00:00,Hébergement site web,-12.0,Charge,Site web
+2025-08-12 09:15:00,CB - Camille Bonnet,25.0,Recette,Paiement client
+2025-08-12 10:50:00,CB - Maya Richard,180.0,Recette,Paiement client
+2025-08-13 09:30:00,CB - Anaïs Thomas,90.0,Recette,Paiement client
+2025-08-13 10:40:00,CB - Nina Lambert,150.0,Recette,Paiement client
+2025-08-14 09:35:00,CB - Louise Bertrand,100.0,Recette,Paiement client
+2025-08-14 11:55:00,CB - Hana Durand,150.0,Recette,Paiement client
+2025-08-14 13:35:00,CB - Jade Lambert,65.0,Recette,Paiement client
+2025-08-14 14:27:00,CB - Eva Thomas,110.0,Recette,Paiement client
+2025-08-14 15:36:00,CB - Emma Martin,140.0,Recette,Paiement client
+2025-08-14 16:30:00,CB - Elise André,100.0,Recette,Paiement client
+2025-08-15 09:10:00,CB - Lina Bonnet,35.0,Recette,Paiement client
+2025-08-15 09:59:00,CB - Jade Morel,100.0,Recette,Paiement client
+2025-08-15 10:51:00,CB - Emma Bertrand,110.0,Recette,Paiement client
+2025-08-16 10:20:00,CB - Emma Dupont,65.0,Recette,Paiement client
+2025-08-16 11:27:00,CB - Agathe Richard,130.0,Recette,Paiement client
+2025-08-16 12:22:00,CB - Jade Mercier,110.0,Recette,Paiement client
+2025-08-16 13:41:00,CB - Manon Roux,150.0,Recette,Paiement client
+2025-08-18 09:00:00,Achats consommables,-24.14,Charge,Consommables
+2025-08-18 15:15:00,CB - Sarah Bernard,280.0,Recette,Paiement client
+2025-08-19 09:45:00,CB - Maya Roux,25.0,Recette,Paiement client
+2025-08-19 11:01:00,CB - Eva Robert,140.0,Recette,Paiement client
+2025-08-19 12:16:00,CB - Pauline Lambert,140.0,Recette,Paiement client
+2025-08-20 09:15:00,CB - Amina Renaud,25.0,Recette,Paiement client
+2025-08-21 10:34:00,CB - Camille Robert,90.0,Recette,Paiement client
+2025-08-21 11:22:00,CB - Pauline Bertrand,90.0,Recette,Paiement client
+2025-08-23 10:55:00,CB - Camille Dupont,140.0,Recette,Paiement client
+2025-08-23 11:50:00,CB - Agathe Legrand,120.0,Recette,Paiement client
+2025-08-25 09:00:00,Achats consommables,-74.81,Charge,Consommables
+2025-08-25 09:30:00,CB - Camille Bertrand,90.0,Recette,Paiement client
+2025-08-25 10:29:00,CB - Nina Dupont,120.0,Recette,Paiement client
+2025-08-25 11:07:00,CB - Margaux Dubois,75.0,Recette,Paiement client
+2025-08-25 11:42:00,CB - Anaïs Francois,25.0,Recette,Paiement client
+2025-08-25 12:20:00,CB - Agathe Girard,75.0,Recette,Paiement client
+2025-08-25 15:04:00,CB - Zoé Roux,180.0,Recette,Paiement client
+2025-08-26 09:45:00,CB - Lucie Dupont,120.0,Recette,Paiement client
+2025-08-26 11:09:00,CB - Chloé Dupont,100.0,Recette,Paiement client
+2025-08-26 12:04:00,CB - Maëlys Mercier,50.0,Recette,Paiement client
+2025-08-26 14:15:00,CB - Louise Vincent,150.0,Recette,Paiement client
+2025-08-26 14:49:00,CB - Nina Lambert,25.0,Recette,Paiement client
+2025-08-26 15:51:00,CB - Eva Simon,130.0,Recette,Paiement client
+2025-08-27 09:40:00,CB - Clara Francois,110.0,Recette,Paiement client
+2025-08-27 10:09:00,CB - Maëlys Vincent,50.0,Recette,Paiement client
+2025-08-27 10:49:00,CB - Lina Roux,75.0,Recette,Paiement client
+2025-08-27 11:19:00,CB - Charlotte Simon,50.0,Recette,Paiement client
+2025-08-27 11:54:00,CB - Zoé Girard,65.0,Recette,Paiement client
+2025-08-27 14:05:00,CB - Emma Bertrand,130.0,Recette,Paiement client
+2025-08-27 14:31:00,CB - Marine Martin,50.0,Recette,Paiement client
+2025-08-28 10:00:00,CB - Louise Durand,150.0,Recette,Paiement client
+2025-08-28 10:34:00,CB - Clara Lambert,25.0,Recette,Paiement client
+2025-08-28 12:15:00,CB - Sarah Martin,120.0,Recette,Paiement client
+2025-08-29 09:15:00,CB - Nina Bernard,50.0,Recette,Paiement client
+2025-08-29 09:56:00,CB - Manon Legrand,75.0,Recette,Paiement client
+2025-08-29 10:26:00,CB - Margaux Richard,65.0,Recette,Paiement client
+2025-08-29 10:55:00,CB - Alice André,25.0,Recette,Paiement client
+2025-08-30 10:55:00,CB - Amina Girard,140.0,Recette,Paiement client
+2025-09-01 09:00:00,Abonnement Planity,-80.0,Charge,Logiciel / abonnement
+2025-09-01 09:00:00,Achats consommables,-62.38,Charge,Consommables
+2025-09-01 09:00:00,Loyer cabinet,-1200.0,Charge,Loyer
+2025-09-01 09:00:00,Frais compte pro,-15.0,Charge,Frais bancaires
+2025-09-01 10:32:00,CB - Océane Legrand,120.0,Recette,Paiement client
+2025-09-01 11:53:00,CB - Alice Dupont,150.0,Recette,Paiement client
+2025-09-01 13:30:00,CB - Margaux Legrand,50.0,Recette,Paiement client
+2025-09-01 14:08:00,CB - Agathe Michel,75.0,Recette,Paiement client
+2025-09-01 15:21:00,CB - Alice Lefèvre,150.0,Recette,Paiement client
+2025-09-02 09:20:00,CB - Lucie Renaud,65.0,Recette,Paiement client
+2025-09-02 10:09:00,CB - Agathe Lefèvre,100.0,Recette,Paiement client
+2025-09-02 11:09:00,CB - Julie Vincent,120.0,Recette,Paiement client
+2025-09-02 11:46:00,CB - Manon Bonnet,65.0,Recette,Paiement client
+2025-09-03 10:41:00,CB - Agathe Thomas,120.0,Recette,Paiement client
+2025-09-03 11:06:00,CB - Margaux Robert,25.0,Recette,Paiement client
+2025-09-03 14:15:00,CB - Clara Simon,150.0,Recette,Paiement client
+2025-09-04 09:15:00,CB - Elise Thomas,50.0,Recette,Paiement client
+2025-09-04 10:01:00,CB - Sarah Garcia,75.0,Recette,Paiement client
+2025-09-05 09:00:00,Assurance professionnelle,-45.0,Charge,Assurance
+2025-09-05 09:10:00,CB - Emma Roux,35.0,Recette,Paiement client
+2025-09-05 09:47:00,CB - Anaïs Legrand,75.0,Recette,Paiement client
+2025-09-05 11:04:00,CB - Nina Lambert,150.0,Recette,Paiement client
+2025-09-06 10:35:00,CB - Jade Bertrand,100.0,Recette,Paiement client
+2025-09-06 11:34:00,CB - Emma Martin,120.0,Recette,Paiement client
+2025-09-06 11:59:00,CB - Lina Dubois,50.0,Recette,Paiement client
+2025-09-08 09:00:00,Achats consommables,-56.67,Charge,Consommables
+2025-09-08 09:15:00,CB - Inès Michel,50.0,Recette,Paiement client
+2025-09-08 10:10:00,CB - Inès Robert,110.0,Recette,Paiement client
+2025-09-08 11:22:00,CB - Hana Durand,150.0,Recette,Paiement client
+2025-09-08 11:42:00,CB - Maëlys Michel,35.0,Recette,Paiement client
+2025-09-08 13:55:00,CB - Jade Mercier,110.0,Recette,Paiement client
+2025-09-08 14:20:00,CB - Julie Bernard,25.0,Recette,Paiement client
+2025-09-09 09:10:00,CB - Maëlys Bonnet,35.0,Recette,Paiement client
+2025-09-09 10:50:00,CB - Marine Robert,220.0,Recette,Paiement client
+2025-09-10 09:00:00,Électricité,-120.0,Charge,Énergie
+2025-09-10 09:15:00,CB - Inès Robert,25.0,Recette,Paiement client
+2025-09-10 10:10:00,CB - Manon Roux,120.0,Recette,Paiement client
+2025-09-10 15:15:00,CB - Sarah Bernard,280.0,Recette,Paiement client
+2025-09-11 09:25:00,CB - Camille Dupont,75.0,Recette,Paiement client
+2025-09-11 10:10:00,CB - Emma Simon,90.0,Recette,Paiement client
+2025-09-11 11:39:00,CB - Marine Roux,180.0,Recette,Paiement client
+2025-09-11 14:05:00,CB - Maya Richard,130.0,Recette,Paiement client
+2025-09-12 09:00:00,Hébergement site web,-12.0,Charge,Site web
+2025-09-12 09:15:00,CB - Alice Mercier,25.0,Recette,Paiement client
+2025-09-12 09:50:00,CB - Marine Roux,25.0,Recette,Paiement client
+2025-09-12 10:47:00,CB - Emma Roux,110.0,Recette,Paiement client
+2025-09-13 10:20:00,CB - Anaïs Robert,65.0,Recette,Paiement client
+2025-09-13 11:01:00,CB - Elise André,90.0,Recette,Paiement client
+2025-09-13 12:26:00,CB - Amina Francois,180.0,Recette,Paiement client
+2025-09-15 09:00:00,Entretien machine électrolyse,-250.0,Charge,Maintenance
+2025-09-15 09:00:00,Achats consommables,-69.09,Charge,Consommables
+2025-09-15 09:30:00,CB - Agathe Richard,90.0,Recette,Paiement client
+2025-09-15 09:57:00,CB - Margaux Dupont,35.0,Recette,Paiement client
+2025-09-15 10:35:00,CB - Anaïs David,75.0,Recette,Paiement client
+2025-09-15 11:27:00,CB - Eva Thomas,100.0,Recette,Paiement client
+2025-09-15 12:03:00,CB - Anaïs Thomas,75.0,Recette,Paiement client
+2025-09-15 13:25:00,CB - Zoé Thomas,35.0,Recette,Paiement client
+2025-09-15 14:43:00,CB - Pauline Francois,140.0,Recette,Paiement client
+2025-09-16 09:30:00,CB - Camille Bonnet,90.0,Recette,Paiement client
+2025-09-16 10:05:00,CB - Emma Bertrand,75.0,Recette,Paiement client
+2025-09-16 11:54:00,CB - Louise Bertrand,75.0,Recette,Paiement client
+2025-09-17 10:00:00,CB - Zoé Roux,150.0,Recette,Paiement client
+2025-09-17 10:34:00,CB - Camille Mercier,25.0,Recette,Paiement client
+2025-09-17 11:16:00,CB - Agathe Simon,65.0,Recette,Paiement client
+2025-09-17 12:17:00,CB - Agathe Legrand,130.0,Recette,Paiement client
+2025-09-17 14:05:00,CB - Camille Dupont,130.0,Recette,Paiement client
+2025-09-17 14:57:00,CB - Eva Robert,110.0,Recette,Paiement client
+2025-09-17 15:23:00,CB - Charlotte Girard,50.0,Recette,Paiement client
+2025-09-18 09:50:00,CB - Anaïs Robert,130.0,Recette,Paiement client
+2025-09-18 11:01:00,CB - Louise Vincent,140.0,Recette,Paiement client
+2025-09-19 09:10:00,CB - Julie Vincent,35.0,Recette,Paiement client
+2025-09-19 09:38:00,CB - Jade Durand,25.0,Recette,Paiement client
+2025-09-19 10:04:00,CB - Pauline Bertrand,35.0,Recette,Paiement client
+2025-09-19 10:36:00,CB - Manon Francois,25.0,Recette,Paiement client
+2025-09-20 10:15:00,CB - Maëlys Richard,50.0,Recette,Paiement client
+2025-09-20 10:59:00,CB - Pauline Bertrand,90.0,Recette,Paiement client
+2025-09-20 11:19:00,CB - Amina Martin,25.0,Recette,Paiement client
+2025-09-22 09:00:00,Achats consommables,-86.79,Charge,Consommables
+2025-09-22 09:45:00,CB - Maëlys Morel,120.0,Recette,Paiement client
+2025-09-22 10:16:00,CB - Jade Lambert,25.0,Recette,Paiement client
+2025-09-22 11:19:00,CB - Louise Durand,130.0,Recette,Paiement client
+2025-09-22 12:00:00,CB - Camille Robert,90.0,Recette,Paiement client
+2025-09-22 13:30:00,CB - Noémie Lambert,50.0,Recette,Paiement client
+2025-09-22 14:30:00,CB - Julie Robert,130.0,Recette,Paiement client
+2025-09-22 15:08:00,CB - Agathe Girard,65.0,Recette,Paiement client
+2025-09-23 09:35:00,CB - Pauline Lambert,100.0,Recette,Paiement client
+2025-09-23 10:14:00,CB - Noémie Michel,75.0,Recette,Paiement client
+2025-09-23 10:59:00,CB - Jade Morel,75.0,Recette,Paiement client
+2025-09-23 11:53:00,CB - Maya Roux,100.0,Recette,Paiement client
+2025-09-23 12:13:00,CB - Lina Bonnet,35.0,Recette,Paiement client
+2025-09-23 13:30:00,CB - Charlotte Robert,50.0,Recette,Paiement client
+2025-09-23 14:02:00,CB - Agathe Petit,25.0,Recette,Paiement client
+2025-09-24 09:42:00,CB - Amina Renaud,65.0,Recette,Paiement client
+2025-09-24 10:27:00,CB - Sarah Martin,100.0,Recette,Paiement client
+2025-09-25 09:35:00,CB - Elise Bonnet,100.0,Recette,Paiement client
+2025-09-25 10:39:00,CB - Anaïs Dupont,130.0,Recette,Paiement client
+2025-09-25 11:31:00,CB - Nina Dupont,110.0,Recette,Paiement client
+2025-09-26 09:15:00,CB - Louise Bernard,25.0,Recette,Paiement client
+2025-09-26 10:25:00,CB - Clara Simon,150.0,Recette,Paiement client
+2025-09-27 11:17:00,CB - Chloé Dupont,90.0,Recette,Paiement client
+2025-09-27 12:11:00,CB - Eva Simon,110.0,Recette,Paiement client
+2025-09-27 12:41:00,CB - Maëlys Mercier,65.0,Recette,Paiement client
+2025-09-27 13:12:00,CB - Julie Bernard,25.0,Recette,Paiement client
+2025-09-29 09:00:00,Achats consommables,-62.31,Charge,Consommables
+2025-09-29 09:25:00,CB - Clara Francois,75.0,Recette,Paiement client
+2025-09-29 10:58:00,CB - Emma Bertrand,110.0,Recette,Paiement client
+2025-09-29 14:45:00,CB - Anaïs Francois,220.0,Recette,Paiement client
+2025-09-29 15:16:00,CB - Julie Bertrand,25.0,Recette,Paiement client
+2025-09-29 16:17:00,CB - Agathe Martin,110.0,Recette,Paiement client
+2025-09-29 17:02:00,CB - Océane Legrand,100.0,Recette,Paiement client
+2025-09-30 09:20:00,CB - Manon Legrand,65.0,Recette,Paiement client
+2025-09-30 09:51:00,CB - Louise Roux,35.0,Recette,Paiement client
+2025-09-30 15:02:00,CB - Nina Lambert,140.0,Recette,Paiement client
+2025-10-01 09:00:00,Frais compte pro,-15.0,Charge,Frais bancaires
+2025-10-01 09:00:00,Loyer cabinet,-1200.0,Charge,Loyer
+2025-10-01 09:00:00,Abonnement Planity,-80.0,Charge,Logiciel / abonnement
+2025-10-01 09:15:00,CB - Marine Vincent,25.0,Recette,Paiement client
+2025-10-01 10:27:00,CB - Emma Martin,140.0,Recette,Paiement client
+2025-10-02 09:50:00,CB - Alice Lefèvre,130.0,Recette,Paiement client
+2025-10-02 11:17:00,CB - Marine Robert,180.0,Recette,Paiement client
+2025-10-02 13:55:00,CB - Clara Lambert,110.0,Recette,Paiement client
+2025-10-02 15:18:00,CB - Amina Girard,90.0,Recette,Paiement client
+2025-10-03 10:00:00,CB - Alice André,150.0,Recette,Paiement client
+2025-10-03 10:39:00,CB - Jade Mercier,75.0,Recette,Paiement client
+2025-10-03 11:12:00,CB - Pauline Roux,25.0,Recette,Paiement client
+2025-10-03 11:37:00,CB - Lina Petit,25.0,Recette,Paiement client
+2025-10-04 11:00:00,CB - Marine Roux,150.0,Recette,Paiement client
+2025-10-04 11:51:00,CB - Agathe Lefèvre,100.0,Recette,Paiement client
+2025-10-05 09:00:00,Assurance professionnelle,-45.0,Charge,Assurance
+2025-10-06 09:00:00,Achats consommables,-37.66,Charge,Consommables
+2025-10-06 09:10:00,CB - Lina Roux,35.0,Recette,Paiement client
+2025-10-06 10:00:00,CB - Agathe Thomas,90.0,Recette,Paiement client
+2025-10-06 11:48:00,CB - Sarah Bernard,220.0,Recette,Paiement client
+2025-10-06 14:05:00,CB - Hana Durand,130.0,Recette,Paiement client
+2025-10-06 15:33:00,CB - Amina Francois,180.0,Recette,Paiement client
+2025-10-07 09:10:00,CB - Hana Thomas,35.0,Recette,Paiement client
+2025-10-07 09:50:00,CB - Lina Roux,65.0,Recette,Paiement client
+2025-10-07 10:32:00,CB - Jade Petit,75.0,Recette,Paiement client
+2025-10-08 10:15:00,CB - Margaux Robert,180.0,Recette,Paiement client
+2025-10-08 11:16:00,CB - Manon Roux,120.0,Recette,Paiement client
+2025-10-08 13:40:00,CB - Zoé Girard,75.0,Recette,Paiement client
+2025-10-08 14:15:00,CB - Agathe Michel,75.0,Recette,Paiement client
+2025-10-09 11:18:00,CB - Inès Robert,120.0,Recette,Paiement client
+2025-10-10 09:00:00,Électricité,-120.0,Charge,Énergie
+2025-10-10 09:30:00,CB - Louise Durand,90.0,Recette,Paiement client
+2025-10-11 10:25:00,CB - Lucie Renaud,75.0,Recette,Paiement client
+2025-10-12 09:00:00,Hébergement site web,-12.0,Charge,Site web
+2025-10-13 09:00:00,Achats consommables,-55.31,Charge,Consommables
+2025-10-13 09:55:00,CB - Zoé Roux,140.0,Recette,Paiement client
+2025-10-13 11:01:00,CB - Louise Vincent,130.0,Recette,Paiement client
+2025-10-13 14:45:00,CB - Julie Bernard,220.0,Recette,Paiement client
+2025-10-13 15:48:00,CB - Maya Richard,130.0,Recette,Paiement client
+2025-10-13 16:26:00,CB - Clara Dupont,65.0,Recette,Paiement client
+2025-10-13 16:51:00,CB - Louise David,25.0,Recette,Paiement client
+2025-10-14 09:35:00,CB - Emma Simon,100.0,Recette,Paiement client
+2025-10-14 10:07:00,CB - Amina Thomas,25.0,Recette,Paiement client
+2025-10-15 09:50:00,CB - Agathe Legrand,130.0,Recette,Paiement client
+2025-10-15 10:38:00,CB - Agathe Richard,90.0,Recette,Paiement client
+2025-10-15 15:15:00,CB - Inès Robert,280.0,Recette,Paiement client
+2025-10-15 16:33:00,CB - Julie Robert,150.0,Recette,Paiement client
+2025-10-15 17:25:00,CB - Camille Dupont,100.0,Recette,Paiement client
+2025-10-15 18:19:00,CB - Elise André,110.0,Recette,Paiement client
+2025-10-16 10:39:00,CB - Margaux Mercier,130.0,Recette,Paiement client
+2025-10-17 09:50:00,CB - Marine Roux,130.0,Recette,Paiement client
+2025-10-17 10:43:00,CB - Alice Mercier,110.0,Recette,Paiement client
+2025-10-18 10:10:00,CB - Lina Dubois,35.0,Recette,Paiement client
+2025-10-18 11:13:00,CB - Anaïs Robert,130.0,Recette,Paiement client
+2025-10-18 11:48:00,CB - Camille Dupont,75.0,Recette,Paiement client
+2025-10-18 12:43:00,CB - Eva Robert,110.0,Recette,Paiement client
+2025-10-20 09:00:00,Achats consommables,-91.71,Charge,Consommables
+2025-10-20 09:10:00,CB - Inès Michel,35.0,Recette,Paiement client
+2025-10-20 09:53:00,CB - Eva Thomas,75.0,Recette,Paiement client
+2025-10-20 10:25:00,CB - Anaïs Thomas,50.0,Recette,Paiement client
+2025-10-20 11:24:00,CB - Louise Durand,120.0,Recette,Paiement client
+2025-10-20 12:18:00,CB - Pauline Francois,110.0,Recette,Paiement client
+2025-10-21 09:55:00,CB - Clara Simon,140.0,Recette,Paiement client
+2025-10-21 10:33:00,CB - Chloé Bernard,65.0,Recette,Paiement client
+2025-10-21 11:05:00,CB - Pauline Roux,25.0,Recette,Paiement client
+2025-10-21 11:46:00,CB - Emma Roux,75.0,Recette,Paiement client
+2025-10-21 12:15:00,CB - Margaux Bertrand,25.0,Recette,Paiement client
+2025-10-21 14:10:00,CB - Anaïs David,75.0,Recette,Paiement client
+2025-10-21 15:00:00,CB - Louise Bertrand,90.0,Recette,Paiement client
+2025-10-21 15:46:00,CB - Emma Bertrand,100.0,Recette,Paiement client
+2025-10-22 09:30:00,CB - Pauline Bertrand,90.0,Recette,Paiement client
+2025-10-22 10:00:00,CB - Maëlys André,35.0,Recette,Paiement client
+2025-10-22 10:25:00,CB - Alice Simon,25.0,Recette,Paiement client
+2025-10-22 12:05:00,CB - Anaïs Francois,220.0,Recette,Paiement client
+2025-10-22 15:15:00,CB - Camille Mercier,280.0,Recette,Paiement client
+2025-10-22 15:44:00,CB - Agathe Girard,50.0,Recette,Paiement client
+2025-10-23 09:25:00,CB - Sarah Martin,75.0,Recette,Paiement client
+2025-10-23 10:21:00,CB - Nina Lambert,110.0,Recette,Paiement client
+2025-10-23 10:54:00,CB - Julie Martin,25.0,Recette,Paiement client
+2025-10-24 09:50:00,CB - Manon Francois,130.0,Recette,Paiement client
+2025-10-24 11:30:00,CB - Jade Durand,220.0,Recette,Paiement client
+2025-10-25 10:25:00,CB - Elise Bonnet,75.0,Recette,Paiement client
+2025-10-27 09:00:00,Achats consommables,-72.77,Charge,Consommables
+2025-10-27 12:02:00,CB - Marine Robert,180.0,Recette,Paiement client
+2025-10-27 13:45:00,CB - Camille Robert,90.0,Recette,Paiement client
+2025-10-27 14:41:00,CB - Nina Lambert,120.0,Recette,Paiement client
+2025-10-28 10:28:00,CB - Agathe Petit,120.0,Recette,Paiement client
+2025-10-28 11:08:00,CB - Maëlys Morel,75.0,Recette,Paiement client
+2025-10-28 11:28:00,CB - Julie Vincent,35.0,Recette,Paiement client
+2025-10-28 12:15:00,CB - Pauline Lambert,100.0,Recette,Paiement client
+2025-10-29 09:55:00,CB - Marine Roux,140.0,Recette,Paiement client
+2025-10-29 10:20:00,CB - Charlotte Girard,50.0,Recette,Paiement client
+2025-10-29 10:54:00,CB - Marine David,25.0,Recette,Paiement client
+2025-10-30 09:35:00,CB - Nina Dupont,100.0,Recette,Paiement client
+2025-10-30 10:10:00,CB - Julie Vincent,65.0,Recette,Paiement client
+2025-10-30 11:20:00,CB - Inès Morel,150.0,Recette,Paiement client
+2025-10-30 14:00:00,CB - Océane Legrand,120.0,Recette,Paiement client
+2025-10-30 14:56:00,CB - Anaïs Dupont,110.0,Recette,Paiement client
+2025-10-30 15:31:00,CB - Lina Francois,25.0,Recette,Paiement client
+2025-10-31 10:00:00,CB - Margaux Robert,150.0,Recette,Paiement client
+2025-10-31 11:04:00,CB - Amina Francois,130.0,Recette,Paiement client
+2025-10-31 11:44:00,CB - Louise Bernard,90.0,Recette,Paiement client
+2025-10-31 14:00:00,CB - Jade Mercier,120.0,Recette,Paiement client
+2025-11-01 09:00:00,Frais compte pro,-15.0,Charge,Frais bancaires
+2025-11-01 09:00:00,Abonnement Planity,-80.0,Charge,Logiciel / abonnement
+2025-11-01 09:00:00,Loyer cabinet,-1200.0,Charge,Loyer
+2025-11-01 10:50:00,CB - Alice Dupont,130.0,Recette,Paiement client
+2025-11-01 11:39:00,CB - Eva Simon,100.0,Recette,Paiement client
+2025-11-01 12:55:00,CB - Julie Bernard,150.0,Recette,Paiement client
+2025-11-01 13:25:00,CB - Chloé Dupont,65.0,Recette,Paiement client
+2025-11-01 13:50:00,CB - Sarah Garcia,50.0,Recette,Paiement client
+2025-11-01 14:10:00,CB - Maëlys Mercier,35.0,Recette,Paiement client
+2025-11-01 14:34:00,CB - Noémie Michel,35.0,Recette,Paiement client
+2025-11-03 09:00:00,Achats consommables,-76.6,Charge,Consommables
+2025-11-03 09:35:00,CB - Lucie Dupont,100.0,Recette,Paiement client
+2025-11-03 11:19:00,CB - Sarah Bernard,220.0,Recette,Paiement client
+2025-11-03 13:45:00,CB - Clara Francois,90.0,Recette,Paiement client
+2025-11-03 14:50:00,CB - Hana Durand,120.0,Recette,Paiement client
+2025-11-03 15:22:00,CB - Jade Lambert,50.0,Recette,Paiement client
+2025-11-03 16:19:00,CB - Julie Bertrand,110.0,Recette,Paiement client
+2025-11-03 17:07:00,CB - Camille Bonnet,100.0,Recette,Paiement client
+2025-11-03 17:34:00,CB - Clara André,50.0,Recette,Paiement client
+2025-11-04 09:25:00,CB - Jade Morel,75.0,Recette,Paiement client
+2025-11-04 10:54:00,CB - Alice Lefèvre,110.0,Recette,Paiement client
+2025-11-04 11:15:00,CB - Manon Legrand,35.0,Recette,Paiement client
+2025-11-04 11:40:00,CB - Lina Bonnet,25.0,Recette,Paiement client
+2025-11-05 09:00:00,Assurance professionnelle,-45.0,Charge,Assurance
+2025-11-05 09:05:00,CB - Emma Dupont,25.0,Recette,Paiement client
+2025-11-05 10:02:00,CB - Maëlys Roux,25.0,Recette,Paiement client
+2025-11-05 11:13:00,CB - Marine Vincent,150.0,Recette,Paiement client
+2025-11-05 14:45:00,CB - Julie Bernard,220.0,Recette,Paiement client
+2025-11-06 09:15:00,CB - Chloé André,25.0,Recette,Paiement client
+2025-11-06 10:26:00,CB - Jade Garcia,25.0,Recette,Paiement client
+2025-11-07 09:15:00,CB - Margaux Petit,25.0,Recette,Paiement client
+2025-11-07 10:48:00,CB - Pauline Roux,180.0,Recette,Paiement client
+2025-11-07 12:14:00,CB - Lina Petit,180.0,Recette,Paiement client
+2025-11-07 13:55:00,CB - Manon Roux,110.0,Recette,Paiement client
+2025-11-07 16:09:00,CB - Inès Robert,280.0,Recette,Paiement client
+2025-11-07 17:02:00,CB - Agathe Martin,100.0,Recette,Paiement client
+2025-11-07 17:34:00,CB - Amina Vincent,25.0,Recette,Paiement client
+2025-11-08 10:20:00,CB - Agathe Lefèvre,65.0,Recette,Paiement client
+2025-11-08 11:52:00,CB - Margaux Dubois,75.0,Recette,Paiement client
+2025-11-10 09:00:00,Achats consommables,-75.29,Charge,Consommables
+2025-11-10 09:00:00,Électricité,-120.0,Charge,Énergie
+2025-11-10 09:25:00,CB - Agathe Thomas,75.0,Recette,Paiement client
+2025-11-10 10:24:00,CB - Alice Mercier,110.0,Recette,Paiement client
+2025-11-10 11:48:00,CB - Marine Roux,150.0,Recette,Paiement client
+2025-11-10 14:10:00,CB - Julie Robert,140.0,Recette,Paiement client
+2025-11-10 16:00:00,CB - Maya Roux,100.0,Recette,Paiement client
+2025-11-10 16:57:00,CB - Louise Vincent,110.0,Recette,Paiement client
+2025-11-11 09:15:00,CB - Amina Renaud,50.0,Recette,Paiement client
+2025-11-11 09:50:00,CB - Maya Francois,25.0,Recette,Paiement client
+2025-11-11 10:21:00,CB - Manon Lefèvre,25.0,Recette,Paiement client
+2025-11-11 10:46:00,CB - Sarah Garcia,25.0,Recette,Paiement client
+2025-11-12 09:00:00,Hébergement site web,-12.0,Charge,Site web
+2025-11-13 09:30:00,CB - Inès Robert,90.0,Recette,Paiement client
+2025-11-13 10:15:00,CB - Jade Bertrand,75.0,Recette,Paiement client
+2025-11-14 09:40:00,CB - Agathe Legrand,110.0,Recette,Paiement client
+2025-11-14 10:08:00,CB - Marine Dubois,25.0,Recette,Paiement client
+2025-11-14 11:04:00,CB - Camille Dupont,110.0,Recette,Paiement client
+2025-11-14 15:15:00,CB - Camille Mercier,280.0,Recette,Paiement client
+2025-11-14 15:41:00,CB - Maya Durand,25.0,Recette,Paiement client
+2025-11-15 10:15:00,CB - Jade Petit,50.0,Recette,Paiement client
+2025-11-17 09:00:00,Achats consommables,-73.9,Charge,Consommables
+2025-11-17 10:15:00,CB - Anaïs Francois,180.0,Recette,Paiement client
+2025-11-17 11:21:00,CB - Manon Francois,130.0,Recette,Paiement client
+2025-11-17 11:51:00,CB - Agathe Michel,65.0,Recette,Paiement client
+2025-11-17 12:20:00,CB - Margaux Legrand,35.0,Recette,Paiement client
+2025-11-17 13:30:00,CB - Lina Roux,50.0,Recette,Paiement client
+2025-11-17 14:55:00,CB - Jade Durand,180.0,Recette,Paiement client
+2025-11-17 16:40:00,CB - Agathe Richard,90.0,Recette,Paiement client
+2025-11-17 17:51:00,CB - Pauline Lambert,140.0,Recette,Paiement client
+2025-11-17 18:41:00,CB - Maya Richard,110.0,Recette,Paiement client
+2025-11-18 10:00:00,CB - Louise David,150.0,Recette,Paiement client
+2025-11-18 10:52:00,CB - Nina Lambert,100.0,Recette,Paiement client
+2025-11-18 14:30:00,CB - Amina Thomas,180.0,Recette,Paiement client
+2025-11-18 14:55:00,CB - Emma Simon,50.0,Recette,Paiement client
+2025-11-18 16:14:00,CB - Océane Laurent,25.0,Recette,Paiement client
+2025-11-18 16:44:00,CB - Agathe Leroy,50.0,Recette,Paiement client
+2025-11-19 09:45:00,CB - Anaïs Robert,120.0,Recette,Paiement client
+2025-11-19 10:34:00,CB - Clara Lambert,90.0,Recette,Paiement client
+2025-11-19 11:21:00,CB - Elise André,100.0,Recette,Paiement client
+2025-11-19 12:18:00,CB - Louise Durand,110.0,Recette,Paiement client
+2025-11-19 13:30:00,CB - Alice Simon,25.0,Recette,Paiement client
+2025-11-20 09:30:00,CB - Eva Robert,90.0,Recette,Paiement client
+2025-11-20 10:32:00,CB - Alice André,130.0,Recette,Paiement client
+2025-11-20 11:28:00,CB - Agathe Petit,110.0,Recette,Paiement client
+2025-11-21 10:14:00,CB - Noémie Morel,120.0,Recette,Paiement client
+2025-11-21 11:09:00,CB - Charlotte André,120.0,Recette,Paiement client
+2025-11-22 11:00:00,CB - Inès Morel,150.0,Recette,Paiement client
+2025-11-22 11:37:00,CB - Lucie Renaud,65.0,Recette,Paiement client
+2025-11-24 09:00:00,Achats consommables,-70.29,Charge,Consommables
+2025-11-24 09:30:00,CB - Agathe Girard,90.0,Recette,Paiement client
+2025-11-24 10:30:00,CB - Louise Bernard,110.0,Recette,Paiement client
+2025-11-24 11:12:00,CB - Sarah Martin,90.0,Recette,Paiement client
+2025-11-24 12:20:00,CB - Marine Robert,140.0,Recette,Paiement client
+2025-11-25 09:35:00,CB - Margaux Bertrand,100.0,Recette,Paiement client
+2025-11-25 11:02:00,CB - Pauline Roux,180.0,Recette,Paiement client
+2025-11-25 12:15:00,CB - Nina Lambert,150.0,Recette,Paiement client
+2025-11-25 14:30:00,CB - Margaux Robert,180.0,Recette,Paiement client
+2025-11-25 15:41:00,CB - Marine Roux,130.0,Recette,Paiement client
+2025-11-26 09:20:00,CB - Pauline Bertrand,65.0,Recette,Paiement client
+2025-11-26 10:13:00,CB - Emma Leroy,110.0,Recette,Paiement client
+2025-11-26 10:34:00,CB - Zoé Robert,35.0,Recette,Paiement client
+2025-11-26 11:15:00,CB - Emma Martin,90.0,Recette,Paiement client
+2025-11-26 12:09:00,CB - Julie Bertrand,100.0,Recette,Paiement client
+2025-11-26 13:30:00,CB - Eva Thomas,50.0,Recette,Paiement client
+2025-11-26 15:09:00,CB - Pauline Francois,120.0,Recette,Paiement client
+2025-11-26 15:44:00,CB - Camille Dupont,65.0,Recette,Paiement client
+2025-11-26 16:14:00,CB - Anaïs Thomas,50.0,Recette,Paiement client
+2025-11-26 17:57:00,CB - Alice Simon,220.0,Recette,Paiement client
+2025-11-27 09:35:00,CB - Louise Bertrand,100.0,Recette,Paiement client
+2025-11-27 10:51:00,CB - Julie Martin,150.0,Recette,Paiement client
+2025-11-27 11:26:00,CB - Emma Bertrand,75.0,Recette,Paiement client
+2025-11-28 09:50:00,CB - Marine Vincent,130.0,Recette,Paiement client
+2025-11-28 10:59:00,CB - Amina Francois,130.0,Recette,Paiement client
+2025-11-28 11:31:00,CB - Chloé Durand,25.0,Recette,Paiement client
+2025-11-29 10:15:00,CB - Anaïs David,50.0,Recette,Paiement client
+2025-12-01 09:00:00,Abonnement Planity,-80.0,Charge,Logiciel / abonnement
+2025-12-01 09:00:00,Achats consommables,-88.63,Charge,Consommables
+2025-12-01 09:00:00,Frais compte pro,-15.0,Charge,Frais bancaires
+2025-12-01 09:00:00,Loyer cabinet,-1200.0,Charge,Loyer
+2025-12-01 09:30:00,CB - Jade Mercier,90.0,Recette,Paiement client
+2025-12-01 11:06:00,CB - Lina Petit,180.0,Recette,Paiement client
+2025-12-01 12:15:00,CB - Pauline Roux,140.0,Recette,Paiement client
+2025-12-01 14:45:00,CB - Julie Bernard,220.0,Recette,Paiement client
+2025-12-01 15:35:00,CB - Julie Vincent,90.0,Recette,Paiement client
+2025-12-01 16:19:00,CB - Camille Bonnet,90.0,Recette,Paiement client
+2025-12-02 09:30:00,CB - Océane Legrand,90.0,Recette,Paiement client
+2025-12-02 11:09:00,CB - Sarah Bernard,180.0,Recette,Paiement client
+2025-12-02 11:41:00,CB - Emma Roux,50.0,Recette,Paiement client
+2025-12-02 14:45:00,CB - Inès Robert,220.0,Recette,Paiement client
+2025-12-03 09:45:00,CB - Margaux Mercier,120.0,Recette,Paiement client
+2025-12-03 10:15:00,CB - Sarah Garcia,50.0,Recette,Paiement client
+2025-12-03 10:52:00,CB - Camille Robert,75.0,Recette,Paiement client
+2025-12-03 11:28:00,CB - Maya Bertrand,25.0,Recette,Paiement client
+2025-12-03 14:15:00,CB - Marine David,150.0,Recette,Paiement client
+2025-12-04 11:00:00,CB - Lina Francois,280.0,Recette,Paiement client
+2025-12-04 12:05:00,CB - Marine Roux,130.0,Recette,Paiement client
+2025-12-04 13:55:00,CB - Hana Durand,110.0,Recette,Paiement client
+2025-12-04 14:46:00,CB - Pauline Lambert,90.0,Recette,Paiement client
+2025-12-04 15:34:00,CB - Alice Mercier,100.0,Recette,Paiement client
+2025-12-05 09:00:00,Assurance professionnelle,-45.0,Charge,Assurance
+2025-12-06 10:15:00,CB - Manon Lefèvre,25.0,Recette,Paiement client
+2025-12-06 11:00:00,CB - Anaïs Dupont,75.0,Recette,Paiement client
+2025-12-06 11:39:00,CB - Maëlys Morel,65.0,Recette,Paiement client
+2025-12-06 12:18:00,CB - Alice Dupont,75.0,Recette,Paiement client
+2025-12-06 13:02:00,CB - Nina Dupont,75.0,Recette,Paiement client
+2025-12-06 13:20:00,CB - Pauline Petit,25.0,Recette,Paiement client
+2025-12-08 09:00:00,Achats consommables,-88.49,Charge,Consommables
+2025-12-08 09:45:00,CB - Julie Robert,120.0,Recette,Paiement client
+2025-12-08 10:31:00,CB - Maya Roux,90.0,Recette,Paiement client
+2025-12-08 11:49:00,CB - Lucie Dupont,75.0,Recette,Paiement client
+2025-12-08 13:30:00,CB - Sarah David,25.0,Recette,Paiement client
+2025-12-08 14:00:00,CB - Maëlys Mercier,50.0,Recette,Paiement client
+2025-12-08 14:41:00,CB - Eva Simon,90.0,Recette,Paiement client
+2025-12-09 09:10:00,CB - Julie Vincent,35.0,Recette,Paiement client
+2025-12-09 09:36:00,CB - Camille David,35.0,Recette,Paiement client
+2025-12-09 10:26:00,CB - Zoé Roux,110.0,Recette,Paiement client
+2025-12-09 12:08:00,CB - Camille Mercier,220.0,Recette,Paiement client
+2025-12-09 14:25:00,CB - Manon Roux,100.0,Recette,Paiement client
+2025-12-09 15:18:00,CB - Emma Bertrand,100.0,Recette,Paiement client
+2025-12-09 16:15:00,CB - Alice Lefèvre,110.0,Recette,Paiement client
+2025-12-09 16:48:00,CB - Maya Mercier,25.0,Recette,Paiement client
+2025-12-09 17:12:00,CB - Sarah Lambert,35.0,Recette,Paiement client
+2025-12-10 09:00:00,Électricité,-120.0,Charge,Énergie
+2025-12-10 09:35:00,CB - Louise Vincent,100.0,Recette,Paiement client
+2025-12-10 10:26:00,CB - Louise David,110.0,Recette,Paiement client
+2025-12-10 11:28:00,CB - Elise David,130.0,Recette,Paiement client
+2025-12-10 14:10:00,CB - Maëlys Roux,140.0,Recette,Paiement client
+2025-12-11 09:45:00,CB - Manon Francois,120.0,Recette,Paiement client
+2025-12-11 10:55:00,CB - Jade Durand,150.0,Recette,Paiement client
+2025-12-11 12:13:00,CB - Amina Thomas,150.0,Recette,Paiement client
+2025-12-11 13:35:00,CB - Manon Legrand,65.0,Recette,Paiement client
+2025-12-11 14:21:00,CB - Jade Garcia,75.0,Recette,Paiement client
+2025-12-11 15:33:00,CB - Chloé André,130.0,Recette,Paiement client
+2025-12-12 09:00:00,Hébergement site web,-12.0,Charge,Site web
+2025-12-12 10:00:00,CB - Margaux Petit,150.0,Recette,Paiement client
+2025-12-12 10:36:00,CB - Sarah Leroy,25.0,Recette,Paiement client
+2025-12-12 11:52:00,CB - Amina Vincent,150.0,Recette,Paiement client
+2025-12-13 10:10:00,CB - Noémie Michel,35.0,Recette,Paiement client
+2025-12-13 11:20:00,CB - Anaïs Francois,150.0,Recette,Paiement client
+2025-12-13 12:03:00,CB - Amina Girard,75.0,Recette,Paiement client
+2025-12-13 12:34:00,CB - Camille Bertrand,50.0,Recette,Paiement client
+2025-12-15 09:00:00,Achats consommables,-88.02,Charge,Consommables
+2025-12-15 09:00:00,Entretien machine électrolyse,-250.0,Charge,Maintenance
+2025-12-15 09:15:00,CB - Agathe Lefèvre,50.0,Recette,Paiement client
+2025-12-15 10:10:00,CB - Agathe Petit,120.0,Recette,Paiement client
+2025-12-15 11:00:00,CB - Nina Lambert,100.0,Recette,Paiement client
+2025-12-16 10:00:00,CB - Maya Francois,150.0,Recette,Paiement client
+2025-12-16 10:35:00,CB - Agathe Thomas,75.0,Recette,Paiement client
+2025-12-16 11:40:00,CB - Charlotte André,130.0,Recette,Paiement client
+2025-12-16 14:05:00,CB - Noémie Morel,130.0,Recette,Paiement client
+2025-12-16 16:22:00,CB - Sarah Garcia,280.0,Recette,Paiement client
+2025-12-16 17:05:00,CB - Agathe Legrand,75.0,Recette,Paiement client
+2025-12-16 18:00:00,CB - Camille Dupont,110.0,Recette,Paiement client
+2025-12-16 18:41:00,CB - Clara Simon,75.0,Recette,Paiement client
+2025-12-17 09:20:00,CB - Manon Lefèvre,65.0,Recette,Paiement client
+2025-12-17 10:35:00,CB - Inès Morel,140.0,Recette,Paiement client
+2025-12-17 11:14:00,CB - Clara Lambert,75.0,Recette,Paiement client
+2025-12-18 09:40:00,CB - Louise Bernard,110.0,Recette,Paiement client
+2025-12-18 11:13:00,CB - Pauline Roux,180.0,Recette,Paiement client
+2025-12-18 12:05:00,CB - Alice André,110.0,Recette,Paiement client
+2025-12-19 09:25:00,CB - Agathe Martin,75.0,Recette,Paiement client
+2025-12-19 10:39:00,CB - Marine Dubois,150.0,Recette,Paiement client
+2025-12-19 14:30:00,CB - Alice Simon,180.0,Recette,Paiement client
+2025-12-19 15:40:00,CB - Julie Bernard,130.0,Recette,Paiement client
+2025-12-19 16:28:00,CB - Emma Leroy,100.0,Recette,Paiement client
+2025-12-20 10:20:00,CB - Inès Robert,65.0,Recette,Paiement client
+2025-12-20 11:35:00,CB - Julie Martin,140.0,Recette,Paiement client
+2025-12-20 12:16:00,CB - Margaux Dubois,90.0,Recette,Paiement client
+2025-12-22 09:00:00,Achats consommables,-56.88,Charge,Consommables
+2025-12-22 10:12:00,CB - Louise Durand,100.0,Recette,Paiement client
+2025-12-22 10:55:00,CB - Agathe Richard,75.0,Recette,Paiement client
+2025-12-22 11:45:00,CB - Pauline Lambert,100.0,Recette,Paiement client
+2025-12-23 09:15:00,CB - Eva André,25.0,Recette,Paiement client
+2025-12-23 11:21:00,CB - Océane Laurent,140.0,Recette,Paiement client
+2025-12-23 12:21:00,CB - Margaux Robert,130.0,Recette,Paiement client
+2025-12-23 13:30:00,CB - Louise Francois,25.0,Recette,Paiement client
+2025-12-24 09:25:00,CB - Maya Richard,75.0,Recette,Paiement client
+2025-12-24 10:32:00,CB - Alice Simon,130.0,Recette,Paiement client
+2025-12-24 11:52:00,CB - Marine Robert,140.0,Recette,Paiement client
+2025-12-24 14:05:00,CB - Marine Roux,130.0,Recette,Paiement client
+2025-12-24 14:48:00,CB - Anaïs Robert,90.0,Recette,Paiement client
+2025-12-24 15:22:00,CB - Jade Renaud,25.0,Recette,Paiement client
+2025-12-25 09:50:00,CB - Pauline Roux,130.0,Recette,Paiement client
+2025-12-25 10:28:00,CB - Eva Robert,75.0,Recette,Paiement client
+2025-12-25 10:52:00,CB - Emma Simon,35.0,Recette,Paiement client
+2025-12-25 11:54:00,CB - Lina Petit,130.0,Recette,Paiement client
+2025-12-26 09:05:00,CB - Lucie Vincent,25.0,Recette,Paiement client
+2025-12-26 10:30:00,CB - Amina Moreau,180.0,Recette,Paiement client
+2025-12-26 10:58:00,CB - Sarah Martin,50.0,Recette,Paiement client
+2025-12-26 11:28:00,CB - Elise André,65.0,Recette,Paiement client
+2025-12-26 12:17:00,CB - Nina Lambert,100.0,Recette,Paiement client
+2025-12-26 14:15:00,CB - Marine David,150.0,Recette,Paiement client
+2025-12-27 12:00:00,CB - Lina Francois,280.0,Recette,Paiement client
+2025-12-27 12:45:00,CB - Emma Martin,100.0,Recette,Paiement client
+2025-12-27 13:05:00,CB - Jade Petit,35.0,Recette,Paiement client
+2025-12-27 14:45:00,CB - Julie Bernard,220.0,Recette,Paiement client
+2025-12-29 09:00:00,Achats consommables,-72.64,Charge,Consommables
+2025-12-29 09:15:00,CB - Agathe Michel,50.0,Recette,Paiement client
+2025-12-29 09:45:00,CB - Margaux Legrand,50.0,Recette,Paiement client
+2025-12-29 10:49:00,CB - Amina Francois,130.0,Recette,Paiement client
+2025-12-29 11:25:00,CB - Agathe Girard,50.0,Recette,Paiement client
+2025-12-30 09:20:00,CB - Louise Durand,65.0,Recette,Paiement client
+2025-12-30 11:11:00,CB - Inès Robert,220.0,Recette,Paiement client
+2025-12-31 09:30:00,CB - Camille Bonnet,90.0,Recette,Paiement client
+2025-12-31 10:25:00,CB - Alice Mercier,110.0,Recette,Paiement client
+2025-12-31 10:59:00,CB - Elise Bonnet,65.0,Recette,Paiement client
+2025-12-31 11:54:00,CB - Margaux Mercier,110.0,Recette,Paiement client
+2026-01-01 09:00:00,Frais compte pro,-15.0,Charge,Frais bancaires
+2026-01-01 09:00:00,Loyer cabinet,-1200.0,Charge,Loyer
+2026-01-01 09:00:00,Abonnement Planity,-80.0,Charge,Logiciel / abonnement
+2026-01-01 09:54:00,CB - Zoé Leroy,35.0,Recette,Paiement client
+2026-01-01 10:47:00,CB - Marine Roux,110.0,Recette,Paiement client
+2026-01-02 09:20:00,CB - Pauline Bertrand,65.0,Recette,Paiement client
+2026-01-02 10:16:00,CB - Chloé Durand,120.0,Recette,Paiement client
+2026-01-02 11:05:00,CB - Elise David,100.0,Recette,Paiement client
+2026-01-02 12:06:00,CB - Maëlys Roux,130.0,Recette,Paiement client
+2026-01-03 11:00:00,CB - Sarah Bernard,150.0,Recette,Paiement client
+2026-01-03 12:28:00,CB - Jade Garcia,75.0,Recette,Paiement client
+2026-01-05 09:00:00,Achats consommables,-120.07,Charge,Consommables
+2026-01-05 09:00:00,Assurance professionnelle,-45.0,Charge,Assurance
+2026-01-05 10:00:00,CB - Margaux Petit,150.0,Recette,Paiement client
+2026-01-05 10:31:00,CB - Pauline Francois,50.0,Recette,Paiement client
+2026-01-05 11:41:00,CB - Amina Vincent,150.0,Recette,Paiement client
+2026-01-05 12:15:00,CB - Eva Thomas,50.0,Recette,Paiement client
+2026-01-05 13:30:00,CB - Anaïs Thomas,50.0,Recette,Paiement client
+2026-01-05 14:42:00,CB - Louise David,130.0,Recette,Paiement client
+2026-01-05 15:14:00,CB - Louise Bertrand,65.0,Recette,Paiement client
+2026-01-05 15:47:00,CB - Nina Durand,25.0,Recette,Paiement client
+2026-01-05 16:29:00,CB - Emma Bertrand,75.0,Recette,Paiement client
+2026-01-05 18:09:00,CB - Camille Mercier,220.0,Recette,Paiement client
+2026-01-05 18:44:00,CB - Julie Vincent,65.0,Recette,Paiement client
+2026-01-06 09:50:00,CB - Amina Thomas,130.0,Recette,Paiement client
+2026-01-06 10:31:00,CB - Océane Legrand,75.0,Recette,Paiement client
+2026-01-06 11:21:00,CB - Hana Durand,100.0,Recette,Paiement client
+2026-01-06 11:46:00,CB - Elise Dubois,25.0,Recette,Paiement client
+2026-01-06 12:17:00,CB - Alice David,25.0,Recette,Paiement client
+2026-01-06 13:45:00,CB - Amina Renaud,90.0,Recette,Paiement client
+2026-01-06 14:38:00,CB - Julie Robert,110.0,Recette,Paiement client
+2026-01-06 15:06:00,CB - Anaïs Simon,25.0,Recette,Paiement client
+2026-01-07 09:45:00,CB - Maya Bertrand,120.0,Recette,Paiement client
+2026-01-07 10:17:00,CB - Sarah Garcia,50.0,Recette,Paiement client
+2026-01-07 11:17:00,CB - Camille Dupont,50.0,Recette,Paiement client
+2026-01-08 09:50:00,CB - Jade Durand,130.0,Recette,Paiement client
+2026-01-08 11:00:00,CB - Maya Francois,150.0,Recette,Paiement client
+2026-01-08 12:00:00,CB - Manon Francois,120.0,Recette,Paiement client
+2026-01-08 13:30:00,CB - Nina Roux,25.0,Recette,Paiement client
+2026-01-08 15:51:00,CB - Sarah Garcia,280.0,Recette,Paiement client
+2026-01-08 16:48:00,CB - Manon Lefèvre,110.0,Recette,Paiement client
+2026-01-09 09:15:00,CB - Inès André,25.0,Recette,Paiement client
+2026-01-10 09:00:00,Électricité,-120.0,Charge,Énergie
+2026-01-10 10:20:00,CB - Anaïs David,65.0,Recette,Paiement client
+2026-01-10 11:15:00,CB - Zoé Roux,110.0,Recette,Paiement client
+2026-01-10 12:20:00,CB - Manon Lefèvre,140.0,Recette,Paiement client
+2026-01-12 09:00:00,Hébergement site web,-12.0,Charge,Site web
+2026-01-12 09:00:00,Achats consommables,-110.57,Charge,Consommables
+2026-01-12 09:15:00,CB - Camille Robert,50.0,Recette,Paiement client
+2026-01-12 10:19:00,CB - Agathe Petit,120.0,Recette,Paiement client
+2026-01-12 11:03:00,CB - Louise Vincent,90.0,Recette,Paiement client
+2026-01-12 11:49:00,CB - Maya Durand,100.0,Recette,Paiement client
+2026-01-12 14:10:00,CB - Marine Dubois,140.0,Recette,Paiement client
+2026-01-12 15:29:00,CB - Anaïs Francois,150.0,Recette,Paiement client
+2026-01-12 16:39:00,CB - Sarah David,150.0,Recette,Paiement client
+2026-01-12 18:11:00,CB - Pauline Roux,180.0,Recette,Paiement client
+2026-01-12 18:42:00,CB - Alice Dupont,50.0,Recette,Paiement client
+2026-01-13 09:40:00,CB - Noémie Morel,110.0,Recette,Paiement client
+2026-01-13 10:19:00,CB - Pauline Lambert,65.0,Recette,Paiement client
+2026-01-13 11:59:00,CB - Margaux Bertrand,90.0,Recette,Paiement client
+2026-01-13 14:45:00,CB - Alice Simon,220.0,Recette,Paiement client
+2026-01-13 15:50:00,CB - Inès Morel,140.0,Recette,Paiement client
+2026-01-13 17:10:00,CB - Maya Mercier,65.0,Recette,Paiement client
+2026-01-13 17:40:00,CB - Manon Roux,65.0,Recette,Paiement client
+2026-01-14 09:30:00,CB - Nina Lambert,90.0,Recette,Paiement client
+2026-01-14 10:05:00,CB - Nina Dupont,65.0,Recette,Paiement client
+2026-01-14 10:40:00,CB - Anaïs Dupont,75.0,Recette,Paiement client
+2026-01-14 11:27:00,CB - Louise Bernard,100.0,Recette,Paiement client
+2026-01-14 11:56:00,CB - Anaïs Robert,50.0,Recette,Paiement client
+2026-01-14 14:10:00,CB - Julie Martin,140.0,Recette,Paiement client
+2026-01-15 09:55:00,CB - Océane Laurent,140.0,Recette,Paiement client
+2026-01-15 10:45:00,CB - Alice Lefèvre,100.0,Recette,Paiement client
+2026-01-16 09:20:00,CB - Maëlys Mercier,65.0,Recette,Paiement client
+2026-01-16 10:19:00,CB - Chloé Dupont,65.0,Recette,Paiement client
+2026-01-16 11:15:00,CB - Alice Simon,110.0,Recette,Paiement client
+2026-01-16 13:50:00,CB - Eva Simon,100.0,Recette,Paiement client
+2026-01-16 14:47:00,CB - Julie Bernard,110.0,Recette,Paiement client
+2026-01-16 15:13:00,CB - Clara Lambert,35.0,Recette,Paiement client
+2026-01-16 16:09:00,CB - Clara Simon,110.0,Recette,Paiement client
+2026-01-17 10:40:00,CB - Alice André,110.0,Recette,Paiement client
+2026-01-17 11:16:00,CB - Clara Francois,50.0,Recette,Paiement client
+2026-01-17 11:55:00,CB - Emma Bertrand,65.0,Recette,Paiement client
+2026-01-17 12:28:00,CB - Maëlys Morel,50.0,Recette,Paiement client
+2026-01-19 09:00:00,Achats consommables,-45.24,Charge,Consommables
+2026-01-19 09:35:00,CB - Julie Bertrand,100.0,Recette,Paiement client
+2026-01-19 10:46:00,CB - Amina Moreau,150.0,Recette,Paiement client
+2026-01-19 11:16:00,CB - Lucie Simon,25.0,Recette,Paiement client
+2026-01-19 11:46:00,CB - Manon Legrand,35.0,Recette,Paiement client
+2026-01-19 13:55:00,CB - Marine Vincent,110.0,Recette,Paiement client
+2026-01-20 10:07:00,CB - Camille Dupont,90.0,Recette,Paiement client
+2026-01-20 11:24:00,CB - Marine David,150.0,Recette,Paiement client
+2026-01-21 09:48:00,CB - Chloé Renaud,25.0,Recette,Paiement client
+2026-01-21 11:36:00,CB - Lina Francois,220.0,Recette,Paiement client
+2026-01-21 14:05:00,CB - Lina Petit,130.0,Recette,Paiement client
+2026-01-22 09:50:00,CB - Margaux Robert,130.0,Recette,Paiement client
+2026-01-22 10:53:00,CB - Pauline Roux,130.0,Recette,Paiement client
+2026-01-23 09:05:00,CB - Agathe Lefèvre,25.0,Recette,Paiement client
+2026-01-24 10:10:00,CB - Camille Bertrand,35.0,Recette,Paiement client
+2026-01-24 10:40:00,CB - Agathe Thomas,65.0,Recette,Paiement client
+2026-01-24 11:13:00,CB - Jade Robert,65.0,Recette,Paiement client
+2026-01-24 12:11:00,CB - Marine Roux,110.0,Recette,Paiement client
+2026-01-26 09:00:00,Achats consommables,-78.45,Charge,Consommables
+2026-01-26 09:45:00,CB - Chloé Durand,120.0,Recette,Paiement client
+2026-01-26 10:32:00,CB - Marine Robert,100.0,Recette,Paiement client
+2026-01-26 11:12:00,CB - Louise Durand,75.0,Recette,Paiement client
+2026-01-26 14:15:00,CB - Julie Bernard,150.0,Recette,Paiement client
+2026-01-26 14:45:00,CB - Maëlys Martin,25.0,Recette,Paiement client
+2026-01-26 15:10:00,CB - Charlotte Vincent,25.0,Recette,Paiement client
+2026-01-27 10:15:00,CB - Louise Francois,180.0,Recette,Paiement client
+2026-01-27 11:24:00,CB - Eva André,140.0,Recette,Paiement client
+2026-01-27 12:14:00,CB - Elise David,110.0,Recette,Paiement client
+2026-01-27 14:10:00,CB - Maëlys Roux,140.0,Recette,Paiement client
+2026-01-28 09:15:00,CB - Anaïs Martin,25.0,Recette,Paiement client
+2026-01-28 11:12:00,CB - Jade Renaud,90.0,Recette,Paiement client
+2026-01-28 12:12:00,CB - Jade Bertrand,75.0,Recette,Paiement client
+2026-01-28 13:50:00,CB - Jade Garcia,100.0,Recette,Paiement client
+2026-01-28 14:30:00,CB - Pauline Lambert,90.0,Recette,Paiement client
+2026-01-29 09:50:00,CB - Margaux Petit,130.0,Recette,Paiement client
+2026-01-29 10:34:00,CB - Alice Mercier,90.0,Recette,Paiement client
+2026-01-29 11:37:00,CB - Amina Vincent,120.0,Recette,Paiement client
+2026-01-29 14:00:00,CB - Amina Francois,120.0,Recette,Paiement client
+2026-01-29 15:42:00,CB - Inès Robert,150.0,Recette,Paiement client
+2026-01-29 16:23:00,CB - Emma Martin,90.0,Recette,Paiement client
+2026-01-30 09:35:00,CB - Anaïs Robert,100.0,Recette,Paiement client
+2026-01-30 10:05:00,CB - Sarah Martin,65.0,Recette,Paiement client
+2026-01-30 11:40:00,CB - Maya Bertrand,110.0,Recette,Paiement client
+2026-01-31 10:50:00,CB - Marine Roux,130.0,Recette,Paiement client
+2026-01-31 11:31:00,CB - Eva Robert,90.0,Recette,Paiement client
+2026-02-01 09:00:00,Loyer cabinet,-1200.0,Charge,Loyer
+2026-02-01 09:00:00,Frais compte pro,-15.0,Charge,Frais bancaires
+2026-02-01 09:00:00,Abonnement Planity,-80.0,Charge,Logiciel / abonnement
+2026-02-02 09:00:00,Achats consommables,-72.2,Charge,Consommables
+2026-02-02 09:35:00,CB - Louise David,100.0,Recette,Paiement client
+2026-02-02 10:06:00,CB - Camille Bonnet,50.0,Recette,Paiement client
+2026-02-02 10:41:00,CB - Maya Richard,65.0,Recette,Paiement client
+2026-02-02 11:31:00,CB - Manon Lefèvre,100.0,Recette,Paiement client
+2026-02-02 14:39:00,CB - Emma Simon,50.0,Recette,Paiement client
+2026-02-02 16:19:00,CB - Sarah Garcia,220.0,Recette,Paiement client
+2026-02-02 18:17:00,CB - Maya Francois,130.0,Recette,Paiement client
+2026-02-03 09:25:00,CB - Elise André,75.0,Recette,Paiement client
+2026-02-03 10:53:00,CB - Camille Mercier,180.0,Recette,Paiement client
+2026-02-03 11:20:00,CB - Lucie Simon,25.0,Recette,Paiement client
+2026-02-04 09:15:00,CB - Julie Moreau,50.0,Recette,Paiement client
+2026-02-04 10:29:00,CB - Sarah David,150.0,Recette,Paiement client
+2026-02-05 09:00:00,Assurance professionnelle,-45.0,Charge,Assurance
+2026-02-05 10:35:00,CB - Maya Mercier,75.0,Recette,Paiement client
+2026-02-05 11:05:00,CB - Louise Moreau,25.0,Recette,Paiement client
+2026-02-05 11:25:00,CB - Jade Mercier,35.0,Recette,Paiement client
+2026-02-05 12:19:00,CB - Maya Durand,110.0,Recette,Paiement client
+2026-02-05 13:30:00,CB - Zoé Roux,25.0,Recette,Paiement client
+2026-02-06 09:20:00,CB - Elise Bonnet,65.0,Recette,Paiement client
+2026-02-06 09:50:00,CB - Amina Renaud,50.0,Recette,Paiement client
+2026-02-06 10:40:00,CB - Anaïs Robert,110.0,Recette,Paiement client
+2026-02-07 10:45:00,CB - Julie Robert,120.0,Recette,Paiement client
+2026-02-07 12:35:00,CB - Sarah Bernard,130.0,Recette,Paiement client
+2026-02-07 13:37:00,CB - Jade Durand,130.0,Recette,Paiement client
+2026-02-09 09:00:00,Achats consommables,-90.12,Charge,Consommables
+2026-02-09 09:55:00,CB - Pauline Roux,140.0,Recette,Paiement client
+2026-02-09 10:30:00,CB - Maya Roux,75.0,Recette,Paiement client
+2026-02-09 12:15:00,CB - Sarah Leroy,130.0,Recette,Paiement client
+2026-02-09 13:50:00,CB - Agathe Petit,100.0,Recette,Paiement client
+2026-02-09 14:40:00,CB - Océane Laurent,110.0,Recette,Paiement client
+2026-02-09 17:00:00,CB - Emma Leroy,75.0,Recette,Paiement client
+2026-02-09 18:40:00,CB - Nina Durand,220.0,Recette,Paiement client
+2026-02-10 09:00:00,Électricité,-120.0,Charge,Énergie
+2026-02-10 10:00:00,CB - Anaïs Simon,150.0,Recette,Paiement client
+2026-02-10 11:48:00,CB - Alice David,220.0,Recette,Paiement client
+2026-02-10 14:05:00,CB - Elise Dubois,130.0,Recette,Paiement client
+2026-02-10 15:15:00,CB - Noémie Morel,120.0,Recette,Paiement client
+2026-02-10 15:58:00,CB - Charlotte André,90.0,Recette,Paiement client
+2026-02-10 16:26:00,CB - Pauline Bertrand,50.0,Recette,Paiement client
+2026-02-10 18:11:00,CB - Hana Durand,90.0,Recette,Paiement client
+2026-02-11 09:15:00,CB - Julie Vincent,50.0,Recette,Paiement client
+2026-02-11 10:23:00,CB - Julie Martin,130.0,Recette,Paiement client
+2026-02-11 10:56:00,CB - Lina Richard,25.0,Recette,Paiement client
+2026-02-11 11:59:00,CB - Inès Morel,110.0,Recette,Paiement client
+2026-02-12 09:00:00,Hébergement site web,-12.0,Charge,Site web
+2026-02-12 09:35:00,CB - Louise Bernard,100.0,Recette,Paiement client
+2026-02-12 10:11:00,CB - Océane Legrand,75.0,Recette,Paiement client
+2026-02-12 11:28:00,CB - Amina Moreau,150.0,Recette,Paiement client
+2026-02-12 12:03:00,CB - Léa Francois,25.0,Recette,Paiement client
+2026-02-12 13:50:00,CB - Nina Roux,100.0,Recette,Paiement client
+2026-02-12 14:19:00,CB - Louise Mercier,25.0,Recette,Paiement client
+2026-02-13 10:05:00,CB - Inès André,120.0,Recette,Paiement client
+2026-02-14 10:35:00,CB - Zoé Roux,100.0,Recette,Paiement client
+2026-02-16 09:00:00,Achats consommables,-55.22,Charge,Consommables
+2026-02-16 09:05:00,CB - Anaïs Thomas,25.0,Recette,Paiement client
+2026-02-16 10:03:00,CB - Julie Bernard,120.0,Recette,Paiement client
+2026-02-16 10:37:00,CB - Pauline Francois,65.0,Recette,Paiement client
+2026-02-16 11:17:00,CB - Louise Vincent,65.0,Recette,Paiement client
+2026-02-16 11:41:00,CB - Eva Thomas,35.0,Recette,Paiement client
+2026-02-16 13:45:00,CB - Nina Lambert,90.0,Recette,Paiement client
+2026-02-16 14:21:00,CB - Emma Bertrand,65.0,Recette,Paiement client
+2026-02-17 09:25:00,CB - Julie Bertrand,75.0,Recette,Paiement client
+2026-02-17 09:54:00,CB - Clara Lambert,35.0,Recette,Paiement client
+2026-02-17 10:45:00,CB - Marine Vincent,110.0,Recette,Paiement client
+2026-02-17 14:45:00,CB - Lina Francois,220.0,Recette,Paiement client
+2026-02-18 09:15:00,CB - Sarah Lambert,25.0,Recette,Paiement client
+2026-02-18 10:09:00,CB - Alice André,100.0,Recette,Paiement client
+2026-02-18 10:58:00,CB - Clara Simon,100.0,Recette,Paiement client
+2026-02-19 10:00:00,CB - Louise Francois,150.0,Recette,Paiement client
+2026-02-19 10:55:00,CB - Chloé Durand,120.0,Recette,Paiement client
+2026-02-19 11:58:00,CB - Eva André,120.0,Recette,Paiement client
+2026-02-19 14:10:00,CB - Lina Petit,140.0,Recette,Paiement client
+2026-02-19 14:57:00,CB - Manon Roux,90.0,Recette,Paiement client
+2026-02-20 09:15:00,CB - Alice Dupont,50.0,Recette,Paiement client
+2026-02-20 10:01:00,CB - Jade Renaud,90.0,Recette,Paiement client
+2026-02-23 09:00:00,Achats consommables,-59.68,Charge,Consommables
+2026-02-23 09:05:00,CB - Camille Robert,25.0,Recette,Paiement client
+2026-02-23 10:02:00,CB - Margaux Robert,110.0,Recette,Paiement client
+2026-02-23 10:42:00,CB - Alice Lefèvre,90.0,Recette,Paiement client
+2026-02-23 11:10:00,CB - Pauline Lambert,35.0,Recette,Paiement client
+2026-02-23 14:45:00,CB - Lucie Simon,220.0,Recette,Paiement client
+2026-02-24 09:15:00,CB - Marine Morel,25.0,Recette,Paiement client
+2026-02-24 10:11:00,CB - Chloé André,120.0,Recette,Paiement client
+2026-02-24 11:10:00,CB - Maëlys Roux,120.0,Recette,Paiement client
+2026-02-24 12:13:00,CB - Elise David,130.0,Recette,Paiement client
+2026-02-24 13:50:00,CB - Maya Bertrand,100.0,Recette,Paiement client
+2026-02-25 09:15:00,CB - Anaïs Dupont,50.0,Recette,Paiement client
+2026-02-25 10:35:00,CB - Julie Bernard,150.0,Recette,Paiement client
+2026-02-25 12:08:00,CB - Jade Garcia,75.0,Recette,Paiement client
+2026-02-26 09:15:00,CB - Chloé Petit,25.0,Recette,Paiement client
+2026-02-26 09:47:00,CB - Jade Francois,25.0,Recette,Paiement client
+2026-02-26 10:42:00,CB - Agathe Legrand,35.0,Recette,Paiement client
+2026-02-26 11:10:00,CB - Camille Dupont,50.0,Recette,Paiement client
+2026-02-26 14:10:00,CB - Margaux Petit,140.0,Recette,Paiement client
+2026-02-26 15:06:00,CB - Amina Vincent,110.0,Recette,Paiement client
+2026-02-26 15:53:00,CB - Marine Roux,90.0,Recette,Paiement client
+2026-02-27 09:10:00,CB - Chloé Dupont,35.0,Recette,Paiement client
+2026-02-27 09:53:00,CB - Eva Simon,75.0,Recette,Paiement client
+2026-02-27 10:25:00,CB - Manon Thomas,25.0,Recette,Paiement client
+2026-02-27 10:53:00,CB - Maëlys Mercier,50.0,Recette,Paiement client
+2026-02-27 11:28:00,CB - Lucie Dupont,65.0,Recette,Paiement client
+2026-02-27 14:00:00,CB - Manon Lefèvre,120.0,Recette,Paiement client
+2026-02-28 10:49:00,CB - Emma Bertrand,75.0,Recette,Paiement client

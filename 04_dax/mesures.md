@@ -1,4 +1,4 @@
-Ce fichier contient les mesures DAX utilisées dans ce  rapport, ainsi que leur définition textuelle précise. Les mesures sont triées par ordre alphabétique.
+Ce fichier contient les mesures DAX utilisées dans ce rapport, ainsi que leur définition précise. Les mesures sont triées par ordre alphabétique.
 
 - Chiffre d'affaire dans le contexte de filtre
 ```

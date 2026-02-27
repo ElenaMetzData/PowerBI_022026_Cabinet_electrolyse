@@ -1,7 +1,7 @@
 table Mesures
 	lineageTag: 5ec9c2b6-cbae-403a-8412-70ec3be84bf5
 
-	///  Chiffre d'affaire dans le contexte de filtre
+	/// Chiffre d'affaire dans le contexte de filtre
 	measure CA =
 			
 			CALCULATE(
@@ -283,7 +283,7 @@ table Mesures
 	/// Valeur de vie client calculée sur les 12 premiers mois après la première consultation. Seuls les clients ayant réalisés leur première consultation 12 mois auparavant minimum sont pris en compte. Q : combien de temps max dure un traitement ? certains clients font-ils plusieurs zones ?
 	measure 'LTV estimée (12 mois après 1re consult)' =
 			
-			VAR Pivot = [Date Pivot]
+			VAR Pivot = [Date Pivot (mois terminé)]
 			VAR ClientsCohorte = VALUES(clients_36_mois[client_id])
 			RETURN
 			AVERAGEX(
@@ -412,7 +412,7 @@ table Mesures
 
 	measure 'Heures RDV réalisés - 12M' =
 			
-			VAR Pivot = [Date Pivot]
+			VAR Pivot = [Date Pivot (mois terminé)]
 			RETURN
 			CALCULATE(
 			    [Heures RDV réalisés],
@@ -475,7 +475,7 @@ table Mesures
 	/// Facteur de saisonnalité calculé sur 1 an, sensibilité à la semaine
 	measure 'Facteur saisonnalité (semaine) - lissé' =
 			
-			VAR Pivot = [Date Pivot]
+			VAR Pivot = [Date Pivot (mois terminé)]
 			VAR WeekNum = MAX(Calendrier[Numero de la semaine])
 			VAR Window52W =
 			    DATESINPERIOD(Calendrier[Date], Pivot, -364, DAY)
@@ -502,7 +502,7 @@ table Mesures
 	/// Tendance du nombre de nouveaux clients sur les 12 derniers mois
 	measure 'Nouveaux clients - moy / mois (12M)' =
 			
-			VAR Pivot = [Date Pivot]
+			VAR Pivot = [Date Pivot (mois terminé)]
 			RETURN
 			AVERAGEX(
 			    DATESINPERIOD(Calendrier[Date], Pivot, -12, MONTH),
@@ -515,7 +515,7 @@ table Mesures
 	/// Calcul de l'évolution mensuelle du taux d'abandon au cours de l'année dernière glissante
 	measure 'Taux abandon - moy mensuel (12M)' =
 			
-			VAR Pivot = [Date Pivot]
+			VAR Pivot = [Date Pivot (mois terminé)]
 			RETURN
 			AVERAGEX(
 			    DATESINPERIOD(Calendrier[Date], Pivot, -12, MONTH),
@@ -547,7 +547,7 @@ table Mesures
 	/// Heures de soins réalisées par client actifs au cours des 12 derniers mois
 	measure 'Heures par client actif (12M)' =
 			
-			VAR Pivot = [Date Pivot]
+			VAR Pivot = [Date Pivot (mois terminé)]
 			VAR Heures = [Heures RDV réalisés - 12M]
 			VAR ClientsActifs =
 			    CALCULATE(
@@ -564,7 +564,7 @@ table Mesures
 	/// Nombre de clients actifs projetés sur les 6 prochains mois (sont pris en compte : les rdv planifiés, la taux d'abandon et les nouveaux clients, et la saisonnalité)
 	measure 'Clients actifs projetés' =
 			
-			VAR Pivot = [Date Pivot]
+			VAR Pivot = [Date Pivot (mois terminé)]
 			VAR d = MAX(Calendrier[Date])
 			VAR N = MAX(0, DATEDIFF(EOMONTH(Pivot,0), EOMONTH(d,0), MONTH))
 			
@@ -598,7 +598,7 @@ table Mesures
 	/// Heures réellement réalisées dans le passé et, pour le futur, rendez-vous déjà planifiés avec une estimation des heures supplémentaires attendues
 	measure 'Heures RDV (réel + calés + prévision)' =
 			
-			VAR Pivot = [Date Pivot]
+			VAR Pivot = [Date Pivot (mois terminé)]
 			VAR d = MAX(Calendrier[Date])
 			RETURN
 			IF(
@@ -704,7 +704,7 @@ table Mesures
 
 	measure 'Fenêtre Graph Remplissage (12M + 6M)' =
 			
-			VAR Pivot = [Date Pivot (mois terminé)]
+			VAR Pivot = [Date Pivot (mois terminé) (mois terminé)]
 			VAR MoisDebut = EOMONTH(Pivot, -12) + 1
 			VAR MoisFin   = EOMONTH(Pivot, 6)
 			VAR d = MAX(Calendrier[Date])
@@ -715,7 +715,7 @@ table Mesures
 
 	measure 'Tx remplissage - Réel (mensuel)' =
 			
-			VAR Pivot = [Date Pivot (mois terminé)]
+			VAR Pivot = [Date Pivot (mois terminé) (mois terminé)]
 			VAR d = MAX(Calendrier[Date])
 			RETURN
 			IF(
@@ -729,7 +729,7 @@ table Mesures
 
 	measure 'Tx remplissage - Prévision (6M, mensuel)' =
 			
-			VAR Pivot = [Date Pivot (mois terminé)]
+			VAR Pivot = [Date Pivot (mois terminé) (mois terminé)]
 			VAR d = MAX(Calendrier[Date])
 			RETURN
 			IF(
@@ -746,7 +746,7 @@ table Mesures
 
 	measure 'Tx remplissage (réel + prévision 6M)' =
 			
-			VAR Pivot = [Date Pivot]
+			VAR Pivot = [Date Pivot (mois terminé)]
 			VAR d = MAX(Calendrier[Date])
 			RETURN
 			IF(

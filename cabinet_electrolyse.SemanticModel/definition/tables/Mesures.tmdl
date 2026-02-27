@@ -1,7 +1,7 @@
 table Mesures
 	lineageTag: 5ec9c2b6-cbae-403a-8412-70ec3be84bf5
 
-	///  Chiffre d'affaire dans le contexte de filtre
+	/// Chiffre d'affaire dans le contexte de filtre
 	measure CA =
 			
 			CALCULATE(
@@ -766,6 +766,10 @@ table Mesures
 			EOMONTH(TODAY(), -1)
 		formatString: General Date
 		lineageTag: cda64bea-3b04-449f-b11d-740ddd27376f
+
+	measure 'prévisionnel test' = [Date Fin M-1 (today)]
+		formatString: General Date
+		lineageTag: e52dead9-0b0c-40bc-b32b-24d198ba2543
 
 	column Placeholder
 		isHidden

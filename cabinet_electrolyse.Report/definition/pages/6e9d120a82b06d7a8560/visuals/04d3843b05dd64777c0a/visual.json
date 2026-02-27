@@ -17,62 +17,17 @@
           "projections": [
             {
               "field": {
-                "HierarchyLevel": {
+                "Column": {
                   "Expression": {
-                    "Hierarchy": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Calendrier"
-                        }
-                      },
-                      "Hierarchy": "Annee Hiérarchie"
+                    "SourceRef": {
+                      "Entity": "Calendrier"
                     }
                   },
-                  "Level": "Annee"
+                  "Property": "Annee mois"
                 }
               },
-              "queryRef": "Calendrier.Annee Hiérarchie.Annee",
-              "nativeQueryRef": "Annee Hiérarchie Annee",
-              "active": true
-            },
-            {
-              "field": {
-                "HierarchyLevel": {
-                  "Expression": {
-                    "Hierarchy": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Calendrier"
-                        }
-                      },
-                      "Hierarchy": "Annee Hiérarchie"
-                    }
-                  },
-                  "Level": "Numero du mois"
-                }
-              },
-              "queryRef": "Calendrier.Annee Hiérarchie.Numero du mois",
-              "nativeQueryRef": "Annee Hiérarchie Numero du mois",
-              "active": true
-            },
-            {
-              "field": {
-                "HierarchyLevel": {
-                  "Expression": {
-                    "Hierarchy": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Calendrier"
-                        }
-                      },
-                      "Hierarchy": "Annee Hiérarchie"
-                    }
-                  },
-                  "Level": "Nom du mois"
-                }
-              },
-              "queryRef": "Calendrier.Annee Hiérarchie.Nom du mois",
-              "nativeQueryRef": "Annee Hiérarchie Nom du mois",
+              "queryRef": "Calendrier.Annee mois",
+              "nativeQueryRef": "Annee mois",
               "active": true
             }
           ]
@@ -118,57 +73,16 @@
         "sort": [
           {
             "field": {
-              "HierarchyLevel": {
+              "Measure": {
                 "Expression": {
-                  "Hierarchy": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "Calendrier"
-                      }
-                    },
-                    "Hierarchy": "Annee Hiérarchie"
+                  "SourceRef": {
+                    "Entity": "Mesures"
                   }
                 },
-                "Level": "Annee"
+                "Property": "Tx remplissage - Réel (mensuel)"
               }
             },
-            "direction": "Ascending"
-          },
-          {
-            "field": {
-              "HierarchyLevel": {
-                "Expression": {
-                  "Hierarchy": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "Calendrier"
-                      }
-                    },
-                    "Hierarchy": "Annee Hiérarchie"
-                  }
-                },
-                "Level": "Numero du mois"
-              }
-            },
-            "direction": "Ascending"
-          },
-          {
-            "field": {
-              "HierarchyLevel": {
-                "Expression": {
-                  "Hierarchy": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "Calendrier"
-                      }
-                    },
-                    "Hierarchy": "Annee Hiérarchie"
-                  }
-                },
-                "Level": "Nom du mois"
-              }
-            },
-            "direction": "Ascending"
+            "direction": "Descending"
           }
         ],
         "isDefaultSort": true
@@ -300,7 +214,8 @@
             "Level": "Annee"
           }
         },
-        "type": "Categorical"
+        "type": "Categorical",
+        "howCreated": "User"
       },
       {
         "name": "93c7c90b174909b00c34",
@@ -370,7 +285,8 @@
             "Level": "Nom du mois"
           }
         },
-        "type": "Categorical"
+        "type": "Categorical",
+        "howCreated": "User"
       },
       {
         "name": "52fde54f7d7c3a8e2b49",
@@ -390,7 +306,8 @@
             "Level": "Numero du mois"
           }
         },
-        "type": "Advanced"
+        "type": "Advanced",
+        "howCreated": "User"
       },
       {
         "name": "782fda839cd1d0e9ea55",
@@ -421,6 +338,20 @@
           }
         },
         "type": "Advanced"
+      },
+      {
+        "name": "184fa9bfb86ee645d030",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Calendrier"
+              }
+            },
+            "Property": "Annee mois"
+          }
+        },
+        "type": "Categorical"
       }
     ],
     "filterSortOrder": "Custom"

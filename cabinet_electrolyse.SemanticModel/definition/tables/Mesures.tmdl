@@ -767,10 +767,6 @@ table Mesures
 		formatString: General Date
 		lineageTag: cda64bea-3b04-449f-b11d-740ddd27376f
 
-	measure 'prévisionnel test' = [Date Fin M-1 (today)]
-		formatString: General Date
-		lineageTag: e52dead9-0b0c-40bc-b32b-24d198ba2543
-
 	column Placeholder
 		isHidden
 		formatString: 0

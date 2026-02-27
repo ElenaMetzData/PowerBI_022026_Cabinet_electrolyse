@@ -1,0 +1,568 @@
+--------------------------------------------------
+CA = 
+CALCULATE(
+    SUM(planity_rdv_36_mois[montant_recu_eur])
+)
+
+--------------------------------------------------
+Titre Dernier Mois Terminé = 
+FORMAT(
+    [Date Dernier Mois Terminé],
+    "mmmm"
+)
+
+--------------------------------------------------
+CA M-2 = 
+VAR EndDate   = EOMONTH(TODAY(), -2)
+VAR StartDate = DATE(YEAR(EndDate), MONTH(EndDate), 1)
+RETURN
+CALCULATE(
+    [CA],
+    DATESBETWEEN(Calendrier[Date], StartDate, EndDate)
+)
+
+--------------------------------------------------
+CA M-1 N-1 = 
+VAR EndDate   = EOMONTH(TODAY(), -13)
+VAR StartDate = DATE(YEAR(EndDate), MONTH(EndDate), 1)
+RETURN
+CALCULATE(
+    [CA],
+    DATESBETWEEN(Calendrier[Date], StartDate, EndDate)
+)
+
+--------------------------------------------------
+Var % MoM (ignore filtres) = 
+DIVIDE(
+    [CA M-1 (ignore filtres)] - [CA M-2 (ignore filtres)],
+    [CA M-2 (ignore filtres)]
+)
+
+--------------------------------------------------
+Var % YoY (ignore filtres) = 
+DIVIDE(
+    [CA M-1 (ignore filtres)] - [CA M-1 N-1 (ignore filtres)],
+    [CA M-1 N-1 (ignore filtres)]
+)
+
+--------------------------------------------------
+CA M-1 (ignore filtres) = 
+VAR EndDate   = [Date Fin M-1 (today)]
+VAR StartDate = DATE(YEAR(EndDate), MONTH(EndDate), 1)
+RETURN
+CALCULATE(
+    [CA],
+    REMOVEFILTERS(Calendrier),
+    DATESBETWEEN(Calendrier[Date], StartDate, EndDate)
+)
+
+--------------------------------------------------
+Date Fin M-1 (today) = 
+EOMONTH(TODAY(), -1)
+
+--------------------------------------------------
+Date Début M-1 (today) = 
+VAR EndDate = [Date Fin M-1 (today)]
+RETURN DATE(YEAR(EndDate), MONTH(EndDate), 1)
+
+--------------------------------------------------
+Sous-titre Var MoM = 
+VAR VarMoM = [Var % MoM (ignore filtres)]
+VAR Sign = IF(VarMoM > 0, "+", "")
+VAR TxtPct =
+    IF(
+        ISBLANK(VarMoM),
+        "—",
+        Sign & FORMAT(VarMoM, "0%")
+    )
+RETURN
+IF(
+    ISBLANK(VarMoM),
+    "Pas de comparaison disponible",
+    TxtPct & " VS M-1")
+
+--------------------------------------------------
+Sous-titre Var YoY = 
+VAR VarYoY = [Var % YoY (ignore filtres)]
+VAR Sign = IF(VarYoY > 0, "+", "")
+VAR TxtPct =
+    IF(
+        ISBLANK(VarYoY),
+        "—",
+        Sign & FORMAT(VarYoY, "0%")
+    )
+RETURN
+IF(
+    ISBLANK(VarYoY),
+    "Pas de comparaison Y-1 disponible",
+    TxtPct & " par rapport à Y-1"
+)
+
+--------------------------------------------------
+Paiements = CALCULATE(
+    SUM(banque_transactions_36_mois[montant_eur]),
+    banque_transactions_36_mois[type] = "Recette"
+)
+
+--------------------------------------------------
+Charges = 
+ABS(
+    CALCULATE(
+        SUM(banque_transactions_36_mois[montant_eur]),
+        banque_transactions_36_mois[type] = "Charge"
+    )
+)
+
+--------------------------------------------------
+Résultat net = [Paiements]-[Charges]
+
+--------------------------------------------------
+Heures RDV réalisés = 
+DIVIDE(
+    CALCULATE(
+        SUM(planity_rdv_36_mois[duree_prestation_min]),
+        planity_rdv_36_mois[statut] IN {"Réalisé","Honoré"}
+    ),
+    60
+)
+
+--------------------------------------------------
+Heures ouverture théoriques = 
+SUMX(
+    VALUES(Calendrier[Date]),
+    VAR dow = WEEKDAY(Calendrier[Date], 2)  -- 1=Lun ... 7=Dim
+    RETURN
+        SWITCH(
+            TRUE(),
+            dow >= 1 && dow <= 5, 10,
+            dow = 6, 5,
+            0
+        )
+)
+
+--------------------------------------------------
+Taux de remplissage = 
+DIVIDE([Heures RDV réalisés], [Heures ouverture théoriques])
+
+--------------------------------------------------
+Clients actifs (6M) = 
+VAR DateFin = MAX(Calendrier[Date])
+VAR DateDebut = EDATE(DateFin, -6)
+RETURN
+CALCULATE(
+    DISTINCTCOUNT(planity_rdv_36_mois[client_id]),
+    planity_rdv_36_mois[statut] IN {"Réalisé","Honoré"},
+    DATESBETWEEN(Calendrier[Date], DateDebut, DateFin)
+)
+
+--------------------------------------------------
+Nouveaux clients du mois = 
+VAR MoisDebut = DATE(YEAR(MAX(Calendrier[Date])), MONTH(MAX(Calendrier[Date])), 1)
+VAR MoisFin = EOMONTH(MAX(Calendrier[Date]), 0)
+RETURN
+CALCULATE(
+    DISTINCTCOUNT(planity_rdv_36_mois[client_id]),
+    FILTER(
+        VALUES(planity_rdv_36_mois[client_id]),
+        VAR FirstVisit =
+            CALCULATE(
+                MIN(planity_rdv_36_mois[date]),
+                planity_rdv_36_mois[statut] IN {"Réalisé","Honoré"},
+                ALL(Calendrier)
+            )
+        RETURN FirstVisit >= MoisDebut && FirstVisit <= MoisFin
+    )
+)
+
+--------------------------------------------------
+CA M-2 (ignore filtres) = 
+VAR EndDate   = EOMONTH(TODAY(), -2)
+VAR StartDate = DATE(YEAR(EndDate), MONTH(EndDate), 1)
+RETURN
+CALCULATE(
+    [CA],
+    REMOVEFILTERS(Calendrier),
+    DATESBETWEEN(Calendrier[Date], StartDate, EndDate)
+)
+
+--------------------------------------------------
+CA M-1 N-1 (ignore filtres) = 
+VAR EndDate   = EOMONTH(TODAY(), -13)
+VAR StartDate = DATE(YEAR(EndDate), MONTH(EndDate), 1)
+RETURN
+CALCULATE(
+    [CA],
+    REMOVEFILTERS(Calendrier),
+    DATESBETWEEN(Calendrier[Date], StartDate, EndDate)
+)
+
+--------------------------------------------------
+LTV estimée (12 mois après 1re consult) = 
+VAR Pivot = [Date Pivot]
+VAR ClientsCohorte = VALUES(clients_36_mois[client_id])
+RETURN
+AVERAGEX(
+    FILTER(
+        ClientsCohorte,
+        VAR DateStart =
+            CALCULATE(
+                MIN(clients_36_mois[date_premiere_consultation])
+            )
+        VAR DateEnd = EDATE(DateStart, 12)
+        RETURN NOT ISBLANK(DateStart) && DateEnd <= Pivot
+    ),
+    VAR DateStart =
+        CALCULATE(
+            MIN(clients_36_mois[date_premiere_consultation])
+        )
+    VAR DateEnd = EDATE(DateStart, 12)
+    RETURN
+        CALCULATE(
+            SUM(planity_rdv_36_mois[montant_recu_eur]),
+            planity_rdv_36_mois[statut] IN {"Réalisé","Honoré"},
+            REMOVEFILTERS(Calendrier),
+            DATESBETWEEN(Calendrier[Date], DateStart, DateEnd)
+        )
+)
+
+--------------------------------------------------
+Durée traitement moyenne (mois) (ignore filtres) = 
+VAR T =
+    ADDCOLUMNS(
+        VALUES(clients_36_mois[client_id]),
+        "FirstDate",
+            CALCULATE(
+                MIN(planity_rdv_36_mois[date]),
+                REMOVEFILTERS(Calendrier),
+                planity_rdv_36_mois[statut] IN {"Réalisé","Honoré"}
+            ),
+        "LastDate",
+            CALCULATE(
+                MAX(planity_rdv_36_mois[date]),
+                REMOVEFILTERS(Calendrier),
+                planity_rdv_36_mois[statut] IN {"Réalisé","Honoré"}
+            )
+    )
+RETURN
+AVERAGEX(
+    FILTER(T, NOT(ISBLANK([FirstDate])) && NOT(ISBLANK([LastDate]))),
+    DIVIDE(DATEDIFF([FirstDate], [LastDate], DAY), 30.4375)
+)
+
+--------------------------------------------------
+Date Dernier Mois Terminé = EOMONTH(TODAY(), -1)
+
+--------------------------------------------------
+Heures RDV annulés = 
+DIVIDE(
+    CALCULATE(
+        SUM(planity_rdv_36_mois[duree_prestation_min]),
+        planity_rdv_36_mois[statut] = "Annulé"
+    ),
+    60
+)
+
+
+--------------------------------------------------
+Heures RDV no-show = 
+DIVIDE(
+    CALCULATE(
+        SUM(planity_rdv_36_mois[duree_prestation_min]),
+        planity_rdv_36_mois[statut] = "No-show"
+    ),
+    60
+)
+
+--------------------------------------------------
+Heures non facturées (admin) = 
+DIVIDE(
+    CALCULATE(
+        SUM(planity_rdv_36_mois[temps_non_facture_min])
+    ),
+    60
+)
+
+--------------------------------------------------
+Taux annulation = 
+DIVIDE([Heures RDV annulés], [Heures ouverture théoriques])
+
+--------------------------------------------------
+Taux remplissage M-1 (ignore filtres) = 
+VAR EndDate   = [Date Fin M-1 (today)]
+VAR StartDate = DATE(YEAR(EndDate), MONTH(EndDate), 1)
+RETURN
+CALCULATE(
+    [Taux de remplissage],
+    REMOVEFILTERS(Calendrier),
+    DATESBETWEEN(Calendrier[Date], StartDate, EndDate)
+)
+
+--------------------------------------------------
+Heures RDV réalisés - 12M = 
+VAR Pivot = [Date Pivot]
+RETURN
+CALCULATE(
+    [Heures RDV réalisés],
+    DATESINPERIOD(Calendrier[Date], Pivot, -12, MONTH)
+)
+
+--------------------------------------------------
+Heures RDV (réel + prévision) = 
+VAR d = MAX(Calendrier[Date])
+VAR DatePivot = MAXX(ALLSELECTED(Calendrier[Date]), Calendrier[Date])
+RETURN
+IF(
+    d <= DatePivot,
+    [Heures RDV réalisés],
+    [Heures RDV réalisés - 12M] / 7   -- converti en "par jour" si ton axe est quotidien
+)
+
+--------------------------------------------------
+CA M-1 = 
+VAR EndDate   = [Date Fin M-1 (today)]
+VAR StartDate = DATE(YEAR(EndDate), MONTH(EndDate), 1)
+RETURN
+CALCULATE(
+    [CA],
+    DATESBETWEEN(Calendrier[Date], StartDate, EndDate)
+)
+
+--------------------------------------------------
+Date Pivot = 
+MAXX(ALLSELECTED(Calendrier[Date]), Calendrier[Date])
+
+--------------------------------------------------
+Heures RDV calées = 
+VAR Pivot = [Date Pivot]
+RETURN
+CALCULATE(
+    SUM(planity_rdv_36_mois[durée_prestation_heure]),            -- ou ta mesure d'heures
+    planity_rdv_36_mois[date] > Pivot,
+    planity_rdv_36_mois[statut] IN {"Confirmé","Planifié","À venir"}
+)
+
+--------------------------------------------------
+Facteur saisonnalité (semaine) - lissé = 
+VAR Pivot = [Date Pivot]
+VAR WeekNum = MAX(Calendrier[Numero de la semaine])
+VAR Window52W =
+    DATESINPERIOD(Calendrier[Date], Pivot, -364, DAY)
+VAR Heures3Weeks =
+    CALCULATE(
+        [Heures RDV réalisés],
+        FILTER(
+            Window52W,
+            VAR w = WEEKNUM(Calendrier[Date], 21)
+            RETURN w IN { WeekNum - 1, WeekNum, WeekNum + 1 }
+        )
+    )
+VAR AvgWeekly =
+    DIVIDE(
+        CALCULATE([Heures RDV réalisés], Window52W),
+        52
+    )
+RETURN
+DIVIDE(Heures3Weeks / 3, AvgWeekly)
+
+--------------------------------------------------
+Nouveaux clients - moy / mois (12M) = 
+VAR Pivot = [Date Pivot]
+RETURN
+AVERAGEX(
+    DATESINPERIOD(Calendrier[Date], Pivot, -12, MONTH),
+    [Nouveaux clients du mois]
+)
+
+--------------------------------------------------
+Taux abandon - moy mensuel (12M) = 
+VAR Pivot = [Date Pivot]
+RETURN
+AVERAGEX(
+    DATESINPERIOD(Calendrier[Date], Pivot, -12, MONTH),
+    VAR FinM = EOMONTH(MAX(Calendrier[Date]), 0)
+    VAR DebM = DATE(YEAR(FinM), MONTH(FinM), 1)
+    VAR DebM1 = EOMONTH(FinM, 0) + 1
+    VAR FinM1 = EOMONTH(FinM, 1)
+
+    VAR ActifsM =
+        CALCULATETABLE(
+            VALUES(planity_rdv_36_mois[client_id]),
+            planity_rdv_36_mois[statut] IN {"Réalisé","Honoré"},
+            DATESBETWEEN(Calendrier[Date], DebM, FinM)
+        )
+    VAR ActifsM1 =
+        CALCULATETABLE(
+            VALUES(planity_rdv_36_mois[client_id]),
+            planity_rdv_36_mois[statut] IN {"Réalisé","Honoré"},
+            DATESBETWEEN(Calendrier[Date], DebM1, FinM1)
+        )
+    VAR Retenus = COUNTROWS(INTERSECT(ActifsM, ActifsM1))
+    VAR Total = COUNTROWS(ActifsM)
+    RETURN 1 - DIVIDE(Retenus, Total)
+)
+
+--------------------------------------------------
+Heures par client actif (12M) = 
+VAR Pivot = [Date Pivot]
+VAR Heures = [Heures RDV réalisés - 12M]
+VAR ClientsActifs =
+    CALCULATE(
+        DISTINCTCOUNT(planity_rdv_36_mois[client_id]),
+        planity_rdv_36_mois[statut] IN {"Réalisé","Honoré"},
+        DATESINPERIOD(Calendrier[Date], Pivot, -12, MONTH)
+    )
+RETURN
+DIVIDE(Heures, ClientsActifs)
+
+--------------------------------------------------
+Clients actifs projetés = 
+VAR Pivot = [Date Pivot]
+VAR d = MAX(Calendrier[Date])
+VAR N = MAX(0, DATEDIFF(EOMONTH(Pivot,0), EOMONTH(d,0), MONTH))
+
+VAR ActifsNow =
+    CALCULATE(
+        DISTINCTCOUNT(planity_rdv_36_mois[client_id]),
+        planity_rdv_36_mois[statut] IN {"Réalisé","Honoré"},
+        DATESINPERIOD(Calendrier[Date], Pivot, -1, MONTH)
+    )
+VAR NewAvg = [Nouveaux clients - moy / mois (12M)]
+VAR Churn = [Taux abandon - moy mensuel (12M)]
+VAR Ret = 1 - Churn
+RETURN
+IF(
+    Churn = 0,
+    ActifsNow + NewAvg * N,
+    ActifsNow * POWER(Ret, N) + NewAvg * (1 - POWER(Ret, N)) / Churn
+)
+
+--------------------------------------------------
+Heures attendues (non calées) = 
+[Clients actifs projetés] * [Heures par client actif (12M)] * [Facteur saisonnalité (semaine) - lissé]
+
+--------------------------------------------------
+Heures RDV (réel + calés + prévision) = 
+VAR Pivot = [Date Pivot]
+VAR d = MAX(Calendrier[Date])
+RETURN
+IF(
+    d <= Pivot,
+    [Heures RDV réalisés],
+    [Heures RDV calées] + [Heures attendues (non calées)]
+)
+
+--------------------------------------------------
+CA moyen par client (réalisé) = 
+DIVIDE(
+    [CA],
+    CALCULATE(
+        DISTINCTCOUNT(planity_rdv_36_mois[client_id]),
+        planity_rdv_36_mois[statut] IN {"Réalisé","Honoré"}
+    )
+)
+
+--------------------------------------------------
+CA moyen mensuel par client (réalisé) = 
+DIVIDE(
+    CALCULATE([CA], planity_rdv_36_mois[statut] IN {"Réalisé","Honoré"}),
+    CALCULATE(
+        DISTINCTCOUNT(planity_rdv_36_mois[client_id]),
+        planity_rdv_36_mois[statut] IN {"Réalisé","Honoré"}
+    )
+)
+
+--------------------------------------------------
+LTV estimée (CA) = 
+[CA moyen mensuel par client (réalisé)] * [Durée traitement moyenne (mois) (ignore filtres)]
+
+--------------------------------------------------
+Taux d'heures non facturées (admin) = 
+DIVIDE([Heures non facturées (admin)], [Heures ouverture théoriques])
+
+--------------------------------------------------
+Canal d'acquisition - Site web = 
+CALCULATE(
+    DISTINCTCOUNT(clients_36_mois[client_id]),
+    clients_36_mois[canal_acquisition] = "Site internet"
+)
+
+--------------------------------------------------
+Canal d'acquisition - Bouche-à-oreille = 
+CALCULATE(
+    DISTINCTCOUNT(clients_36_mois[client_id]),
+    clients_36_mois[canal_acquisition] = "Bouche-à-oreille"
+)
+
+--------------------------------------------------
+Canal d'acquisition - Instagram = 
+CALCULATE(
+    DISTINCTCOUNT(clients_36_mois[client_id]),
+    clients_36_mois[canal_acquisition] = "Instagram"
+)
+
+--------------------------------------------------
+Canal d'acquisition - médecin = 
+CALCULATE(
+    DISTINCTCOUNT(clients_36_mois[client_id]),
+    clients_36_mois[canal_acquisition] = "Médecin dermatologue"
+)
+
+--------------------------------------------------
+Canal d'acquisition - Planity = 
+CALCULATE(
+    DISTINCTCOUNT(clients_36_mois[client_id]),
+    clients_36_mois[canal_acquisition] = "Planity"
+)
+
+--------------------------------------------------
+Fenêtre Graph Remplissage (12M + 6M) = 
+VAR Pivot = [Date Pivot (mois terminé)]
+VAR MoisDebut = EOMONTH(Pivot, -12) + 1
+VAR MoisFin   = EOMONTH(Pivot, 6)
+VAR d = MAX(Calendrier[Date])
+RETURN
+IF(d >= MoisDebut && d <= MoisFin, 1, 0)
+
+--------------------------------------------------
+Tx remplissage - Réel (mensuel) = 
+VAR Pivot = [Date Pivot (mois terminé)]
+VAR d = MAX(Calendrier[Date])
+RETURN
+IF(
+    d <= Pivot,
+    [Taux de remplissage],
+    BLANK()
+)
+
+--------------------------------------------------
+Tx remplissage - Prévision (6M, mensuel) = 
+VAR Pivot = [Date Pivot (mois terminé)]
+VAR d = MAX(Calendrier[Date])
+RETURN
+IF(
+    d > Pivot && d <= EOMONTH(Pivot, 6),
+    DIVIDE(
+        [Heures RDV (réel + calés + prévision)],
+        [Heures ouverture théoriques]
+    ),
+    BLANK()
+)
+
+--------------------------------------------------
+Tx remplissage (réel + prévision 6M) = 
+VAR Pivot = [Date Pivot]
+VAR d = MAX(Calendrier[Date])
+RETURN
+IF(
+    d <= EOMONTH(Pivot, 6),
+    DIVIDE(
+        [Heures RDV (réel + calés + prévision)],
+        [Heures ouverture théoriques]
+    ),
+    BLANK()
+)
+
+--------------------------------------------------
+Date Pivot (mois terminé) = 
+EOMONTH(TODAY(), -1)
+

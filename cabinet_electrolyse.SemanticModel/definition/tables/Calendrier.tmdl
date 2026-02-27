@@ -10,7 +10,7 @@ table Calendrier
 
 		variation Variation
 			isDefault
-			relationship: 3764d210-708b-4754-9f93-f6fb7cf2c052
+			relationship: 341626be-88aa-469e-a2e8-df652b5aac63
 			defaultHierarchy: LocalDateTable_71ba8576-5693-4647-9007-68f435cbe8d1.'Hiérarchie de dates'
 
 		annotation SummarizationSetBy = Automatic
@@ -89,17 +89,39 @@ table Calendrier
 
 		annotation SummarizationSetBy = Automatic
 
+	column 'Numero de la semaine'
+		formatString: 0
+		lineageTag: 1b52f087-4cb0-4674-9f69-9c9793c44632
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Numero de la semaine]
+
+		annotation SummarizationSetBy = Automatic
+
+	hierarchy 'Annee Hiérarchie'
+		lineageTag: 7e98bcea-faa9-426c-a7b6-8e313ef0dfbd
+
+		level Annee
+			lineageTag: d1206493-cbc0-4c7f-8534-40cf57d1d934
+			column: Annee
+
+		level 'Numero du mois'
+			lineageTag: 7fcf417f-78bb-401e-a5e2-c0213c324851
+			column: 'Numero du mois'
+
+		level 'Nom du mois'
+			lineageTag: 9a81c659-014e-4252-8d65-567c3f867dc7
+			column: 'Nom du mois'
+
 	partition Calendrier = calculated
 		mode: import
 		source =
 				
 				
-				// penser a changer les annees en fonctions des transactions
-				
 				ADDCOLUMNS(
 				    CALENDAR(
 				        DATE(2023,3,1),
-				        DATE(2026,2,28)
+				        DATE(2026,8,28)
 				    ),
 				    "Annee", FORMAT([Date],"YYYY"),
 				    "Trimestre" , "T"&FORMAT([Date],"Q"),
@@ -107,6 +129,7 @@ table Calendrier
 				    "Nom du mois", FORMAT([Date],"MMM") ,
 				    "Numero du mois", MONTH([Date]),
 				    "Semaine", YEAR([Date])&"S"&WEEKNUM([Date],21),
+				    "Numero de la semaine", WEEKNUM([Date],21),
 				    "Nom du jour", FORMAT([Date],"DDDD"),
 				    "Numero du jour" , WEEKDAY([Date],2),
 				    "Jour ouvre" , IF(WEEKDAY([Date],2)>6,"Week-end")

@@ -8,11 +8,6 @@ table google_analytics_36_mois
 		summarizeBy: none
 		sourceColumn: date
 
-		variation Variation
-			isDefault
-			relationship: 92d340bf-2858-46e8-92bd-c3a3c662c167
-			defaultHierarchy: LocalDateTable_49bd91aa-9bd6-41f7-8840-afed6aaf4b21.'Hiérarchie de dates'
-
 		annotation SummarizationSetBy = Automatic
 
 		annotation UnderlyingDateTimeDataType = Date

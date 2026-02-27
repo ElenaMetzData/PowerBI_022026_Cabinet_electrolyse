@@ -47,48 +47,34 @@ table Mesures
 
 		annotation PBI_FormatHint = {"currencyCulture":"fr-FR"}
 
-	measure 'Var % MoM' =
+	measure 'Var % MoM (ignore filtres)' =
 			
 			DIVIDE(
-			    [CA M-1] - [CA M-2],
-			    [CA M-2]
+			    [CA M-1 (ignore filtres)] - [CA M-2 (ignore filtres)],
+			    [CA M-2 (ignore filtres)]
 			)
 		lineageTag: 13fa3000-11c7-49ec-8f74-f507a21470d9
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'Var % YoY' =
+	measure 'Var % YoY (ignore filtres)' =
 			
 			DIVIDE(
-			    [CA M-1] - [CA M-1 N-1],
-			    [CA M-1 N-1]
+			    [CA M-1 (ignore filtres)] - [CA M-1 N-1 (ignore filtres)],
+			    [CA M-1 N-1 (ignore filtres)]
 			)
 		lineageTag: 8707c1ad-931a-486c-ac0c-02427016dc98
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'Date Dernier Mois Terminé' =
-			
-			EOMONTH(TODAY(), -1)
-		formatString: General Date
-		lineageTag: 4022b8ae-f152-4aac-91f5-b575568f2504
-
-	measure 'Couleur Var' =
-			
-			IF(
-			    [Var % MoM] >= 0,
-			    "#1A9B4F",   -- vert
-			    "#D64541"    -- rouge
-			)
-		lineageTag: e3d97334-3c63-4d98-bf36-8b8363c76552
-
-	measure 'CA M-1' =
+	measure 'CA M-1 (ignore filtres)' =
 			
 			VAR EndDate   = [Date Fin M-1 (today)]
 			VAR StartDate = DATE(YEAR(EndDate), MONTH(EndDate), 1)
 			RETURN
 			CALCULATE(
 			    [CA],
+			    REMOVEFILTERS(Calendrier),
 			    DATESBETWEEN(Calendrier[Date], StartDate, EndDate)
 			)
 		formatString: #,0.###############\ "€";-#,0.###############\ "€";#,0.###############\ "€"
@@ -111,7 +97,7 @@ table Mesures
 
 	measure 'Sous-titre Var MoM' =
 			
-			VAR VarMoM = [Var % MoM]
+			VAR VarMoM = [Var % MoM (ignore filtres)]
 			VAR Sign = IF(VarMoM > 0, "+", "")
 			VAR TxtPct =
 			    IF(
@@ -128,7 +114,7 @@ table Mesures
 
 	measure 'Sous-titre Var YoY' =
 			
-			VAR VarYoY = [Var % YoY]
+			VAR VarYoY = [Var % YoY (ignore filtres)]
 			VAR Sign = IF(VarYoY > 0, "+", "")
 			VAR TxtPct =
 			    IF(
@@ -243,10 +229,510 @@ table Mesures
 		formatString: 0
 		lineageTag: 67689c97-5459-49f3-bf51-26c9e5ada81d
 
+	measure 'CA M-2 (ignore filtres)' =
+			
+			VAR EndDate   = EOMONTH(TODAY(), -2)
+			VAR StartDate = DATE(YEAR(EndDate), MONTH(EndDate), 1)
+			RETURN
+			CALCULATE(
+			    [CA],
+			    REMOVEFILTERS(Calendrier),
+			    DATESBETWEEN(Calendrier[Date], StartDate, EndDate)
+			)
+		formatString: #,0.###############\ "€";-#,0.###############\ "€";#,0.###############\ "€"
+		lineageTag: 1045c4f6-f2b0-47b5-8c59-7f0736557aae
+
+		annotation PBI_FormatHint = {"currencyCulture":"fr-FR"}
+
+	measure 'CA M-1 N-1 (ignore filtres)' =
+			
+			VAR EndDate   = EOMONTH(TODAY(), -13)
+			VAR StartDate = DATE(YEAR(EndDate), MONTH(EndDate), 1)
+			RETURN
+			CALCULATE(
+			    [CA],
+			    REMOVEFILTERS(Calendrier),
+			    DATESBETWEEN(Calendrier[Date], StartDate, EndDate)
+			)
+		formatString: #,0.###############\ "€";-#,0.###############\ "€";#,0.###############\ "€"
+		lineageTag: 233fa1d5-58e6-4091-b35f-8627daa56626
+
+		annotation PBI_FormatHint = {"currencyCulture":"fr-FR"}
+
+	measure 'LTV estimée (12 mois après 1re consult)' =
+			
+			VAR Pivot = [Date Pivot]
+			VAR ClientsCohorte = VALUES(clients_36_mois[client_id])
+			RETURN
+			AVERAGEX(
+			    FILTER(
+			        ClientsCohorte,
+			        VAR DateStart =
+			            CALCULATE(
+			                MIN(clients_36_mois[date_premiere_consultation])
+			            )
+			        VAR DateEnd = EDATE(DateStart, 12)
+			        RETURN NOT ISBLANK(DateStart) && DateEnd <= Pivot
+			    ),
+			    VAR DateStart =
+			        CALCULATE(
+			            MIN(clients_36_mois[date_premiere_consultation])
+			        )
+			    VAR DateEnd = EDATE(DateStart, 12)
+			    RETURN
+			        CALCULATE(
+			            SUM(planity_rdv_36_mois[montant_recu_eur]),
+			            planity_rdv_36_mois[statut] IN {"Réalisé","Honoré"},
+			            REMOVEFILTERS(Calendrier),
+			            DATESBETWEEN(Calendrier[Date], DateStart, DateEnd)
+			        )
+			)
+		formatString: 0
+		lineageTag: 99d56178-0860-40c5-99b2-fc1ae8a64bb5
+
+	measure 'Durée traitement moyenne (mois) (ignore filtres)' =
+			
+			VAR T =
+			    ADDCOLUMNS(
+			        VALUES(clients_36_mois[client_id]),
+			        "FirstDate",
+			            CALCULATE(
+			                MIN(planity_rdv_36_mois[date]),
+			                REMOVEFILTERS(Calendrier),
+			                planity_rdv_36_mois[statut] IN {"Réalisé","Honoré"}
+			            ),
+			        "LastDate",
+			            CALCULATE(
+			                MAX(planity_rdv_36_mois[date]),
+			                REMOVEFILTERS(Calendrier),
+			                planity_rdv_36_mois[statut] IN {"Réalisé","Honoré"}
+			            )
+			    )
+			RETURN
+			AVERAGEX(
+			    FILTER(T, NOT(ISBLANK([FirstDate])) && NOT(ISBLANK([LastDate]))),
+			    DIVIDE(DATEDIFF([FirstDate], [LastDate], DAY), 30.4375)
+			)
+		lineageTag: b62b0dd4-5d52-48a0-97f8-fa1e639eca01
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Date Dernier Mois Terminé' = EOMONTH(TODAY(), -1)
+		formatString: General Date
+		lineageTag: 0d214e82-bda0-4365-b257-5617670448b4
+
+	measure 'Heures RDV annulés' = ```
+			
+			DIVIDE(
+			    CALCULATE(
+			        SUM(planity_rdv_36_mois[duree_prestation_min]),
+			        planity_rdv_36_mois[statut] = "Annulé"
+			    ),
+			    60
+			)
+			
+			```
+		lineageTag: cebbf1ea-810a-4c08-bb6f-eaa96977d2cd
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Heures RDV no-show' =
+			
+			DIVIDE(
+			    CALCULATE(
+			        SUM(planity_rdv_36_mois[duree_prestation_min]),
+			        planity_rdv_36_mois[statut] = "No-show"
+			    ),
+			    60
+			)
+		lineageTag: a325bf28-89b0-4159-8951-f87a73a7ff13
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Heures non facturées (admin)' =
+			
+			DIVIDE(
+			    CALCULATE(
+			        SUM(planity_rdv_36_mois[temps_non_facture_min])
+			    ),
+			    60
+			)
+		lineageTag: dc44939f-8417-43a6-bca8-eeed8d02fbd3
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Taux annulation' =
+			
+			DIVIDE([Heures RDV annulés], [Heures ouverture théoriques])
+		lineageTag: c07f0a19-04dc-4446-9ea0-1fbb5de35165
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Taux remplissage M-1 (ignore filtres)' =
+			
+			VAR EndDate   = [Date Fin M-1 (today)]
+			VAR StartDate = DATE(YEAR(EndDate), MONTH(EndDate), 1)
+			RETURN
+			CALCULATE(
+			    [Taux de remplissage],
+			    REMOVEFILTERS(Calendrier),
+			    DATESBETWEEN(Calendrier[Date], StartDate, EndDate)
+			)
+		lineageTag: d73e6fb6-8e31-42cf-970e-4bb86878d1f1
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Heures RDV réalisés - 12M' =
+			
+			VAR Pivot = [Date Pivot]
+			RETURN
+			CALCULATE(
+			    [Heures RDV réalisés],
+			    DATESINPERIOD(Calendrier[Date], Pivot, -12, MONTH)
+			)
+		lineageTag: 293a14a3-fea9-47c9-974e-528404bbeb5e
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Heures RDV (réel + prévision)' =
+			
+			VAR d = MAX(Calendrier[Date])
+			VAR DatePivot = MAXX(ALLSELECTED(Calendrier[Date]), Calendrier[Date])
+			RETURN
+			IF(
+			    d <= DatePivot,
+			    [Heures RDV réalisés],
+			    [Heures RDV réalisés - 12M] / 7   -- converti en "par jour" si ton axe est quotidien
+			)
+		isHidden
+		lineageTag: 304efe1e-4139-471c-9dfc-ea3e4e481c83
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'CA M-1' =
+			
+			VAR EndDate   = [Date Fin M-1 (today)]
+			VAR StartDate = DATE(YEAR(EndDate), MONTH(EndDate), 1)
+			RETURN
+			CALCULATE(
+			    [CA],
+			    DATESBETWEEN(Calendrier[Date], StartDate, EndDate)
+			)
+		formatString: #,0.###############\ "€";-#,0.###############\ "€";#,0.###############\ "€"
+		lineageTag: d3f8df39-320a-4d54-ae74-5bd42b2501f5
+
+		annotation PBI_FormatHint = {"currencyCulture":"fr-FR"}
+
+	measure 'Date Pivot' =
+			
+			MAXX(ALLSELECTED(Calendrier[Date]), Calendrier[Date])
+		formatString: General Date
+		lineageTag: 788e0821-9ebf-4d46-a7f9-7ff31585ea9c
+
+	measure 'Heures RDV calées' =
+			
+			VAR Pivot = [Date Pivot]
+			RETURN
+			CALCULATE(
+			    SUM(planity_rdv_36_mois[durée_prestation_heure]),            -- ou ta mesure d'heures
+			    planity_rdv_36_mois[date] > Pivot,
+			    planity_rdv_36_mois[statut] IN {"Confirmé","Planifié","À venir"}
+			)
+		formatString: 0
+		lineageTag: 41095596-3d4e-4be1-8c0b-047deab2c51c
+
+	measure 'Facteur saisonnalité (semaine) - lissé' =
+			
+			VAR Pivot = [Date Pivot]
+			VAR WeekNum = MAX(Calendrier[Numero de la semaine])
+			VAR Window52W =
+			    DATESINPERIOD(Calendrier[Date], Pivot, -364, DAY)
+			VAR Heures3Weeks =
+			    CALCULATE(
+			        [Heures RDV réalisés],
+			        FILTER(
+			            Window52W,
+			            VAR w = WEEKNUM(Calendrier[Date], 21)
+			            RETURN w IN { WeekNum - 1, WeekNum, WeekNum + 1 }
+			        )
+			    )
+			VAR AvgWeekly =
+			    DIVIDE(
+			        CALCULATE([Heures RDV réalisés], Window52W),
+			        52
+			    )
+			RETURN
+			DIVIDE(Heures3Weeks / 3, AvgWeekly)
+		lineageTag: 7c9463d1-7d95-4fde-bfef-0961631dd16b
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Nouveaux clients - moy / mois (12M)' =
+			
+			VAR Pivot = [Date Pivot]
+			RETURN
+			AVERAGEX(
+			    DATESINPERIOD(Calendrier[Date], Pivot, -12, MONTH),
+			    [Nouveaux clients du mois]
+			)
+		lineageTag: d2836afa-58e9-4d9e-80b1-579611aca3c1
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Taux abandon - moy mensuel (12M)' =
+			
+			VAR Pivot = [Date Pivot]
+			RETURN
+			AVERAGEX(
+			    DATESINPERIOD(Calendrier[Date], Pivot, -12, MONTH),
+			    VAR FinM = EOMONTH(MAX(Calendrier[Date]), 0)
+			    VAR DebM = DATE(YEAR(FinM), MONTH(FinM), 1)
+			    VAR DebM1 = EOMONTH(FinM, 0) + 1
+			    VAR FinM1 = EOMONTH(FinM, 1)
+			
+			    VAR ActifsM =
+			        CALCULATETABLE(
+			            VALUES(planity_rdv_36_mois[client_id]),
+			            planity_rdv_36_mois[statut] IN {"Réalisé","Honoré"},
+			            DATESBETWEEN(Calendrier[Date], DebM, FinM)
+			        )
+			    VAR ActifsM1 =
+			        CALCULATETABLE(
+			            VALUES(planity_rdv_36_mois[client_id]),
+			            planity_rdv_36_mois[statut] IN {"Réalisé","Honoré"},
+			            DATESBETWEEN(Calendrier[Date], DebM1, FinM1)
+			        )
+			    VAR Retenus = COUNTROWS(INTERSECT(ActifsM, ActifsM1))
+			    VAR Total = COUNTROWS(ActifsM)
+			    RETURN 1 - DIVIDE(Retenus, Total)
+			)
+		lineageTag: 5cbfcd8d-7c13-41b2-af47-45652fe4731b
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Heures par client actif (12M)' =
+			
+			VAR Pivot = [Date Pivot]
+			VAR Heures = [Heures RDV réalisés - 12M]
+			VAR ClientsActifs =
+			    CALCULATE(
+			        DISTINCTCOUNT(planity_rdv_36_mois[client_id]),
+			        planity_rdv_36_mois[statut] IN {"Réalisé","Honoré"},
+			        DATESINPERIOD(Calendrier[Date], Pivot, -12, MONTH)
+			    )
+			RETURN
+			DIVIDE(Heures, ClientsActifs)
+		lineageTag: d3b4b975-aa90-4204-9ab6-46c30b240c6a
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Clients actifs projetés' =
+			
+			VAR Pivot = [Date Pivot]
+			VAR d = MAX(Calendrier[Date])
+			VAR N = MAX(0, DATEDIFF(EOMONTH(Pivot,0), EOMONTH(d,0), MONTH))
+			
+			VAR ActifsNow =
+			    CALCULATE(
+			        DISTINCTCOUNT(planity_rdv_36_mois[client_id]),
+			        planity_rdv_36_mois[statut] IN {"Réalisé","Honoré"},
+			        DATESINPERIOD(Calendrier[Date], Pivot, -1, MONTH)
+			    )
+			VAR NewAvg = [Nouveaux clients - moy / mois (12M)]
+			VAR Churn = [Taux abandon - moy mensuel (12M)]
+			VAR Ret = 1 - Churn
+			RETURN
+			IF(
+			    Churn = 0,
+			    ActifsNow + NewAvg * N,
+			    ActifsNow * POWER(Ret, N) + NewAvg * (1 - POWER(Ret, N)) / Churn
+			)
+		lineageTag: c7ff5c19-daff-49fd-b768-faf49734a46c
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Heures attendues (non calées)' =
+			
+			[Clients actifs projetés] * [Heures par client actif (12M)] * [Facteur saisonnalité (semaine) - lissé]
+		lineageTag: be4570b2-9b16-4afe-9d1f-59763de718db
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Heures RDV (réel + calés + prévision)' =
+			
+			VAR Pivot = [Date Pivot]
+			VAR d = MAX(Calendrier[Date])
+			RETURN
+			IF(
+			    d <= Pivot,
+			    [Heures RDV réalisés],
+			    [Heures RDV calées] + [Heures attendues (non calées)]
+			)
+		lineageTag: b0b5b8a3-4319-4cfd-8f4e-5d5ad80e0448
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'CA moyen par client (réalisé)' =
+			
+			DIVIDE(
+			    [CA],
+			    CALCULATE(
+			        DISTINCTCOUNT(planity_rdv_36_mois[client_id]),
+			        planity_rdv_36_mois[statut] IN {"Réalisé","Honoré"}
+			    )
+			)
+		formatString: #,0.###############\ "€";-#,0.###############\ "€";#,0.###############\ "€"
+		isHidden
+		lineageTag: 17687465-adff-43f9-a1f1-9688ad869a96
+
+		annotation PBI_FormatHint = {"currencyCulture":"fr-FR"}
+
+	measure 'CA moyen mensuel par client (réalisé)' =
+			
+			DIVIDE(
+			    CALCULATE([CA], planity_rdv_36_mois[statut] IN {"Réalisé","Honoré"}),
+			    CALCULATE(
+			        DISTINCTCOUNT(planity_rdv_36_mois[client_id]),
+			        planity_rdv_36_mois[statut] IN {"Réalisé","Honoré"}
+			    )
+			)
+		formatString: #,0.###############\ "€";-#,0.###############\ "€";#,0.###############\ "€"
+		isHidden
+		lineageTag: fedcaeb4-b81d-4b4b-aa1e-4e34e1fc89d9
+
+		annotation PBI_FormatHint = {"currencyCulture":"fr-FR"}
+
+	measure 'LTV estimée (CA)' =
+			
+			[CA moyen mensuel par client (réalisé)] * [Durée traitement moyenne (mois) (ignore filtres)]
+		formatString: #,0.###############\ "€";-#,0.###############\ "€";#,0.###############\ "€"
+		isHidden
+		lineageTag: 30d30c27-7cb8-489b-88e2-02fa224da0a2
+
+		annotation PBI_FormatHint = {"currencyCulture":"fr-FR"}
+
+	measure 'Taux d''heures non facturées (admin)' =
+			
+			DIVIDE([Heures non facturées (admin)], [Heures ouverture théoriques])
+		lineageTag: bab1e660-3168-420c-912e-a37a337cd8e1
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Canal d''acquisition - Site web' =
+			
+			CALCULATE(
+			    DISTINCTCOUNT(clients_36_mois[client_id]),
+			    clients_36_mois[canal_acquisition] = "Site internet"
+			)
+		formatString: 0
+		lineageTag: 37021c3b-7e76-408c-9eae-b4b22ceadd89
+
+	measure 'Canal d''acquisition - Bouche-à-oreille' =
+			
+			CALCULATE(
+			    DISTINCTCOUNT(clients_36_mois[client_id]),
+			    clients_36_mois[canal_acquisition] = "Bouche-à-oreille"
+			)
+		formatString: 0
+		lineageTag: eded56e9-d752-4090-aca2-e2e3853aa072
+
+	measure 'Canal d''acquisition - Instagram' =
+			
+			CALCULATE(
+			    DISTINCTCOUNT(clients_36_mois[client_id]),
+			    clients_36_mois[canal_acquisition] = "Instagram"
+			)
+		formatString: 0
+		lineageTag: b7a75742-42e3-440f-93a4-244b1ed8585f
+
+	measure 'Canal d''acquisition - médecin' =
+			
+			CALCULATE(
+			    DISTINCTCOUNT(clients_36_mois[client_id]),
+			    clients_36_mois[canal_acquisition] = "Médecin dermatologue"
+			)
+		formatString: 0
+		lineageTag: a6f3d246-d385-485f-aed9-a82e8c935683
+
+	measure 'Canal d''acquisition - Planity' =
+			
+			CALCULATE(
+			    DISTINCTCOUNT(clients_36_mois[client_id]),
+			    clients_36_mois[canal_acquisition] = "Planity"
+			)
+		formatString: 0
+		lineageTag: 896c38ad-5db5-4a97-a37e-8ad4caa2508e
+
+	measure 'Fenêtre Graph Remplissage (12M + 6M)' =
+			
+			VAR Pivot = [Date Pivot (mois terminé)]
+			VAR MoisDebut = EOMONTH(Pivot, -12) + 1
+			VAR MoisFin   = EOMONTH(Pivot, 6)
+			VAR d = MAX(Calendrier[Date])
+			RETURN
+			IF(d >= MoisDebut && d <= MoisFin, 1, 0)
+		formatString: 0
+		lineageTag: 7924fac3-d747-4639-ac4a-2b3a95998ded
+
+	measure 'Tx remplissage - Réel (mensuel)' =
+			
+			VAR Pivot = [Date Pivot (mois terminé)]
+			VAR d = MAX(Calendrier[Date])
+			RETURN
+			IF(
+			    d <= Pivot,
+			    [Taux de remplissage],
+			    BLANK()
+			)
+		lineageTag: 26b0cc11-598b-40bb-af08-9a3188084b27
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Tx remplissage - Prévision (6M, mensuel)' =
+			
+			VAR Pivot = [Date Pivot (mois terminé)]
+			VAR d = MAX(Calendrier[Date])
+			RETURN
+			IF(
+			    d > Pivot && d <= EOMONTH(Pivot, 6),
+			    DIVIDE(
+			        [Heures RDV (réel + calés + prévision)],
+			        [Heures ouverture théoriques]
+			    ),
+			    BLANK()
+			)
+		lineageTag: 413a3e8d-8d4a-40e5-bb00-370cecbbd36c
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Tx remplissage (réel + prévision 6M)' =
+			
+			VAR Pivot = [Date Pivot]
+			VAR d = MAX(Calendrier[Date])
+			RETURN
+			IF(
+			    d <= EOMONTH(Pivot, 6),
+			    DIVIDE(
+			        [Heures RDV (réel + calés + prévision)],
+			        [Heures ouverture théoriques]
+			    ),
+			    BLANK()
+			)
+		lineageTag: 194fd7bd-4881-4d6c-8705-a96d0add8a31
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Date Pivot (mois terminé)' =
+			
+			EOMONTH(TODAY(), -1)
+		formatString: General Date
+		lineageTag: cda64bea-3b04-449f-b11d-740ddd27376f
+
 	column Placeholder
 		isHidden
+		formatString: 0
 		lineageTag: eb838ea6-440d-4f28-ab20-681de9989c74
-		summarizeBy: none
+		summarizeBy: sum
 		isNameInferred
 		sourceColumn: [Placeholder]
 
@@ -254,12 +740,9 @@ table Mesures
 
 	partition Mesures = calculated
 		mode: import
-		source =
-				
-				DATATABLE(
-				    "Placeholder", STRING,
-				    { {"X"} }
-				)
+		source = Row("Placeholder", BLANK())
 
 	annotation PBI_Id = b61b37aa52d94a28aea5cd28dba662c4
+
+	annotation 436ba87b-9c83-4389-a31b-ebd06a36be98 = {"Expression":""}
 

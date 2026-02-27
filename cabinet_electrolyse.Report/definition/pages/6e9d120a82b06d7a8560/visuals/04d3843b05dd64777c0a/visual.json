@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
-  "name": "7f2fa642ab36d8295246",
+  "name": "04d3843b05dd64777c0a",
   "position": {
-    "x": 31.111111111111111,
-    "y": 322.22222222222223,
-    "z": 1000,
-    "height": 387.77777777777777,
-    "width": 804.44444444444446,
-    "tabOrder": 1000
+    "x": 31,
+    "y": 322,
+    "z": 0,
+    "height": 388,
+    "width": 992,
+    "tabOrder": 0
   },
   "visual": {
     "visualType": "lineStackedColumnComboChart",
@@ -87,12 +87,11 @@
                       "Entity": "Mesures"
                     }
                   },
-                  "Property": "CA"
+                  "Property": "Tx remplissage - Réel (mensuel)"
                 }
               },
-              "queryRef": "Mesures.CA",
-              "nativeQueryRef": "Chiffre d'affaire",
-              "displayName": "Chiffre d'affaire"
+              "queryRef": "Mesures.Tx remplissage - Réel (mensuel)",
+              "nativeQueryRef": "Tx remplissage - Réel (mensuel)"
             }
           ]
         },
@@ -106,11 +105,11 @@
                       "Entity": "Mesures"
                     }
                   },
-                  "Property": "Résultat net"
+                  "Property": "Tx remplissage - Prévision (6M, mensuel)"
                 }
               },
-              "queryRef": "Mesures.Marge",
-              "nativeQueryRef": "Résultat net"
+              "queryRef": "Mesures.Tx remplissage - Prévision (6M, mensuel)",
+              "nativeQueryRef": "Tx remplissage - Prévision (6M, mensuel)"
             }
           ]
         }
@@ -176,22 +175,6 @@
       }
     },
     "objects": {
-      "dataPoint": [
-        {
-          "properties": {
-            "borderShow": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Mesures.Marge"
-          }
-        }
-      ],
       "labels": [
         {
           "properties": {
@@ -301,6 +284,7 @@
     "filters": [
       {
         "name": "9b8298ef738e29e04115",
+        "ordinal": 0,
         "field": {
           "HierarchyLevel": {
             "Expression": {
@@ -316,144 +300,129 @@
             "Level": "Annee"
           }
         },
-        "type": "Categorical",
+        "type": "Categorical"
+      },
+      {
+        "name": "93c7c90b174909b00c34",
+        "ordinal": 1,
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mesures"
+              }
+            },
+            "Property": "Fenêtre Graph Remplissage (12M + 6M)"
+          }
+        },
+        "type": "Advanced",
         "filter": {
           "Version": 2,
           "From": [
             {
-              "Name": "c",
-              "Entity": "Calendrier",
+              "Name": "m",
+              "Entity": "Mesures",
               "Type": 0
             }
           ],
           "Where": [
             {
               "Condition": {
-                "In": {
-                  "Expressions": [
-                    {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Source": "c"
-                          }
-                        },
-                        "Property": "Annee"
-                      }
+                "Comparison": {
+                  "ComparisonKind": 0,
+                  "Left": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Source": "m"
+                        }
+                      },
+                      "Property": "Fenêtre Graph Remplissage (12M + 6M)"
                     }
-                  ],
-                  "Values": [
-                    [
-                      {
-                        "Literal": {
-                          "Value": "'2024'"
-                        }
-                      }
-                    ],
-                    [
-                      {
-                        "Literal": {
-                          "Value": "'2025'"
-                        }
-                      }
-                    ],
-                    [
-                      {
-                        "Literal": {
-                          "Value": "'2026'"
-                        }
-                      }
-                    ]
-                  ]
-                }
-              },
-              "Annotations": {
-                "filterExpressionMetadata": {
-                  "expressions": [
-                    {
-                      "HierarchyLevel": {
-                        "Expression": {
-                          "Hierarchy": {
-                            "Expression": {
-                              "SourceRef": {
-                                "Entity": "Calendrier"
-                              }
-                            },
-                            "Hierarchy": "Annee Hiérarchie"
-                          }
-                        },
-                        "Level": "Annee"
-                      }
-                    }
-                  ],
-                  "decomposedIdentities": {
-                    "values": [
-                      [
-                        {
-                          "0": [
-                            {
-                              "Literal": {
-                                "Value": "'2024'"
-                              }
-                            }
-                          ]
-                        }
-                      ],
-                      [
-                        {
-                          "0": [
-                            {
-                              "Literal": {
-                                "Value": "'2025'"
-                              }
-                            }
-                          ]
-                        }
-                      ],
-                      [
-                        {
-                          "0": [
-                            {
-                              "Literal": {
-                                "Value": "'2026'"
-                              }
-                            }
-                          ]
-                        }
-                      ]
-                    ],
-                    "columns": [
-                      {
-                        "value": {
-                          "Column": {
-                            "Expression": {
-                              "SourceRef": {
-                                "Entity": "Calendrier"
-                              }
-                            },
-                            "Property": "Annee"
-                          }
-                        }
-                      }
-                    ]
                   },
-                  "valueMap": [
-                    {
-                      "0": "2024"
-                    },
-                    {
-                      "0": "2025"
-                    },
-                    {
-                      "0": "2026"
+                  "Right": {
+                    "Literal": {
+                      "Value": "1L"
                     }
-                  ]
+                  }
                 }
               }
             }
           ]
-        }
+        },
+        "howCreated": "User"
+      },
+      {
+        "name": "0f77de900705e7cba0d0",
+        "ordinal": 2,
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Calendrier"
+                  }
+                },
+                "Hierarchy": "Annee Hiérarchie"
+              }
+            },
+            "Level": "Nom du mois"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "52fde54f7d7c3a8e2b49",
+        "ordinal": 3,
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Calendrier"
+                  }
+                },
+                "Hierarchy": "Annee Hiérarchie"
+              }
+            },
+            "Level": "Numero du mois"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "782fda839cd1d0e9ea55",
+        "ordinal": 4,
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mesures"
+              }
+            },
+            "Property": "Tx remplissage - Prévision (6M, mensuel)"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "89e7c33b91761876269a",
+        "ordinal": 5,
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mesures"
+              }
+            },
+            "Property": "Tx remplissage - Réel (mensuel)"
+          }
+        },
+        "type": "Advanced"
       }
-    ]
+    ],
+    "filterSortOrder": "Custom"
   }
 }

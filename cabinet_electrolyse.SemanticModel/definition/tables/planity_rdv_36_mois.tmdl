@@ -82,6 +82,14 @@ table planity_rdv_36_mois
 
 		annotation UnderlyingDateTimeDataType = Date
 
+	column durée_prestation_heure
+		dataType: string
+		lineageTag: 0fe57044-19dd-434d-aae8-a93ce4cadf28
+		summarizeBy: none
+		sourceColumn: durée_prestation_heure
+
+		annotation SummarizationSetBy = Automatic
+
 	partition planity_rdv_36_mois = m
 		mode: import
 		source =
@@ -92,9 +100,11 @@ table planity_rdv_36_mois
 				    #"Fractionner la colonne par délimiteur" = Table.SplitColumn(Table.TransformColumnTypes(#"Type modifié", {{"date_heure", type text}}, "fr-FR"), "date_heure", Splitter.SplitTextByDelimiter(" ", QuoteStyle.Csv), {"date_heure.1", "date_heure.2"}),
 				    #"Type modifié1" = Table.TransformColumnTypes(#"Fractionner la colonne par délimiteur",{{"date_heure.1", type date}, {"date_heure.2", type time}}),
 				    #"Colonnes supprimées" = Table.RemoveColumns(#"Type modifié1",{"date_heure.2", "date_heure_fin"}),
-				    #"Colonnes renommées" = Table.RenameColumns(#"Colonnes supprimées",{{"date_heure.1", "date"}})
+				    #"Colonnes renommées" = Table.RenameColumns(#"Colonnes supprimées",{{"date_heure.1", "date"}}),
+				    #"Personnalisée ajoutée" = Table.AddColumn(#"Colonnes renommées", "durée_heure", each [duree_prestation_min]/60),
+				    #"Colonnes renommées1" = Table.RenameColumns(#"Personnalisée ajoutée",{{"durée_heure", "durée_prestation_heure"}, {"date", "date"}})
 				in
-				    #"Colonnes renommées"
+				    #"Colonnes renommées1"
 
 	annotation PBI_ResultType = Table
 

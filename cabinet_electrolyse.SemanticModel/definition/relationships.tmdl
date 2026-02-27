@@ -3,16 +3,11 @@ relationship 45b72f1d-7b58-4513-bf8c-3907f18cdfdd
 	fromColumn: clients_36_mois.date_premiere_consultation
 	toColumn: LocalDateTable_95985ade-ea90-4d4a-8ad6-e86504771cc0.Date
 
-relationship 92d340bf-2858-46e8-92bd-c3a3c662c167
-	joinOnDateBehavior: datePartOnly
-	fromColumn: google_analytics_36_mois.date
-	toColumn: LocalDateTable_49bd91aa-9bd6-41f7-8840-afed6aaf4b21.Date
-
 relationship AutoDetected_4181add8-7c98-4614-8cfa-49c9232d96ad
 	fromColumn: planity_rdv_36_mois.client_id
 	toColumn: clients_36_mois.client_id
 
-relationship 3764d210-708b-4754-9f93-f6fb7cf2c052
+relationship 341626be-88aa-469e-a2e8-df652b5aac63
 	joinOnDateBehavior: datePartOnly
 	fromColumn: Calendrier.Date
 	toColumn: LocalDateTable_71ba8576-5693-4647-9007-68f435cbe8d1.Date
@@ -23,5 +18,9 @@ relationship 34d61677-8862-9c29-8d35-cf47220528e4
 
 relationship 8ccc5b69-a63a-cefd-8e1f-38f29c1d61f9
 	fromColumn: banque_transactions_36_mois.date
+	toColumn: Calendrier.Date
+
+relationship b24a07b0-644c-5ce5-8ecd-1f94e8f14461
+	fromColumn: google_analytics_36_mois.date
 	toColumn: Calendrier.Date
 

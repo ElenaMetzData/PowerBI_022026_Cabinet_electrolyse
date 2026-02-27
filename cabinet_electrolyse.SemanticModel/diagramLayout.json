@@ -4,14 +4,14 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 0,
-        "y": 31.25
+        "x": 53.333333333333329,
+        "y": 0
       },
       "nodes": [
         {
           "location": {
-            "x": 1125.5000019073486,
-            "y": 111.25
+            "x": 1204.2500019073486,
+            "y": 41.25
           },
           "nodeIndex": "banque_transactions_36_mois",
           "nodeLineageTag": "a0823922-ee1c-41cb-9d42-976c226b69f1",
@@ -23,8 +23,8 @@
         },
         {
           "location": {
-            "x": 315.25,
-            "y": 313.5
+            "x": 401.5,
+            "y": 463.5
           },
           "nodeIndex": "clients_36_mois",
           "nodeLineageTag": "2873060b-1093-4c7c-ba21-ba9451952dad",
@@ -36,21 +36,21 @@
         },
         {
           "location": {
-            "x": 568,
+            "x": 454.25,
             "y": 87
           },
           "nodeIndex": "google_analytics_36_mois",
           "nodeLineageTag": "83fae81c-662c-4523-9dc9-6a2d36646849",
           "size": {
-            "height": 186,
+            "height": 226,
             "width": 234
           },
           "zIndex": 5
         },
         {
           "location": {
-            "x": 855.75,
-            "y": 356.25
+            "x": 840.75,
+            "y": 405
           },
           "nodeIndex": "planity_rdv_36_mois",
           "nodeLineageTag": "7798b9ec-babd-488e-91be-6e6b16415901",
@@ -75,11 +75,10 @@
         },
         {
           "location": {
-            "x": 29.75,
-            "y": 116.25
+            "x": 1207.25,
+            "y": 461.25
           },
           "nodeIndex": "Mesures",
-          "nodeLineageTag": "5ec9c2b6-cbae-403a-8412-70ec3be84bf5",
           "size": {
             "height": 200,
             "width": 234
@@ -88,7 +87,7 @@
         }
       ],
       "name": "Toutes les tables",
-      "zoomValue": 80,
+      "zoomValue": 90,
       "pinKeyFieldsToTop": false,
       "showExtraHeaderInfo": false,
       "hideKeyFieldsWhenCollapsed": false,

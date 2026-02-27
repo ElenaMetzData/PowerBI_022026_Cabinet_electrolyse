@@ -1,0 +1,18 @@
+Calendrier = 
+
+ADDCOLUMNS(
+    CALENDAR(
+        DATE(2023,3,1),
+        DATE(2026,8,31)
+    ),
+    "Annee", FORMAT([Date],"YYYY"),
+    "Trimestre" , "T"&FORMAT([Date],"Q"),
+    "Annee mois", FORMAT([Date],"YYYYMM"),
+    "Nom du mois", FORMAT([Date],"MMM") ,
+    "Numero du mois", MONTH([Date]),
+    "Semaine", YEAR([Date])&"S"&WEEKNUM([Date],21),
+    "Numero de la semaine", WEEKNUM([Date],21),
+    "Nom du jour", FORMAT([Date],"DDDD"),
+    "Numero du jour" , WEEKDAY([Date],2),
+    "Jour ouvre" , IF(WEEKDAY([Date],2)>6,"Week-end")
+)

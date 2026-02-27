@@ -1,6 +1,7 @@
 table Mesures
 	lineageTag: 5ec9c2b6-cbae-403a-8412-70ec3be84bf5
 
+	///  Chiffre d'affaire dans le contexte de filtre
 	measure CA =
 			
 			CALCULATE(
@@ -11,6 +12,7 @@ table Mesures
 
 		annotation PBI_FormatHint = {"currencyCulture":"fr-FR"}
 
+	/// Nom du dernier mois civil terminé
 	measure 'Titre Dernier Mois Terminé' =
 			
 			FORMAT(
@@ -19,8 +21,9 @@ table Mesures
 			)
 		lineageTag: c598f2ad-419c-4d86-b7e3-309fee3dfaf3
 
+	/// Chiffre d'affaire de l'avant-dernier mois civil
 	measure 'CA M-2' =
-			
+			--- Chiffre d'affaire du dernier mois civil terminé 1 an plus tôt (ignore le contexte de filtre)
 			VAR EndDate   = EOMONTH(TODAY(), -2)
 			VAR StartDate = DATE(YEAR(EndDate), MONTH(EndDate), 1)
 			RETURN
@@ -33,6 +36,7 @@ table Mesures
 
 		annotation PBI_FormatHint = {"currencyCulture":"fr-FR"}
 
+	/// Chiffre d'affaire du dernier mois civil terminé 1 an plus tôt
 	measure 'CA M-1 N-1' =
 			
 			VAR EndDate   = EOMONTH(TODAY(), -13)
@@ -47,6 +51,7 @@ table Mesures
 
 		annotation PBI_FormatHint = {"currencyCulture":"fr-FR"}
 
+	/// Variation en pourcentage du CA entre l'avant-dernier moi civil et le dernier mois civil terminé.
 	measure 'Var % MoM (ignore filtres)' =
 			
 			DIVIDE(
@@ -57,6 +62,7 @@ table Mesures
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	/// Variation en pourcentage du CA entre le dernier mois civil terminé civil 12 mois plus tôt et le dernier mois civil terminé.
 	measure 'Var % YoY (ignore filtres)' =
 			
 			DIVIDE(
@@ -67,6 +73,7 @@ table Mesures
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	/// Chiffre d'affaire du dernier mois civil terminé (ignore contexte de filtre)
 	measure 'CA M-1 (ignore filtres)' =
 			
 			VAR EndDate   = [Date Fin M-1 (today)]
@@ -82,12 +89,14 @@ table Mesures
 
 		annotation PBI_FormatHint = {"currencyCulture":"fr-FR"}
 
+	/// Date du dernier jour du dernier moi civil terminé
 	measure 'Date Fin M-1 (today)' =
 			
 			EOMONTH(TODAY(), -1)
 		formatString: General Date
 		lineageTag: 1ec3014f-eb03-495a-9e26-a4b5543339d2
 
+	/// Date du premier jour du dernier moi civil terminé
 	measure 'Date Début M-1 (today)' =
 			
 			VAR EndDate = [Date Fin M-1 (today)]
@@ -95,6 +104,7 @@ table Mesures
 		formatString: General Date
 		lineageTag: 0f9f6aac-489c-4137-b902-10097ab3c752
 
+	/// "+/- x% par rapport à M-1", soit l'évolution en pourcentage du chiffre d'ffaire du dernier moi civil terminé par rapport à l'avant-dernier mois civil
 	measure 'Sous-titre Var MoM' =
 			
 			VAR VarMoM = [Var % MoM (ignore filtres)]
@@ -112,6 +122,7 @@ table Mesures
 			    TxtPct & " VS M-1")
 		lineageTag: 959792f6-2004-475d-9a8f-5f9ae2106f0a
 
+	/// "+/- x% par rapport à Y-1", soit l'évolution en pourcentage du chiffre d'ffaire du dernier moi civil terminé par rapport au même mois de la dernière année civile
 	measure 'Sous-titre Var YoY' =
 			
 			VAR VarYoY = [Var % YoY (ignore filtres)]
@@ -130,6 +141,7 @@ table Mesures
 			)
 		lineageTag: db5e8677-1196-4cef-bd0f-c5d2a121e5b0
 
+	/// Total des revenus apparaissant sur le compte bancaire dans le contexte de filtre
 	measure Paiements =
 			CALCULATE(
 			    SUM(banque_transactions_36_mois[montant_eur]),
@@ -140,6 +152,7 @@ table Mesures
 
 		annotation PBI_FormatHint = {"currencyCulture":"fr-FR"}
 
+	/// Total des charges apparaissant sur le compte bancaire professionnel dans le contexte de filtre
 	measure Charges =
 			
 			ABS(
@@ -153,12 +166,14 @@ table Mesures
 
 		annotation PBI_FormatHint = {"currencyCulture":"fr-FR"}
 
+	/// Résultat net des opérations sur le compte bancaire professionnel
 	measure 'Résultat net' = [Paiements]-[Charges]
 		formatString: #,0.###############\ "€";-#,0.###############\ "€";#,0.###############\ "€"
 		lineageTag: 15b6ea8b-3740-4599-8a49-0c5f85f72dc8
 
 		annotation PBI_FormatHint = {"currencyCulture":"fr-FR"}
 
+	/// Nombre d'heures de prestation réalisées (hors temps administratif et temps sans client)
 	measure 'Heures RDV réalisés' =
 			
 			DIVIDE(
@@ -172,6 +187,7 @@ table Mesures
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	/// Total d'heures d'ouverture théoriques du cabinet dans le contexte de filtre (hors congés, jours fériés, fermetures exceptionnelles)
 	measure 'Heures ouverture théoriques' =
 			
 			SUMX(
@@ -188,6 +204,7 @@ table Mesures
 		formatString: 0
 		lineageTag: 516b9257-ec3b-4e31-abbb-99a4ebd5dd42
 
+	/// Taux de remplissage par rapport aux heures d'ouverture théoriques
 	measure 'Taux de remplissage' =
 			
 			DIVIDE([Heures RDV réalisés], [Heures ouverture théoriques])
@@ -195,6 +212,7 @@ table Mesures
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	/// Nombre de clients uniques ayant effectué au moins un RDV réalisé ou honoré au cours des 6 derniers mois glissants.
 	measure 'Clients actifs (6M)' =
 			
 			VAR DateFin = MAX(Calendrier[Date])
@@ -208,6 +226,7 @@ table Mesures
 		formatString: 0
 		lineageTag: a5e7fceb-2efc-47c0-893c-8a9cd58a7f26
 
+	/// Nombre de nouveau clients enregistrés sur le dernier mois civil terminé
 	measure 'Nouveaux clients du mois' =
 			
 			VAR MoisDebut = DATE(YEAR(MAX(Calendrier[Date])), MONTH(MAX(Calendrier[Date])), 1)
@@ -229,6 +248,7 @@ table Mesures
 		formatString: 0
 		lineageTag: 67689c97-5459-49f3-bf51-26c9e5ada81d
 
+	/// Chiffre d'affaire de l'avant-dernier mois civil (ignore le contexte de filtre)
 	measure 'CA M-2 (ignore filtres)' =
 			
 			VAR EndDate   = EOMONTH(TODAY(), -2)
@@ -244,8 +264,9 @@ table Mesures
 
 		annotation PBI_FormatHint = {"currencyCulture":"fr-FR"}
 
+	/// Chiffre d'affaire du dernier mois civil terminé 1 an plus tôt (ignore le contexte de filtre)
 	measure 'CA M-1 N-1 (ignore filtres)' =
-			
+			--- Chiffre d'affaire du dernier mois civil terminé 1 an plus tôt
 			VAR EndDate   = EOMONTH(TODAY(), -13)
 			VAR StartDate = DATE(YEAR(EndDate), MONTH(EndDate), 1)
 			RETURN
@@ -259,6 +280,7 @@ table Mesures
 
 		annotation PBI_FormatHint = {"currencyCulture":"fr-FR"}
 
+	/// Valeur de vie client calculée sur les 12 premiers mois après la première consultation. Seuls les clients ayant réalisés leur première consultation 12 mois auparavant minimum sont pris en compte. Q : combien de temps max dure un traitement ? certains clients font-ils plusieurs zones ?
 	measure 'LTV estimée (12 mois après 1re consult)' =
 			
 			VAR Pivot = [Date Pivot]
@@ -290,6 +312,7 @@ table Mesures
 		formatString: 0
 		lineageTag: 99d56178-0860-40c5-99b2-fc1ae8a64bb5
 
+	/// Durée moyenne de suivi d’un client, en mois, entre son premier et son dernier rendez-vous réalisé, en ignorant les filtres de date.
 	measure 'Durée traitement moyenne (mois) (ignore filtres)' =
 			
 			VAR T =
@@ -317,10 +340,12 @@ table Mesures
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	/// Dernière date du dernier mois civil terminé
 	measure 'Date Dernier Mois Terminé' = EOMONTH(TODAY(), -1)
 		formatString: General Date
 		lineageTag: 0d214e82-bda0-4365-b257-5617670448b4
 
+	/// Heures de RDV annulés, ou le/la client.e ne s'est pas présenté.e
 	measure 'Heures RDV annulés' = ```
 			
 			DIVIDE(
@@ -336,6 +361,7 @@ table Mesures
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	/// Nombre d'heures de soins effectifs pour lesquelles le/la client.es ne s'est pas présenté.e
 	measure 'Heures RDV no-show' =
 			
 			DIVIDE(
@@ -361,6 +387,7 @@ table Mesures
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	/// Taux d'annulation par rapport aux heures d'ouverture théoriques
 	measure 'Taux annulation' =
 			
 			DIVIDE([Heures RDV annulés], [Heures ouverture théoriques])
@@ -368,6 +395,7 @@ table Mesures
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	/// Taux de remplissage du dernier mois civil terminé par rapport aux heures d'ouverture théoriques (ignore le contexte de filtre)
 	measure 'Taux remplissage M-1 (ignore filtres)' =
 			
 			VAR EndDate   = [Date Fin M-1 (today)]
@@ -409,6 +437,7 @@ table Mesures
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	/// Chiffre d'affaire du dernier mois civil terminé
 	measure 'CA M-1' =
 			
 			VAR EndDate   = [Date Fin M-1 (today)]
@@ -423,12 +452,14 @@ table Mesures
 
 		annotation PBI_FormatHint = {"currencyCulture":"fr-FR"}
 
+	/// Date actuelle (pour date pivot)
 	measure 'Date Pivot' =
 			
 			MAXX(ALLSELECTED(Calendrier[Date]), Calendrier[Date])
 		formatString: General Date
 		lineageTag: 788e0821-9ebf-4d46-a7f9-7ff31585ea9c
 
+	/// Nombre d'heures de soins effectifs calées à partir de la date pivot
 	measure 'Heures RDV calées' =
 			
 			VAR Pivot = [Date Pivot]
@@ -441,6 +472,7 @@ table Mesures
 		formatString: 0
 		lineageTag: 41095596-3d4e-4be1-8c0b-047deab2c51c
 
+	/// Facteur de saisonnalité calculé sur 1 an, sensibilité à la semaine
 	measure 'Facteur saisonnalité (semaine) - lissé' =
 			
 			VAR Pivot = [Date Pivot]
@@ -467,6 +499,7 @@ table Mesures
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	/// Tendance du nombre de nouveaux clients sur les 12 derniers mois
 	measure 'Nouveaux clients - moy / mois (12M)' =
 			
 			VAR Pivot = [Date Pivot]
@@ -479,6 +512,7 @@ table Mesures
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	/// Calcul de l'évolution mensuelle du taux d'abandon au cours de l'année dernière glissante
 	measure 'Taux abandon - moy mensuel (12M)' =
 			
 			VAR Pivot = [Date Pivot]
@@ -510,6 +544,7 @@ table Mesures
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	/// Heures de soins réalisées par client actifs au cours des 12 derniers mois
 	measure 'Heures par client actif (12M)' =
 			
 			VAR Pivot = [Date Pivot]
@@ -526,6 +561,7 @@ table Mesures
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	/// Nombre de clients actifs projetés sur les 6 prochains mois (sont pris en compte : les rdv planifiés, la taux d'abandon et les nouveaux clients, et la saisonnalité)
 	measure 'Clients actifs projetés' =
 			
 			VAR Pivot = [Date Pivot]
@@ -551,6 +587,7 @@ table Mesures
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	/// Heures attendues non calées sur la base des 12 derniers mois, en prenant en compte les rdv prévus et la saisonnalité.
 	measure 'Heures attendues (non calées)' =
 			
 			[Clients actifs projetés] * [Heures par client actif (12M)] * [Facteur saisonnalité (semaine) - lissé]
@@ -558,6 +595,7 @@ table Mesures
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	/// Heures réellement réalisées dans le passé et, pour le futur, rendez-vous déjà planifiés avec une estimation des heures supplémentaires attendues
 	measure 'Heures RDV (réel + calés + prévision)' =
 			
 			VAR Pivot = [Date Pivot]
@@ -611,6 +649,7 @@ table Mesures
 
 		annotation PBI_FormatHint = {"currencyCulture":"fr-FR"}
 
+	/// Taux d'heures occupées mais non facturées (temps d'échange, administratif) par rapport aux heures d'ouverture théoriques
 	measure 'Taux d''heures non facturées (admin)' =
 			
 			DIVIDE([Heures non facturées (admin)], [Heures ouverture théoriques])

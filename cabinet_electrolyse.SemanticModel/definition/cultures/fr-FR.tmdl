@@ -37,7 +37,7 @@ cultureInfo fr-FR
 			    "mesure.var__MoM_ignore_filtres": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Mesures",
+			          "ConceptualEntity": "Test - NewAvg",
 			          "ConceptualProperty": "Var % MoM (ignore filtres)"
 			        }
 			      },
@@ -59,7 +59,7 @@ cultureInfo fr-FR
 			    "mesure.ca_m1_n1": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Mesures",
+			          "ConceptualEntity": "Test - NewAvg",
 			          "ConceptualProperty": "CA M-1 N-1"
 			        }
 			      },
@@ -75,7 +75,7 @@ cultureInfo fr-FR
 			    "mesure.ca_m2": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Mesures",
+			          "ConceptualEntity": "Test - NewAvg",
 			          "ConceptualProperty": "CA M-2"
 			        }
 			      },
@@ -91,7 +91,7 @@ cultureInfo fr-FR
 			    "mesure.placeholder": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Mesures",
+			          "ConceptualEntity": "Test - NewAvg",
 			          "ConceptualProperty": "Placeholder"
 			        }
 			      },
@@ -1131,7 +1131,7 @@ cultureInfo fr-FR
 			    "mesure.clients_actifs_6M": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Mesures",
+			          "ConceptualEntity": "Test - NewAvg",
 			          "ConceptualProperty": "Clients actifs (6M)"
 			        }
 			      },
@@ -1153,7 +1153,7 @@ cultureInfo fr-FR
 			    "mesure.taux_de_remplissage": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Mesures",
+			          "ConceptualEntity": "Test - NewAvg",
 			          "ConceptualProperty": "Taux de remplissage"
 			        }
 			      },
@@ -1169,7 +1169,7 @@ cultureInfo fr-FR
 			    "mesure.heures_ouverture_théoriques": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Mesures",
+			          "ConceptualEntity": "Test - NewAvg",
 			          "ConceptualProperty": "Heures ouverture théoriques"
 			        }
 			      },
@@ -1185,7 +1185,7 @@ cultureInfo fr-FR
 			    "mesure.heures_RDV_réalisés": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Mesures",
+			          "ConceptualEntity": "Test - NewAvg",
 			          "ConceptualProperty": "Heures RDV réalisés"
 			        }
 			      },
@@ -2203,7 +2203,7 @@ cultureInfo fr-FR
 			    "mesure": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Mesures"
+			          "ConceptualEntity": "Test - NewAvg"
 			        }
 			      },
 			      "State": "Generated",
@@ -2218,7 +2218,7 @@ cultureInfo fr-FR
 			    "mesure.ca": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Mesures",
+			          "ConceptualEntity": "Test - NewAvg",
 			          "ConceptualProperty": "CA"
 			        }
 			      },
@@ -2654,7 +2654,7 @@ cultureInfo fr-FR
 			    "mesure.titre_dernier_mois_terminé": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Mesures",
+			          "ConceptualEntity": "Test - NewAvg",
 			          "ConceptualProperty": "Titre Dernier Mois Terminé"
 			        }
 			      },
@@ -2670,7 +2670,7 @@ cultureInfo fr-FR
 			    "mesure.var__YoY_ignore_filtres": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Mesures",
+			          "ConceptualEntity": "Test - NewAvg",
 			          "ConceptualProperty": "Var % YoY (ignore filtres)"
 			        }
 			      },
@@ -2692,7 +2692,7 @@ cultureInfo fr-FR
 			    "mesure.CA_M1_ignore_filtres": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Mesures",
+			          "ConceptualEntity": "Test - NewAvg",
 			          "ConceptualProperty": "CA M-1 (ignore filtres)"
 			        }
 			      },
@@ -2714,7 +2714,7 @@ cultureInfo fr-FR
 			    "mesure.date_fin_M1_today": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Mesures",
+			          "ConceptualEntity": "Test - NewAvg",
 			          "ConceptualProperty": "Date Fin M-1 (today)"
 			        }
 			      },
@@ -2743,7 +2743,7 @@ cultureInfo fr-FR
 			    "mesure.date_début_M1_today": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Mesures",
+			          "ConceptualEntity": "Test - NewAvg",
 			          "ConceptualProperty": "Date Début M-1 (today)"
 			        }
 			      },
@@ -2772,7 +2772,7 @@ cultureInfo fr-FR
 			    "mesure.soustitre_var_MoM": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Mesures",
+			          "ConceptualEntity": "Test - NewAvg",
 			          "ConceptualProperty": "Sous-titre Var MoM"
 			        }
 			      },
@@ -2912,7 +2912,7 @@ cultureInfo fr-FR
 			    "mesure.soustitre_var_YoY": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Mesures",
+			          "ConceptualEntity": "Test - NewAvg",
 			          "ConceptualProperty": "Sous-titre Var YoY"
 			        }
 			      },
@@ -2934,7 +2934,7 @@ cultureInfo fr-FR
 			    "mesure.paiements": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Mesures",
+			          "ConceptualEntity": "Test - NewAvg",
 			          "ConceptualProperty": "Paiements"
 			        }
 			      },
@@ -2950,7 +2950,7 @@ cultureInfo fr-FR
 			    "mesure.charges": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Mesures",
+			          "ConceptualEntity": "Test - NewAvg",
 			          "ConceptualProperty": "Charges"
 			        }
 			      },
@@ -3066,7 +3066,7 @@ cultureInfo fr-FR
 			    "mesure.résultat_net": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Mesures",
+			          "ConceptualEntity": "Test - NewAvg",
 			          "ConceptualProperty": "Résultat net"
 			        }
 			      },
@@ -3152,7 +3152,7 @@ cultureInfo fr-FR
 			    "mesure.nouveaux_clients_du_mois": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Mesures",
+			          "ConceptualEntity": "Test - NewAvg",
 			          "ConceptualProperty": "Nouveaux clients du mois"
 			        }
 			      },
@@ -3168,7 +3168,7 @@ cultureInfo fr-FR
 			    "mesure.CA_M2_ignore_filtres": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Mesures",
+			          "ConceptualEntity": "Test - NewAvg",
 			          "ConceptualProperty": "CA M-2 (ignore filtres)"
 			        }
 			      },
@@ -3190,7 +3190,7 @@ cultureInfo fr-FR
 			    "mesure.CA_M1_N1_ignore_filtres": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Mesures",
+			          "ConceptualEntity": "Test - NewAvg",
 			          "ConceptualProperty": "CA M-1 N-1 (ignore filtres)"
 			        }
 			      },
@@ -3212,7 +3212,7 @@ cultureInfo fr-FR
 			    "mesure.LTV_estimée_12_mois_après_1re_consult": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Mesures",
+			          "ConceptualEntity": "Test - NewAvg",
 			          "ConceptualProperty": "LTV estimée (12 mois après 1re consult)"
 			        }
 			      },
@@ -3244,7 +3244,7 @@ cultureInfo fr-FR
 			    "mesure.durée_traitement_moyenne_mois_ignore_filtres": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Mesures",
+			          "ConceptualEntity": "Test - NewAvg",
 			          "ConceptualProperty": "Durée traitement moyenne (mois) (ignore filtres)"
 			        }
 			      },
@@ -3266,7 +3266,7 @@ cultureInfo fr-FR
 			    "mesure.date_dernier_mois_terminé": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Mesures",
+			          "ConceptualEntity": "Test - NewAvg",
 			          "ConceptualProperty": "Date Dernier Mois Terminé"
 			        }
 			      },
@@ -3309,7 +3309,7 @@ cultureInfo fr-FR
 			    "mesure.heures_RDV_annulés": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Mesures",
+			          "ConceptualEntity": "Test - NewAvg",
 			          "ConceptualProperty": "Heures RDV annulés"
 			        }
 			      },
@@ -3335,7 +3335,7 @@ cultureInfo fr-FR
 			    "mesure.heures_RDV_noshow": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Mesures",
+			          "ConceptualEntity": "Test - NewAvg",
 			          "ConceptualProperty": "Heures RDV no-show"
 			        }
 			      },
@@ -3467,7 +3467,7 @@ cultureInfo fr-FR
 			    "mesure.heures_non_facturées_admin": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Mesures",
+			          "ConceptualEntity": "Test - NewAvg",
 			          "ConceptualProperty": "Heures non facturées (admin)"
 			        }
 			      },
@@ -3499,7 +3499,7 @@ cultureInfo fr-FR
 			    "mesure.taux_annulation": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Mesures",
+			          "ConceptualEntity": "Test - NewAvg",
 			          "ConceptualProperty": "Taux annulation"
 			        }
 			      },
@@ -3512,32 +3512,10 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "mesure.taux_remplissage_M1_ignore_filtres": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Mesures",
-			          "ConceptualProperty": "Taux remplissage M-1 (ignore filtres)"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "taux remplissage M-1 (ignore filtres)": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "taux remplissage M-1": {
-			            "State": "Generated",
-			            "Weight": 0.75
-			          }
-			        }
-			      ]
-			    },
 			    "mesure.heures_RDV_réalisés__12M": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Mesures",
+			          "ConceptualEntity": "Test - NewAvg",
 			          "ConceptualProperty": "Heures RDV réalisés - 12M"
 			        }
 			      },
@@ -3559,7 +3537,7 @@ cultureInfo fr-FR
 			    "mesure.heures_RDV_réel__prévision": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Mesures",
+			          "ConceptualEntity": "Test - NewAvg",
 			          "ConceptualProperty": "Heures RDV (réel + prévision)"
 			        }
 			      },
@@ -3584,7 +3562,7 @@ cultureInfo fr-FR
 			    "mesure.ca_m1": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Mesures",
+			          "ConceptualEntity": "Test - NewAvg",
 			          "ConceptualProperty": "CA M-1"
 			        }
 			      },
@@ -3600,7 +3578,7 @@ cultureInfo fr-FR
 			    "mesure.date_pivot": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Mesures",
+			          "ConceptualEntity": "Test - NewAvg",
 			          "ConceptualProperty": "Date Pivot"
 			        }
 			      },
@@ -3729,8 +3707,8 @@ cultureInfo fr-FR
 			    "mesure.heures_RDV_calées": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Mesures",
-			          "ConceptualProperty": "Heures RDV calées"
+			          "ConceptualEntity": "Test - NewAvg",
+			          "ConceptualProperty": "Heures RDV planifiés"
 			        }
 			      },
 			      "State": "Generated",
@@ -3745,7 +3723,7 @@ cultureInfo fr-FR
 			    "mesure.facteur_saisonnalité_semaine__lissé": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Mesures",
+			          "ConceptualEntity": "Test - NewAvg",
 			          "ConceptualProperty": "Facteur saisonnalité (mois)"
 			        }
 			      },
@@ -3767,7 +3745,7 @@ cultureInfo fr-FR
 			    "mesure.nouveaux_clients__moy___mois_12M": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Mesures",
+			          "ConceptualEntity": "Test - NewAvg",
 			          "ConceptualProperty": "Nouveaux clients - moy / mois (12M)"
 			        }
 			      },
@@ -3831,7 +3809,7 @@ cultureInfo fr-FR
 			    "mesure.taux_abandon__moy_mensuel_12M": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Mesures",
+			          "ConceptualEntity": "Test - NewAvg",
 			          "ConceptualProperty": "Taux abandon - moy mensuel (12M)"
 			        }
 			      },
@@ -3859,7 +3837,7 @@ cultureInfo fr-FR
 			    "mesure.heures_par_client_actif_12M": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Mesures",
+			          "ConceptualEntity": "Test - NewAvg",
 			          "ConceptualProperty": "Heures par client actif (12M)"
 			        }
 			      },
@@ -3881,7 +3859,7 @@ cultureInfo fr-FR
 			    "mesure.clients_actifs_projetés": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Mesures",
+			          "ConceptualEntity": "Test - NewAvg",
 			          "ConceptualProperty": "Clients actifs projetés"
 			        }
 			      },
@@ -3897,8 +3875,8 @@ cultureInfo fr-FR
 			    "mesure.heures_attendues_non_calées": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Mesures",
-			          "ConceptualProperty": "Heures attendues (non calées)"
+			          "ConceptualEntity": "Test - NewAvg",
+			          "ConceptualProperty": "Heures RDV attendues (non planifiées)"
 			        }
 			      },
 			      "State": "Generated",
@@ -3919,7 +3897,7 @@ cultureInfo fr-FR
 			    "mesure.heures_RDV_réel__calés__prévision": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Mesures",
+			          "ConceptualEntity": "Test - NewAvg",
 			          "ConceptualProperty": "Heures RDV (réel + calés + prévision)"
 			        }
 			      },
@@ -3941,7 +3919,7 @@ cultureInfo fr-FR
 			    "mesure.CA_moyen_par_client_réalisé": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Mesures",
+			          "ConceptualEntity": "Test - NewAvg",
 			          "ConceptualProperty": "CA moyen par client (réalisé)"
 			        }
 			      },
@@ -3966,7 +3944,7 @@ cultureInfo fr-FR
 			    "mesure.CA_moyen_mensuel_par_client_réalisé": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Mesures",
+			          "ConceptualEntity": "Test - NewAvg",
 			          "ConceptualProperty": "CA moyen mensuel par client (réalisé)"
 			        }
 			      },
@@ -3991,7 +3969,7 @@ cultureInfo fr-FR
 			    "mesure.LTV_estimée_CA": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Mesures",
+			          "ConceptualEntity": "Test - NewAvg",
 			          "ConceptualProperty": "LTV estimée (CA)"
 			        }
 			      },
@@ -4016,7 +3994,7 @@ cultureInfo fr-FR
 			    "mesure.taux_dheures_non_facturées_admin": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Mesures",
+			          "ConceptualEntity": "Test - NewAvg",
 			          "ConceptualProperty": "Taux d'heures non facturées (admin)"
 			        }
 			      },
@@ -4038,7 +4016,7 @@ cultureInfo fr-FR
 			    "mesure.canal_dacquisition__site_web": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Mesures",
+			          "ConceptualEntity": "Test - NewAvg",
 			          "ConceptualProperty": "Canal d'acquisition - Site web"
 			        }
 			      },
@@ -4170,7 +4148,7 @@ cultureInfo fr-FR
 			    "mesure.canal_dacquisition__boucheàoreille": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Mesures",
+			          "ConceptualEntity": "Test - NewAvg",
 			          "ConceptualProperty": "Canal d'acquisition - Bouche-à-oreille"
 			        }
 			      },
@@ -4202,7 +4180,7 @@ cultureInfo fr-FR
 			    "mesure.canal_dacquisition__instagram": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Mesures",
+			          "ConceptualEntity": "Test - NewAvg",
 			          "ConceptualProperty": "Canal d'acquisition - Instagram"
 			        }
 			      },
@@ -4234,7 +4212,7 @@ cultureInfo fr-FR
 			    "mesure.canal_dacquisition__médecin": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Mesures",
+			          "ConceptualEntity": "Test - NewAvg",
 			          "ConceptualProperty": "Canal d'acquisition - médecin"
 			        }
 			      },
@@ -4266,7 +4244,7 @@ cultureInfo fr-FR
 			    "mesure.canal_dacquisition__planity": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Mesures",
+			          "ConceptualEntity": "Test - NewAvg",
 			          "ConceptualProperty": "Canal d'acquisition - Planity"
 			        }
 			      },
@@ -5745,7 +5723,7 @@ cultureInfo fr-FR
 			    },
 			    "mesure_has_heures_RDV_réel__calés__prévision": {
 			      "Binding": {
-			        "ConceptualEntity": "Mesures"
+			        "ConceptualEntity": "Test - NewAvg"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -5778,7 +5756,7 @@ cultureInfo fr-FR
 			    },
 			    "mesure_has_heures_attendues_non_calées": {
 			      "Binding": {
-			        "ConceptualEntity": "Mesures"
+			        "ConceptualEntity": "Test - NewAvg"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -5811,7 +5789,7 @@ cultureInfo fr-FR
 			    },
 			    "mesure_has_clients_actifs_projetés": {
 			      "Binding": {
-			        "ConceptualEntity": "Mesures"
+			        "ConceptualEntity": "Test - NewAvg"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -5877,7 +5855,7 @@ cultureInfo fr-FR
 			    },
 			    "mesure_has_taux_abandon__moy_mensuel_12M": {
 			      "Binding": {
-			        "ConceptualEntity": "Mesures"
+			        "ConceptualEntity": "Test - NewAvg"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -5910,7 +5888,7 @@ cultureInfo fr-FR
 			    },
 			    "mesure_has_nouveaux_clients__moy___mois_12M": {
 			      "Binding": {
-			        "ConceptualEntity": "Mesures"
+			        "ConceptualEntity": "Test - NewAvg"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -6339,7 +6317,7 @@ cultureInfo fr-FR
 			    },
 			    "mesure_has_date_dernier_mois_terminé": {
 			      "Binding": {
-			        "ConceptualEntity": "Mesures"
+			        "ConceptualEntity": "Test - NewAvg"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -6372,7 +6350,7 @@ cultureInfo fr-FR
 			    },
 			    "mesure_has_durée_traitement_moyenne_mois_ignore_filtres": {
 			      "Binding": {
-			        "ConceptualEntity": "Mesures"
+			        "ConceptualEntity": "Test - NewAvg"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -6735,7 +6713,7 @@ cultureInfo fr-FR
 			    },
 			    "mesure_has_date_début_M1_today": {
 			      "Binding": {
-			        "ConceptualEntity": "Mesures"
+			        "ConceptualEntity": "Test - NewAvg"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -6768,7 +6746,7 @@ cultureInfo fr-FR
 			    },
 			    "mesure_has_date_fin_M1_today": {
 			      "Binding": {
-			        "ConceptualEntity": "Mesures"
+			        "ConceptualEntity": "Test - NewAvg"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -6867,7 +6845,7 @@ cultureInfo fr-FR
 			    },
 			    "mesure_has_titre_dernier_mois_terminé": {
 			      "Binding": {
-			        "ConceptualEntity": "Mesures"
+			        "ConceptualEntity": "Test - NewAvg"
 			      },
 			      "State": "Generated",
 			      "Roles": {

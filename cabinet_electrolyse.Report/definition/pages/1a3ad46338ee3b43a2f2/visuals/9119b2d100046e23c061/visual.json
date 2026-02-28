@@ -20,7 +20,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Mesures"
+                      "Entity": "Test - NewAvg"
                     }
                   },
                   "Property": "Heures RDV annulés"
@@ -36,7 +36,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Mesures"
+                      "Entity": "Test - NewAvg"
                     }
                   },
                   "Property": "Heures RDV réalisés"
@@ -51,7 +51,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Mesures"
+                      "Entity": "Test - NewAvg"
                     }
                   },
                   "Property": "Heures RDV no-show"
@@ -66,7 +66,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Mesures"
+                      "Entity": "Test - NewAvg"
                     }
                   },
                   "Property": "Heures non facturées (admin)"
@@ -86,7 +86,7 @@
               "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "Mesures"
+                    "Entity": "Test - NewAvg"
                   }
                 },
                 "Property": "Heures RDV annulés"

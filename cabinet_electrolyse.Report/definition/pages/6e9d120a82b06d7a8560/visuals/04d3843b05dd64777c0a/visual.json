@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
   "name": "04d3843b05dd64777c0a",
   "position": {
-    "x": 31,
-    "y": 322,
+    "x": 153.31189710610931,
+    "y": 305.59485530546624,
     "z": 0,
-    "height": 388,
-    "width": 992,
+    "height": 387.90996784565914,
+    "width": 991.89710610932468,
     "tabOrder": 0
   },
   "visual": {
@@ -39,7 +39,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Mesures"
+                      "Entity": "Test - NewAvg"
                     }
                   },
                   "Property": "Tx remplissage - Réel (mensuel)"
@@ -53,7 +53,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Mesures"
+                      "Entity": "Test - NewAvg"
                     }
                   },
                   "Property": "Tx remplissage - Prévision (6M, mensuel)"
@@ -212,7 +212,7 @@
           "Measure": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Mesures"
+                "Entity": "Test - NewAvg"
               }
             },
             "Property": "Fenêtre Graph Remplissage (12M + 6M)"
@@ -224,7 +224,7 @@
           "From": [
             {
               "Name": "m",
-              "Entity": "Mesures",
+              "Entity": "Test - NewAvg",
               "Type": 0
             }
           ],

@@ -20,7 +20,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Mesures"
+                      "Entity": "Test - NewAvg"
                     }
                   },
                   "Property": "CA M-1 (ignore filtres)"
@@ -35,7 +35,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Mesures"
+                      "Entity": "Test - NewAvg"
                     }
                   },
                   "Property": "Sous-titre Var MoM"
@@ -54,7 +54,7 @@
               "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "Mesures"
+                    "Entity": "Test - NewAvg"
                   }
                 },
                 "Property": "CA M-1 (ignore filtres)"
@@ -158,7 +158,7 @@
                                 "Measure": {
                                   "Expression": {
                                     "SourceRef": {
-                                      "Entity": "Mesures"
+                                      "Entity": "Test - NewAvg"
                                     }
                                   },
                                   "Property": "Var % MoM (ignore filtres)"
@@ -225,7 +225,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Mesures"
+                      "Entity": "Test - NewAvg"
                     }
                   },
                   "Property": "Sous-titre Var MoM"
@@ -251,7 +251,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Mesures"
+                      "Entity": "Test - NewAvg"
                     }
                   },
                   "Property": "Sous-titre Var YoY"
@@ -321,7 +321,7 @@
                                 "Measure": {
                                   "Expression": {
                                     "SourceRef": {
-                                      "Entity": "Mesures"
+                                      "Entity": "Test - NewAvg"
                                     }
                                   },
                                   "Property": "Var % YoY (ignore filtres)"
@@ -348,7 +348,7 @@
                                 "Measure": {
                                   "Expression": {
                                     "SourceRef": {
-                                      "Entity": "Mesures"
+                                      "Entity": "Test - NewAvg"
                                     }
                                   },
                                   "Property": "Var % YoY (ignore filtres)"
@@ -641,7 +641,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Mesures"
+                      "Entity": "Test - NewAvg"
                     }
                   },
                   "Property": "Titre Dernier Mois Terminé"

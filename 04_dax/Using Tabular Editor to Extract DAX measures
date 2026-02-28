@@ -2,24 +2,24 @@ var path = @"C:\Users\User\TheFreelanceWay\Cas pratiques\022026_Cabinet_electrol
 
 var sb = new System.Text.StringBuilder();
 
-foreach(var m in Model.AllMeasures)
+sb.AppendLine("# Liste des mesures DAX");
+sb.AppendLine("");
+
+foreach(var m in Model.AllMeasures.OrderBy(x => x.Name))
 {
-    sb.AppendLine("--------------------------------------------------");
-    sb.AppendLine(m.Name + " = " + m.Expression);
+    sb.AppendLine("");
+
+    if(!string.IsNullOrEmpty("- " + m.Description))
+    {
+        sb.AppendLine("- " + m.Description);
+        sb.AppendLine("");
+    }
+
+    sb.AppendLine("```");
+    sb.AppendLine(m.Name + " =");
+    sb.AppendLine(m.Expression);
+    sb.AppendLine("```");
     sb.AppendLine("");
 }
 
 System.IO.File.WriteAllText(path, sb.ToString());
-
-
---------------------------------------------------
-Measure: CA
-Table: _Mesures
-
-SUM(planity_rdv_36_mois[montant_recu_eur])
-
---------------------------------------------------
-Measure: CA M-1
-Table: _Mesures
-
-CALCULATE(...)

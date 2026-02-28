@@ -10,7 +10,7 @@
     "tabOrder": 0
   },
   "visual": {
-    "visualType": "lineStackedColumnComboChart",
+    "visualType": "columnChart",
     "query": {
       "queryState": {
         "Category": {
@@ -47,11 +47,7 @@
               },
               "queryRef": "Mesures.Tx remplissage - Réel (mensuel)",
               "nativeQueryRef": "Tx remplissage - Réel (mensuel)"
-            }
-          ]
-        },
-        "Y2": {
-          "projections": [
+            },
             {
               "field": {
                 "Measure": {
@@ -73,19 +69,18 @@
         "sort": [
           {
             "field": {
-              "Measure": {
+              "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "Mesures"
+                    "Entity": "Calendrier"
                   }
                 },
-                "Property": "Tx remplissage - Réel (mensuel)"
+                "Property": "Annee mois"
               }
             },
-            "direction": "Descending"
+            "direction": "Ascending"
           }
-        ],
-        "isDefaultSort": true
+        ]
       }
     },
     "objects": {
@@ -109,13 +104,6 @@
               "expr": {
                 "Literal": {
                   "Value": "''"
-                }
-              }
-            },
-            "legendMarkerRendering": {
-              "expr": {
-                "Literal": {
-                  "Value": "'lineAndMarker'"
                 }
               }
             },
@@ -308,50 +296,6 @@
         },
         "type": "Advanced",
         "howCreated": "User"
-      },
-      {
-        "name": "782fda839cd1d0e9ea55",
-        "ordinal": 4,
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Mesures"
-              }
-            },
-            "Property": "Tx remplissage - Prévision (6M, mensuel)"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "89e7c33b91761876269a",
-        "ordinal": 5,
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Mesures"
-              }
-            },
-            "Property": "Tx remplissage - Réel (mensuel)"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "184fa9bfb86ee645d030",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Calendrier"
-              }
-            },
-            "Property": "Annee mois"
-          }
-        },
-        "type": "Categorical"
       }
     ],
     "filterSortOrder": "Custom"

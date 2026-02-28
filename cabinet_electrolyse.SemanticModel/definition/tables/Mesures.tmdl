@@ -467,7 +467,7 @@ table Mesures
 			CALCULATE(
 			    SUM(planity_rdv_36_mois[durée_prestation_heure]),            -- ou ta mesure d'heures
 			    planity_rdv_36_mois[date] > Pivot,
-			    planity_rdv_36_mois[statut] IN {"Confirmé","Planifié","À venir"}
+			    planity_rdv_36_mois[statut] IN {"Réalisé","Annulé","No-show"}
 			)
 		formatString: 0
 		lineageTag: 41095596-3d4e-4be1-8c0b-047deab2c51c
@@ -704,7 +704,7 @@ table Mesures
 
 	measure 'Fenêtre Graph Remplissage (12M + 6M)' =
 			
-			VAR Pivot = [Date Pivot (mois terminé) (mois terminé)]
+			VAR Pivot = [Date Pivot (mois terminé)]
 			VAR MoisDebut = EOMONTH(Pivot, -12) + 1
 			VAR MoisFin   = EOMONTH(Pivot, 6)
 			VAR d = MAX(Calendrier[Date])
@@ -715,7 +715,7 @@ table Mesures
 
 	measure 'Tx remplissage - Réel (mensuel)' =
 			
-			VAR Pivot = [Date Pivot (mois terminé) (mois terminé)]
+			VAR Pivot = [Date Pivot (mois terminé)]
 			VAR d = MAX(Calendrier[Date])
 			RETURN
 			IF(
@@ -729,7 +729,7 @@ table Mesures
 
 	measure 'Tx remplissage - Prévision (6M, mensuel)' =
 			
-			VAR Pivot = [Date Pivot (mois terminé) (mois terminé)]
+			VAR Pivot = [Date Pivot (mois terminé)]
 			VAR d = MAX(Calendrier[Date])
 			RETURN
 			IF(

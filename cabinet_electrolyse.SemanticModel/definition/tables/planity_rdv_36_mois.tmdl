@@ -83,12 +83,14 @@ table planity_rdv_36_mois
 		annotation UnderlyingDateTimeDataType = Date
 
 	column durée_prestation_heure
-		dataType: string
+		dataType: double
 		lineageTag: 0fe57044-19dd-434d-aae8-a93ce4cadf28
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: durée_prestation_heure
 
 		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	partition planity_rdv_36_mois = m
 		mode: import
@@ -102,9 +104,10 @@ table planity_rdv_36_mois
 				    #"Colonnes supprimées" = Table.RemoveColumns(#"Type modifié1",{"date_heure.2", "date_heure_fin"}),
 				    #"Colonnes renommées" = Table.RenameColumns(#"Colonnes supprimées",{{"date_heure.1", "date"}}),
 				    #"Personnalisée ajoutée" = Table.AddColumn(#"Colonnes renommées", "durée_heure", each [duree_prestation_min]/60),
-				    #"Colonnes renommées1" = Table.RenameColumns(#"Personnalisée ajoutée",{{"durée_heure", "durée_prestation_heure"}, {"date", "date"}})
+				    #"Colonnes renommées1" = Table.RenameColumns(#"Personnalisée ajoutée",{{"durée_heure", "durée_prestation_heure"}, {"date", "date"}}),
+				    #"Type modifié2" = Table.TransformColumnTypes(#"Colonnes renommées1",{{"durée_prestation_heure", type number}})
 				in
-				    #"Colonnes renommées1"
+				    #"Type modifié2"
 
 	annotation PBI_ResultType = Table
 

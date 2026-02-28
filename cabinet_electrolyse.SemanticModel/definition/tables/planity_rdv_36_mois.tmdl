@@ -94,7 +94,7 @@ table planity_rdv_36_mois
 		mode: import
 		source =
 				let
-				    Source = Csv.Document(File.Contents("C:\Users\User\TheFreelanceWay\Cas pratiques\022026_Cabinet_electrolyse\planity_rdv_36_mois.csv"),[Delimiter=",", Columns=10, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    Source = Csv.Document(File.Contents("C:\Users\User\TheFreelanceWay\Cas pratiques\022026_Cabinet_electrolyse\02_data\planity_rdv_36_mois.csv"),[Delimiter=",", Columns=10, Encoding=65001, QuoteStyle=QuoteStyle.None]),
 				    #"En-têtes promus" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
 				    #"Type modifié" = Table.TransformColumnTypes(#"En-têtes promus",{{"date_heure", type datetime}, {"date_heure_fin", type datetime}, {"nom_client", type text}, {"client_id", Int64.Type}, {"zone", type text}, {"type_prestation", type text}, {"duree_prestation_min", Int64.Type}, {"montant_recu_eur", Currency.Type}, {"statut", type text}, {"temps_non_facture_min", Int64.Type}}),
 				    #"Fractionner la colonne par délimiteur" = Table.SplitColumn(Table.TransformColumnTypes(#"Type modifié", {{"date_heure", type text}}, "fr-FR"), "date_heure", Splitter.SplitTextByDelimiter(" ", QuoteStyle.Csv), {"date_heure.1", "date_heure.2"}),

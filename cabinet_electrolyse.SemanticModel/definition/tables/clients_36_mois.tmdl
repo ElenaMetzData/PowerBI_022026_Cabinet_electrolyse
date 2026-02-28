@@ -69,7 +69,7 @@ table clients_36_mois
 		mode: import
 		source =
 				let
-				    Source = Csv.Document(File.Contents("C:\Users\User\TheFreelanceWay\Cas pratiques\022026_Cabinet_electrolyse\clients_36_mois.csv"),[Delimiter=",", Columns=7, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    Source = Csv.Document(File.Contents("C:\Users\User\TheFreelanceWay\Cas pratiques\022026_Cabinet_electrolyse\02_data\clients_36_mois.csv"),[Delimiter=",", Columns=7, Encoding=65001, QuoteStyle=QuoteStyle.None]),
 				    #"En-têtes promus" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
 				    #"Type modifié" = Table.TransformColumnTypes(#"En-têtes promus",{{"date_premiere_consultation", type date}})
 				in

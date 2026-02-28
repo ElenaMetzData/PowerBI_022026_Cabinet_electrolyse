@@ -51,7 +51,7 @@ table banque_transactions_36_mois
 		mode: import
 		source =
 				let
-				    Source = Csv.Document(File.Contents("C:\Users\User\TheFreelanceWay\Cas pratiques\022026_Cabinet_electrolyse\banque_transactions_36_mois.csv"),[Delimiter=",", Columns=5, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    Source = Csv.Document(File.Contents("C:\Users\User\TheFreelanceWay\Cas pratiques\022026_Cabinet_electrolyse\02_data\banque_transactions_36_mois.csv"),[Delimiter=",", Columns=5, Encoding=65001, QuoteStyle=QuoteStyle.None]),
 				    #"En-têtes promus" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
 				    #"Valeur remplacée" = Table.ReplaceValue(#"En-têtes promus",".",",",Replacer.ReplaceText,{"montant_eur"}),
 				    #"Type modifié" = Table.TransformColumnTypes(#"Valeur remplacée",{{"montant_eur", Currency.Type}, {"date_heure", type datetime}}),

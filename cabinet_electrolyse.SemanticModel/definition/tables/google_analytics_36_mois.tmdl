@@ -42,7 +42,7 @@ table google_analytics_36_mois
 		mode: import
 		source =
 				let
-				    Source = Csv.Document(File.Contents("C:\Users\User\TheFreelanceWay\Cas pratiques\022026_Cabinet_electrolyse\google_analytics_36_mois.csv"),[Delimiter=",", Columns=4, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    Source = Csv.Document(File.Contents("C:\Users\User\TheFreelanceWay\Cas pratiques\022026_Cabinet_electrolyse\02_data\google_analytics_36_mois.csv"),[Delimiter=",", Columns=4, Encoding=1252, QuoteStyle=QuoteStyle.None]),
 				    #"En-têtes promus" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
 				    #"Type modifié" = Table.TransformColumnTypes(#"En-têtes promus",{{"date", type date}, {"source", type text}, {"sessions", Int64.Type}, {"users", Int64.Type}})
 				in

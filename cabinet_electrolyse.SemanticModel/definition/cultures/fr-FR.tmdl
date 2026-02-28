@@ -1212,7 +1212,7 @@ cultureInfo fr-FR
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "planity_rdv_36_mois",
-			          "ConceptualProperty": "durée_prestation_heure"
+			          "ConceptualProperty": "duree_prestation_heure"
 			        }
 			      },
 			      "State": "Generated",
@@ -3746,7 +3746,7 @@ cultureInfo fr-FR
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Mesures",
-			          "ConceptualProperty": "Facteur saisonnalité (semaine) - lissé"
+			          "ConceptualProperty": "Facteur saisonnalité (mois)"
 			        }
 			      },
 			      "State": "Generated",

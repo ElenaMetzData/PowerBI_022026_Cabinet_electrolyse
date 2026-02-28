@@ -465,7 +465,7 @@ table Mesures
 			VAR Pivot = [Date Pivot]
 			RETURN
 			CALCULATE(
-			    SUM(planity_rdv_36_mois[durée_prestation_heure]),            -- ou ta mesure d'heures
+			    SUM(planity_rdv_36_mois[duree_prestation_heure]),            -- ou ta mesure d'heures
 			    planity_rdv_36_mois[date] > Pivot,
 			    planity_rdv_36_mois[statut] IN {"Réalisé","Annulé","No-show"}
 			)
@@ -473,28 +473,55 @@ table Mesures
 		lineageTag: 41095596-3d4e-4be1-8c0b-047deab2c51c
 
 	/// Facteur de saisonnalité calculé sur 1 an, sensibilité à la semaine
-	measure 'Facteur saisonnalité (semaine) - lissé' =
+	measure 'Facteur saisonnalité (mois)' =
 			
 			VAR Pivot = [Date Pivot (mois terminé)]
-			VAR WeekNum = MAX(Calendrier[Numero de la semaine])
-			VAR Window52W =
-			    DATESINPERIOD(Calendrier[Date], Pivot, -364, DAY)
-			VAR Heures3Weeks =
+			VAR MoisNum = MAX(Calendrier[Numero du mois])
+			
+			-- Fenêtre historique
+			VAR WindowHist =
+			    DATESINPERIOD(Calendrier[Date], Pivot, -24, MONTH)
+			
+			-- Total heures sur les mois "du même type" (ex : tous les mars)
+			VAR HeuresMoisType =
 			    CALCULATE(
 			        [Heures RDV réalisés],
+			        WindowHist,
 			        FILTER(
-			            Window52W,
-			            VAR w = WEEKNUM(Calendrier[Date], 21)
-			            RETURN w IN { WeekNum - 1, WeekNum, WeekNum + 1 }
+			            ALL(Calendrier),
+			            Calendrier[Numero du mois] = MoisNum
 			        )
 			    )
-			VAR AvgWeekly =
-			    DIVIDE(
-			        CALCULATE([Heures RDV réalisés], Window52W),
-			        52
+			
+			-- Nb de mois de ce type dans la fenêtre (ex : nb de mars)
+			VAR NbMoisType =
+			    CALCULATE(
+			        DISTINCTCOUNT(Calendrier[Annee mois]),
+			        WindowHist,
+			        FILTER(
+			            ALL(Calendrier),
+			            Calendrier[Numero du mois] = MoisNum
+			        )
 			    )
+			
+			VAR MoyMoisType =
+			    DIVIDE(HeuresMoisType, NbMoisType)
+			
+			-- Moyenne mensuelle globale sur la fenêtre
+			VAR HeuresTotal =
+			    CALCULATE([Heures RDV réalisés], WindowHist)
+			
+			VAR NbMoisWindow =
+			    CALCULATE(
+			        DISTINCTCOUNT(Calendrier[Annee mois]),
+			        WindowHist
+			    )
+			
+			VAR MoyMensuelleGlobale =
+			    DIVIDE(HeuresTotal, NbMoisWindow)
+			
 			RETURN
-			DIVIDE(Heures3Weeks / 3, AvgWeekly)
+			DIVIDE(MoyMoisType, MoyMensuelleGlobale)
 		lineageTag: 7c9463d1-7d95-4fde-bfef-0961631dd16b
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -590,7 +617,7 @@ table Mesures
 	/// Heures attendues non calées sur la base des 12 derniers mois, en prenant en compte les rdv prévus et la saisonnalité.
 	measure 'Heures attendues (non calées)' =
 			
-			[Clients actifs projetés] * [Heures par client actif (12M)] * [Facteur saisonnalité (semaine) - lissé]
+			[Clients actifs projetés] * [Heures par client actif (12M)] * [Facteur saisonnalité (mois)]
 		lineageTag: be4570b2-9b16-4afe-9d1f-59763de718db
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}

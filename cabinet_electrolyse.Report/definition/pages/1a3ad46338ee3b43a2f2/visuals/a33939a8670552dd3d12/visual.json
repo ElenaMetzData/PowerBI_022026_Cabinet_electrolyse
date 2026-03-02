@@ -39,7 +39,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Mesures"
+                      "Entity": "Test - NewAvg"
                     }
                   },
                   "Property": "CA"
@@ -58,7 +58,7 @@
               "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "Mesures"
+                    "Entity": "Test - NewAvg"
                   }
                 },
                 "Property": "CA"
@@ -104,7 +104,7 @@
                       },
                       {
                         "Name": "m",
-                        "Entity": "Mesures",
+                        "Entity": "Test - NewAvg",
                         "Type": 0
                       }
                     ],

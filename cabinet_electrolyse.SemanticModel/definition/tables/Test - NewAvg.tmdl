@@ -1,4 +1,4 @@
-table Mesures
+table 'Test - NewAvg'
 	lineageTag: 5ec9c2b6-cbae-403a-8412-70ec3be84bf5
 
 	/// Chiffre d'affaire dans le contexte de filtre
@@ -395,21 +395,6 @@ table Mesures
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	/// Taux de remplissage du dernier mois civil terminé par rapport aux heures d'ouverture théoriques (ignore le contexte de filtre)
-	measure 'Taux remplissage M-1 (ignore filtres)' =
-			
-			VAR EndDate   = [Date Fin M-1 (today)]
-			VAR StartDate = DATE(YEAR(EndDate), MONTH(EndDate), 1)
-			RETURN
-			CALCULATE(
-			    [Taux de remplissage],
-			    REMOVEFILTERS(Calendrier),
-			    DATESBETWEEN(Calendrier[Date], StartDate, EndDate)
-			)
-		lineageTag: d73e6fb6-8e31-42cf-970e-4bb86878d1f1
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	measure 'Heures RDV réalisés - 12M' =
 			
 			VAR Pivot = [Date Pivot (mois terminé)]
@@ -460,14 +445,15 @@ table Mesures
 		lineageTag: 788e0821-9ebf-4d46-a7f9-7ff31585ea9c
 
 	/// Nombre d'heures de soins effectifs calées à partir de la date pivot
-	measure 'Heures RDV calées' =
+	measure 'Heures RDV planifiés' =
 			
-			VAR Pivot = [Date Pivot]
+			
+			VAR Pivot = [Date Pivot (mois terminé)]
 			RETURN
 			CALCULATE(
-			    SUM(planity_rdv_36_mois[duree_prestation_heure]),            -- ou ta mesure d'heures
+			    SUM(planity_rdv_36_mois[duree_prestation_heure]),
 			    planity_rdv_36_mois[date] > Pivot,
-			    planity_rdv_36_mois[statut] IN {"Réalisé","Annulé","No-show"}
+			    planity_rdv_36_mois[statut] = "planifié"
 			)
 		formatString: 0
 		lineageTag: 41095596-3d4e-4be1-8c0b-047deab2c51c
@@ -542,25 +528,40 @@ table Mesures
 	/// Calcul de l'évolution mensuelle du taux d'abandon au cours de l'année dernière glissante
 	measure 'Taux abandon - moy mensuel (12M)' =
 			
+			
 			VAR Pivot = [Date Pivot (mois terminé)]
+			
+			VAR MoisHisto =
+			    CALCULATETABLE(
+			        VALUES(Calendrier[Annee mois]),
+			        DATESINPERIOD(Calendrier[Date], Pivot, -12, MONTH),
+			        ALL(Calendrier)
+			    )
+			
 			RETURN
 			AVERAGEX(
-			    DATESINPERIOD(Calendrier[Date], Pivot, -12, MONTH),
-			    VAR FinM = EOMONTH(MAX(Calendrier[Date]), 0)
+			    MoisHisto,
+			    VAR FinM =
+			        CALCULATE(
+			            MAX(Calendrier[Date]),
+			            ALL(Calendrier),
+			            Calendrier[Annee mois] = EARLIER(Calendrier[Annee mois])
+			        )
 			    VAR DebM = DATE(YEAR(FinM), MONTH(FinM), 1)
-			    VAR DebM1 = EOMONTH(FinM, 0) + 1
+			    VAR DebM1 = FinM + 1
 			    VAR FinM1 = EOMONTH(FinM, 1)
-			
 			    VAR ActifsM =
 			        CALCULATETABLE(
 			            VALUES(planity_rdv_36_mois[client_id]),
-			            planity_rdv_36_mois[statut] IN {"Réalisé","Honoré"},
+			            planity_rdv_36_mois[statut] IN {"Réalisé", "Honoré"},
+			            ALL(Calendrier),
 			            DATESBETWEEN(Calendrier[Date], DebM, FinM)
 			        )
 			    VAR ActifsM1 =
 			        CALCULATETABLE(
 			            VALUES(planity_rdv_36_mois[client_id]),
-			            planity_rdv_36_mois[statut] IN {"Réalisé","Honoré"},
+			            planity_rdv_36_mois[statut] IN {"Réalisé", "Honoré"},
+			            ALL(Calendrier),
 			            DATESBETWEEN(Calendrier[Date], DebM1, FinM1)
 			        )
 			    VAR Retenus = COUNTROWS(INTERSECT(ActifsM, ActifsM1))
@@ -589,35 +590,74 @@ table Mesures
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	/// Nombre de clients actifs projetés sur les 6 prochains mois (sont pris en compte : les rdv planifiés, la taux d'abandon et les nouveaux clients, et la saisonnalité)
-	measure 'Clients actifs projetés' =
+	measure 'Clients actifs projetés' = ```
+			
 			
 			VAR Pivot = [Date Pivot (mois terminé)]
 			VAR d = MAX(Calendrier[Date])
-			VAR N = MAX(0, DATEDIFF(EOMONTH(Pivot,0), EOMONTH(d,0), MONTH))
+			VAR N = MAX(0, DATEDIFF(EOMONTH(Pivot, 0), EOMONTH(d, 0), MONTH))
 			
 			VAR ActifsNow =
 			    CALCULATE(
 			        DISTINCTCOUNT(planity_rdv_36_mois[client_id]),
-			        planity_rdv_36_mois[statut] IN {"Réalisé","Honoré"},
-			        DATESINPERIOD(Calendrier[Date], Pivot, -1, MONTH)
+			        planity_rdv_36_mois[statut] IN {"Réalisé", "Honoré"},
+			        REMOVEFILTERS(Calendrier),                              -- ✅ ignore le contexte mois futur
+			        DATESBETWEEN(Calendrier[Date],
+			            DATE(YEAR(Pivot), MONTH(Pivot), 1),
+			            Pivot
+			        )
 			    )
+			
 			VAR NewAvg = [Nouveaux clients - moy / mois (12M)]
 			VAR Churn = [Taux abandon - moy mensuel (12M)]
-			VAR Ret = 1 - Churn
+			VAR ChurnSafe = MAX(0.001, MIN(Churn, 0.999))
+			VAR Ret = 1 - ChurnSafe
+			VAR NSafe = MIN(N, 24)
+			
 			RETURN
 			IF(
-			    Churn = 0,
-			    ActifsNow + NewAvg * N,
-			    ActifsNow * POWER(Ret, N) + NewAvg * (1 - POWER(Ret, N)) / Churn
-			)
+			    ISBLANK(ActifsNow) || ActifsNow = 0,
+			    BLANK(),
+			    ActifsNow * POWER(Ret, NSafe) + NewAvg * DIVIDE(1 - POWER(Ret, NSafe), ChurnSafe)
+			)	
+			
+			```
 		lineageTag: c7ff5c19-daff-49fd-b768-faf49734a46c
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	/// Heures attendues non calées sur la base des 12 derniers mois, en prenant en compte les rdv prévus et la saisonnalité.
-	measure 'Heures attendues (non calées)' =
+	measure 'Heures RDV attendues (non planifiées)' =
 			
-			[Clients actifs projetés] * [Heures par client actif (12M)] * [Facteur saisonnalité (mois)]
+			
+			VAR Pivot = [Date Pivot (mois terminé)]
+			VAR d = MAX(Calendrier[Date])
+			
+			-- Heures moyennes par mois sur 12M (base historique)
+			VAR HeuresMoyMensuelle =
+			    CALCULATE(
+			        DIVIDE([Heures RDV réalisés], 12),
+			        DATESINPERIOD(Calendrier[Date], Pivot, -12, MONTH),
+			        ALL(Calendrier)
+			    )
+			
+			-- Croissance via nouveaux clients
+			VAR NewAvg = [Nouveaux clients - moy / mois (12M)]
+			VAR HeuresParClient = [Heures par client actif (12M)]
+			VAR N = MAX(0, DATEDIFF(EOMONTH(Pivot, 0), EOMONTH(d, 0), MONTH))
+			VAR HeuresNouveauxClients = NewAvg * HeuresParClient * N
+			
+			-- Saisonnalité
+			VAR Saison = [Facteur saisonnalité (mois)]
+			
+			-- Heures projetées brutes
+			VAR HeuresProjetees = (HeuresMoyMensuelle + HeuresNouveauxClients) * Saison
+			
+			-- Soustraction des heures déjà planifiées
+			VAR HeuresCalees = [Heures RDV planifiés]
+			
+			RETURN
+			MAX(0, HeuresProjetees - HeuresCalees)
 		lineageTag: be4570b2-9b16-4afe-9d1f-59763de718db
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -631,7 +671,7 @@ table Mesures
 			IF(
 			    d <= Pivot,
 			    [Heures RDV réalisés],
-			    [Heures RDV calées] + [Heures attendues (non calées)]
+			    [Heures RDV planifiés] + [Heures RDV attendues (non planifiées)]
 			)
 		lineageTag: b0b5b8a3-4319-4cfd-8f4e-5d5ad80e0448
 
@@ -790,9 +830,83 @@ table Mesures
 
 	measure 'Date Pivot (mois terminé)' =
 			
-			EOMONTH(TODAY(), -1)
+			
+			IF(
+			    TODAY() = EOMONTH(TODAY(), 0),
+			    EOMONTH(TODAY(), 0),
+			    EOMONTH(TODAY(), -1)
+			)
 		formatString: General Date
 		lineageTag: cda64bea-3b04-449f-b11d-740ddd27376f
+
+	measure 'Test - Clients actifs projetés' =
+			
+			[Clients actifs projetés]
+		lineageTag: 428a3f75-af5c-4103-8a1f-044bc2cc99e0
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Test - Heures par client actif' =
+			
+			[Heures par client actif (12M)]
+		lineageTag: d4130f74-4448-4c4f-8a2d-4039e5e5e69b
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Test - Facteur saisonnalité' =
+			
+			[Facteur saisonnalité (mois)]
+		lineageTag: 44ce1cad-287d-40c6-a325-5eca93eeb009
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Test - Heures attendues brutes' =
+			
+			[Clients actifs projetés] * [Heures par client actif (12M)] * [Facteur saisonnalité (mois)]
+		lineageTag: 19a8dbcf-eb31-4b7b-bcb7-83901bdba8e0
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Test - ActifsNow isolé' =
+			
+			VAR Pivot = [Date Pivot (mois terminé)]
+			RETURN
+			CALCULATE(
+			    DISTINCTCOUNT(planity_rdv_36_mois[client_id]),
+			    planity_rdv_36_mois[statut] IN {"Réalisé", "Honoré"},
+			    REMOVEFILTERS(Calendrier),
+			    DATESBETWEEN(
+			        Calendrier[Date],
+			        DATE(YEAR(Pivot), MONTH(Pivot), 1),
+			        Pivot
+			    )
+			)
+		formatString: 0
+		lineageTag: f1347f6d-f451-41be-8777-1599a16a4b88
+
+	measure 'Test - Churn' =
+			
+			[Taux abandon - moy mensuel (12M)]
+		lineageTag: e430dbc8-1a39-4518-ab5b-453c07f9cf92
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Test - NewAvg' =
+			
+			[Nouveaux clients - moy / mois (12M)]
+		lineageTag: 949b6609-7da7-4c64-a1f5-9e12d69e16db
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Test - Heures calées mars' =
+			
+			CALCULATE(
+			    [Heures RDV planifiés],
+			    Calendrier[Numero du mois] = 3
+			)
+		lineageTag: 289d4eb4-e6e0-405e-8d87-ff0258f45217
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column Placeholder
 		isHidden
@@ -804,11 +918,11 @@ table Mesures
 
 		annotation SummarizationSetBy = Automatic
 
-	partition Mesures = calculated
+	partition 'Test - NewAvg' = calculated
 		mode: import
-		source = Row("Placeholder", BLANK())
+		source =
+				
+				[Nouveaux clients - moy / mois (12M)]
 
 	annotation PBI_Id = b61b37aa52d94a28aea5cd28dba662c4
-
-	annotation 436ba87b-9c83-4389-a31b-ebd06a36be98 = {"Expression":""}
 

@@ -395,21 +395,6 @@ table Mesures
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	/// Taux de remplissage du dernier mois civil terminé par rapport aux heures d'ouverture théoriques (ignore le contexte de filtre)
-	measure 'Taux remplissage M-1 (ignore filtres)' =
-			
-			VAR EndDate   = [Date Fin M-1 (today)]
-			VAR StartDate = DATE(YEAR(EndDate), MONTH(EndDate), 1)
-			RETURN
-			CALCULATE(
-			    [Taux de remplissage],
-			    REMOVEFILTERS(Calendrier),
-			    DATESBETWEEN(Calendrier[Date], StartDate, EndDate)
-			)
-		lineageTag: d73e6fb6-8e31-42cf-970e-4bb86878d1f1
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	measure 'Heures RDV réalisés - 12M' =
 			
 			VAR Pivot = [Date Pivot (mois terminé)]
@@ -793,6 +778,21 @@ table Mesures
 			EOMONTH(TODAY(), -1)
 		formatString: General Date
 		lineageTag: cda64bea-3b04-449f-b11d-740ddd27376f
+
+	/// Taux de remplissage du dernier mois civil terminé par rapport aux heures d'ouverture théoriques (ignore le contexte de filtre)
+	measure 'Taux remplissage M-1 (ignore filtres)' =
+			
+			VAR EndDate   = [Date Fin M-1 (today)]
+			VAR StartDate = DATE(YEAR(EndDate), MONTH(EndDate), 1)
+			RETURN
+			CALCULATE(
+			    [Taux de remplissage],
+			    REMOVEFILTERS(Calendrier),
+			    DATESBETWEEN(Calendrier[Date], StartDate, EndDate)
+			)
+		lineageTag: d73e6fb6-8e31-42cf-970e-4bb86878d1f1
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column Placeholder
 		isHidden

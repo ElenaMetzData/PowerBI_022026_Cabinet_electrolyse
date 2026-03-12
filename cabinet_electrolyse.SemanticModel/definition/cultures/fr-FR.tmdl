@@ -3556,31 +3556,6 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "mesure.heures_RDV_réel__prévision": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Mesures",
-			          "ConceptualProperty": "Heures RDV (réel + prévision)"
-			        }
-			      },
-			      "State": "Generated",
-			      "Visibility": {
-			        "Value": "Hidden"
-			      },
-			      "Terms": [
-			        {
-			          "heures RDV (réel + prévision)": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "heures RDV": {
-			            "State": "Generated",
-			            "Weight": 0.75
-			          }
-			        }
-			      ]
-			    },
 			    "mesure.ca_m1": {
 			      "Definition": {
 			        "Binding": {
@@ -3730,7 +3705,7 @@ cultureInfo fr-FR
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Mesures",
-			          "ConceptualProperty": "Heures RDV calées"
+			          "ConceptualProperty": "Heures RDV planifiés"
 			        }
 			      },
 			      "State": "Generated",
@@ -3898,7 +3873,7 @@ cultureInfo fr-FR
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Mesures",
-			          "ConceptualProperty": "Heures attendues (non calées)"
+			          "ConceptualProperty": "Heures RDV attendues (non planifiées)"
 			        }
 			      },
 			      "State": "Generated",

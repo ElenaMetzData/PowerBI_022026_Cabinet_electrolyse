@@ -296,6 +296,48 @@
         },
         "type": "Advanced",
         "howCreated": "User"
+      },
+      {
+        "name": "090f95f07ac1270ad00e",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Calendrier"
+              }
+            },
+            "Property": "Annee mois"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "c2bf9d169acedb57be11",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mesures"
+              }
+            },
+            "Property": "Tx remplissage - Réel (mensuel)"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "b3610466da62a2eb8c0c",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mesures"
+              }
+            },
+            "Property": "Tx remplissage - Prévision (6M, mensuel)"
+          }
+        },
+        "type": "Advanced"
       }
     ],
     "filterSortOrder": "Custom"

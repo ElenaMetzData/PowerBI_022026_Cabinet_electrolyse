@@ -834,6 +834,175 @@ table Mesures
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	measure 'CA par heure réalisée (12M)' =
+			
+			
+			VAR Pivot = [Date Pivot (mois terminé)]
+			VAR Heures = [Heures RDV réalisés - 12M]
+			VAR CA =
+			    CALCULATE(
+			        [CA],
+			        DATESINPERIOD(Calendrier[Date], Pivot, -12, MONTH)
+			    )
+			RETURN
+			DIVIDE(CA, Heures)
+		formatString: #,0.###############\ "€";-#,0.###############\ "€";#,0.###############\ "€"
+		lineageTag: 153432cb-25d4-48cf-a391-6357f5a664b3
+
+		annotation PBI_FormatHint = {"currencyCulture":"fr-FR"}
+
+	measure 'CA RDV planifiés' =
+			
+			
+			VAR Pivot = [Date Pivot (mois terminé)]
+			RETURN
+			CALCULATE(
+			    SUM(planity_rdv_36_mois[montant_recu_eur]),
+			    planity_rdv_36_mois[date] > Pivot,
+			    planity_rdv_36_mois[statut] = "planifié"
+			)
+		formatString: #,0.###############\ "€";-#,0.###############\ "€";#,0.###############\ "€"
+		lineageTag: ae8e7a85-4544-4d75-a400-727b55750c06
+
+		annotation PBI_FormatHint = {"currencyCulture":"fr-FR"}
+
+	measure 'CA RDV attendus (non planifiés)' =
+			
+			
+			VAR Pivot = [Date Pivot (mois terminé)]
+			VAR d = MAX(Calendrier[Date])
+			
+			VAR CAMoyMensuel =
+			    CALCULATE(
+			        DIVIDE([CA], 12),
+			        DATESINPERIOD(Calendrier[Date], Pivot, -12, MONTH),
+			        ALL(Calendrier)
+			    )
+			
+			VAR NewAvg = [Nouveaux clients - moy / mois (12M)]
+			VAR CAParClient =
+			    CALCULATE(
+			        [CA moyen mensuel par client (réalisé)],
+			        DATESINPERIOD(Calendrier[Date], Pivot, -12, MONTH),
+			        ALL(Calendrier)
+			    )
+			VAR N = MAX(0, DATEDIFF(EOMONTH(Pivot, 0), EOMONTH(d, 0), MONTH))
+			VAR CANouveauxClients = NewAvg * CAParClient * N
+			VAR Saison = [Facteur saisonnalité (mois)]
+			VAR CAProjete = (CAMoyMensuel + CANouveauxClients) * Saison
+			VAR CACale = [CA RDV planifiés]
+			
+			RETURN
+			MAX(0, CAProjete - CACale)
+		formatString: #,0.###############\ "€";-#,0.###############\ "€";#,0.###############\ "€"
+		lineageTag: 1c438faa-6138-4cc0-a747-90956f5c3662
+
+		annotation PBI_FormatHint = {"currencyCulture":"fr-FR"}
+
+	measure 'CA (réel + calés + prévision)' =
+			
+			
+			VAR Pivot = [Date Pivot (mois terminé)]
+			VAR d = MAX(Calendrier[Date])
+			RETURN
+			IF(
+			    d <= Pivot,
+			    [CA],
+			    [CA RDV planifiés] + [CA RDV attendus (non planifiés)]
+			)
+		formatString: #,0.###############\ "€";-#,0.###############\ "€";#,0.###############\ "€"
+		lineageTag: 1a075ec8-273b-4ae1-96bd-8a7315cf5bed
+
+		annotation PBI_FormatHint = {"currencyCulture":"fr-FR"}
+
+	measure 'Taux de marge (12M)' =
+			
+			
+			VAR Pivot = [Date Pivot (mois terminé)]
+			VAR CA12M =
+			    CALCULATE(
+			        [CA],
+			        DATESINPERIOD(Calendrier[Date], Pivot, -12, MONTH)
+			    )
+			VAR RN12M =
+			    CALCULATE(
+			        [Résultat net],
+			        DATESINPERIOD(Calendrier[Date], Pivot, -12, MONTH)
+			    )
+			RETURN
+			DIVIDE(RN12M, CA12M)
+		lineageTag: 1409e47c-f876-462b-a83c-44d9361148d5
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'CA - Réel (mensuel)' =
+			
+			
+			VAR Pivot = [Date Pivot (mois terminé)]
+			VAR d = MAX(Calendrier[Date])
+			RETURN
+			IF(
+			    d <= Pivot,
+			    [CA],
+			    BLANK()
+			)
+		formatString: #,0.###############\ "€";-#,0.###############\ "€";#,0.###############\ "€"
+		lineageTag: 5844d896-bc6d-4171-ab65-6247297eb399
+
+		annotation PBI_FormatHint = {"currencyCulture":"fr-FR"}
+
+	measure 'CA - Prévision (6M, mensuel)' =
+			
+			
+			VAR Pivot = [Date Pivot (mois terminé)]
+			VAR d = MAX(Calendrier[Date])
+			RETURN
+			IF(
+			    d > Pivot && d <= EOMONTH(Pivot, 6),
+			    [CA (réel + calés + prévision)],
+			    BLANK()
+			)
+		formatString: #,0.###############\ "€";-#,0.###############\ "€";#,0.###############\ "€"
+		lineageTag: 4f0d0b1d-b168-405b-8c35-9b5d22f70846
+
+		annotation PBI_FormatHint = {"currencyCulture":"fr-FR"}
+
+	measure 'Marge - Réel (mensuel)' =
+			
+			
+			VAR Pivot = [Date Pivot (mois terminé)]
+			VAR d = MAX(Calendrier[Date])
+			RETURN
+			IF(
+			    d <= Pivot,
+			    [Résultat net],
+			    BLANK()
+			)
+		formatString: #,0.###############\ "€";-#,0.###############\ "€";#,0.###############\ "€"
+		lineageTag: 1d02235f-6d59-4551-94a2-468ba99fe761
+
+		annotation PBI_FormatHint = {"currencyCulture":"fr-FR"}
+
+	measure 'Marge - Prévision (6M, mensuel)' =
+			
+			
+			VAR Pivot = [Date Pivot (mois terminé)]
+			VAR d = MAX(Calendrier[Date])
+			RETURN
+			IF(
+			    d = Pivot,
+			    [Résultat net],                   -- point de jonction = valeur réelle de février
+			    IF(
+			        d > Pivot && d <= EOMONTH(Pivot, 6),
+			        [CA (réel + calés + prévision)] * [Taux de marge (12M)],
+			        BLANK()
+			    )
+			)
+		formatString: #,0.###############\ "€";-#,0.###############\ "€";#,0.###############\ "€"
+		lineageTag: 92d480e0-f7ad-454b-a647-6f13582e6eeb
+
+		annotation PBI_FormatHint = {"currencyCulture":"fr-FR"}
+
 	column Placeholder
 		isHidden
 		formatString: 0

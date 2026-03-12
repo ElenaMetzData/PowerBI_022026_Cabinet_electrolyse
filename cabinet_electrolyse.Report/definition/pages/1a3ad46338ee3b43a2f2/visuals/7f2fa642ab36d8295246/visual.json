@@ -87,12 +87,27 @@
                       "Entity": "Mesures"
                     }
                   },
-                  "Property": "CA"
+                  "Property": "CA - Réel (mensuel)"
                 }
               },
-              "queryRef": "Mesures.CA",
-              "nativeQueryRef": "Chiffre d'affaire",
-              "displayName": "Chiffre d'affaire"
+              "queryRef": "Mesures.CA - Réel (mensuel)",
+              "nativeQueryRef": "CA réalisé",
+              "displayName": "CA réalisé"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mesures"
+                    }
+                  },
+                  "Property": "CA - Prévision (6M, mensuel)"
+                }
+              },
+              "queryRef": "Mesures.CA - Prévision (6M, mensuel)",
+              "nativeQueryRef": "CA prévu",
+              "displayName": "CA prévu"
             }
           ]
         },
@@ -106,11 +121,27 @@
                       "Entity": "Mesures"
                     }
                   },
-                  "Property": "Résultat net"
+                  "Property": "Marge - Réel (mensuel)"
                 }
               },
-              "queryRef": "Mesures.Marge",
-              "nativeQueryRef": "Résultat net"
+              "queryRef": "Mesures.Marge - Réel (mensuel)",
+              "nativeQueryRef": "Résultat net réalisé",
+              "displayName": "Résultat net réalisé"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mesures"
+                    }
+                  },
+                  "Property": "Marge - Prévision (6M, mensuel)"
+                }
+              },
+              "queryRef": "Mesures.Marge - Prévision (6M, mensuel)",
+              "nativeQueryRef": "Résultat net prévu",
+              "displayName": "Résultat net prévu"
             }
           ]
         }
@@ -176,22 +207,6 @@
       }
     },
     "objects": {
-      "dataPoint": [
-        {
-          "properties": {
-            "borderShow": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Mesures.Marge"
-          }
-        }
-      ],
       "labels": [
         {
           "properties": {
@@ -453,6 +468,149 @@
             }
           ]
         }
+      },
+      {
+        "name": "e578c8af509498d633c0",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Calendrier"
+                  }
+                },
+                "Hierarchy": "Annee Hiérarchie"
+              }
+            },
+            "Level": "Numero du mois"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "2194792baaa24c9d3629",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Calendrier"
+                  }
+                },
+                "Hierarchy": "Annee Hiérarchie"
+              }
+            },
+            "Level": "Nom du mois"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "8f9b18bbd648e3c48b60",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mesures"
+              }
+            },
+            "Property": "CA - Réel (mensuel)"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "0ecb37e00e1887ee023a",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mesures"
+              }
+            },
+            "Property": "CA - Prévision (6M, mensuel)"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "67d071e9a350119260e5",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mesures"
+              }
+            },
+            "Property": "Marge - Réel (mensuel)"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "eb503afa07780e603049",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mesures"
+              }
+            },
+            "Property": "Marge - Prévision (6M, mensuel)"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "1644c2296b53b9605277",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mesures"
+              }
+            },
+            "Property": "Fenêtre Graph Remplissage (12M + 6M)"
+          }
+        },
+        "type": "Advanced",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "m",
+              "Entity": "Mesures",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Comparison": {
+                  "ComparisonKind": 0,
+                  "Left": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Source": "m"
+                        }
+                      },
+                      "Property": "Fenêtre Graph Remplissage (12M + 6M)"
+                    }
+                  },
+                  "Right": {
+                    "Literal": {
+                      "Value": "1L"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User"
       }
     ]
   }

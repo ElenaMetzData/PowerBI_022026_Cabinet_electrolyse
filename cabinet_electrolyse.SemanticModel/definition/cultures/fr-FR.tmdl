@@ -1208,7 +1208,7 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "planity_rdv_36_mois.durée_prestation_heure": {
+			    "planity_rdv_36_mois.duree_prestation_heure": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "planity_rdv_36_mois",
@@ -1218,12 +1218,12 @@ cultureInfo fr-FR
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "durée prestation heure": {
+			          "duree prestation heure": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "durée_prestation_heure": {
+			          "duree_prestation_heure": {
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
@@ -2227,16 +2227,6 @@ cultureInfo fr-FR
 			        {
 			          "ca": {
 			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "Chiffre d'affaire": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -3701,7 +3691,7 @@ cultureInfo fr-FR
 			      ],
 			      "SemanticType": "Time"
 			    },
-			    "mesure.heures_RDV_calées": {
+			    "mesure.heures_RDV_planifiés": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Mesures",
@@ -3711,13 +3701,13 @@ cultureInfo fr-FR
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "heures RDV calées": {
+			          "heures RDV planifiés": {
 			            "State": "Generated"
 			          }
 			        }
 			      ]
 			    },
-			    "mesure.facteur_saisonnalité_semaine__lissé": {
+			    "mesure.facteur_saisonnalité_mois": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Mesures",
@@ -3727,14 +3717,14 @@ cultureInfo fr-FR
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "facteur saisonnalité (semaine) - lissé": {
+			          "facteur saisonnalité (mois)": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "facteur saisonnalité (semaine) lissé": {
+			          "facteur saisonnalité": {
 			            "State": "Generated",
-			            "Weight": 0.97
+			            "Weight": 0.75
 			          }
 			        }
 			      ]
@@ -3869,7 +3859,7 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "mesure.heures_attendues_non_calées": {
+			    "mesure.heures_RDV_attendues_non_planifiées": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Mesures",
@@ -3879,12 +3869,12 @@ cultureInfo fr-FR
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "heures attendues (non calées)": {
+			          "heures RDV attendues (non planifiées)": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "heures attendues": {
+			          "heures RDV attendues": {
 			            "State": "Generated",
 			            "Weight": 0.75
 			          }
@@ -4332,6 +4322,427 @@ cultureInfo fr-FR
 			      "Terms": [
 			        {
 			          "nom du mois": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "mesure.fenêtre_graph_remplissage_12M__6M": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mesures",
+			          "ConceptualProperty": "Fenêtre Graph Remplissage (12M + 6M)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fenêtre graph remplissage (12M + 6M)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fenêtre graph remplissage": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "mesure.tx_remplissage__réel_mensuel": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mesures",
+			          "ConceptualProperty": "Tx remplissage - Réel (mensuel)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tx remplissage - réel (mensuel)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "tx remplissage - réel": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "tx remplissage réel (mensuel)": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "Taux de remplissage observé": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "mesure.tx_remplissage__prévision_6M_mensuel": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mesures",
+			          "ConceptualProperty": "Tx remplissage - Prévision (6M, mensuel)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tx remplissage - prévision (6M, mensuel)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "tx remplissage - prévision": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "tx remplissage prévision (6M, mensuel)": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "Taux remplissage prévu": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "mesure.tx_remplissage_réel__prévision_6M": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mesures",
+			          "ConceptualProperty": "Tx remplissage (réel + prévision 6M)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tx remplissage (réel + prévision 6M)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "tx remplissage": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "mesure.date_pivot_mois_terminé": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mesures",
+			          "ConceptualProperty": "Date Pivot (mois terminé)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "date pivot (mois terminé)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "date pivot": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "mesure.CA_par_heure_réalisée_12M": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mesures",
+			          "ConceptualProperty": "CA par heure réalisée (12M)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "CA par heure réalisée (12M)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "CA par heure réalisée": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "mesure.CA_RDV_planifiés": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mesures",
+			          "ConceptualProperty": "CA RDV planifiés"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "CA RDV planifiés": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "mesure.CA_RDV_attendus_non_planifiés": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mesures",
+			          "ConceptualProperty": "CA RDV attendus (non planifiés)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "CA RDV attendus (non planifiés)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "CA RDV attendus": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "mesure.CA_réel__calés__prévision": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mesures",
+			          "ConceptualProperty": "CA (réel + calés + prévision)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "CA (réel + calés + prévision)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "CA": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "mesure.taux_de_marge_12M": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mesures",
+			          "ConceptualProperty": "Taux de marge (12M)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "taux de marge (12M)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "taux de marge": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "mesure.CA__réel_mensuel": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mesures",
+			          "ConceptualProperty": "CA - Réel (mensuel)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "CA - réel (mensuel)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "CA - réel": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "CA réel (mensuel)": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "CA réalisé": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "mesure.CA__prévision_6M_mensuel": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mesures",
+			          "ConceptualProperty": "CA - Prévision (6M, mensuel)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "CA - prévision (6M, mensuel)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "CA - prévision": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "CA prévision (6M, mensuel)": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "CA prévu": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "mesure.marge__réel_mensuel": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mesures",
+			          "ConceptualProperty": "Marge - Réel (mensuel)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "marge - réel (mensuel)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "marge - réel": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "marge réel (mensuel)": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "Résultat net réalisé": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "mesure.marge__prévision_6M_mensuel": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mesures",
+			          "ConceptualProperty": "Marge - Prévision (6M, mensuel)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "marge - prévision (6M, mensuel)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "marge - prévision": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "marge prévision (6M, mensuel)": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "Résultat net prévu": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "calendrier.numero_de_la_semaine": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Calendrier",
+			          "ConceptualProperty": "Numero de la semaine"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "numero de la semaine": {
 			            "State": "Generated"
 			          }
 			        }
@@ -5421,6 +5832,633 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
+			    "calendrier_has_numero_de_la_semaine": {
+			      "Binding": {
+			        "ConceptualEntity": "Calendrier"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendrier": {
+			          "Target": {
+			            "Entity": "calendrier"
+			          }
+			        },
+			        "calendrier.numero_de_la_semaine": {
+			          "Target": {
+			            "Entity": "calendrier.numero_de_la_semaine"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendrier"
+			            },
+			            "Object": {
+			              "Role": "calendrier.numero_de_la_semaine"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "calendriers_have_numero_de_la_semaines"
+			        }
+			      ]
+			    },
+			    "mesure_has_marge__prévision_6M_mensuel": {
+			      "Binding": {
+			        "ConceptualEntity": "Mesures"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mesure": {
+			          "Target": {
+			            "Entity": "mesure"
+			          }
+			        },
+			        "mesure.marge__prévision_6M_mensuel": {
+			          "Target": {
+			            "Entity": "mesure.marge__prévision_6M_mensuel"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mesure"
+			            },
+			            "Object": {
+			              "Role": "mesure.marge__prévision_6M_mensuel"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mesures_have_marge__prévision_6M_mensuel"
+			        }
+			      ]
+			    },
+			    "banque_transactions_36_mois_has_mesure_marge__réel_mensuel": {
+			      "Binding": {
+			        "ConceptualEntity": "banque_transactions_36_mois"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "banque_transactions_36_mois": {
+			          "Target": {
+			            "Entity": "banque_transactions_36_mois"
+			          }
+			        },
+			        "mesure.marge__réel_mensuel": {
+			          "Target": {
+			            "Entity": "mesure.marge__réel_mensuel"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "banque_transactions_36_mois"
+			            },
+			            "Object": {
+			              "Role": "mesure.marge__réel_mensuel"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "banque_transactions_36_moises_have_marge__réel_mensuel"
+			        }
+			      ]
+			    },
+			    "calendrier_has_mesure_marge__réel_mensuel": {
+			      "Binding": {
+			        "ConceptualEntity": "Calendrier"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendrier": {
+			          "Target": {
+			            "Entity": "calendrier"
+			          }
+			        },
+			        "mesure.marge__réel_mensuel": {
+			          "Target": {
+			            "Entity": "mesure.marge__réel_mensuel"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendrier"
+			            },
+			            "Object": {
+			              "Role": "mesure.marge__réel_mensuel"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "calendriers_have_marge__réel_mensuel"
+			        }
+			      ]
+			    },
+			    "mesure_has_CA__prévision_6M_mensuel": {
+			      "Binding": {
+			        "ConceptualEntity": "Mesures"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mesure": {
+			          "Target": {
+			            "Entity": "mesure"
+			          }
+			        },
+			        "mesure.CA__prévision_6M_mensuel": {
+			          "Target": {
+			            "Entity": "mesure.CA__prévision_6M_mensuel"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mesure"
+			            },
+			            "Object": {
+			              "Role": "mesure.CA__prévision_6M_mensuel"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mesures_have_CA__prévision_6M_mensuel"
+			        }
+			      ]
+			    },
+			    "planity_rdv_36_mois_has_mesure_CA__réel_mensuel": {
+			      "Binding": {
+			        "ConceptualEntity": "planity_rdv_36_mois"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "planity_rdv_36_mois": {
+			          "Target": {
+			            "Entity": "planity_rdv_36_mois"
+			          }
+			        },
+			        "mesure.CA__réel_mensuel": {
+			          "Target": {
+			            "Entity": "mesure.CA__réel_mensuel"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "planity_rdv_36_mois"
+			            },
+			            "Object": {
+			              "Role": "mesure.CA__réel_mensuel"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "planity_rdv_36_moises_have_CA__réel_mensuel"
+			        }
+			      ]
+			    },
+			    "calendrier_has_mesure_CA__réel_mensuel": {
+			      "Binding": {
+			        "ConceptualEntity": "Calendrier"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendrier": {
+			          "Target": {
+			            "Entity": "calendrier"
+			          }
+			        },
+			        "mesure.CA__réel_mensuel": {
+			          "Target": {
+			            "Entity": "mesure.CA__réel_mensuel"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendrier"
+			            },
+			            "Object": {
+			              "Role": "mesure.CA__réel_mensuel"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "calendriers_have_CA__réel_mensuel"
+			        }
+			      ]
+			    },
+			    "planity_rdv_36_mois_has_mesure_taux_de_marge_12M": {
+			      "Binding": {
+			        "ConceptualEntity": "planity_rdv_36_mois"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "planity_rdv_36_mois": {
+			          "Target": {
+			            "Entity": "planity_rdv_36_mois"
+			          }
+			        },
+			        "mesure.taux_de_marge_12M": {
+			          "Target": {
+			            "Entity": "mesure.taux_de_marge_12M"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "planity_rdv_36_mois"
+			            },
+			            "Object": {
+			              "Role": "mesure.taux_de_marge_12M"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "planity_rdv_36_moises_have_taux_de_marge_12M"
+			        }
+			      ]
+			    },
+			    "banque_transactions_36_mois_has_mesure_taux_de_marge_12M": {
+			      "Binding": {
+			        "ConceptualEntity": "banque_transactions_36_mois"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "banque_transactions_36_mois": {
+			          "Target": {
+			            "Entity": "banque_transactions_36_mois"
+			          }
+			        },
+			        "mesure.taux_de_marge_12M": {
+			          "Target": {
+			            "Entity": "mesure.taux_de_marge_12M"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "banque_transactions_36_mois"
+			            },
+			            "Object": {
+			              "Role": "mesure.taux_de_marge_12M"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "banque_transactions_36_moises_have_taux_de_marge_12M"
+			        }
+			      ]
+			    },
+			    "mesure_has_CA_réel__calés__prévision": {
+			      "Binding": {
+			        "ConceptualEntity": "Mesures"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mesure": {
+			          "Target": {
+			            "Entity": "mesure"
+			          }
+			        },
+			        "mesure.CA_réel__calés__prévision": {
+			          "Target": {
+			            "Entity": "mesure.CA_réel__calés__prévision"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mesure"
+			            },
+			            "Object": {
+			              "Role": "mesure.CA_réel__calés__prévision"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mesures_have_CA_réel__calés__prévision"
+			        }
+			      ]
+			    },
+			    "mesure_has_CA_RDV_attendus_non_planifiés": {
+			      "Binding": {
+			        "ConceptualEntity": "Mesures"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mesure": {
+			          "Target": {
+			            "Entity": "mesure"
+			          }
+			        },
+			        "mesure.CA_RDV_attendus_non_planifiés": {
+			          "Target": {
+			            "Entity": "mesure.CA_RDV_attendus_non_planifiés"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mesure"
+			            },
+			            "Object": {
+			              "Role": "mesure.CA_RDV_attendus_non_planifiés"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mesures_have_CA_RDV_attendus_non_planifiés"
+			        }
+			      ]
+			    },
+			    "planity_rdv_36_mois_has_mesure_CA_RDV_planifiés": {
+			      "Binding": {
+			        "ConceptualEntity": "planity_rdv_36_mois"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "planity_rdv_36_mois": {
+			          "Target": {
+			            "Entity": "planity_rdv_36_mois"
+			          }
+			        },
+			        "mesure.CA_RDV_planifiés": {
+			          "Target": {
+			            "Entity": "mesure.CA_RDV_planifiés"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "planity_rdv_36_mois"
+			            },
+			            "Object": {
+			              "Role": "mesure.CA_RDV_planifiés"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "planity_rdv_36_moises_have_CA_RDV_planifiés"
+			        }
+			      ]
+			    },
+			    "planity_rdv_36_mois_has_mesure_CA_par_heure_réalisée_12M": {
+			      "Binding": {
+			        "ConceptualEntity": "planity_rdv_36_mois"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "planity_rdv_36_mois": {
+			          "Target": {
+			            "Entity": "planity_rdv_36_mois"
+			          }
+			        },
+			        "mesure.CA_par_heure_réalisée_12M": {
+			          "Target": {
+			            "Entity": "mesure.CA_par_heure_réalisée_12M"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "planity_rdv_36_mois"
+			            },
+			            "Object": {
+			              "Role": "mesure.CA_par_heure_réalisée_12M"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "planity_rdv_36_moises_have_CA_par_heure_réalisée_12M"
+			        }
+			      ]
+			    },
+			    "mesure_has_date_pivot_mois_terminé": {
+			      "Binding": {
+			        "ConceptualEntity": "Mesures"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mesure": {
+			          "Target": {
+			            "Entity": "mesure"
+			          }
+			        },
+			        "mesure.date_pivot_mois_terminé": {
+			          "Target": {
+			            "Entity": "mesure.date_pivot_mois_terminé"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mesure"
+			            },
+			            "Object": {
+			              "Role": "mesure.date_pivot_mois_terminé"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mesures_have_date_pivot_mois_terminé"
+			        }
+			      ]
+			    },
+			    "mesure_has_tx_remplissage_réel__prévision_6M": {
+			      "Binding": {
+			        "ConceptualEntity": "Mesures"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mesure": {
+			          "Target": {
+			            "Entity": "mesure"
+			          }
+			        },
+			        "mesure.tx_remplissage_réel__prévision_6M": {
+			          "Target": {
+			            "Entity": "mesure.tx_remplissage_réel__prévision_6M"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mesure"
+			            },
+			            "Object": {
+			              "Role": "mesure.tx_remplissage_réel__prévision_6M"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mesures_have_tx_remplissage_réel__prévision_6M"
+			        }
+			      ]
+			    },
+			    "mesure_has_tx_remplissage__prévision_6M_mensuel": {
+			      "Binding": {
+			        "ConceptualEntity": "Mesures"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mesure": {
+			          "Target": {
+			            "Entity": "mesure"
+			          }
+			        },
+			        "mesure.tx_remplissage__prévision_6M_mensuel": {
+			          "Target": {
+			            "Entity": "mesure.tx_remplissage__prévision_6M_mensuel"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mesure"
+			            },
+			            "Object": {
+			              "Role": "mesure.tx_remplissage__prévision_6M_mensuel"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mesures_have_tx_remplissage__prévision_6M_mensuel"
+			        }
+			      ]
+			    },
+			    "planity_rdv_36_mois_has_mesure_tx_remplissage__réel_mensuel": {
+			      "Binding": {
+			        "ConceptualEntity": "planity_rdv_36_mois"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "planity_rdv_36_mois": {
+			          "Target": {
+			            "Entity": "planity_rdv_36_mois"
+			          }
+			        },
+			        "mesure.tx_remplissage__réel_mensuel": {
+			          "Target": {
+			            "Entity": "mesure.tx_remplissage__réel_mensuel"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "planity_rdv_36_mois"
+			            },
+			            "Object": {
+			              "Role": "mesure.tx_remplissage__réel_mensuel"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "planity_rdv_36_moises_have_tx_remplissage__réel_mensuel"
+			        }
+			      ]
+			    },
+			    "calendrier_has_mesure_tx_remplissage__réel_mensuel": {
+			      "Binding": {
+			        "ConceptualEntity": "Calendrier"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendrier": {
+			          "Target": {
+			            "Entity": "calendrier"
+			          }
+			        },
+			        "mesure.tx_remplissage__réel_mensuel": {
+			          "Target": {
+			            "Entity": "mesure.tx_remplissage__réel_mensuel"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendrier"
+			            },
+			            "Object": {
+			              "Role": "mesure.tx_remplissage__réel_mensuel"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "calendriers_have_tx_remplissage__réel_mensuel"
+			        }
+			      ]
+			    },
+			    "calendrier_has_mesure_fenêtre_graph_remplissage_12M__6M": {
+			      "Binding": {
+			        "ConceptualEntity": "Calendrier"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendrier": {
+			          "Target": {
+			            "Entity": "calendrier"
+			          }
+			        },
+			        "mesure.fenêtre_graph_remplissage_12M__6M": {
+			          "Target": {
+			            "Entity": "mesure.fenêtre_graph_remplissage_12M__6M"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendrier"
+			            },
+			            "Object": {
+			              "Role": "mesure.fenêtre_graph_remplissage_12M__6M"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "calendriers_have_fenêtre_graph_remplissage_12M__6M"
+			        }
+			      ]
+			    },
 			    "calendrier_has_annee_hiérarchie": {
 			      "Binding": {
 			        "ConceptualEntity": "Calendrier"
@@ -5685,39 +6723,6 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "calendrier_has_numero_de_la_semaine": {
-			      "Binding": {
-			        "ConceptualEntity": "Calendrier"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "calendrier": {
-			          "Target": {
-			            "Entity": "calendrier"
-			          }
-			        },
-			        "calendrier.numero_de_la_semaine": {
-			          "Target": {
-			            "Entity": "calendrier.numero_de_la_semaine"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "calendrier"
-			            },
-			            "Object": {
-			              "Role": "calendrier.numero_de_la_semaine"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "calendriers_have_numero_de_la_semaines"
-			        }
-			      ]
-			    },
 			    "mesure_has_heures_RDV_réel__calés__prévision": {
 			      "Binding": {
 			        "ConceptualEntity": "Mesures"
@@ -5751,7 +6756,7 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "mesure_has_heures_attendues_non_calées": {
+			    "mesure_has_heures_RDV_attendues_non_planifiées": {
 			      "Binding": {
 			        "ConceptualEntity": "Mesures"
 			      },
@@ -5762,9 +6767,9 @@ cultureInfo fr-FR
 			            "Entity": "mesure"
 			          }
 			        },
-			        "mesure.heures_attendues_non_calées": {
+			        "mesure.heures_RDV_attendues_non_planifiées": {
 			          "Target": {
-			            "Entity": "mesure.heures_attendues_non_calées"
+			            "Entity": "mesure.heures_RDV_attendues_non_planifiées"
 			          }
 			        }
 			      },
@@ -5775,12 +6780,12 @@ cultureInfo fr-FR
 			              "Role": "mesure"
 			            },
 			            "Object": {
-			              "Role": "mesure.heures_attendues_non_calées"
+			              "Role": "mesure.heures_RDV_attendues_non_planifiées"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mesures_have_heures_attendues_non_calées"
+			          "ID": "mesures_have_heures_RDV_attendues_non_planifiées"
 			        }
 			      ]
 			    },
@@ -5850,15 +6855,15 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "mesure_has_taux_abandon__moy_mensuel_12M": {
+			    "planity_rdv_36_mois_has_mesure_taux_abandon__moy_mensuel_12M": {
 			      "Binding": {
-			        "ConceptualEntity": "Mesures"
+			        "ConceptualEntity": "planity_rdv_36_mois"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "mesure": {
+			        "planity_rdv_36_mois": {
 			          "Target": {
-			            "Entity": "mesure"
+			            "Entity": "planity_rdv_36_mois"
 			          }
 			        },
 			        "mesure.taux_abandon__moy_mensuel_12M": {
@@ -5871,7 +6876,7 @@ cultureInfo fr-FR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "mesure"
+			              "Role": "planity_rdv_36_mois"
 			            },
 			            "Object": {
 			              "Role": "mesure.taux_abandon__moy_mensuel_12M"
@@ -5879,7 +6884,40 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mesures_have_taux_abandon__moy_mensuel_12M"
+			          "ID": "planity_rdv_36_moises_have_taux_abandon__moy_mensuel_12M"
+			        }
+			      ]
+			    },
+			    "calendrier_has_mesure_taux_abandon__moy_mensuel_12M": {
+			      "Binding": {
+			        "ConceptualEntity": "Calendrier"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendrier": {
+			          "Target": {
+			            "Entity": "calendrier"
+			          }
+			        },
+			        "mesure.taux_abandon__moy_mensuel_12M": {
+			          "Target": {
+			            "Entity": "mesure.taux_abandon__moy_mensuel_12M"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendrier"
+			            },
+			            "Object": {
+			              "Role": "mesure.taux_abandon__moy_mensuel_12M"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "calendriers_have_taux_abandon__moy_mensuel_12M"
 			        }
 			      ]
 			    },
@@ -5916,7 +6954,7 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "planity_rdv_36_mois_has_mesure_facteur_saisonnalité_semaine__lissé": {
+			    "planity_rdv_36_mois_has_mesure_facteur_saisonnalité_mois": {
 			      "Binding": {
 			        "ConceptualEntity": "planity_rdv_36_mois"
 			      },
@@ -5927,9 +6965,9 @@ cultureInfo fr-FR
 			            "Entity": "planity_rdv_36_mois"
 			          }
 			        },
-			        "mesure.facteur_saisonnalité_semaine__lissé": {
+			        "mesure.facteur_saisonnalité_mois": {
 			          "Target": {
-			            "Entity": "mesure.facteur_saisonnalité_semaine__lissé"
+			            "Entity": "mesure.facteur_saisonnalité_mois"
 			          }
 			        }
 			      },
@@ -5940,16 +6978,49 @@ cultureInfo fr-FR
 			              "Role": "planity_rdv_36_mois"
 			            },
 			            "Object": {
-			              "Role": "mesure.facteur_saisonnalité_semaine__lissé"
+			              "Role": "mesure.facteur_saisonnalité_mois"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "planity_rdv_36_moises_have_facteur_saisonnalité_semaine__lissé"
+			          "ID": "planity_rdv_36_moises_have_facteur_saisonnalité_mois"
 			        }
 			      ]
 			    },
-			    "planity_rdv_36_mois_has_mesure_heures_RDV_calées": {
+			    "calendrier_has_mesure_facteur_saisonnalité_mois": {
+			      "Binding": {
+			        "ConceptualEntity": "Calendrier"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendrier": {
+			          "Target": {
+			            "Entity": "calendrier"
+			          }
+			        },
+			        "mesure.facteur_saisonnalité_mois": {
+			          "Target": {
+			            "Entity": "mesure.facteur_saisonnalité_mois"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendrier"
+			            },
+			            "Object": {
+			              "Role": "mesure.facteur_saisonnalité_mois"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "calendriers_have_facteur_saisonnalité_mois"
+			        }
+			      ]
+			    },
+			    "planity_rdv_36_mois_has_mesure_heures_RDV_planifiés": {
 			      "Binding": {
 			        "ConceptualEntity": "planity_rdv_36_mois"
 			      },
@@ -5960,9 +7031,9 @@ cultureInfo fr-FR
 			            "Entity": "planity_rdv_36_mois"
 			          }
 			        },
-			        "mesure.heures_RDV_calées": {
+			        "mesure.heures_RDV_planifiés": {
 			          "Target": {
-			            "Entity": "mesure.heures_RDV_calées"
+			            "Entity": "mesure.heures_RDV_planifiés"
 			          }
 			        }
 			      },
@@ -5973,12 +7044,12 @@ cultureInfo fr-FR
 			              "Role": "planity_rdv_36_mois"
 			            },
 			            "Object": {
-			              "Role": "mesure.heures_RDV_calées"
+			              "Role": "mesure.heures_RDV_planifiés"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "planity_rdv_36_moises_have_heures_RDV_calées"
+			          "ID": "planity_rdv_36_moises_have_heures_RDV_planifiés"
 			        }
 			      ]
 			    },
@@ -7599,7 +8670,7 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "planity_rdv_36_mois_has_durée_prestation_heure": {
+			    "planity_rdv_36_mois_has_duree_prestation_heure": {
 			      "Binding": {
 			        "ConceptualEntity": "planity_rdv_36_mois"
 			      },
@@ -7610,9 +8681,9 @@ cultureInfo fr-FR
 			            "Entity": "planity_rdv_36_mois"
 			          }
 			        },
-			        "planity_rdv_36_mois.durée_prestation_heure": {
+			        "planity_rdv_36_mois.duree_prestation_heure": {
 			          "Target": {
-			            "Entity": "planity_rdv_36_mois.durée_prestation_heure"
+			            "Entity": "planity_rdv_36_mois.duree_prestation_heure"
 			          }
 			        }
 			      },
@@ -7623,12 +8694,12 @@ cultureInfo fr-FR
 			              "Role": "planity_rdv_36_mois"
 			            },
 			            "Object": {
-			              "Role": "planity_rdv_36_mois.durée_prestation_heure"
+			              "Role": "planity_rdv_36_mois.duree_prestation_heure"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "planity_rdv_36_moises_have_durée_prestation_heures"
+			          "ID": "planity_rdv_36_moises_have_duree_prestation_heures"
 			        }
 			      ]
 			    },

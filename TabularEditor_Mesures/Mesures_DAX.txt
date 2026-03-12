@@ -230,24 +230,34 @@ CALCULATE(
 ```
 Clients actifs projetés =
 
+
 VAR Pivot = [Date Pivot (mois terminé)]
 VAR d = MAX(Calendrier[Date])
-VAR N = MAX(0, DATEDIFF(EOMONTH(Pivot,0), EOMONTH(d,0), MONTH))
+VAR N = MAX(0, DATEDIFF(EOMONTH(Pivot, 0), EOMONTH(d, 0), MONTH))
 
 VAR ActifsNow =
     CALCULATE(
         DISTINCTCOUNT(planity_rdv_36_mois[client_id]),
-        planity_rdv_36_mois[statut] IN {"Réalisé","Honoré"},
-        DATESINPERIOD(Calendrier[Date], Pivot, -1, MONTH)
+        planity_rdv_36_mois[statut] IN {"Réalisé", "Honoré"},
+        REMOVEFILTERS(Calendrier),
+        DATESBETWEEN(
+            Calendrier[Date],
+            EDATE(Pivot, -3),
+            Pivot
+        )
     )
+
 VAR NewAvg = [Nouveaux clients - moy / mois (12M)]
 VAR Churn = [Taux abandon - moy mensuel (12M)]
-VAR Ret = 1 - Churn
+VAR ChurnSafe = MAX(0.001, MIN(Churn, 0.999))
+VAR Ret = 1 - ChurnSafe
+VAR NSafe = MIN(N, 24)
+
 RETURN
 IF(
-    Churn = 0,
-    ActifsNow + NewAvg * N,
-    ActifsNow * POWER(Ret, N) + NewAvg * (1 - POWER(Ret, N)) / Churn
+    ISBLANK(ActifsNow) || ActifsNow = 0,
+    BLANK(),
+    ActifsNow * POWER(Ret, NSafe) + NewAvg * DIVIDE(1 - POWER(Ret, NSafe), ChurnSafe)
 )
 ```
 
@@ -288,12 +298,17 @@ MAXX(ALLSELECTED(Calendrier[Date]), Calendrier[Date])
 ```
 
 
-- 
+- Charnière entre passé et futur. Égale au dernier jour du mois précédent, sauf si aujourd'hui est le dernier jour du mois en cours (auquel cas le mois en cours est considéré comme terminé).
 
 ```
 Date Pivot (mois terminé) =
 
-EOMONTH(TODAY(), -1)
+
+IF(
+    TODAY() = EOMONTH(TODAY(), 0),
+    EOMONTH(TODAY(), 0),
+    EOMONTH(TODAY(), -1)
+)
 ```
 
 
@@ -326,7 +341,7 @@ AVERAGEX(
 ```
 
 
-- Facteur de saisonnalité calculé sur 1 an, sensibilité à la semaine
+- Coefficient multiplicateur calculé sur 24 mois d'historique. Compare les heures réalisées sur un mois donné (ex: tous les juin) à la moyenne mensuelle globale. Un coefficient > 1 indique un mois historiquement plus chargé.
 
 ```
 Facteur saisonnalité (mois) =
@@ -395,15 +410,6 @@ IF(d >= MoisDebut && d <= MoisFin, 1, 0)
 ```
 
 
-- Heures attendues non calées sur la base des 12 derniers mois, en prenant en compte les rdv prévus et la saisonnalité.
-
-```
-Heures attendues (non calées) =
-
-[Clients actifs projetés] * [Heures par client actif (12M)] * [Facteur saisonnalité (mois)]
-```
-
-
 - 
 
 ```
@@ -418,7 +424,7 @@ DIVIDE(
 ```
 
 
-- Total d'heures d'ouverture théoriques du cabinet dans le contexte de filtre (hors congés, jours fériés, fermetures exceptionnelles)
+- Capacité maximale du cabinet : Lun-Ven = 10h/jour, Sam = 5h/jour, Dim = 0h. Ne tient pas compte des congés ou fermetures exceptionnelles.
 
 ```
 Heures ouverture théoriques =
@@ -437,7 +443,7 @@ SUMX(
 ```
 
 
-- Heures de soins réalisées par client actifs au cours des 12 derniers mois
+- Nombre moyen d'heures de soin consommées par client actif sur les 12 derniers mois. Sert à convertir un nombre de clients en volume d'heures.
 
 ```
 Heures par client actif (12M) =
@@ -455,7 +461,7 @@ DIVIDE(Heures, ClientsActifs)
 ```
 
 
-- Heures réellement réalisées dans le passé et, pour le futur, rendez-vous déjà planifiés avec une estimation des heures supplémentaires attendues
+- Agrège les trois sources d'heures selon la période : pour le passé = heures réalisées, pour le futur = heures planifiées + heures attendues non planifiées.
 
 ```
 Heures RDV (réel + calés + prévision) =
@@ -466,23 +472,7 @@ RETURN
 IF(
     d <= Pivot,
     [Heures RDV réalisés],
-    [Heures RDV calées] + [Heures attendues (non calées)]
-)
-```
-
-
-- 
-
-```
-Heures RDV (réel + prévision) =
-
-VAR d = MAX(Calendrier[Date])
-VAR DatePivot = MAXX(ALLSELECTED(Calendrier[Date]), Calendrier[Date])
-RETURN
-IF(
-    d <= DatePivot,
-    [Heures RDV réalisés],
-    [Heures RDV réalisés - 12M] / 7   -- converti en "par jour" si ton axe est quotidien
+    [Heures RDV planifiés] + [Heures RDV attendues (non planifiées)]
 )
 ```
 
@@ -503,18 +493,32 @@ DIVIDE(
 ```
 
 
-- Nombre d'heures de soins effectifs calées à partir de la date pivot
+- Estimation des heures de soins pour les semaines au-delà des RDV déjà calés. Calculée à partir de la moyenne mensuelle historique des 12 derniers mois, ajustée par la saisonnalité et enrichie de la contribution des nouveaux clients. Les heures déjà planifiées sont soustraites pour éviter tout double-compte.
 
 ```
-Heures RDV calées =
+Heures RDV attendues (non planifiées) =
 
-VAR Pivot = [Date Pivot]
+
+VAR Pivot = [Date Pivot (mois terminé)]
+VAR d = MAX(Calendrier[Date])
+
+VAR HeuresMoyMensuelle =
+    CALCULATE(
+        DIVIDE([Heures RDV réalisés], 12),
+        DATESINPERIOD(Calendrier[Date], Pivot, -12, MONTH),
+        ALL(Calendrier)
+    )
+
+VAR NewAvg = [Nouveaux clients - moy / mois (12M)]
+VAR HeuresParClient = [Heures par client actif (12M)]
+VAR N = MAX(0, DATEDIFF(EOMONTH(Pivot, 0), EOMONTH(d, 0), MONTH))
+VAR HeuresNouveauxClients = NewAvg * HeuresParClient * N
+VAR Saison = [Facteur saisonnalité (mois)]
+VAR HeuresProjetees = (HeuresMoyMensuelle + HeuresNouveauxClients) * Saison
+VAR HeuresCalees = [Heures RDV planifiés]
+
 RETURN
-CALCULATE(
-    SUM(planity_rdv_36_mois[duree_prestation_heure]),            -- ou ta mesure d'heures
-    planity_rdv_36_mois[date] > Pivot,
-    planity_rdv_36_mois[statut] IN {"Réalisé","Annulé","No-show"}
-)
+MAX(0, HeuresProjetees - HeuresCalees)
 ```
 
 
@@ -533,7 +537,23 @@ DIVIDE(
 ```
 
 
-- Nombre d'heures de prestation réalisées (hors temps administratif et temps sans client)
+- Heures des RDV futurs déjà inscrits dans Planity (statut = "planifié", date > Date Pivot). Comme Planity ne fournit pas les durées pour les RDV futurs, la durée est estimée via la moyenne historique par type de prestation. Couvre typiquement les 8 semaines à venir.
+
+```
+Heures RDV planifiés =
+
+
+VAR Pivot = [Date Pivot (mois terminé)]
+RETURN
+CALCULATE(
+    DIVIDE(SUM(planity_rdv_36_mois[duree_prestation_min]), 60),
+    planity_rdv_36_mois[date] > Pivot,
+    planity_rdv_36_mois[statut] = "planifié"
+)
+```
+
+
+- Somme des durées (en heures) des RDV dont le statut est "Réalisé" . Exclut les annulations, no-shows et temps administratif.
 
 ```
 Heures RDV réalisés =
@@ -605,7 +625,7 @@ LTV estimée (CA) =
 ```
 
 
-- Tendance du nombre de nouveaux clients sur les 12 derniers mois
+- Moyenne mensuelle du nombre de nouveaux clients sur les 12 derniers mois glissants. Alimente la croissance progressive des heures projetées.
 
 ```
 Nouveaux clients - moy / mois (12M) =
@@ -710,26 +730,41 @@ IF(
 ```
 Taux abandon - moy mensuel (12M) =
 
+
 VAR Pivot = [Date Pivot (mois terminé)]
+
+VAR MoisHisto =
+    CALCULATETABLE(
+        VALUES(Calendrier[Annee mois]),
+        DATESINPERIOD(Calendrier[Date], Pivot, -12, MONTH),
+        ALL(Calendrier)
+    )
+
 RETURN
 AVERAGEX(
-    DATESINPERIOD(Calendrier[Date], Pivot, -12, MONTH),
-    VAR FinM = EOMONTH(MAX(Calendrier[Date]), 0)
-    VAR DebM = DATE(YEAR(FinM), MONTH(FinM), 1)
-    VAR DebM1 = EOMONTH(FinM, 0) + 1
-    VAR FinM1 = EOMONTH(FinM, 1)
-
+    MoisHisto,
+    VAR FinM =
+        CALCULATE(
+            MAX(Calendrier[Date]),
+            ALL(Calendrier),
+            Calendrier[Annee mois] = EARLIER(Calendrier[Annee mois])
+        )
+    VAR DebFenetre = EDATE(FinM, -3)
+    VAR DebSuivant = FinM + 1
+    VAR FinSuivant = EOMONTH(FinM, 1)
     VAR ActifsM =
         CALCULATETABLE(
             VALUES(planity_rdv_36_mois[client_id]),
-            planity_rdv_36_mois[statut] IN {"Réalisé","Honoré"},
-            DATESBETWEEN(Calendrier[Date], DebM, FinM)
+            planity_rdv_36_mois[statut] IN {"Réalisé", "Honoré"},
+            ALL(Calendrier),
+            DATESBETWEEN(Calendrier[Date], DebFenetre, FinM)
         )
     VAR ActifsM1 =
         CALCULATETABLE(
             VALUES(planity_rdv_36_mois[client_id]),
-            planity_rdv_36_mois[statut] IN {"Réalisé","Honoré"},
-            DATESBETWEEN(Calendrier[Date], DebM1, FinM1)
+            planity_rdv_36_mois[statut] IN {"Réalisé", "Honoré"},
+            ALL(Calendrier),
+            DATESBETWEEN(Calendrier[Date], DebSuivant, FinSuivant)
         )
     VAR Retenus = COUNTROWS(INTERSECT(ActifsM, ActifsM1))
     VAR Total = COUNTROWS(ActifsM)
@@ -747,7 +782,7 @@ DIVIDE([Heures RDV annulés], [Heures ouverture théoriques])
 ```
 
 
-- Taux de remplissage par rapport aux heures d'ouverture théoriques
+- Ratio entre les heures de soins effectivement réalisées et la capacité théorique d'ouverture du cabinet. C'est le KPI central de performance passée.
 
 ```
 Taux de remplissage =
@@ -794,6 +829,7 @@ FORMAT(
 
 
 - 
+S'affiche uniquement pour les mois > Date Pivot et ≤ Date Pivot + 6 mois. Retourne le taux de remplissage prévisionnel, sinon BLANK.
 
 ```
 Tx remplissage - Prévision (6M, mensuel) =
@@ -812,7 +848,7 @@ IF(
 ```
 
 
-- 
+- S'affiche uniquement pour les mois ≤ Date Pivot. Retourne le taux de remplissage réel, sinon BLANK.
 
 ```
 Tx remplissage - Réel (mensuel) =

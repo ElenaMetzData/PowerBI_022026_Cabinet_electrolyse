@@ -20,7 +20,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Mesures"
+                      "Entity": "Test - NewAvg"
                     }
                   },
                   "Property": "LTV estimée (12 mois après 1re consult)"
@@ -41,7 +41,7 @@
               "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "Mesures"
+                    "Entity": "Test - NewAvg"
                   }
                 },
                 "Property": "LTV estimée (12 mois après 1re consult)"

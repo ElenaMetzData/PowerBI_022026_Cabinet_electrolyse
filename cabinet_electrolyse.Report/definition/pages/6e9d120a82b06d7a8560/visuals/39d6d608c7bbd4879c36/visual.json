@@ -67,7 +67,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Mesures"
+                      "Entity": "Test - NewAvg"
                     }
                   },
                   "Property": "CA - Réel (mensuel)"
@@ -101,7 +101,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Mesures"
+                      "Entity": "Test - NewAvg"
                     }
                   },
                   "Property": "Marge - Réel (mensuel)"

@@ -12,6 +12,57 @@ CALCULATE(
 ```
 
 
+- 
+
+```
+CA - Prévision (6M, mensuel) =
+
+
+VAR Pivot = [Date Pivot (mois terminé)]
+VAR d = MAX(Calendrier[Date])
+RETURN
+IF(
+    d > Pivot && d <= EOMONTH(Pivot, 6),
+    [CA (réel + calés + prévision)],
+    BLANK()
+)
+```
+
+
+- 
+
+```
+CA - Réel (mensuel) =
+
+
+VAR Pivot = [Date Pivot (mois terminé)]
+VAR d = MAX(Calendrier[Date])
+RETURN
+IF(
+    d <= Pivot,
+    [CA],
+    BLANK()
+)
+```
+
+
+- 
+
+```
+CA (réel + calés + prévision) =
+
+
+VAR Pivot = [Date Pivot (mois terminé)]
+VAR d = MAX(Calendrier[Date])
+RETURN
+IF(
+    d <= Pivot,
+    [CA],
+    [CA RDV planifiés] + [CA RDV attendus (non planifiés)]
+)
+```
+
+
 - Chiffre d'affaire du dernier mois civil terminé
 
 ```
@@ -131,6 +182,74 @@ DIVIDE(
         DISTINCTCOUNT(planity_rdv_36_mois[client_id]),
         planity_rdv_36_mois[statut] IN {"Réalisé","Honoré"}
     )
+)
+```
+
+
+- 
+
+```
+CA par heure réalisée (12M) =
+
+
+VAR Pivot = [Date Pivot (mois terminé)]
+VAR Heures = [Heures RDV réalisés - 12M]
+VAR CA =
+    CALCULATE(
+        [CA],
+        DATESINPERIOD(Calendrier[Date], Pivot, -12, MONTH)
+    )
+RETURN
+DIVIDE(CA, Heures)
+```
+
+
+- 
+
+```
+CA RDV attendus (non planifiés) =
+
+
+VAR Pivot = [Date Pivot (mois terminé)]
+VAR d = MAX(Calendrier[Date])
+
+VAR CAMoyMensuel =
+    CALCULATE(
+        DIVIDE([CA], 12),
+        DATESINPERIOD(Calendrier[Date], Pivot, -12, MONTH),
+        ALL(Calendrier)
+    )
+
+VAR NewAvg = [Nouveaux clients - moy / mois (12M)]
+VAR CAParClient =
+    CALCULATE(
+        [CA moyen mensuel par client (réalisé)],
+        DATESINPERIOD(Calendrier[Date], Pivot, -12, MONTH),
+        ALL(Calendrier)
+    )
+VAR N = MAX(0, DATEDIFF(EOMONTH(Pivot, 0), EOMONTH(d, 0), MONTH))
+VAR CANouveauxClients = NewAvg * CAParClient * N
+VAR Saison = [Facteur saisonnalité (mois)]
+VAR CAProjete = (CAMoyMensuel + CANouveauxClients) * Saison
+VAR CACale = [CA RDV planifiés]
+
+RETURN
+MAX(0, CAProjete - CACale)
+```
+
+
+- 
+
+```
+CA RDV planifiés =
+
+
+VAR Pivot = [Date Pivot (mois terminé)]
+RETURN
+CALCULATE(
+    SUM(planity_rdv_36_mois[montant_recu_eur]),
+    planity_rdv_36_mois[date] > Pivot,
+    planity_rdv_36_mois[statut] = "planifié"
 )
 ```
 
@@ -625,6 +744,44 @@ LTV estimée (CA) =
 ```
 
 
+- 
+
+```
+Marge - Prévision (6M, mensuel) =
+
+
+VAR Pivot = [Date Pivot (mois terminé)]
+VAR d = MAX(Calendrier[Date])
+RETURN
+IF(
+    d = Pivot,
+    [Résultat net],                   -- point de jonction = valeur réelle de février
+    IF(
+        d > Pivot && d <= EOMONTH(Pivot, 6),
+        [CA (réel + calés + prévision)] * [Taux de marge (12M)],
+        BLANK()
+    )
+)
+```
+
+
+- 
+
+```
+Marge - Réel (mensuel) =
+
+
+VAR Pivot = [Date Pivot (mois terminé)]
+VAR d = MAX(Calendrier[Date])
+RETURN
+IF(
+    d <= Pivot,
+    [Résultat net],
+    BLANK()
+)
+```
+
+
 - Moyenne mensuelle du nombre de nouveaux clients sur les 12 derniers mois glissants. Alimente la croissance progressive des heures projetées.
 
 ```
@@ -779,6 +936,28 @@ AVERAGEX(
 Taux annulation =
 
 DIVIDE([Heures RDV annulés], [Heures ouverture théoriques])
+```
+
+
+- 
+
+```
+Taux de marge (12M) =
+
+
+VAR Pivot = [Date Pivot (mois terminé)]
+VAR CA12M =
+    CALCULATE(
+        [CA],
+        DATESINPERIOD(Calendrier[Date], Pivot, -12, MONTH)
+    )
+VAR RN12M =
+    CALCULATE(
+        [Résultat net],
+        DATESINPERIOD(Calendrier[Date], Pivot, -12, MONTH)
+    )
+RETURN
+DIVIDE(RN12M, CA12M)
 ```
 
 

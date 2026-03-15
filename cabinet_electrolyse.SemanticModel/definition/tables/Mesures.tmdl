@@ -229,6 +229,7 @@ table Mesures
 	/// Nombre de nouveau clients enregistrés sur le dernier mois civil terminé
 	measure 'Nouveaux clients du mois' =
 			
+			
 			VAR MoisDebut = DATE(YEAR(MAX(Calendrier[Date])), MONTH(MAX(Calendrier[Date])), 1)
 			VAR MoisFin = EOMONTH(MAX(Calendrier[Date]), 0)
 			RETURN
@@ -239,10 +240,19 @@ table Mesures
 			        VAR FirstVisit =
 			            CALCULATE(
 			                MIN(planity_rdv_36_mois[date]),
-			                planity_rdv_36_mois[statut] IN {"Réalisé","Honoré"},
+			                planity_rdv_36_mois[statut] IN {"Réalisé", "Honoré"},
 			                ALL(Calendrier)
 			            )
-			        RETURN FirstVisit >= MoisDebut && FirstVisit <= MoisFin
+			        VAR FirstType =
+			            CALCULATE(
+			                FIRSTNONBLANK(planity_rdv_36_mois[type_prestation], 1),
+			                planity_rdv_36_mois[date] = FirstVisit,
+			                ALL(Calendrier)
+			            )
+			        RETURN
+			            FirstVisit >= MoisDebut
+			            && FirstVisit <= MoisFin
+			            && FirstType = "Consultation préalable"
 			    )
 			)
 		formatString: 0
@@ -313,32 +323,49 @@ table Mesures
 		lineageTag: 99d56178-0860-40c5-99b2-fc1ae8a64bb5
 
 	/// Durée moyenne de suivi d’un client, en mois, entre son premier et son dernier rendez-vous réalisé, en ignorant les filtres de date.
-	measure 'Durée traitement moyenne (mois) (ignore filtres)' =
+	measure 'Durée traitement moyenne (mois)' =
+			
+			
+			VAR SeuilInactivite = EDATE(TODAY(), -6)
 			
 			VAR T =
 			    ADDCOLUMNS(
-			        VALUES(clients_36_mois[client_id]),
+			        ALL(clients_36_mois[client_id]),
 			        "FirstDate",
 			            CALCULATE(
 			                MIN(planity_rdv_36_mois[date]),
 			                REMOVEFILTERS(Calendrier),
-			                planity_rdv_36_mois[statut] IN {"Réalisé","Honoré"}
+			                FILTER(
+			                    ALL(planity_rdv_36_mois),
+			                    planity_rdv_36_mois[client_id] = EARLIER(clients_36_mois[client_id])
+			                    && planity_rdv_36_mois[statut] IN {"Réalisé", "Honoré"}
+			                )
 			            ),
 			        "LastDate",
 			            CALCULATE(
 			                MAX(planity_rdv_36_mois[date]),
 			                REMOVEFILTERS(Calendrier),
-			                planity_rdv_36_mois[statut] IN {"Réalisé","Honoré"}
+			                FILTER(
+			                    ALL(planity_rdv_36_mois),
+			                    planity_rdv_36_mois[client_id] = EARLIER(clients_36_mois[client_id])
+			                    && planity_rdv_36_mois[statut] IN {"Réalisé", "Honoré"}
+			                )
 			            )
 			    )
+			
 			RETURN
 			AVERAGEX(
-			    FILTER(T, NOT(ISBLANK([FirstDate])) && NOT(ISBLANK([LastDate]))),
+			    FILTER(
+			        T,
+			        NOT(ISBLANK([FirstDate]))
+			            && NOT(ISBLANK([LastDate]))
+			            && [LastDate] < SeuilInactivite
+			            && [FirstDate] <> [LastDate]
+			    ),
 			    DIVIDE(DATEDIFF([FirstDate], [LastDate], DAY), 30.4375)
 			)
+		formatString: 0
 		lineageTag: b62b0dd4-5d52-48a0-97f8-fa1e639eca01
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	/// Dernière date du dernier mois civil terminé
 	measure 'Date Dernier Mois Terminé' = EOMONTH(TODAY(), -1)
@@ -685,7 +712,7 @@ table Mesures
 
 	measure 'LTV estimée (CA)' =
 			
-			[CA moyen mensuel par client (réalisé)] * [Durée traitement moyenne (mois) (ignore filtres)]
+			[CA moyen mensuel par client (réalisé)] * [Durée traitement moyenne (mois)]
 		formatString: #,0.###############\ "€";-#,0.###############\ "€";#,0.###############\ "€"
 		isHidden
 		lineageTag: 30d30c27-7cb8-489b-88e2-02fa224da0a2
@@ -711,9 +738,14 @@ table Mesures
 
 	measure 'Canal d''acquisition - Bouche-à-oreille' =
 			
+			
 			CALCULATE(
-			    DISTINCTCOUNT(clients_36_mois[client_id]),
-			    clients_36_mois[canal_acquisition] = "Bouche-à-oreille"
+			    DISTINCTCOUNT(planity_rdv_36_mois[client_id]),
+			    planity_rdv_36_mois[statut] IN {"Réalisé", "Honoré"},
+			    FILTER(
+			        clients_36_mois,
+			        clients_36_mois[canal_acquisition] = "Bouche-à-oreille"
+			    )
 			)
 		formatString: 0
 		lineageTag: eded56e9-d752-4090-aca2-e2e3853aa072
@@ -1002,6 +1034,254 @@ table Mesures
 		lineageTag: 92d480e0-f7ad-454b-a647-6f13582e6eeb
 
 		annotation PBI_FormatHint = {"currencyCulture":"fr-FR"}
+
+	measure 'Taux remplissage M-2 (ignore filtres)' =
+			
+			
+			VAR EndDate   = EOMONTH(TODAY(), -2)
+			VAR StartDate = DATE(YEAR(EndDate), MONTH(EndDate), 1)
+			RETURN
+			CALCULATE(
+			    [Taux de remplissage],
+			    REMOVEFILTERS(Calendrier),
+			    DATESBETWEEN(Calendrier[Date], StartDate, EndDate)
+			)
+		lineageTag: 13088afb-3570-46ea-a05a-52c8949e001b
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Taux remplissage M-1 N-1 (ignore filtres)' =
+			
+			
+			VAR EndDate   = EOMONTH(TODAY(), -13)
+			VAR StartDate = DATE(YEAR(EndDate), MONTH(EndDate), 1)
+			RETURN
+			CALCULATE(
+			    [Taux de remplissage],
+			    REMOVEFILTERS(Calendrier),
+			    DATESBETWEEN(Calendrier[Date], StartDate, EndDate)
+			)
+		lineageTag: 3a831207-8e1a-48bf-bfa9-3d0cebe781ae
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Var % MoM - Taux remplissage (ignore filtres)' =
+			
+			
+			DIVIDE(
+			    [Taux remplissage M-1 (ignore filtres)] - [Taux remplissage M-2 (ignore filtres)],
+			    [Taux remplissage M-2 (ignore filtres)]
+			)
+		lineageTag: 57858471-7803-4626-92a4-496299fc1f35
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Var % YoY - Taux remplissage (ignore filtres)' =
+			
+			
+			DIVIDE(
+			    [Taux remplissage M-1 (ignore filtres)] - [Taux remplissage M-1 N-1 (ignore filtres)],
+			    [Taux remplissage M-1 N-1 (ignore filtres)]
+			)
+		lineageTag: b8ba3833-b46f-4c68-90f9-469a46244433
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Sous-titre Var MoM - Taux remplissage' =
+			
+			
+			VAR VarMoM = [Var % MoM - Taux remplissage (ignore filtres)]
+			VAR Sign = IF(VarMoM > 0, "+", "")
+			VAR TxtPct =
+			    IF(
+			        ISBLANK(VarMoM),
+			        "—",
+			        Sign & FORMAT(VarMoM, "0%")
+			    )
+			RETURN
+			IF(
+			    ISBLANK(VarMoM),
+			    "Pas de comparaison disponible",
+			    TxtPct & " VS M-1"
+			)
+		lineageTag: 80b9312c-043c-46c7-b392-71a93c662ea0
+
+	measure 'Sous-titre Var YoY - Taux remplissage' =
+			
+			
+			VAR VarYoY = [Var % YoY - Taux remplissage (ignore filtres)]
+			VAR Sign = IF(VarYoY > 0, "+", "")
+			VAR TxtPct =
+			    IF(
+			        ISBLANK(VarYoY),
+			        "—",
+			        Sign & FORMAT(VarYoY, "0%")
+			    )
+			RETURN
+			IF(
+			    ISBLANK(VarYoY),
+			    "Pas de comparaison Y-1 disponible",
+			    TxtPct & " par rapport à Y-1"
+			)
+		lineageTag: d0965d66-32e5-49d2-bff0-300490dc02fc
+
+	measure 'Durée traitement moyenne (mois) (label)' =
+			
+			
+			VAR Duree = [Durée traitement moyenne (mois)]
+			RETURN
+			IF(
+			    ISBLANK(Duree),
+			    BLANK(),
+			    FORMAT(ROUND(Duree, 1), "0.0") & " mois"
+			)
+		lineageTag: 544905e8-6071-4113-afb6-d5f87aefa1ba
+
+	measure 'Part heures par zone' =
+			
+			
+			DIVIDE(
+			    [Heures RDV réalisés],
+			    CALCULATE(
+			        [Heures RDV réalisés],
+			        ALL(planity_rdv_36_mois[zone])
+			    )
+			)
+		lineageTag: 4b226a52-1965-4644-a8fc-a3830fc288d6
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Clients récurrents du mois' =
+			
+			
+			VAR MoisDebut = DATE(YEAR(MAX(Calendrier[Date])), MONTH(MAX(Calendrier[Date])), 1)
+			VAR MoisFin = EOMONTH(MAX(Calendrier[Date]), 0)
+			
+			VAR ClientsDuMois =
+			    CALCULATETABLE(
+			        VALUES(planity_rdv_36_mois[client_id]),
+			        planity_rdv_36_mois[statut] IN {"Réalisé", "Honoré"},
+			        DATESBETWEEN(Calendrier[Date], MoisDebut, MoisFin)
+			    )
+			
+			RETURN
+			CALCULATE(
+			    DISTINCTCOUNT(planity_rdv_36_mois[client_id]),
+			    FILTER(
+			        ClientsDuMois,
+			        VAR PremierRDV =
+			            CALCULATE(
+			                MIN(planity_rdv_36_mois[date]),
+			                planity_rdv_36_mois[statut] IN {"Réalisé", "Honoré"},
+			                ALL(Calendrier)
+			            )
+			        VAR RDVApres =
+			            CALCULATE(
+			                COUNTROWS(planity_rdv_36_mois),
+			                planity_rdv_36_mois[statut] IN {"Réalisé", "Honoré", "planifié"},
+			                planity_rdv_36_mois[date] > MoisFin,
+			                planity_rdv_36_mois[date] <= EDATE(MoisFin, 6),
+			                ALL(Calendrier)
+			            )
+			        RETURN
+			            PremierRDV < MoisDebut    -- non-nouveau
+			            && RDVApres > 0           -- RDV dans les 6 mois suivants
+			    )
+			)
+		formatString: 0
+		lineageTag: 127d3920-a97d-4a37-9dd0-8ae7f8c9e700
+
+	measure 'Fins de traitement du mois' =
+			
+			
+			VAR MoisDebut = DATE(YEAR(MAX(Calendrier[Date])), MONTH(MAX(Calendrier[Date])), 1)
+			VAR MoisFin = EOMONTH(MAX(Calendrier[Date]), 0)
+			
+			VAR ClientsDuMois =
+			    CALCULATETABLE(
+			        VALUES(planity_rdv_36_mois[client_id]),
+			        planity_rdv_36_mois[statut] IN {"Réalisé", "Honoré"},
+			        DATESBETWEEN(Calendrier[Date], MoisDebut, MoisFin)
+			    )
+			
+			RETURN
+			CALCULATE(
+			    DISTINCTCOUNT(planity_rdv_36_mois[client_id]),
+			    FILTER(
+			        ClientsDuMois,
+			        VAR PremierRDV =
+			            CALCULATE(
+			                MIN(planity_rdv_36_mois[date]),
+			                planity_rdv_36_mois[statut] IN {"Réalisé", "Honoré"},
+			                ALL(Calendrier)
+			            )
+			        VAR RDVApres =
+			            CALCULATE(
+			                COUNTROWS(planity_rdv_36_mois),
+			                planity_rdv_36_mois[statut] IN {"Réalisé", "Honoré", "planifié"},
+			                planity_rdv_36_mois[date] > MoisFin,
+			                planity_rdv_36_mois[date] <= EDATE(MoisFin, 6),
+			                ALL(Calendrier)
+			            )
+			        RETURN
+			            PremierRDV < MoisDebut    -- non-nouveau
+			            && RDVApres = 0           -- aucun RDV dans les 6 mois suivants
+			    )
+			)
+		formatString: 0
+		lineageTag: 8b0c4b33-e68d-40dd-b55a-55574d4fbcab
+
+	measure '% CA par zone' =
+			
+			
+			DIVIDE(
+			    [CA],
+			    CALCULATE(
+			        [CA],
+			        ALL(planity_rdv_36_mois[zone])
+			    ),
+			    0
+			)
+		lineageTag: e004cd9c-54cd-4482-bf4d-8813e29e1f03
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '% CA par zone (label)' =
+			
+			
+			VAR Pct =
+			    DIVIDE(
+			        [CA],
+			        CALCULATE(
+			            [CA],
+			            ALL(planity_rdv_36_mois[zone])
+			        )
+			    )
+			RETURN
+			IF(
+			    ISBLANK(Pct),
+			    BLANK(),
+			    FORMAT(Pct, "0%")
+			)
+		lineageTag: 44b4d5ec-3a3c-4257-8311-20da7b7e6733
+
+	measure 'Clients actifs par canal' =
+			
+			
+			CALCULATE(
+			    DISTINCTCOUNT(planity_rdv_36_mois[client_id]),
+			    planity_rdv_36_mois[statut] IN {"Réalisé", "Honoré"},
+			    FILTER(
+			        clients_36_mois,
+			        clients_36_mois[canal_acquisition] = MAX(clients_36_mois[canal_acquisition])
+			    )
+			)
+		formatString: 0
+		lineageTag: 757d18c9-935e-458a-9734-26fdc3819fe3
+
+	measure Aujourd_hui = TODAY()
+		formatString: General Date
+		lineageTag: 87b64d39-5517-44cc-9c53-6e83e1ce04fd
 
 	column Placeholder
 		isHidden

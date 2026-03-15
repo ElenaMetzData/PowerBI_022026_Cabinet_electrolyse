@@ -65,6 +65,21 @@ table clients_36_mois
 
 		annotation SummarizationSetBy = Automatic
 
+	column canal_acquisition_court =
+			
+			
+			SWITCH(
+			    clients_36_mois[canal_acquisition],
+			    "Médecin dermatologue", "Dermato",
+			    "Bouche-à-oreille", "BàO",
+			    "Site internet", "Site web",
+			    clients_36_mois[canal_acquisition]  -- valeur par défaut si non listé
+			)
+		lineageTag: 461997c9-4310-45e0-a400-2487175f422a
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
 	partition clients_36_mois = m
 		mode: import
 		source =

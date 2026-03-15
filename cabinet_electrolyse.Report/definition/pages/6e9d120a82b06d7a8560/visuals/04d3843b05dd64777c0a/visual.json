@@ -3,10 +3,10 @@
   "name": "04d3843b05dd64777c0a",
   "position": {
     "x": 30,
-    "y": 333.33333333333331,
+    "y": 300,
     "z": 0,
-    "height": 365.55555555555554,
-    "width": 836.66666666666663,
+    "height": 365,
+    "width": 832.5,
     "tabOrder": 0
   },
   "visual": {
@@ -48,26 +48,6 @@
                       "Hierarchy": "Annee Hiérarchie"
                     }
                   },
-                  "Level": "Numero du mois"
-                }
-              },
-              "queryRef": "Calendrier.Annee Hiérarchie.Numero du mois",
-              "nativeQueryRef": "Annee Hiérarchie Numero du mois",
-              "active": true
-            },
-            {
-              "field": {
-                "HierarchyLevel": {
-                  "Expression": {
-                    "Hierarchy": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Calendrier"
-                        }
-                      },
-                      "Hierarchy": "Annee Hiérarchie"
-                    }
-                  },
                   "Level": "Nom du mois"
                 }
               },
@@ -87,12 +67,12 @@
                       "Entity": "Mesures"
                     }
                   },
-                  "Property": "Tx remplissage - Réel (mensuel)"
+                  "Property": "Clients récurrents du mois"
                 }
               },
-              "queryRef": "Mesures.Tx remplissage - Réel (mensuel)",
-              "nativeQueryRef": "Taux de remplissage observé",
-              "displayName": "Taux de remplissage observé"
+              "queryRef": "Mesures.Clients récurrents du mois",
+              "nativeQueryRef": "Base clients",
+              "displayName": "Base clients"
             },
             {
               "field": {
@@ -102,12 +82,27 @@
                       "Entity": "Mesures"
                     }
                   },
-                  "Property": "Tx remplissage - Prévision (6M, mensuel)"
+                  "Property": "Nouveaux clients du mois"
                 }
               },
-              "queryRef": "Mesures.Tx remplissage - Prévision (6M, mensuel)",
-              "nativeQueryRef": "Taux remplissage prévu",
-              "displayName": "Taux remplissage prévu"
+              "queryRef": "Mesures.Nouveaux clients du mois",
+              "nativeQueryRef": "Nouveaux clients",
+              "displayName": "Nouveaux clients"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mesures"
+                    }
+                  },
+                  "Property": "Fins de traitement du mois"
+                }
+              },
+              "queryRef": "Mesures.Fins de traitement du mois",
+              "nativeQueryRef": "Fins de traitement",
+              "displayName": "Fins de traitement"
             }
           ]
         }
@@ -128,24 +123,6 @@
                   }
                 },
                 "Level": "Annee"
-              }
-            },
-            "direction": "Ascending"
-          },
-          {
-            "field": {
-              "HierarchyLevel": {
-                "Expression": {
-                  "Hierarchy": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "Calendrier"
-                      }
-                    },
-                    "Hierarchy": "Annee Hiérarchie"
-                  }
-                },
-                "Level": "Numero du mois"
               }
             },
             "direction": "Ascending"
@@ -292,61 +269,146 @@
           }
         },
         "type": "Categorical",
-        "howCreated": "User"
-      },
-      {
-        "name": "93c7c90b174909b00c34",
-        "ordinal": 1,
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Mesures"
-              }
-            },
-            "Property": "Fenêtre Graph Remplissage (12M + 6M)"
-          }
-        },
-        "type": "Advanced",
         "filter": {
           "Version": 2,
           "From": [
             {
-              "Name": "m",
-              "Entity": "Mesures",
+              "Name": "c",
+              "Entity": "Calendrier",
               "Type": 0
             }
           ],
           "Where": [
             {
               "Condition": {
-                "Comparison": {
-                  "ComparisonKind": 0,
-                  "Left": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Source": "m"
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "c"
+                          }
+                        },
+                        "Property": "Annee"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'2025'"
                         }
-                      },
-                      "Property": "Fenêtre Graph Remplissage (12M + 6M)"
+                      }
+                    ],
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'2026'"
+                        }
+                      }
+                    ],
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'2024'"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              },
+              "Annotations": {
+                "filterExpressionMetadata": {
+                  "expressions": [
+                    {
+                      "HierarchyLevel": {
+                        "Expression": {
+                          "Hierarchy": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Entity": "Calendrier"
+                              }
+                            },
+                            "Hierarchy": "Annee Hiérarchie"
+                          }
+                        },
+                        "Level": "Annee"
+                      }
                     }
+                  ],
+                  "decomposedIdentities": {
+                    "values": [
+                      [
+                        {
+                          "0": [
+                            {
+                              "Literal": {
+                                "Value": "'2024'"
+                              }
+                            }
+                          ]
+                        }
+                      ],
+                      [
+                        {
+                          "0": [
+                            {
+                              "Literal": {
+                                "Value": "'2025'"
+                              }
+                            }
+                          ]
+                        }
+                      ],
+                      [
+                        {
+                          "0": [
+                            {
+                              "Literal": {
+                                "Value": "'2026'"
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    ],
+                    "columns": [
+                      {
+                        "value": {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Entity": "Calendrier"
+                              }
+                            },
+                            "Property": "Annee"
+                          }
+                        }
+                      }
+                    ]
                   },
-                  "Right": {
-                    "Literal": {
-                      "Value": "1L"
+                  "valueMap": [
+                    {
+                      "0": "2024"
+                    },
+                    {
+                      "0": "2025"
+                    },
+                    {
+                      "0": "2026"
                     }
-                  }
+                  ]
                 }
               }
             }
           ]
-        },
-        "howCreated": "User"
+        }
       },
       {
         "name": "0f77de900705e7cba0d0",
-        "ordinal": 2,
+        "ordinal": 1,
         "field": {
           "HierarchyLevel": {
             "Expression": {
@@ -362,12 +424,11 @@
             "Level": "Nom du mois"
           }
         },
-        "type": "Categorical",
-        "howCreated": "User"
+        "type": "Categorical"
       },
       {
         "name": "52fde54f7d7c3a8e2b49",
-        "ordinal": 3,
+        "ordinal": 2,
         "field": {
           "HierarchyLevel": {
             "Expression": {
@@ -387,7 +448,8 @@
         "howCreated": "User"
       },
       {
-        "name": "c2bf9d169acedb57be11",
+        "name": "35b9ef0828a0239080ce",
+        "ordinal": 3,
         "field": {
           "Measure": {
             "Expression": {
@@ -395,13 +457,14 @@
                 "Entity": "Mesures"
               }
             },
-            "Property": "Tx remplissage - Réel (mensuel)"
+            "Property": "Nouveaux clients du mois"
           }
         },
         "type": "Advanced"
       },
       {
-        "name": "b3610466da62a2eb8c0c",
+        "name": "664c4a61b1a772d6299c",
+        "ordinal": 4,
         "field": {
           "Measure": {
             "Expression": {
@@ -409,12 +472,28 @@
                 "Entity": "Mesures"
               }
             },
-            "Property": "Tx remplissage - Prévision (6M, mensuel)"
+            "Property": "Fins de traitement du mois"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "4a7f45503776d8eed212",
+        "ordinal": 5,
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mesures"
+              }
+            },
+            "Property": "Clients récurrents du mois"
           }
         },
         "type": "Advanced"
       }
     ],
     "filterSortOrder": "Custom"
-  }
+  },
+  "isHidden": true
 }

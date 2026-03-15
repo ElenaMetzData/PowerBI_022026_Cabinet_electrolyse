@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
-  "name": "7f2fa642ab36d8295246",
+  "name": "39d6d608c7bbd4879c36",
   "position": {
-    "x": 31.111111111111111,
-    "y": 322.22222222222223,
-    "z": 1000,
-    "height": 387.77777777777777,
-    "width": 804.44444444444446,
-    "tabOrder": 1000
+    "x": 12.5,
+    "y": 211.25,
+    "z": 7000,
+    "height": 496.25,
+    "width": 888.75,
+    "tabOrder": 7000
   },
   "visual": {
     "visualType": "lineStackedColumnComboChart",
@@ -48,26 +48,6 @@
                       "Hierarchy": "Annee Hiérarchie"
                     }
                   },
-                  "Level": "Numero du mois"
-                }
-              },
-              "queryRef": "Calendrier.Annee Hiérarchie.Numero du mois",
-              "nativeQueryRef": "Annee Hiérarchie Numero du mois",
-              "active": true
-            },
-            {
-              "field": {
-                "HierarchyLevel": {
-                  "Expression": {
-                    "Hierarchy": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Calendrier"
-                        }
-                      },
-                      "Hierarchy": "Annee Hiérarchie"
-                    }
-                  },
                   "Level": "Nom du mois"
                 }
               },
@@ -76,6 +56,9 @@
               "active": true
             }
           ]
+        },
+        "Tooltips": {
+          "projections": []
         },
         "Y": {
           "projections": [
@@ -145,65 +128,6 @@
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "HierarchyLevel": {
-                "Expression": {
-                  "Hierarchy": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "Calendrier"
-                      }
-                    },
-                    "Hierarchy": "Annee Hiérarchie"
-                  }
-                },
-                "Level": "Annee"
-              }
-            },
-            "direction": "Ascending"
-          },
-          {
-            "field": {
-              "HierarchyLevel": {
-                "Expression": {
-                  "Hierarchy": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "Calendrier"
-                      }
-                    },
-                    "Hierarchy": "Annee Hiérarchie"
-                  }
-                },
-                "Level": "Numero du mois"
-              }
-            },
-            "direction": "Ascending"
-          },
-          {
-            "field": {
-              "HierarchyLevel": {
-                "Expression": {
-                  "Hierarchy": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "Calendrier"
-                      }
-                    },
-                    "Hierarchy": "Annee Hiérarchie"
-                  }
-                },
-                "Level": "Nom du mois"
-              }
-            },
-            "direction": "Ascending"
-          }
-        ],
-        "isDefaultSort": true
       }
     },
     "objects": {
@@ -286,6 +210,125 @@
             }
           }
         }
+      ],
+      "lineStyles": [
+        {
+          "properties": {
+            "lineChartType": {
+              "expr": {
+                "Literal": {
+                  "Value": "'smooth'"
+                }
+              }
+            },
+            "interpolationSmooth": {
+              "expr": {
+                "Literal": {
+                  "Value": "'cardinal'"
+                }
+              }
+            },
+            "strokeShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "lineStyle": {
+              "expr": {
+                "Literal": {
+                  "Value": "'dashed'"
+                }
+              }
+            },
+            "strokeAutoScale": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "strokeWidth": {
+              "expr": {
+                "Literal": {
+                  "Value": "4D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mesures.Marge - Prévision (6M, mensuel)"
+          }
+        },
+        {
+          "properties": {
+            "lineChartType": {
+              "expr": {
+                "Literal": {
+                  "Value": "'smooth'"
+                }
+              }
+            },
+            "interpolationSmooth": {
+              "expr": {
+                "Literal": {
+                  "Value": "'cardinal'"
+                }
+              }
+            },
+            "strokeWidth": {
+              "expr": {
+                "Literal": {
+                  "Value": "4D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mesures.Marge - Réel (mensuel)"
+          }
+        }
+      ],
+      "dataPoint": [
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 9,
+                      "Percent": 0.6
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mesures.Marge - Réel (mensuel)"
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mesures.Marge - Prévision (6M, mensuel)"
+          }
+        }
       ]
     },
     "visualContainerObjects": {
@@ -302,7 +345,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "''"
+                  "Value": "'Turnover bar chart'"
                 }
               }
             }
@@ -468,100 +511,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "e578c8af509498d633c0",
-        "field": {
-          "HierarchyLevel": {
-            "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Calendrier"
-                  }
-                },
-                "Hierarchy": "Annee Hiérarchie"
-              }
-            },
-            "Level": "Numero du mois"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "2194792baaa24c9d3629",
-        "field": {
-          "HierarchyLevel": {
-            "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Calendrier"
-                  }
-                },
-                "Hierarchy": "Annee Hiérarchie"
-              }
-            },
-            "Level": "Nom du mois"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "8f9b18bbd648e3c48b60",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Mesures"
-              }
-            },
-            "Property": "CA - Réel (mensuel)"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "0ecb37e00e1887ee023a",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Mesures"
-              }
-            },
-            "Property": "CA - Prévision (6M, mensuel)"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "67d071e9a350119260e5",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Mesures"
-              }
-            },
-            "Property": "Marge - Réel (mensuel)"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "eb503afa07780e603049",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Mesures"
-              }
-            },
-            "Property": "Marge - Prévision (6M, mensuel)"
-          }
-        },
-        "type": "Advanced"
       },
       {
         "name": "1644c2296b53b9605277",

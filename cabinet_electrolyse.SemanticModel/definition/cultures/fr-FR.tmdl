@@ -3152,6 +3152,16 @@ cultureInfo fr-FR
 			          "nouveaux clients du mois": {
 			            "State": "Generated"
 			          }
+			        },
+			        {
+			          "Nouveaux clients": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -3231,22 +3241,22 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "mesure.durée_traitement_moyenne_mois_ignore_filtres": {
+			    "mesure.durée_traitement_moyenne_mois": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Mesures",
-			          "ConceptualProperty": "Durée traitement moyenne (mois) (ignore filtres)"
+			          "ConceptualProperty": "Durée traitement moyenne (mois)"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "durée traitement moyenne (mois) (ignore filtres)": {
+			          "durée traitement moyenne (mois)": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "durée traitement moyenne (mois)": {
+			          "durée traitement moyenne": {
 			            "State": "Generated",
 			            "Weight": 0.75
 			          }
@@ -4119,16 +4129,6 @@ cultureInfo fr-FR
 			            },
 			            "Weight": 0.605
 			          }
-			        },
-			        {
-			          "Site web": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
 			        }
 			      ]
 			    },
@@ -4150,16 +4150,6 @@ cultureInfo fr-FR
 			          "canal d'acquisition bouche à oreille": {
 			            "State": "Generated",
 			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "Bouche-à-oreille": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -4183,16 +4173,6 @@ cultureInfo fr-FR
 			            "State": "Generated",
 			            "Weight": 0.97
 			          }
-			        },
-			        {
-			          "Insta": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
 			        }
 			      ]
 			    },
@@ -4215,16 +4195,6 @@ cultureInfo fr-FR
 			            "State": "Generated",
 			            "Weight": 0.97
 			          }
-			        },
-			        {
-			          "Dermato": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
 			        }
 			      ]
 			    },
@@ -4246,16 +4216,6 @@ cultureInfo fr-FR
 			          "canal d'acquisition planity": {
 			            "State": "Generated",
 			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "Planity": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -4374,16 +4334,6 @@ cultureInfo fr-FR
 			            "State": "Generated",
 			            "Weight": 0.97
 			          }
-			        },
-			        {
-			          "Taux de remplissage observé": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
 			        }
 			      ]
 			    },
@@ -4411,16 +4361,6 @@ cultureInfo fr-FR
 			          "tx remplissage prévision (6M, mensuel)": {
 			            "State": "Generated",
 			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "Taux remplissage prévu": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -4744,6 +4684,639 @@ cultureInfo fr-FR
 			        {
 			          "numero de la semaine": {
 			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "clients_36_mois.canal_acquisition_court": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "clients_36_mois",
+			          "ConceptualProperty": "canal_acquisition_court"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "canal acquisition court": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "canal_acquisition_court": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "court": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "acquisition court": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "canal acquisition law court": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "acquisition law court": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "canal acquisition courtyard": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "canal acquisition piazza": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "canal acquisition enclosure": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "law court": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "acquisition courtyard": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "acquisition piazza": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "acquisition enclosure": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "canal acquisition square": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        }
+			      ]
+			    },
+			    "mesure.taux_remplissage_M2_ignore_filtres": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mesures",
+			          "ConceptualProperty": "Taux remplissage M-2 (ignore filtres)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "taux remplissage M-2 (ignore filtres)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "taux remplissage M-2": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "mesure.taux_remplissage_M1_N1_ignore_filtres": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mesures",
+			          "ConceptualProperty": "Taux remplissage M-1 N-1 (ignore filtres)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "taux remplissage M-1 N-1 (ignore filtres)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "taux remplissage M-1 N-1": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "mesure.var__MoM__taux_remplissage_ignore_filtres": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mesures",
+			          "ConceptualProperty": "Var % MoM - Taux remplissage (ignore filtres)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "var % MoM - taux remplissage (ignore filtres)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "var % MoM - taux remplissage": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "var % MoM taux remplissage (ignore filtres)": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "mesure.var__YoY__taux_remplissage_ignore_filtres": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mesures",
+			          "ConceptualProperty": "Var % YoY - Taux remplissage (ignore filtres)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "var % YoY - taux remplissage (ignore filtres)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "var % YoY - taux remplissage": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "var % YoY taux remplissage (ignore filtres)": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "mesure.soustitre_var_MoM__taux_remplissage": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mesures",
+			          "ConceptualProperty": "Sous-titre Var MoM - Taux remplissage"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "sous-titre var MoM - taux remplissage": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "sous titre var MoM taux remplissage": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "mesure.soustitre_var_YoY__taux_remplissage": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mesures",
+			          "ConceptualProperty": "Sous-titre Var YoY - Taux remplissage"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "sous-titre var YoY - taux remplissage": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "sous titre var YoY taux remplissage": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "mesure.durée_traitement_moyenne_mois_label": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mesures",
+			          "ConceptualProperty": "Durée traitement moyenne (mois) (label)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "durée traitement moyenne (mois) (label)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "durée traitement moyenne (mois)": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "mesure.part_heures_par_zone": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mesures",
+			          "ConceptualProperty": "Part heures par zone"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "part heures par zone": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "part heure par region": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "part heure par precinct": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "part heure par district": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "part heure par sector": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "part heure par neighborhood": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "part heure par area": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        }
+			      ]
+			    },
+			    "mesure.clients_récurrents_du_mois": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mesures",
+			          "ConceptualProperty": "Clients récurrents du mois"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "clients récurrents du mois": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Base clients": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "mesure.fins_de_traitement_du_mois": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mesures",
+			          "ConceptualProperty": "Fins de traitement du mois"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fins de traitement du mois": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Fins de traitement": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "mesure.CA_par_zone": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mesures",
+			          "ConceptualProperty": "% CA par zone"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% CA par zone": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "percentage ca par zone": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "pct ca par zone": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "% ca par region": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "% ca par precinct": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "% ca par district": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "% ca par sector": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "% ca par neighborhood": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "% ca par area": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        }
+			      ]
+			    },
+			    "mesure.CA_par_zone_label": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mesures",
+			          "ConceptualProperty": "% CA par zone (label)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% CA par zone (label)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "% CA par zone": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "mesure.clients_actifs_par_canal": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mesures",
+			          "ConceptualProperty": "Clients actifs par canal"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "clients actifs par canal": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "client actif par waterway": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "client actif par seaway": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "client actif par channel": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "client actif par vessel": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        },
+			        {
+			          "client actif par duct": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.474
+			          }
+			        },
+			        {
+			          "client actif par tube": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.474
+			          }
+			        },
+			        {
+			          "client actif par passage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.474
 			          }
 			        }
 			      ]
@@ -5832,6 +6405,666 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
+			    "planity_rdv_36_mois_has_mesure_clients_actifs_par_canal": {
+			      "Binding": {
+			        "ConceptualEntity": "planity_rdv_36_mois"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "planity_rdv_36_mois": {
+			          "Target": {
+			            "Entity": "planity_rdv_36_mois"
+			          }
+			        },
+			        "mesure.clients_actifs_par_canal": {
+			          "Target": {
+			            "Entity": "mesure.clients_actifs_par_canal"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "planity_rdv_36_mois"
+			            },
+			            "Object": {
+			              "Role": "mesure.clients_actifs_par_canal"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "planity_rdv_36_moises_have_clients_actifs_par_canal"
+			        }
+			      ]
+			    },
+			    "planity_rdv_36_mois_has_mesure_CA_par_zone_label": {
+			      "Binding": {
+			        "ConceptualEntity": "planity_rdv_36_mois"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "planity_rdv_36_mois": {
+			          "Target": {
+			            "Entity": "planity_rdv_36_mois"
+			          }
+			        },
+			        "mesure.CA_par_zone_label": {
+			          "Target": {
+			            "Entity": "mesure.CA_par_zone_label"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "planity_rdv_36_mois"
+			            },
+			            "Object": {
+			              "Role": "mesure.CA_par_zone_label"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "planity_rdv_36_moises_have__CA_par_zone_label"
+			        }
+			      ]
+			    },
+			    "planity_rdv_36_mois_has_mesure_CA_par_zone": {
+			      "Binding": {
+			        "ConceptualEntity": "planity_rdv_36_mois"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "planity_rdv_36_mois": {
+			          "Target": {
+			            "Entity": "planity_rdv_36_mois"
+			          }
+			        },
+			        "mesure.CA_par_zone": {
+			          "Target": {
+			            "Entity": "mesure.CA_par_zone"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "planity_rdv_36_mois"
+			            },
+			            "Object": {
+			              "Role": "mesure.CA_par_zone"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "planity_rdv_36_moises_have__CA_par_zone"
+			        }
+			      ]
+			    },
+			    "planity_rdv_36_mois_has_mesure_fins_de_traitement_du_mois": {
+			      "Binding": {
+			        "ConceptualEntity": "planity_rdv_36_mois"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "planity_rdv_36_mois": {
+			          "Target": {
+			            "Entity": "planity_rdv_36_mois"
+			          }
+			        },
+			        "mesure.fins_de_traitement_du_mois": {
+			          "Target": {
+			            "Entity": "mesure.fins_de_traitement_du_mois"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "planity_rdv_36_mois"
+			            },
+			            "Object": {
+			              "Role": "mesure.fins_de_traitement_du_mois"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "planity_rdv_36_moises_have_fins_de_traitement_du_mois"
+			        }
+			      ]
+			    },
+			    "planity_rdv_36_mois_has_mesure_clients_récurrents_du_mois": {
+			      "Binding": {
+			        "ConceptualEntity": "planity_rdv_36_mois"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "planity_rdv_36_mois": {
+			          "Target": {
+			            "Entity": "planity_rdv_36_mois"
+			          }
+			        },
+			        "mesure.clients_récurrents_du_mois": {
+			          "Target": {
+			            "Entity": "mesure.clients_récurrents_du_mois"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "planity_rdv_36_mois"
+			            },
+			            "Object": {
+			              "Role": "mesure.clients_récurrents_du_mois"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "planity_rdv_36_moises_have_clients_récurrents_du_mois"
+			        }
+			      ]
+			    },
+			    "planity_rdv_36_mois_has_mesure_part_heures_par_zone": {
+			      "Binding": {
+			        "ConceptualEntity": "planity_rdv_36_mois"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "planity_rdv_36_mois": {
+			          "Target": {
+			            "Entity": "planity_rdv_36_mois"
+			          }
+			        },
+			        "mesure.part_heures_par_zone": {
+			          "Target": {
+			            "Entity": "mesure.part_heures_par_zone"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "planity_rdv_36_mois"
+			            },
+			            "Object": {
+			              "Role": "mesure.part_heures_par_zone"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "planity_rdv_36_moises_have_part_heures_par_zone"
+			        }
+			      ]
+			    },
+			    "mesure_has_durée_traitement_moyenne_mois_label": {
+			      "Binding": {
+			        "ConceptualEntity": "Mesures"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mesure": {
+			          "Target": {
+			            "Entity": "mesure"
+			          }
+			        },
+			        "mesure.durée_traitement_moyenne_mois_label": {
+			          "Target": {
+			            "Entity": "mesure.durée_traitement_moyenne_mois_label"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mesure"
+			            },
+			            "Object": {
+			              "Role": "mesure.durée_traitement_moyenne_mois_label"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mesures_have_durée_traitement_moyenne_mois_label"
+			        }
+			      ]
+			    },
+			    "planity_rdv_36_mois_has_mesure_soustitre_var_YoY__taux_remplissage": {
+			      "Binding": {
+			        "ConceptualEntity": "planity_rdv_36_mois"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "planity_rdv_36_mois": {
+			          "Target": {
+			            "Entity": "planity_rdv_36_mois"
+			          }
+			        },
+			        "mesure.soustitre_var_YoY__taux_remplissage": {
+			          "Target": {
+			            "Entity": "mesure.soustitre_var_YoY__taux_remplissage"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "planity_rdv_36_mois"
+			            },
+			            "Object": {
+			              "Role": "mesure.soustitre_var_YoY__taux_remplissage"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "planity_rdv_36_moises_have_soustitre_var_YoY__taux_remplissage"
+			        }
+			      ]
+			    },
+			    "calendrier_has_mesure_soustitre_var_YoY__taux_remplissage": {
+			      "Binding": {
+			        "ConceptualEntity": "Calendrier"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendrier": {
+			          "Target": {
+			            "Entity": "calendrier"
+			          }
+			        },
+			        "mesure.soustitre_var_YoY__taux_remplissage": {
+			          "Target": {
+			            "Entity": "mesure.soustitre_var_YoY__taux_remplissage"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendrier"
+			            },
+			            "Object": {
+			              "Role": "mesure.soustitre_var_YoY__taux_remplissage"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "calendriers_have_soustitre_var_YoY__taux_remplissage"
+			        }
+			      ]
+			    },
+			    "planity_rdv_36_mois_has_mesure_soustitre_var_MoM__taux_remplissage": {
+			      "Binding": {
+			        "ConceptualEntity": "planity_rdv_36_mois"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "planity_rdv_36_mois": {
+			          "Target": {
+			            "Entity": "planity_rdv_36_mois"
+			          }
+			        },
+			        "mesure.soustitre_var_MoM__taux_remplissage": {
+			          "Target": {
+			            "Entity": "mesure.soustitre_var_MoM__taux_remplissage"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "planity_rdv_36_mois"
+			            },
+			            "Object": {
+			              "Role": "mesure.soustitre_var_MoM__taux_remplissage"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "planity_rdv_36_moises_have_soustitre_var_MoM__taux_remplissage"
+			        }
+			      ]
+			    },
+			    "calendrier_has_mesure_soustitre_var_MoM__taux_remplissage": {
+			      "Binding": {
+			        "ConceptualEntity": "Calendrier"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendrier": {
+			          "Target": {
+			            "Entity": "calendrier"
+			          }
+			        },
+			        "mesure.soustitre_var_MoM__taux_remplissage": {
+			          "Target": {
+			            "Entity": "mesure.soustitre_var_MoM__taux_remplissage"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendrier"
+			            },
+			            "Object": {
+			              "Role": "mesure.soustitre_var_MoM__taux_remplissage"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "calendriers_have_soustitre_var_MoM__taux_remplissage"
+			        }
+			      ]
+			    },
+			    "planity_rdv_36_mois_has_mesure_var__YoY__taux_remplissage_ignore_filtres": {
+			      "Binding": {
+			        "ConceptualEntity": "planity_rdv_36_mois"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "planity_rdv_36_mois": {
+			          "Target": {
+			            "Entity": "planity_rdv_36_mois"
+			          }
+			        },
+			        "mesure.var__YoY__taux_remplissage_ignore_filtres": {
+			          "Target": {
+			            "Entity": "mesure.var__YoY__taux_remplissage_ignore_filtres"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "planity_rdv_36_mois"
+			            },
+			            "Object": {
+			              "Role": "mesure.var__YoY__taux_remplissage_ignore_filtres"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "planity_rdv_36_moises_have_var__YoY__taux_remplissage_ignore_filtres"
+			        }
+			      ]
+			    },
+			    "calendrier_has_mesure_var__YoY__taux_remplissage_ignore_filtres": {
+			      "Binding": {
+			        "ConceptualEntity": "Calendrier"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendrier": {
+			          "Target": {
+			            "Entity": "calendrier"
+			          }
+			        },
+			        "mesure.var__YoY__taux_remplissage_ignore_filtres": {
+			          "Target": {
+			            "Entity": "mesure.var__YoY__taux_remplissage_ignore_filtres"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendrier"
+			            },
+			            "Object": {
+			              "Role": "mesure.var__YoY__taux_remplissage_ignore_filtres"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "calendriers_have_var__YoY__taux_remplissage_ignore_filtres"
+			        }
+			      ]
+			    },
+			    "planity_rdv_36_mois_has_mesure_var__MoM__taux_remplissage_ignore_filtres": {
+			      "Binding": {
+			        "ConceptualEntity": "planity_rdv_36_mois"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "planity_rdv_36_mois": {
+			          "Target": {
+			            "Entity": "planity_rdv_36_mois"
+			          }
+			        },
+			        "mesure.var__MoM__taux_remplissage_ignore_filtres": {
+			          "Target": {
+			            "Entity": "mesure.var__MoM__taux_remplissage_ignore_filtres"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "planity_rdv_36_mois"
+			            },
+			            "Object": {
+			              "Role": "mesure.var__MoM__taux_remplissage_ignore_filtres"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "planity_rdv_36_moises_have_var__MoM__taux_remplissage_ignore_filtres"
+			        }
+			      ]
+			    },
+			    "calendrier_has_mesure_var__MoM__taux_remplissage_ignore_filtres": {
+			      "Binding": {
+			        "ConceptualEntity": "Calendrier"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendrier": {
+			          "Target": {
+			            "Entity": "calendrier"
+			          }
+			        },
+			        "mesure.var__MoM__taux_remplissage_ignore_filtres": {
+			          "Target": {
+			            "Entity": "mesure.var__MoM__taux_remplissage_ignore_filtres"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendrier"
+			            },
+			            "Object": {
+			              "Role": "mesure.var__MoM__taux_remplissage_ignore_filtres"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "calendriers_have_var__MoM__taux_remplissage_ignore_filtres"
+			        }
+			      ]
+			    },
+			    "planity_rdv_36_mois_has_mesure_taux_remplissage_M1_N1_ignore_filtres": {
+			      "Binding": {
+			        "ConceptualEntity": "planity_rdv_36_mois"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "planity_rdv_36_mois": {
+			          "Target": {
+			            "Entity": "planity_rdv_36_mois"
+			          }
+			        },
+			        "mesure.taux_remplissage_M1_N1_ignore_filtres": {
+			          "Target": {
+			            "Entity": "mesure.taux_remplissage_M1_N1_ignore_filtres"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "planity_rdv_36_mois"
+			            },
+			            "Object": {
+			              "Role": "mesure.taux_remplissage_M1_N1_ignore_filtres"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "planity_rdv_36_moises_have_taux_remplissage_M1_N1_ignore_filtres"
+			        }
+			      ]
+			    },
+			    "calendrier_has_mesure_taux_remplissage_M1_N1_ignore_filtres": {
+			      "Binding": {
+			        "ConceptualEntity": "Calendrier"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendrier": {
+			          "Target": {
+			            "Entity": "calendrier"
+			          }
+			        },
+			        "mesure.taux_remplissage_M1_N1_ignore_filtres": {
+			          "Target": {
+			            "Entity": "mesure.taux_remplissage_M1_N1_ignore_filtres"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendrier"
+			            },
+			            "Object": {
+			              "Role": "mesure.taux_remplissage_M1_N1_ignore_filtres"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "calendriers_have_taux_remplissage_M1_N1_ignore_filtres"
+			        }
+			      ]
+			    },
+			    "planity_rdv_36_mois_has_mesure_taux_remplissage_M2_ignore_filtres": {
+			      "Binding": {
+			        "ConceptualEntity": "planity_rdv_36_mois"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "planity_rdv_36_mois": {
+			          "Target": {
+			            "Entity": "planity_rdv_36_mois"
+			          }
+			        },
+			        "mesure.taux_remplissage_M2_ignore_filtres": {
+			          "Target": {
+			            "Entity": "mesure.taux_remplissage_M2_ignore_filtres"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "planity_rdv_36_mois"
+			            },
+			            "Object": {
+			              "Role": "mesure.taux_remplissage_M2_ignore_filtres"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "planity_rdv_36_moises_have_taux_remplissage_M2_ignore_filtres"
+			        }
+			      ]
+			    },
+			    "calendrier_has_mesure_taux_remplissage_M2_ignore_filtres": {
+			      "Binding": {
+			        "ConceptualEntity": "Calendrier"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendrier": {
+			          "Target": {
+			            "Entity": "calendrier"
+			          }
+			        },
+			        "mesure.taux_remplissage_M2_ignore_filtres": {
+			          "Target": {
+			            "Entity": "mesure.taux_remplissage_M2_ignore_filtres"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendrier"
+			            },
+			            "Object": {
+			              "Role": "mesure.taux_remplissage_M2_ignore_filtres"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "calendriers_have_taux_remplissage_M2_ignore_filtres"
+			        }
+			      ]
+			    },
+			    "clients_36_mois_has_canal_acquisition_court": {
+			      "Binding": {
+			        "ConceptualEntity": "clients_36_mois"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "clients_36_mois": {
+			          "Target": {
+			            "Entity": "clients_36_mois"
+			          }
+			        },
+			        "clients_36_mois.canal_acquisition_court": {
+			          "Target": {
+			            "Entity": "clients_36_mois.canal_acquisition_court"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "clients_36_mois"
+			            },
+			            "Object": {
+			              "Role": "clients_36_mois.canal_acquisition_court"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "clients_36_moises_have_canal_acquisition_courts"
+			        }
+			      ]
+			    },
 			    "calendrier_has_numero_de_la_semaine": {
 			      "Binding": {
 			        "ConceptualEntity": "Calendrier"
@@ -6591,15 +7824,15 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "clients_36_mois_has_mesure_canal_dacquisition__boucheàoreille": {
+			    "planity_rdv_36_mois_has_mesure_canal_dacquisition__boucheàoreille": {
 			      "Binding": {
-			        "ConceptualEntity": "clients_36_mois"
+			        "ConceptualEntity": "planity_rdv_36_mois"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "clients_36_mois": {
+			        "planity_rdv_36_mois": {
 			          "Target": {
-			            "Entity": "clients_36_mois"
+			            "Entity": "planity_rdv_36_mois"
 			          }
 			        },
 			        "mesure.canal_dacquisition__boucheàoreille": {
@@ -6612,7 +7845,7 @@ cultureInfo fr-FR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "clients_36_mois"
+			              "Role": "planity_rdv_36_mois"
 			            },
 			            "Object": {
 			              "Role": "mesure.canal_dacquisition__boucheàoreille"
@@ -6620,7 +7853,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "clients_36_moises_have_canal_dacquisition__boucheàoreille"
+			          "ID": "planity_rdv_36_moises_have_canal_dacquisition__boucheàoreille"
 			        }
 			      ]
 			    },
@@ -7416,7 +8649,7 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "mesure_has_durée_traitement_moyenne_mois_ignore_filtres": {
+			    "mesure_has_durée_traitement_moyenne_mois": {
 			      "Binding": {
 			        "ConceptualEntity": "Mesures"
 			      },
@@ -7427,9 +8660,9 @@ cultureInfo fr-FR
 			            "Entity": "mesure"
 			          }
 			        },
-			        "mesure.durée_traitement_moyenne_mois_ignore_filtres": {
+			        "mesure.durée_traitement_moyenne_mois": {
 			          "Target": {
-			            "Entity": "mesure.durée_traitement_moyenne_mois_ignore_filtres"
+			            "Entity": "mesure.durée_traitement_moyenne_mois"
 			          }
 			        }
 			      },
@@ -7440,12 +8673,12 @@ cultureInfo fr-FR
 			              "Role": "mesure"
 			            },
 			            "Object": {
-			              "Role": "mesure.durée_traitement_moyenne_mois_ignore_filtres"
+			              "Role": "mesure.durée_traitement_moyenne_mois"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mesures_have_durée_traitement_moyenne_mois_ignore_filtres"
+			          "ID": "mesures_have_durée_traitement_moyenne_mois"
 			        }
 			      ]
 			    },

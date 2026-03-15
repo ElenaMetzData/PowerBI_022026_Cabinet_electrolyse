@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
-  "name": "bebbafc0c55c870026ae",
+  "name": "0b6d89e0dcc000109aad",
   "position": {
-    "x": 318,
-    "y": 64,
-    "z": 2000,
-    "height": 130,
-    "width": 217,
-    "tabOrder": 6000
+    "x": 518.88888888888891,
+    "y": 20,
+    "z": 8000,
+    "height": 163.33333333333334,
+    "width": 217.77777777777777,
+    "tabOrder": 11000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -69,6 +69,38 @@
             "id": "default"
           }
         }
+      ],
+      "smallMultiplesBorder": [
+        {
+          "properties": {
+            "gridlineShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ],
+      "outline": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
       ]
     },
     "visualContainerObjects": {
@@ -91,26 +123,28 @@
             }
           }
         }
+      ],
+      "subTitle": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'sur 3 ans'"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "563441fb58435e51d514",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Mesures"
-              }
-            },
-            "Property": "LTV estimée (12 mois après 1re consult)"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

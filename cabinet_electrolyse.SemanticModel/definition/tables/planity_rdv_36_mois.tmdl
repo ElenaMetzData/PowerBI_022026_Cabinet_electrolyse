@@ -10,11 +10,12 @@ table planity_rdv_36_mois
 		annotation SummarizationSetBy = Automatic
 
 	column client_id
-		dataType: int64
-		formatString: 0
+		dataType: string
 		lineageTag: cd152674-6219-43ea-8d2b-90cbd8755458
 		summarizeBy: none
 		sourceColumn: client_id
+
+		changedProperty = DataType
 
 		annotation SummarizationSetBy = Automatic
 

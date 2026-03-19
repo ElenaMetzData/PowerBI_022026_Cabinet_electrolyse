@@ -24,3 +24,8 @@ relationship b24a07b0-644c-5ce5-8ecd-1f94e8f14461
 	fromColumn: google_analytics_36_mois.date
 	toColumn: Calendrier.Date
 
+relationship b097090e-d72a-41fa-bdf2-ced9a071ed92
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Calendrier.StartOfMonth
+	toColumn: LocalDateTable_7a53ce29-6223-48de-954f-1b6ab4f02ad7.Date
+

@@ -1925,6 +1925,16 @@ cultureInfo fr-FR
 			            },
 			            "Weight": 0.476
 			          }
+			        },
+			        {
+			          "Zone traitée": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -2227,6 +2237,16 @@ cultureInfo fr-FR
 			        {
 			          "ca": {
 			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Chiffre d'affaire": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -5320,9 +5340,1288 @@ cultureInfo fr-FR
 			          }
 			        }
 			      ]
+			    },
+			    "mesure.aujourd_hui": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mesures",
+			          "ConceptualProperty": "Aujourd_hui"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "aujourd hui": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Aujourd_hui": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "mesure.filtre_18_mois": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mesures",
+			          "ConceptualProperty": "Filtre 18 mois"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "filtre 18 mois": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "mesure.fin_dernier_mois_reel": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mesures",
+			          "ConceptualProperty": "FinDernierMoisReel"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fin dernier mois reel": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "FinDernierMoisReel": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "fin dernier mois bobbin": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "fin dernier mois roller": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "fin dernier mois winder": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "fin dernier mois roll": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "fin dernier mois spool": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "fin dernier mois cylinder": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "calendrier.column": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Calendrier",
+			          "ConceptualProperty": "Column"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "column": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "pilaster": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "pier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "pillar": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "post": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "support": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "stake": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "pole": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "buttress": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "underpinning": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "contribution": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        }
+			      ]
+			    },
+			    "calendrier.start_of_month": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Calendrier",
+			          "ConceptualProperty": "StartOfMonth"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "start of month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "StartOfMonth": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "start": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "start of mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "twitch of month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "jump of month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "jerk of month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "flinch of month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "jolt of month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "twitch": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "jump": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "jerk": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "flinch": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "calendrier.start_of_month.hiérarchie_de_date": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Calendrier",
+			          "VariationSource": "StartOfMonth",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Hiérarchie de dates"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "hiérarchie de date": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "hiérarchie de moment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "hiérarchie de period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ]
+			    },
+			    "calendrier.start_of_month.année": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Calendrier",
+			          "VariationSource": "StartOfMonth",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Hiérarchie de dates",
+			          "HierarchyLevel": "Année"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "année": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "start of month année": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "start of mth année": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "twitch of month année": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "jump of month année": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "jerk of month année": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "flinch of month année": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "jolt of month année": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "shock of month année": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.474
+			          }
+			        },
+			        {
+			          "fright of month année": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.474
+			          }
+			        },
+			        {
+			          "surprise of month année": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.474
+			          }
+			        },
+			        {
+			          "turn of month année": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.474
+			          }
+			        }
+			      ]
+			    },
+			    "calendrier.start_of_month.trimestre": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Calendrier",
+			          "VariationSource": "StartOfMonth",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Hiérarchie de dates",
+			          "HierarchyLevel": "Trimestre"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "trimestre": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "start of month trimestre": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "start of mth trimestre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "twitch of month trimestre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "jump of month trimestre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "jerk of month trimestre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "flinch of month trimestre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "jolt of month trimestre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "shock of month trimestre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.474
+			          }
+			        },
+			        {
+			          "fright of month trimestre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.474
+			          }
+			        },
+			        {
+			          "surprise of month trimestre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.474
+			          }
+			        },
+			        {
+			          "turn of month trimestre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.474
+			          }
+			        }
+			      ]
+			    },
+			    "calendrier.start_of_month.mois": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Calendrier",
+			          "VariationSource": "StartOfMonth",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Hiérarchie de dates",
+			          "HierarchyLevel": "Mois"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mois": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "start of month mois": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "start of mth mois": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "twitch of month mois": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "jump of month mois": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "jerk of month mois": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "flinch of month mois": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "jolt of month mois": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "shock of month mois": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.474
+			          }
+			        },
+			        {
+			          "fright of month mois": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.474
+			          }
+			        },
+			        {
+			          "surprise of month mois": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.474
+			          }
+			        },
+			        {
+			          "turn of month mois": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.474
+			          }
+			        }
+			      ]
+			    },
+			    "calendrier.start_of_month.jour": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Calendrier",
+			          "VariationSource": "StartOfMonth",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Hiérarchie de dates",
+			          "HierarchyLevel": "Jour"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "jour": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "start of month jour": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "start of mth jour": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "twitch of month jour": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "jump of month jour": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "jerk of month jour": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "flinch of month jour": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "jolt of month jour": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "shock of month jour": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.474
+			          }
+			        },
+			        {
+			          "fright of month jour": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.474
+			          }
+			        },
+			        {
+			          "surprise of month jour": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.474
+			          }
+			        },
+			        {
+			          "turn of month jour": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.474
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
+			    "calendrier_start_of_month_trimestre_has_calendrier_start_of_month_mois": {
+			      "Binding": {
+			        "ConceptualEntity": "Calendrier"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendrier.start_of_month.trimestre": {
+			          "Target": {
+			            "Entity": "calendrier.start_of_month.trimestre"
+			          }
+			        },
+			        "calendrier.start_of_month.mois": {
+			          "Target": {
+			            "Entity": "calendrier.start_of_month.mois"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendrier.start_of_month.trimestre"
+			            },
+			            "Object": {
+			              "Role": "calendrier.start_of_month.mois"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_moises"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendrier.start_of_month.mois"
+			            },
+			            "Object": {
+			              "Role": "calendrier.start_of_month.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "moises_have_trimestres"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "calendrier.start_of_month.mois"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "calendrier.start_of_month.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "moises_are_in_trimestres2"
+			        }
+			      ]
+			    },
+			    "calendrier_start_of_month_année_has_calendrier_start_of_month_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "Calendrier"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendrier.start_of_month.année": {
+			          "Target": {
+			            "Entity": "calendrier.start_of_month.année"
+			          }
+			        },
+			        "calendrier.start_of_month.trimestre": {
+			          "Target": {
+			            "Entity": "calendrier.start_of_month.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendrier.start_of_month.année"
+			            },
+			            "Object": {
+			              "Role": "calendrier.start_of_month.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "années_have_trimestres"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendrier.start_of_month.trimestre"
+			            },
+			            "Object": {
+			              "Role": "calendrier.start_of_month.année"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_années"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "calendrier.start_of_month.trimestre"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "calendrier.start_of_month.année"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_are_in_années2"
+			        }
+			      ]
+			    },
+			    "calendrier_start_of_month_hiérarchie_de_date_has_calendrier_start_of_month_jour": {
+			      "Binding": {
+			        "ConceptualEntity": "Calendrier"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendrier.start_of_month.hiérarchie_de_date": {
+			          "Target": {
+			            "Entity": "calendrier.start_of_month.hiérarchie_de_date"
+			          }
+			        },
+			        "calendrier.start_of_month.jour": {
+			          "Target": {
+			            "Entity": "calendrier.start_of_month.jour"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendrier.start_of_month.hiérarchie_de_date"
+			            },
+			            "Object": {
+			              "Role": "calendrier.start_of_month.jour"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hiérarchie_de_dates_have_jour"
+			        }
+			      ]
+			    },
+			    "calendrier_start_of_month_hiérarchie_de_date_has_calendrier_start_of_month_mois": {
+			      "Binding": {
+			        "ConceptualEntity": "Calendrier"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendrier.start_of_month.hiérarchie_de_date": {
+			          "Target": {
+			            "Entity": "calendrier.start_of_month.hiérarchie_de_date"
+			          }
+			        },
+			        "calendrier.start_of_month.mois": {
+			          "Target": {
+			            "Entity": "calendrier.start_of_month.mois"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendrier.start_of_month.hiérarchie_de_date"
+			            },
+			            "Object": {
+			              "Role": "calendrier.start_of_month.mois"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hiérarchie_de_dates_have_moises"
+			        }
+			      ]
+			    },
+			    "calendrier_start_of_month_hiérarchie_de_date_has_calendrier_start_of_month_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "Calendrier"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendrier.start_of_month.hiérarchie_de_date": {
+			          "Target": {
+			            "Entity": "calendrier.start_of_month.hiérarchie_de_date"
+			          }
+			        },
+			        "calendrier.start_of_month.trimestre": {
+			          "Target": {
+			            "Entity": "calendrier.start_of_month.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendrier.start_of_month.hiérarchie_de_date"
+			            },
+			            "Object": {
+			              "Role": "calendrier.start_of_month.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hiérarchie_de_dates_have_trimestres"
+			        }
+			      ]
+			    },
+			    "calendrier_start_of_month_hiérarchie_de_date_has_calendrier_start_of_month_année": {
+			      "Binding": {
+			        "ConceptualEntity": "Calendrier"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendrier.start_of_month.hiérarchie_de_date": {
+			          "Target": {
+			            "Entity": "calendrier.start_of_month.hiérarchie_de_date"
+			          }
+			        },
+			        "calendrier.start_of_month.année": {
+			          "Target": {
+			            "Entity": "calendrier.start_of_month.année"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendrier.start_of_month.hiérarchie_de_date"
+			            },
+			            "Object": {
+			              "Role": "calendrier.start_of_month.année"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hiérarchie_de_dates_have_années"
+			        }
+			      ]
+			    },
+			    "calendrier_start_of_month_has_hiérarchie_de_date": {
+			      "Binding": {
+			        "ConceptualEntity": "Calendrier"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendrier.start_of_month": {
+			          "Target": {
+			            "Entity": "calendrier.start_of_month"
+			          }
+			        },
+			        "calendrier.start_of_month.hiérarchie_de_date": {
+			          "Target": {
+			            "Entity": "calendrier.start_of_month.hiérarchie_de_date"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendrier.start_of_month"
+			            },
+			            "Object": {
+			              "Role": "calendrier.start_of_month.hiérarchie_de_date"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "start_of_month_have_hiérarchie_de_dates"
+			        }
+			      ]
+			    },
+			    "calendrier_annee_hiérarchie_numero_du_mois_has_calendrier_annee_hiérarchie_nom_du_mois": {
+			      "Binding": {
+			        "ConceptualEntity": "Calendrier"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendrier.annee_hiérarchie.numero_du_mois": {
+			          "Target": {
+			            "Entity": "calendrier.annee_hiérarchie.numero_du_mois"
+			          }
+			        },
+			        "calendrier.annee_hiérarchie.nom_du_mois": {
+			          "Target": {
+			            "Entity": "calendrier.annee_hiérarchie.nom_du_mois"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendrier.annee_hiérarchie.numero_du_mois"
+			            },
+			            "Object": {
+			              "Role": "calendrier.annee_hiérarchie.nom_du_mois"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "numero_du_moises_have_nom_du_moises"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendrier.annee_hiérarchie.nom_du_mois"
+			            },
+			            "Object": {
+			              "Role": "calendrier.annee_hiérarchie.numero_du_mois"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "nom_du_moises_have_numero_du_moises"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "calendrier.annee_hiérarchie.nom_du_mois"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "calendrier.annee_hiérarchie.numero_du_mois"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "nom_du_moises_are_in_numero_du_moises"
+			        }
+			      ]
+			    },
 			    "calendrier_annee_hiérarchie_annee_has_calendrier_annee_hiérarchie_numero_du_mois": {
 			      "Binding": {
 			        "ConceptualEntity": "Calendrier"
@@ -5583,7 +6882,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_moises"
+			          "ID": "trimestres_have_moises1"
 			        },
 			        {
 			          "Attribute": {
@@ -5596,7 +6895,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "moises_have_trimestres"
+			          "ID": "moises_have_trimestres1"
 			        },
 			        {
 			          "Preposition": {
@@ -5649,7 +6948,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "années_have_trimestres"
+			          "ID": "années_have_trimestres1"
 			        },
 			        {
 			          "Attribute": {
@@ -5662,7 +6961,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_années"
+			          "ID": "trimestres_have_années1"
 			        },
 			        {
 			          "Preposition": {
@@ -5715,7 +7014,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_jour"
+			          "ID": "hiérarchie_de_dates_have_jour1"
 			        }
 			      ]
 			    },
@@ -5748,7 +7047,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_moises"
+			          "ID": "hiérarchie_de_dates_have_moises1"
 			        }
 			      ]
 			    },
@@ -5781,7 +7080,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_trimestres"
+			          "ID": "hiérarchie_de_dates_have_trimestres1"
 			        }
 			      ]
 			    },
@@ -5814,7 +7113,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_années"
+			          "ID": "hiérarchie_de_dates_have_années1"
 			        }
 			      ]
 			    },
@@ -5946,7 +7245,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_moises1"
+			          "ID": "trimestres_have_moises2"
 			        },
 			        {
 			          "Attribute": {
@@ -5959,7 +7258,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "moises_have_trimestres1"
+			          "ID": "moises_have_trimestres2"
 			        },
 			        {
 			          "Preposition": {
@@ -6012,7 +7311,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "années_have_trimestres1"
+			          "ID": "années_have_trimestres2"
 			        },
 			        {
 			          "Attribute": {
@@ -6025,7 +7324,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_années1"
+			          "ID": "trimestres_have_années2"
 			        },
 			        {
 			          "Preposition": {
@@ -6078,7 +7377,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_jour1"
+			          "ID": "hiérarchie_de_dates_have_jour2"
 			        }
 			      ]
 			    },
@@ -6111,7 +7410,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_moises1"
+			          "ID": "hiérarchie_de_dates_have_moises2"
 			        }
 			      ]
 			    },
@@ -6144,7 +7443,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_trimestres1"
+			          "ID": "hiérarchie_de_dates_have_trimestres2"
 			        }
 			      ]
 			    },
@@ -6177,7 +7476,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_années1"
+			          "ID": "hiérarchie_de_dates_have_années2"
 			        }
 			      ]
 			    },
@@ -6402,6 +7701,171 @@ cultureInfo fr-FR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "calendriers_have_banque_transactions_36_moises"
+			        }
+			      ]
+			    },
+			    "calendrier_has_start_of_month": {
+			      "Binding": {
+			        "ConceptualEntity": "Calendrier"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendrier": {
+			          "Target": {
+			            "Entity": "calendrier"
+			          }
+			        },
+			        "calendrier.start_of_month": {
+			          "Target": {
+			            "Entity": "calendrier.start_of_month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendrier"
+			            },
+			            "Object": {
+			              "Role": "calendrier.start_of_month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "calendriers_have_start_of_month"
+			        }
+			      ]
+			    },
+			    "calendrier_has_column": {
+			      "Binding": {
+			        "ConceptualEntity": "Calendrier"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendrier": {
+			          "Target": {
+			            "Entity": "calendrier"
+			          }
+			        },
+			        "calendrier.column": {
+			          "Target": {
+			            "Entity": "calendrier.column"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendrier"
+			            },
+			            "Object": {
+			              "Role": "calendrier.column"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "calendriers_have_columns"
+			        }
+			      ]
+			    },
+			    "mesure_has_fin_dernier_mois_reel": {
+			      "Binding": {
+			        "ConceptualEntity": "Mesures"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mesure": {
+			          "Target": {
+			            "Entity": "mesure"
+			          }
+			        },
+			        "mesure.fin_dernier_mois_reel": {
+			          "Target": {
+			            "Entity": "mesure.fin_dernier_mois_reel"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mesure"
+			            },
+			            "Object": {
+			              "Role": "mesure.fin_dernier_mois_reel"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mesures_have_fin_dernier_mois_reel"
+			        }
+			      ]
+			    },
+			    "calendrier_has_mesure_filtre_18_mois": {
+			      "Binding": {
+			        "ConceptualEntity": "Calendrier"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendrier": {
+			          "Target": {
+			            "Entity": "calendrier"
+			          }
+			        },
+			        "mesure.filtre_18_mois": {
+			          "Target": {
+			            "Entity": "mesure.filtre_18_mois"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendrier"
+			            },
+			            "Object": {
+			              "Role": "mesure.filtre_18_mois"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "calendriers_have_filtre_18_mois"
+			        }
+			      ]
+			    },
+			    "mesure_has_aujourd_hui": {
+			      "Binding": {
+			        "ConceptualEntity": "Mesures"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mesure": {
+			          "Target": {
+			            "Entity": "mesure"
+			          }
+			        },
+			        "mesure.aujourd_hui": {
+			          "Target": {
+			            "Entity": "mesure.aujourd_hui"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mesure"
+			            },
+			            "Object": {
+			              "Role": "mesure.aujourd_hui"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mesures_have_aujourd_hui"
 			        }
 			      ]
 			    },
@@ -10656,20 +12120,20 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "calendrier_annee_hiérarchie_numero_du_mois_has_calendrier_annee_hiérarchie_nom_du_mois": {
+			    "calendrier_start_of_month_mois_has_calendrier_start_of_month_jour": {
 			      "Binding": {
 			        "ConceptualEntity": "Calendrier"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "calendrier.annee_hiérarchie.numero_du_mois": {
+			        "calendrier.start_of_month.mois": {
 			          "Target": {
-			            "Entity": "calendrier.annee_hiérarchie.numero_du_mois"
+			            "Entity": "calendrier.start_of_month.mois"
 			          }
 			        },
-			        "calendrier.annee_hiérarchie.nom_du_mois": {
+			        "calendrier.start_of_month.jour": {
 			          "Target": {
-			            "Entity": "calendrier.annee_hiérarchie.nom_du_mois"
+			            "Entity": "calendrier.start_of_month.jour"
 			          }
 			        }
 			      },
@@ -10677,33 +12141,33 @@ cultureInfo fr-FR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "calendrier.annee_hiérarchie.numero_du_mois"
+			              "Role": "calendrier.start_of_month.mois"
 			            },
 			            "Object": {
-			              "Role": "calendrier.annee_hiérarchie.nom_du_mois"
+			              "Role": "calendrier.start_of_month.jour"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "numero_du_moises_have_nom_du_moises"
+			          "ID": "moises_have_jour2"
 			        },
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "calendrier.annee_hiérarchie.nom_du_mois"
+			              "Role": "calendrier.start_of_month.jour"
 			            },
 			            "Object": {
-			              "Role": "calendrier.annee_hiérarchie.numero_du_mois"
+			              "Role": "calendrier.start_of_month.mois"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "nom_du_moises_have_numero_du_moises"
+			          "ID": "jour_have_moises2"
 			        },
 			        {
 			          "Preposition": {
 			            "Subject": {
-			              "Role": "calendrier.annee_hiérarchie.nom_du_mois"
+			              "Role": "calendrier.start_of_month.jour"
 			            },
 			            "Prepositions": [
 			              {
@@ -10713,12 +12177,12 @@ cultureInfo fr-FR
 			              }
 			            ],
 			            "Object": {
-			              "Role": "calendrier.annee_hiérarchie.numero_du_mois"
+			              "Role": "calendrier.start_of_month.mois"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "nom_du_moises_are_in_numero_du_moises"
+			          "ID": "jour_are_in_moises2"
 			        }
 			      ]
 			    }

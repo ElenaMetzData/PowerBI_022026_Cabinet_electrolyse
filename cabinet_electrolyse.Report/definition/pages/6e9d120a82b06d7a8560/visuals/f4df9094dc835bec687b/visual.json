@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
   "name": "f4df9094dc835bec687b",
   "position": {
-    "x": 30.000000000000004,
-    "y": 20,
-    "z": 6000,
-    "height": 163.57142857142858,
-    "width": 220,
-    "tabOrder": 6000
+    "x": 27.069486404833835,
+    "y": 31.903323262839876,
+    "z": 11000,
+    "height": 139.21450151057402,
+    "width": 220.42296072507551,
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -134,6 +134,18 @@
               "expr": {
                 "Literal": {
                   "Value": "10D"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
                 }
               }
             }
@@ -363,7 +375,7 @@
                           },
                           "Value": {
                             "Literal": {
-                              "Value": "'#D11515'"
+                              "Value": "'#ED5F5F'"
                             }
                           }
                         }
@@ -577,6 +589,20 @@
           "selector": {
             "metadata": "Mesures.CA M-1"
           }
+        },
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
         }
       ],
       "fillCustom": [
@@ -630,6 +656,22 @@
             "metadata": "Mesures.Sous-titre Var MoM"
           }
         }
+      ],
+      "smallMultiplesBorder": [
+        {
+          "properties": {
+            "gridlineShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
       ]
     },
     "visualContainerObjects": {
@@ -670,6 +712,18 @@
                   "Value": "15D"
                 }
               }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
             }
           }
         }
@@ -706,6 +760,39 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "heading": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Normal'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'wf_standard-font, helvetica, arial, sans-serif'"
                 }
               }
             }

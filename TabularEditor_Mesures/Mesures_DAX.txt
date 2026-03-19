@@ -1,6 +1,54 @@
 # Liste des mesures DAX
 
 
+- 
+
+```
+% CA par zone =
+
+
+DIVIDE(
+    [CA],
+    CALCULATE(
+        [CA],
+        ALL(planity_rdv_36_mois[zone])
+    ),
+    0
+)
+```
+
+
+- 
+
+```
+% CA par zone (label) =
+
+
+VAR Pct =
+    DIVIDE(
+        [CA],
+        CALCULATE(
+            [CA],
+            ALL(planity_rdv_36_mois[zone])
+        )
+    )
+RETURN
+IF(
+    ISBLANK(Pct),
+    BLANK(),
+    FORMAT(Pct, "0%")
+)
+```
+
+
+- 
+
+```
+Aujourd_hui =
+DATE(YEAR(TODAY()), MONTH(TODAY()), -15)
+```
+
+
 - Chiffre d'affaire dans le contexte de filtre
 
 ```
@@ -259,9 +307,14 @@ CALCULATE(
 ```
 Canal d'acquisition - Bouche-à-oreille =
 
+
 CALCULATE(
-    DISTINCTCOUNT(clients_36_mois[client_id]),
-    clients_36_mois[canal_acquisition] = "Bouche-à-oreille"
+    DISTINCTCOUNT(planity_rdv_36_mois[client_id]),
+    planity_rdv_36_mois[statut] IN {"Réalisé", "Honoré"},
+    FILTER(
+        clients_36_mois,
+        clients_36_mois[canal_acquisition] = "Bouche-à-oreille"
+    )
 )
 ```
 
@@ -344,6 +397,23 @@ CALCULATE(
 ```
 
 
+- 
+
+```
+Clients actifs par canal =
+
+
+CALCULATE(
+    DISTINCTCOUNT(planity_rdv_36_mois[client_id]),
+    planity_rdv_36_mois[statut] IN {"Réalisé", "Honoré"},
+    FILTER(
+        clients_36_mois,
+        clients_36_mois[canal_acquisition] = MAX(clients_36_mois[canal_acquisition])
+    )
+)
+```
+
+
 - Nombre de clients actifs projetés sur les 6 prochains mois (sont pris en compte : les rdv planifiés, la taux d'abandon et les nouveaux clients, et la saisonnalité)
 
 ```
@@ -377,6 +447,49 @@ IF(
     ISBLANK(ActifsNow) || ActifsNow = 0,
     BLANK(),
     ActifsNow * POWER(Ret, NSafe) + NewAvg * DIVIDE(1 - POWER(Ret, NSafe), ChurnSafe)
+)
+```
+
+
+- 
+
+```
+Clients récurrents du mois =
+
+
+VAR MoisDebut = DATE(YEAR(MAX(Calendrier[Date])), MONTH(MAX(Calendrier[Date])), 1)
+VAR MoisFin = EOMONTH(MAX(Calendrier[Date]), 0)
+
+VAR ClientsDuMois =
+    CALCULATETABLE(
+        VALUES(planity_rdv_36_mois[client_id]),
+        planity_rdv_36_mois[statut] IN {"Réalisé", "Honoré"},
+        DATESBETWEEN(Calendrier[Date], MoisDebut, MoisFin)
+    )
+
+RETURN
+CALCULATE(
+    DISTINCTCOUNT(planity_rdv_36_mois[client_id]),
+    FILTER(
+        ClientsDuMois,
+        VAR PremierRDV =
+            CALCULATE(
+                MIN(planity_rdv_36_mois[date]),
+                planity_rdv_36_mois[statut] IN {"Réalisé", "Honoré"},
+                ALL(Calendrier)
+            )
+        VAR RDVApres =
+            CALCULATE(
+                COUNTROWS(planity_rdv_36_mois),
+                planity_rdv_36_mois[statut] IN {"Réalisé", "Honoré", "planifié"},
+                planity_rdv_36_mois[date] > MoisFin,
+                planity_rdv_36_mois[date] <= EDATE(MoisFin, 6),
+                ALL(Calendrier)
+            )
+        RETURN
+            PremierRDV < MoisDebut    -- non-nouveau
+            && RDVApres > 0           -- RDV dans les 6 mois suivants
+    )
 )
 ```
 
@@ -434,28 +547,62 @@ IF(
 - Durée moyenne de suivi d’un client, en mois, entre son premier et son dernier rendez-vous réalisé, en ignorant les filtres de date.
 
 ```
-Durée traitement moyenne (mois) (ignore filtres) =
+Durée traitement moyenne (mois) =
+
+
+VAR SeuilInactivite = EDATE(TODAY(), -6)
 
 VAR T =
     ADDCOLUMNS(
-        VALUES(clients_36_mois[client_id]),
+        ALL(clients_36_mois[client_id]),
         "FirstDate",
             CALCULATE(
                 MIN(planity_rdv_36_mois[date]),
                 REMOVEFILTERS(Calendrier),
-                planity_rdv_36_mois[statut] IN {"Réalisé","Honoré"}
+                FILTER(
+                    ALL(planity_rdv_36_mois),
+                    planity_rdv_36_mois[client_id] = EARLIER(clients_36_mois[client_id])
+                    && planity_rdv_36_mois[statut] IN {"Réalisé", "Honoré"}
+                )
             ),
         "LastDate",
             CALCULATE(
                 MAX(planity_rdv_36_mois[date]),
                 REMOVEFILTERS(Calendrier),
-                planity_rdv_36_mois[statut] IN {"Réalisé","Honoré"}
+                FILTER(
+                    ALL(planity_rdv_36_mois),
+                    planity_rdv_36_mois[client_id] = EARLIER(clients_36_mois[client_id])
+                    && planity_rdv_36_mois[statut] IN {"Réalisé", "Honoré"}
+                )
             )
     )
+
 RETURN
 AVERAGEX(
-    FILTER(T, NOT(ISBLANK([FirstDate])) && NOT(ISBLANK([LastDate]))),
+    FILTER(
+        T,
+        NOT(ISBLANK([FirstDate]))
+            && NOT(ISBLANK([LastDate]))
+            && [LastDate] < SeuilInactivite
+            && [FirstDate] <> [LastDate]
+    ),
     DIVIDE(DATEDIFF([FirstDate], [LastDate], DAY), 30.4375)
+)
+```
+
+
+- 
+
+```
+Durée traitement moyenne (mois) (label) =
+
+
+VAR Duree = [Durée traitement moyenne (mois)]
+RETURN
+IF(
+    ISBLANK(Duree),
+    BLANK(),
+    FORMAT(ROUND(Duree, 1), "0.0") & " mois"
 )
 ```
 
@@ -532,14 +679,91 @@ IF(d >= MoisDebut && d <= MoisFin, 1, 0)
 - 
 
 ```
+Filtre 18 mois =
+
+VAR DateMin = EDATE(TODAY(), -18)
+RETURN
+IF(
+    MAX(Calendrier[Date]) >= DateMin &&
+    MAX(Calendrier[Date]) <= TODAY(),
+    1,
+    0
+)
+```
+
+
+- 
+
+```
+FinDernierMoisReel =
+EOMONTH(TODAY(),-1)
+```
+
+
+- 
+
+```
+Fins de traitement du mois =
+
+
+VAR MoisDebut = DATE(YEAR(MAX(Calendrier[Date])), MONTH(MAX(Calendrier[Date])), 1)
+VAR MoisFin = EOMONTH(MAX(Calendrier[Date]), 0)
+
+VAR ClientsDuMois =
+    CALCULATETABLE(
+        VALUES(planity_rdv_36_mois[client_id]),
+        planity_rdv_36_mois[statut] IN {"Réalisé", "Honoré"},
+        DATESBETWEEN(Calendrier[Date], MoisDebut, MoisFin)
+    )
+
+RETURN
+CALCULATE(
+    DISTINCTCOUNT(planity_rdv_36_mois[client_id]),
+    FILTER(
+        ClientsDuMois,
+        VAR PremierRDV =
+            CALCULATE(
+                MIN(planity_rdv_36_mois[date]),
+                planity_rdv_36_mois[statut] IN {"Réalisé", "Honoré"},
+                ALL(Calendrier)
+            )
+        VAR RDVApres =
+            CALCULATE(
+                COUNTROWS(planity_rdv_36_mois),
+                planity_rdv_36_mois[statut] IN {"Réalisé", "Honoré", "planifié"},
+                planity_rdv_36_mois[date] > MoisFin,
+                planity_rdv_36_mois[date] <= EDATE(MoisFin, 6),
+                ALL(Calendrier)
+            )
+        RETURN
+            PremierRDV < MoisDebut    -- non-nouveau
+            && RDVApres = 0           -- aucun RDV dans les 6 mois suivants
+    )
+)
+```
+
+
+- 
+
+```
 Heures non facturées (admin) =
 
 DIVIDE(
     CALCULATE(
-        SUM(planity_rdv_36_mois[temps_non_facture_min])
+        SUM(planity_rdv_36_mois[temps_non_facture_min]),
+        planity_rdv_36_mois[statut] IN {"Réalisé","Honoré"}
     ),
     60
 )
+```
+
+
+- 
+
+```
+Heures occupées =
+
+[Heures RDV réalisés] + [Heures non facturées (admin)]
 ```
 
 
@@ -740,7 +964,7 @@ AVERAGEX(
 ```
 LTV estimée (CA) =
 
-[CA moyen mensuel par client (réalisé)] * [Durée traitement moyenne (mois) (ignore filtres)]
+[CA moyen mensuel par client (réalisé)] * [Durée traitement moyenne (mois)]
 ```
 
 
@@ -801,6 +1025,7 @@ AVERAGEX(
 ```
 Nouveaux clients du mois =
 
+
 VAR MoisDebut = DATE(YEAR(MAX(Calendrier[Date])), MONTH(MAX(Calendrier[Date])), 1)
 VAR MoisFin = EOMONTH(MAX(Calendrier[Date]), 0)
 RETURN
@@ -811,10 +1036,19 @@ CALCULATE(
         VAR FirstVisit =
             CALCULATE(
                 MIN(planity_rdv_36_mois[date]),
-                planity_rdv_36_mois[statut] IN {"Réalisé","Honoré"},
+                planity_rdv_36_mois[statut] IN {"Réalisé", "Honoré"},
                 ALL(Calendrier)
             )
-        RETURN FirstVisit >= MoisDebut && FirstVisit <= MoisFin
+        VAR FirstType =
+            CALCULATE(
+                FIRSTNONBLANK(planity_rdv_36_mois[type_prestation], 1),
+                planity_rdv_36_mois[date] = FirstVisit,
+                ALL(Calendrier)
+            )
+        RETURN
+            FirstVisit >= MoisDebut
+            && FirstVisit <= MoisFin
+            && FirstType = "Consultation préalable"
     )
 )
 ```
@@ -827,6 +1061,22 @@ Paiements =
 CALCULATE(
     SUM(banque_transactions_36_mois[montant_eur]),
     banque_transactions_36_mois[type] = "Recette"
+)
+```
+
+
+- 
+
+```
+Part heures par zone =
+
+
+DIVIDE(
+    [Heures RDV réalisés],
+    CALCULATE(
+        [Heures RDV réalisés],
+        ALL(planity_rdv_36_mois[zone])
+    )
 )
 ```
 
@@ -860,12 +1110,58 @@ IF(
 ```
 
 
+- 
+
+```
+Sous-titre Var MoM - Taux remplissage =
+
+
+VAR VarMoM = [Var % MoM - Taux remplissage (ignore filtres)]
+VAR Sign = IF(VarMoM > 0, "+", "")
+VAR TxtPct =
+    IF(
+        ISBLANK(VarMoM),
+        "—",
+        Sign & FORMAT(VarMoM, "0%")
+    )
+RETURN
+IF(
+    ISBLANK(VarMoM),
+    "Pas de comparaison disponible",
+    TxtPct & " VS M-1"
+)
+```
+
+
 - "+/- x% par rapport à Y-1", soit l'évolution en pourcentage du chiffre d'ffaire du dernier moi civil terminé par rapport au même mois de la dernière année civile
 
 ```
 Sous-titre Var YoY =
 
 VAR VarYoY = [Var % YoY (ignore filtres)]
+VAR Sign = IF(VarYoY > 0, "+", "")
+VAR TxtPct =
+    IF(
+        ISBLANK(VarYoY),
+        "—",
+        Sign & FORMAT(VarYoY, "0%")
+    )
+RETURN
+IF(
+    ISBLANK(VarYoY),
+    "Pas de comparaison Y-1 disponible",
+    TxtPct & " par rapport à Y-1"
+)
+```
+
+
+- 
+
+```
+Sous-titre Var YoY - Taux remplissage =
+
+
+VAR VarYoY = [Var % YoY - Taux remplissage (ignore filtres)]
 VAR Sign = IF(VarYoY > 0, "+", "")
 VAR TxtPct =
     IF(
@@ -966,7 +1262,7 @@ DIVIDE(RN12M, CA12M)
 ```
 Taux de remplissage =
 
-DIVIDE([Heures RDV réalisés], [Heures ouverture théoriques])
+DIVIDE([Heures occupées], [Heures ouverture théoriques])
 ```
 
 
@@ -992,6 +1288,62 @@ CALCULATE(
     REMOVEFILTERS(Calendrier),
     DATESBETWEEN(Calendrier[Date], StartDate, EndDate)
 )
+```
+
+
+- 
+
+```
+Taux remplissage M-1 N-1 (ignore filtres) =
+
+
+VAR EndDate   = EOMONTH(TODAY(), -13)
+VAR StartDate = DATE(YEAR(EndDate), MONTH(EndDate), 1)
+RETURN
+CALCULATE(
+    [Taux de remplissage],
+    REMOVEFILTERS(Calendrier),
+    DATESBETWEEN(Calendrier[Date], StartDate, EndDate)
+)
+```
+
+
+- 
+
+```
+Taux remplissage M-2 (ignore filtres) =
+
+
+VAR EndDate   = EOMONTH(TODAY(), -2)
+VAR StartDate = DATE(YEAR(EndDate), MONTH(EndDate), 1)
+RETURN
+CALCULATE(
+    [Taux de remplissage],
+    REMOVEFILTERS(Calendrier),
+    DATESBETWEEN(Calendrier[Date], StartDate, EndDate)
+)
+```
+
+
+- 
+
+```
+Taux remplissage par zone (réalisé) =
+
+
+VAR HeuresZone =
+    DIVIDE(
+        CALCULATE(
+            SUM(planity_rdv_36_mois[duree_prestation_min]),
+            planity_rdv_36_mois[statut] IN {"Réalisé", "Honoré"}
+        ),
+        60
+    )
+
+VAR HeuresOuverture = [Heures ouverture théoriques]
+
+RETURN
+DIVIDE(HeuresZone, HeuresOuverture)
 ```
 
 
@@ -1062,6 +1414,19 @@ IF(
 ```
 
 
+- 
+
+```
+Var % MoM - Taux remplissage (ignore filtres) =
+
+
+DIVIDE(
+    [Taux remplissage M-1 (ignore filtres)] - [Taux remplissage M-2 (ignore filtres)],
+    [Taux remplissage M-2 (ignore filtres)]
+)
+```
+
+
 - Variation en pourcentage du CA entre l'avant-dernier moi civil et le dernier mois civil terminé.
 
 ```
@@ -1070,6 +1435,19 @@ Var % MoM (ignore filtres) =
 DIVIDE(
     [CA M-1 (ignore filtres)] - [CA M-2 (ignore filtres)],
     [CA M-2 (ignore filtres)]
+)
+```
+
+
+- 
+
+```
+Var % YoY - Taux remplissage (ignore filtres) =
+
+
+DIVIDE(
+    [Taux remplissage M-1 (ignore filtres)] - [Taux remplissage M-1 N-1 (ignore filtres)],
+    [Taux remplissage M-1 N-1 (ignore filtres)]
 )
 ```
 

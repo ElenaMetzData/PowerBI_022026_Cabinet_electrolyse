@@ -1,11 +1,9 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/2.0.0/schema.json",
-  "displayName": "CA",
+  "displayName": "Approche financière",
   "name": "009c05ba4c933b5ab226",
   "options": {
-    "targetVisualNames": [
-      "9764bf5d242267019e96"
-    ],
+    "targetVisualNames": [],
     "suppressData": true
   },
   "explorationState": {
@@ -188,6 +186,55 @@
                   "howCreated": 0
                 },
                 {
+                  "name": "e8e17c1540673e61772c",
+                  "type": "Advanced",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "m",
+                        "Entity": "Mesures",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "Comparison": {
+                            "ComparisonKind": 0,
+                            "Left": {
+                              "Measure": {
+                                "Expression": {
+                                  "SourceRef": {
+                                    "Source": "m"
+                                  }
+                                },
+                                "Property": "Filtre 18 mois"
+                              }
+                            },
+                            "Right": {
+                              "Literal": {
+                                "Value": "1L"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mesures"
+                        }
+                      },
+                      "Property": "Filtre 18 mois"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
                   "name": "52fde54f7d7c3a8e2b49",
                   "type": "Advanced",
                   "expression": {
@@ -334,11 +381,11 @@
               }
             }
           },
-          "72bb54ec71ad0d159ce0": {
+          "0b6d89e0dcc000109aad": {
             "filters": {
               "byExpr": [
                 {
-                  "name": "627a1081dcb7043753de",
+                  "name": "4e176a6232532ce2b0e1",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -347,22 +394,7 @@
                           "Entity": "Mesures"
                         }
                       },
-                      "Property": "Taux remplissage M-1 (ignore filtres)"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "fb3118f152815de0e832",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Mesures"
-                        }
-                      },
-                      "Property": "Sous-titre Var MoM - Taux remplissage"
+                      "Property": "LTV estimée (12 mois après 1re consult)"
                     }
                   },
                   "howCreated": 0
@@ -382,18 +414,217 @@
                           "Entity": "Mesures"
                         }
                       },
-                      "Property": "Taux remplissage M-1 (ignore filtres)"
+                      "Property": "LTV estimée (12 mois après 1re consult)"
                     }
                   }
                 }
               ]
             }
           },
-          "7b79c37d07a16a6d5794": {
+          "39d6d608c7bbd4879c36": {
             "filters": {
               "byExpr": [
                 {
-                  "name": "5a01d84db7c84e013c94",
+                  "name": "9b8298ef738e29e04115",
+                  "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "c",
+                        "Entity": "Calendrier",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "c"
+                                    }
+                                  },
+                                  "Property": "Annee"
+                                }
+                              }
+                            ],
+                            "Values": [
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'2024'"
+                                  }
+                                }
+                              ],
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'2025'"
+                                  }
+                                }
+                              ],
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'2026'"
+                                  }
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Calendrier"
+                            }
+                          },
+                          "Hierarchy": "Annee Hiérarchie"
+                        }
+                      },
+                      "Level": "Annee"
+                    }
+                  },
+                  "howCreated": 1,
+                  "cachedDisplayNames": [
+                    {
+                      "id": {
+                        "scopeId": {
+                          "Comparison": {
+                            "ComparisonKind": 0,
+                            "Left": {
+                              "Column": {
+                                "Expression": {
+                                  "SourceRef": {
+                                    "Entity": "Calendrier"
+                                  }
+                                },
+                                "Property": "Annee"
+                              }
+                            },
+                            "Right": {
+                              "Literal": {
+                                "Value": "'2024'"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "displayName": "2024"
+                    },
+                    {
+                      "id": {
+                        "scopeId": {
+                          "Comparison": {
+                            "ComparisonKind": 0,
+                            "Left": {
+                              "Column": {
+                                "Expression": {
+                                  "SourceRef": {
+                                    "Entity": "Calendrier"
+                                  }
+                                },
+                                "Property": "Annee"
+                              }
+                            },
+                            "Right": {
+                              "Literal": {
+                                "Value": "'2025'"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "displayName": "2025"
+                    },
+                    {
+                      "id": {
+                        "scopeId": {
+                          "Comparison": {
+                            "ComparisonKind": 0,
+                            "Left": {
+                              "Column": {
+                                "Expression": {
+                                  "SourceRef": {
+                                    "Entity": "Calendrier"
+                                  }
+                                },
+                                "Property": "Annee"
+                              }
+                            },
+                            "Right": {
+                              "Literal": {
+                                "Value": "'2026'"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "displayName": "2026"
+                    }
+                  ]
+                },
+                {
+                  "name": "1644c2296b53b9605277",
+                  "type": "Advanced",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "m",
+                        "Entity": "Mesures",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "Comparison": {
+                            "ComparisonKind": 0,
+                            "Left": {
+                              "Measure": {
+                                "Expression": {
+                                  "SourceRef": {
+                                    "Source": "m"
+                                  }
+                                },
+                                "Property": "Fenêtre Graph Remplissage (12M + 6M)"
+                              }
+                            },
+                            "Right": {
+                              "Literal": {
+                                "Value": "1L"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mesures"
+                        }
+                      },
+                      "Property": "Fenêtre Graph Remplissage (12M + 6M)"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "58a149ec06bab976aa76",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -402,7 +633,67 @@
                           "Entity": "Mesures"
                         }
                       },
-                      "Property": "Durée traitement moyenne (mois) (label)"
+                      "Property": "CA - Réel (mensuel)"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "ba9cb2f1e0e36b3110c0",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mesures"
+                        }
+                      },
+                      "Property": "CA - Prévision (6M, mensuel)"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "699b8561881709890d91",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mesures"
+                        }
+                      },
+                      "Property": "Marge - Réel (mensuel)"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "79c482c9e7a3ea4a8e04",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mesures"
+                        }
+                      },
+                      "Property": "Marge - Prévision (6M, mensuel)"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "a4849efb797c964deed0",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Calendrier"
+                        }
+                      },
+                      "Property": "StartOfMonth"
                     }
                   },
                   "howCreated": 0
@@ -410,30 +701,44 @@
               ]
             },
             "singleVisual": {
-              "visualType": "cardVisual",
-              "objects": {}
+              "visualType": "lineStackedColumnComboChart",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 1,
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Calendrier"
+                        }
+                      },
+                      "Property": "StartOfMonth"
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Calendrier"
+                        }
+                      },
+                      "Property": "StartOfMonth"
+                    }
+                  }
+                ]
+              }
             }
           },
           "691e8028beee85007a94": {
             "filters": {
               "byExpr": [
                 {
-                  "name": "d360b47845362c406e63",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Mesures"
-                        }
-                      },
-                      "Property": "Clients actifs par canal"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "a543950c7365b9c73607",
+                  "name": "885f66012b003280c0c5",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -443,6 +748,21 @@
                         }
                       },
                       "Property": "canal_acquisition_court"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "643319f3a35a7c0b069c",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mesures"
+                        }
+                      },
+                      "Property": "Clients actifs par canal"
                     }
                   },
                   "howCreated": 0
@@ -486,11 +806,11 @@
               }
             }
           },
-          "f4df9094dc835bec687b": {
+          "72bb54ec71ad0d159ce0": {
             "filters": {
               "byExpr": [
                 {
-                  "name": "fb70c75e35c6498a2bb4",
+                  "name": "e6693371a08780766de9",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -499,13 +819,13 @@
                           "Entity": "Mesures"
                         }
                       },
-                      "Property": "CA M-1 (ignore filtres)"
+                      "Property": "Taux remplissage M-1 (ignore filtres)"
                     }
                   },
                   "howCreated": 0
                 },
                 {
-                  "name": "014cd2a39777345b9d90",
+                  "name": "159f6d619547070080ce",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -514,7 +834,7 @@
                           "Entity": "Mesures"
                         }
                       },
-                      "Property": "Sous-titre Var MoM"
+                      "Property": "Sous-titre Var MoM - Taux remplissage"
                     }
                   },
                   "howCreated": 0
@@ -534,18 +854,18 @@
                           "Entity": "Mesures"
                         }
                       },
-                      "Property": "CA M-1 (ignore filtres)"
+                      "Property": "Taux remplissage M-1 (ignore filtres)"
                     }
                   }
                 }
               ]
             }
           },
-          "0b6d89e0dcc000109aad": {
+          "7b79c37d07a16a6d5794": {
             "filters": {
               "byExpr": [
                 {
-                  "name": "a7cf77dea50e67b5d3c6",
+                  "name": "b91006d086132a1b696b",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -554,7 +874,7 @@
                           "Entity": "Mesures"
                         }
                       },
-                      "Property": "LTV estimée (12 mois après 1re consult)"
+                      "Property": "Durée traitement moyenne (mois) (label)"
                     }
                   },
                   "howCreated": 0
@@ -563,29 +883,14 @@
             },
             "singleVisual": {
               "visualType": "cardVisual",
-              "objects": {},
-              "orderBy": [
-                {
-                  "Direction": 2,
-                  "Expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Mesures"
-                        }
-                      },
-                      "Property": "LTV estimée (12 mois après 1re consult)"
-                    }
-                  }
-                }
-              ]
+              "objects": {}
             }
           },
           "9764bf5d242267019e96": {
             "filters": {
               "byExpr": [
                 {
-                  "name": "7edcd533d12279b822aa",
+                  "name": "bff7a241de94eeeca71c",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -600,7 +905,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "42c5ea87d9d3cee18de3",
+                  "name": "aaf4c7a363006e722c9a",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -615,7 +920,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "a76c1d12805ccb6296cc",
+                  "name": "019180c301ba71d7b95e",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -630,7 +935,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "de4c2674730113019211",
+                  "name": "cdd334e1de37c410037e",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -772,7 +1077,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "df7215a27bbe2a275474",
+                  "name": "cd8638c530253398ad5d",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -822,18 +1127,173 @@
               }
             }
           },
-          "39d6d608c7bbd4879c36": {
+          "cb8716f5ce984044580a": {
+            "singleVisual": {
+              "visualType": "bookmarkNavigator",
+              "objects": {}
+            }
+          },
+          "f4df9094dc835bec687b": {
             "filters": {
               "byExpr": [
                 {
-                  "name": "9b8298ef738e29e04115",
-                  "type": "Categorical",
+                  "name": "589bfdae12bb2acb1cad",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mesures"
+                        }
+                      },
+                      "Property": "CA M-1 (ignore filtres)"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "76421940bab36953ea0e",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mesures"
+                        }
+                      },
+                      "Property": "Sous-titre Var MoM"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "cardVisual",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mesures"
+                        }
+                      },
+                      "Property": "CA M-1 (ignore filtres)"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "ab5bd9e333b84e416601": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "979f38c8547cbc323ea6": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "526556f7d068a87d2260": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "dfa5dffa5e2b0ad56d5e": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "aada79d010064c3d7904": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "1d0b7864a979d5e09514": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "889e0422450d27c010e0": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "d3e1fb4207e7759763cd": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "d3be5c0b04aa1a79939c",
+                  "type": "TopN",
                   "filter": {
                     "Version": 2,
                     "From": [
                       {
-                        "Name": "c",
-                        "Entity": "Calendrier",
+                        "Name": "subquery",
+                        "Expression": {
+                          "Subquery": {
+                            "Query": {
+                              "Version": 2,
+                              "From": [
+                                {
+                                  "Name": "p",
+                                  "Entity": "planity_rdv_36_mois",
+                                  "Type": 0
+                                },
+                                {
+                                  "Name": "m",
+                                  "Entity": "Mesures",
+                                  "Type": 0
+                                }
+                              ],
+                              "Select": [
+                                {
+                                  "Column": {
+                                    "Expression": {
+                                      "SourceRef": {
+                                        "Source": "p"
+                                      }
+                                    },
+                                    "Property": "zone"
+                                  },
+                                  "Name": "field"
+                                }
+                              ],
+                              "OrderBy": [
+                                {
+                                  "Direction": 2,
+                                  "Expression": {
+                                    "Measure": {
+                                      "Expression": {
+                                        "SourceRef": {
+                                          "Source": "m"
+                                        }
+                                      },
+                                      "Property": "CA"
+                                    }
+                                  }
+                                }
+                              ],
+                              "Top": 5
+                            }
+                          }
+                        },
+                        "Type": 2
+                      },
+                      {
+                        "Name": "p",
+                        "Entity": "planity_rdv_36_mois",
                         "Type": 0
                       }
                     ],
@@ -846,165 +1306,16 @@
                                 "Column": {
                                   "Expression": {
                                     "SourceRef": {
-                                      "Source": "c"
+                                      "Source": "p"
                                     }
                                   },
-                                  "Property": "Annee"
+                                  "Property": "zone"
                                 }
                               }
                             ],
-                            "Values": [
-                              [
-                                {
-                                  "Literal": {
-                                    "Value": "'2024'"
-                                  }
-                                }
-                              ],
-                              [
-                                {
-                                  "Literal": {
-                                    "Value": "'2025'"
-                                  }
-                                }
-                              ],
-                              [
-                                {
-                                  "Literal": {
-                                    "Value": "'2026'"
-                                  }
-                                }
-                              ]
-                            ]
-                          }
-                        }
-                      }
-                    ]
-                  },
-                  "expression": {
-                    "HierarchyLevel": {
-                      "Expression": {
-                        "Hierarchy": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Entity": "Calendrier"
-                            }
-                          },
-                          "Hierarchy": "Annee Hiérarchie"
-                        }
-                      },
-                      "Level": "Annee"
-                    }
-                  },
-                  "howCreated": 0,
-                  "cachedDisplayNames": [
-                    {
-                      "id": {
-                        "scopeId": {
-                          "Comparison": {
-                            "ComparisonKind": 0,
-                            "Left": {
-                              "Column": {
-                                "Expression": {
-                                  "SourceRef": {
-                                    "Entity": "Calendrier"
-                                  }
-                                },
-                                "Property": "Annee"
-                              }
-                            },
-                            "Right": {
-                              "Literal": {
-                                "Value": "'2024'"
-                              }
-                            }
-                          }
-                        }
-                      },
-                      "displayName": "2024"
-                    },
-                    {
-                      "id": {
-                        "scopeId": {
-                          "Comparison": {
-                            "ComparisonKind": 0,
-                            "Left": {
-                              "Column": {
-                                "Expression": {
-                                  "SourceRef": {
-                                    "Entity": "Calendrier"
-                                  }
-                                },
-                                "Property": "Annee"
-                              }
-                            },
-                            "Right": {
-                              "Literal": {
-                                "Value": "'2025'"
-                              }
-                            }
-                          }
-                        }
-                      },
-                      "displayName": "2025"
-                    },
-                    {
-                      "id": {
-                        "scopeId": {
-                          "Comparison": {
-                            "ComparisonKind": 0,
-                            "Left": {
-                              "Column": {
-                                "Expression": {
-                                  "SourceRef": {
-                                    "Entity": "Calendrier"
-                                  }
-                                },
-                                "Property": "Annee"
-                              }
-                            },
-                            "Right": {
-                              "Literal": {
-                                "Value": "'2026'"
-                              }
-                            }
-                          }
-                        }
-                      },
-                      "displayName": "2026"
-                    }
-                  ]
-                },
-                {
-                  "name": "1644c2296b53b9605277",
-                  "type": "Advanced",
-                  "filter": {
-                    "Version": 2,
-                    "From": [
-                      {
-                        "Name": "m",
-                        "Entity": "Mesures",
-                        "Type": 0
-                      }
-                    ],
-                    "Where": [
-                      {
-                        "Condition": {
-                          "Comparison": {
-                            "ComparisonKind": 0,
-                            "Left": {
-                              "Measure": {
-                                "Expression": {
-                                  "SourceRef": {
-                                    "Source": "m"
-                                  }
-                                },
-                                "Property": "Fenêtre Graph Remplissage (12M + 6M)"
-                              }
-                            },
-                            "Right": {
-                              "Literal": {
-                                "Value": "1L"
+                            "Table": {
+                              "SourceRef": {
+                                "Source": "subquery"
                               }
                             }
                           }
@@ -1013,39 +1324,19 @@
                     ]
                   },
                   "expression": {
-                    "Measure": {
+                    "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Mesures"
+                          "Entity": "planity_rdv_36_mois"
                         }
                       },
-                      "Property": "Fenêtre Graph Remplissage (12M + 6M)"
-                    }
-                  },
-                  "howCreated": 1
-                },
-                {
-                  "name": "ead133a7aec0a9157847",
-                  "type": "Categorical",
-                  "expression": {
-                    "HierarchyLevel": {
-                      "Expression": {
-                        "Hierarchy": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Entity": "Calendrier"
-                            }
-                          },
-                          "Hierarchy": "Annee Hiérarchie"
-                        }
-                      },
-                      "Level": "Nom du mois"
+                      "Property": "zone"
                     }
                   },
                   "howCreated": 0
                 },
                 {
-                  "name": "ac28e6708129e194351c",
+                  "name": "744facb92aee1bdb0b6e",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1054,52 +1345,7 @@
                           "Entity": "Mesures"
                         }
                       },
-                      "Property": "CA - Réel (mensuel)"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "4cead1d86337d040b18c",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Mesures"
-                        }
-                      },
-                      "Property": "CA - Prévision (6M, mensuel)"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "73d3bac0d1a717e7d382",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Mesures"
-                        }
-                      },
-                      "Property": "Marge - Réel (mensuel)"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "931307b69550add53b3c",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Mesures"
-                        }
-                      },
-                      "Property": "Marge - Prévision (6M, mensuel)"
+                      "Property": "Taux remplissage par zone (réalisé)"
                     }
                   },
                   "howCreated": 0
@@ -1107,48 +1353,40 @@
               ]
             },
             "singleVisual": {
-              "visualType": "lineStackedColumnComboChart",
+              "visualType": "clusteredColumnChart",
               "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mesures"
+                        }
+                      },
+                      "Property": "Taux remplissage par zone (réalisé)"
+                    }
+                  }
+                }
+              ],
               "activeProjections": {
                 "Category": [
                   {
-                    "HierarchyLevel": {
+                    "Column": {
                       "Expression": {
-                        "Hierarchy": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Entity": "Calendrier"
-                            }
-                          },
-                          "Hierarchy": "Annee Hiérarchie"
+                        "SourceRef": {
+                          "Entity": "planity_rdv_36_mois"
                         }
                       },
-                      "Level": "Annee"
-                    }
-                  },
-                  {
-                    "HierarchyLevel": {
-                      "Expression": {
-                        "Hierarchy": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Entity": "Calendrier"
-                            }
-                          },
-                          "Hierarchy": "Annee Hiérarchie"
-                        }
-                      },
-                      "Level": "Nom du mois"
+                      "Property": "zone"
                     }
                   }
                 ]
+              },
+              "display": {
+                "mode": "hidden"
               }
-            }
-          },
-          "cb8716f5ce984044580a": {
-            "singleVisual": {
-              "visualType": "bookmarkNavigator",
-              "objects": {}
             }
           }
         }

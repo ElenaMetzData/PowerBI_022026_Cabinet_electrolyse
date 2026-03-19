@@ -1,6 +1,6 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/2.0.0/schema.json",
-  "displayName": "Client",
+  "displayName": "Approche clientèle",
   "name": "f3a6560b06063c9a3d34",
   "options": {
     "targetVisualNames": [

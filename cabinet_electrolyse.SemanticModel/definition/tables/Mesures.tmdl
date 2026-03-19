@@ -1279,9 +1279,46 @@ table Mesures
 		formatString: 0
 		lineageTag: 757d18c9-935e-458a-9734-26fdc3819fe3
 
-	measure Aujourd_hui = TODAY()
+	measure Aujourd_hui = DATE(YEAR(TODAY()), MONTH(TODAY()), -15)
 		formatString: General Date
 		lineageTag: 87b64d39-5517-44cc-9c53-6e83e1ce04fd
+
+	measure 'Filtre 18 mois' =
+			
+			VAR DateMin = EDATE(TODAY(), -18)
+			RETURN
+			IF(
+			    MAX(Calendrier[Date]) >= DateMin &&
+			    MAX(Calendrier[Date]) <= TODAY(),
+			    1,
+			    0
+			)
+		formatString: 0
+		lineageTag: 5a310ac0-9ae5-46e8-b621-8f41ef634362
+
+	measure FinDernierMoisReel = EOMONTH(TODAY(),-1)
+		formatString: General Date
+		lineageTag: 1dcd28d1-ca33-4690-9b5b-45dc894b0127
+
+	measure 'Taux remplissage par zone (réalisé)' =
+			
+			
+			VAR HeuresZone =
+			    DIVIDE(
+			        CALCULATE(
+			            SUM(planity_rdv_36_mois[duree_prestation_min]),
+			            planity_rdv_36_mois[statut] IN {"Réalisé", "Honoré"}
+			        ),
+			        60
+			    )
+			
+			VAR HeuresOuverture = [Heures ouverture théoriques]
+			
+			RETURN
+			DIVIDE(HeuresZone, HeuresOuverture)
+		lineageTag: 82076f55-e15b-4d26-8927-0cc6a908b3c9
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column Placeholder
 		isHidden

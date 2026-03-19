@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
   "name": "04d3843b05dd64777c0a",
   "position": {
-    "x": 19.335347432024168,
-    "y": 218.4894259818731,
-    "z": 5000,
-    "height": 484.35045317220539,
-    "width": 867.190332326284,
+    "x": 26.666666666666664,
+    "y": 262.22222222222223,
+    "z": 6000,
+    "height": 441.11111111111109,
+    "width": 860,
     "tabOrder": 0
   },
   "visual": {
@@ -64,89 +64,45 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Mesures"
+                      "Entity": "AMesures"
                     }
                   },
                   "Property": "Clients récurrents du mois"
                 }
               },
-              "queryRef": "Mesures.Clients récurrents du mois",
-              "nativeQueryRef": "Base clients",
-              "displayName": "Base clients"
+              "queryRef": "AMesures.Clients récurrents du mois",
+              "nativeQueryRef": "Base clients"
             },
             {
               "field": {
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Mesures"
+                      "Entity": "AMesures"
                     }
                   },
                   "Property": "Nouveaux clients du mois"
                 }
               },
-              "queryRef": "Mesures.Nouveaux clients du mois",
-              "nativeQueryRef": "Nouveaux clients",
-              "displayName": "Nouveaux clients"
+              "queryRef": "AMesures.Nouveaux clients du mois",
+              "nativeQueryRef": "Nouveaux clients"
             },
             {
               "field": {
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Mesures"
+                      "Entity": "AMesures"
                     }
                   },
                   "Property": "Fins de traitement du mois"
                 }
               },
-              "queryRef": "Mesures.Fins de traitement du mois",
-              "nativeQueryRef": "Fins de traitement",
-              "displayName": "Fins de traitement"
+              "queryRef": "AMesures.Fins de traitement du mois",
+              "nativeQueryRef": "Fins de traitement"
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "HierarchyLevel": {
-                "Expression": {
-                  "Hierarchy": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "Calendrier"
-                      }
-                    },
-                    "Hierarchy": "Annee Hiérarchie"
-                  }
-                },
-                "Level": "Annee"
-              }
-            },
-            "direction": "Ascending"
-          },
-          {
-            "field": {
-              "HierarchyLevel": {
-                "Expression": {
-                  "Hierarchy": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "Calendrier"
-                      }
-                    },
-                    "Hierarchy": "Annee Hiérarchie"
-                  }
-                },
-                "Level": "Nom du mois"
-              }
-            },
-            "direction": "Ascending"
-          }
-        ],
-        "isDefaultSort": true
       }
     },
     "objects": {
@@ -189,6 +145,20 @@
                       "Percent": -0.2
                     }
                   }
+                }
+              }
+            },
+            "showGradientLegend": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }
@@ -322,6 +292,25 @@
           },
           "selector": {
             "metadata": "Mesures.Fins de traitement du mois"
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 5,
+                      "Percent": -0.25
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "AMesures.Clients récurrents du mois"
           }
         }
       ]
@@ -541,33 +530,13 @@
         }
       },
       {
-        "name": "0f77de900705e7cba0d0",
-        "ordinal": 1,
-        "field": {
-          "HierarchyLevel": {
-            "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Calendrier"
-                  }
-                },
-                "Hierarchy": "Annee Hiérarchie"
-              }
-            },
-            "Level": "Nom du mois"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
         "name": "e8e17c1540673e61772c",
         "ordinal": 2,
         "field": {
           "Measure": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Mesures"
+                "Entity": "AMesures"
               }
             },
             "Property": "Filtre 18 mois"
@@ -579,7 +548,7 @@
           "From": [
             {
               "Name": "m",
-              "Entity": "Mesures",
+              "Entity": "AMesures",
               "Type": 0
             }
           ],
@@ -630,51 +599,6 @@
         },
         "type": "Advanced",
         "howCreated": "User"
-      },
-      {
-        "name": "35b9ef0828a0239080ce",
-        "ordinal": 4,
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Mesures"
-              }
-            },
-            "Property": "Nouveaux clients du mois"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "664c4a61b1a772d6299c",
-        "ordinal": 5,
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Mesures"
-              }
-            },
-            "Property": "Fins de traitement du mois"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "4a7f45503776d8eed212",
-        "ordinal": 6,
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Mesures"
-              }
-            },
-            "Property": "Clients récurrents du mois"
-          }
-        },
-        "type": "Advanced"
       }
     ],
     "filterSortOrder": "Custom"

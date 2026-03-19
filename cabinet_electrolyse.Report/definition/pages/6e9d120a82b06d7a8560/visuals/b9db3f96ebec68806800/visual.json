@@ -1,10 +1,10 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
   "name": "b9db3f96ebec68806800",
   "position": {
     "x": 943.97984886649863,
     "y": 487.85894206549114,
-    "z": 15000,
+    "z": 16000,
     "height": 219.44584382871534,
     "width": 311.93954659949623,
     "tabOrder": 7000
@@ -40,7 +40,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Mesures"
+                      "Entity": "AMesures"
                     }
                   },
                   "Property": "CA"
@@ -61,7 +61,7 @@
               "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "Mesures"
+                    "Entity": "AMesures"
                   }
                 },
                 "Property": "CA"
@@ -175,7 +175,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Mesures"
+                      "Entity": "AMesures"
                     }
                   },
                   "Property": "% CA par zone (label)"
@@ -187,7 +187,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Mesures"
+                      "Entity": "AMesures"
                     }
                   },
                   "Property": "% CA par zone (label)"
@@ -493,7 +493,7 @@
                       },
                       {
                         "Name": "m",
-                        "Entity": "Mesures",
+                        "Entity": "AMesures",
                         "Type": 0
                       }
                     ],

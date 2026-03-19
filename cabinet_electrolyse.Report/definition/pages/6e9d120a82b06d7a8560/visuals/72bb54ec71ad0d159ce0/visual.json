@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
   "name": "72bb54ec71ad0d159ce0",
   "position": {
-    "x": 268.76132930513592,
-    "y": 32.870090634441084,
-    "z": 6000,
-    "height": 139.21450151057402,
-    "width": 222.35649546827793,
+    "x": 251.98221586263287,
+    "y": 62.148201144726087,
+    "z": 7000,
+    "height": 139.19869174161897,
+    "width": 221.880621422731,
     "tabOrder": 1000
   },
   "visual": {
@@ -20,7 +20,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Mesures"
+                      "Entity": "AMesures"
                     }
                   },
                   "Property": "Taux remplissage M-1 (ignore filtres)"
@@ -35,7 +35,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Mesures"
+                      "Entity": "AMesures"
                     }
                   },
                   "Property": "Sous-titre Var MoM - Taux remplissage"
@@ -54,7 +54,7 @@
               "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "Mesures"
+                    "Entity": "AMesures"
                   }
                 },
                 "Property": "Taux remplissage M-1 (ignore filtres)"
@@ -170,7 +170,7 @@
                                 "Measure": {
                                   "Expression": {
                                     "SourceRef": {
-                                      "Entity": "Mesures"
+                                      "Entity": "AMesures"
                                     }
                                   },
                                   "Property": "Var % MoM (ignore filtres)"
@@ -237,7 +237,7 @@
                                 "Measure": {
                                   "Expression": {
                                     "SourceRef": {
-                                      "Entity": "Mesures"
+                                      "Entity": "AMesures"
                                     }
                                   },
                                   "Property": "Var % MoM - Taux remplissage (ignore filtres)"
@@ -264,7 +264,7 @@
                                 "Measure": {
                                   "Expression": {
                                     "SourceRef": {
-                                      "Entity": "Mesures"
+                                      "Entity": "AMesures"
                                     }
                                   },
                                   "Property": "Var % MoM - Taux remplissage (ignore filtres)"
@@ -279,7 +279,7 @@
                           },
                           "Value": {
                             "Literal": {
-                              "Value": "'#D00E0E'"
+                              "Value": "'#FA4646'"
                             }
                           }
                         }
@@ -345,7 +345,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Mesures"
+                      "Entity": "AMesures"
                     }
                   },
                   "Property": "Sous-titre Var MoM"
@@ -371,7 +371,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Mesures"
+                      "Entity": "AMesures"
                     }
                   },
                   "Property": "Sous-titre Var YoY"
@@ -441,7 +441,7 @@
                                 "Measure": {
                                   "Expression": {
                                     "SourceRef": {
-                                      "Entity": "Mesures"
+                                      "Entity": "AMesures"
                                     }
                                   },
                                   "Property": "Var % YoY (ignore filtres)"
@@ -468,7 +468,7 @@
                                 "Measure": {
                                   "Expression": {
                                     "SourceRef": {
-                                      "Entity": "Mesures"
+                                      "Entity": "AMesures"
                                     }
                                   },
                                   "Property": "Var % YoY (ignore filtres)"
@@ -519,7 +519,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Mesures"
+                      "Entity": "AMesures"
                     }
                   },
                   "Property": "Sous-titre Var YoY - Taux remplissage"
@@ -575,7 +575,7 @@
                                 "Measure": {
                                   "Expression": {
                                     "SourceRef": {
-                                      "Entity": "Mesures"
+                                      "Entity": "AMesures"
                                     }
                                   },
                                   "Property": "Var % YoY - Taux remplissage (ignore filtres)"
@@ -590,7 +590,7 @@
                           },
                           "Value": {
                             "Literal": {
-                              "Value": "'#0AA40F'"
+                              "Value": "'#12B13F'"
                             }
                           }
                         },
@@ -602,7 +602,7 @@
                                 "Measure": {
                                   "Expression": {
                                     "SourceRef": {
-                                      "Entity": "Mesures"
+                                      "Entity": "AMesures"
                                     }
                                   },
                                   "Property": "Var % YoY - Taux remplissage (ignore filtres)"
@@ -986,7 +986,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Mesures"
+                      "Entity": "AMesures"
                     }
                   },
                   "Property": "Titre Dernier Mois Terminé"

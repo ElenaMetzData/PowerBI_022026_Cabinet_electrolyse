@@ -1,18 +1,37 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
   "name": "9764bf5d242267019e96",
   "position": {
-    "x": 943.56495468277944,
-    "y": 219.4561933534743,
-    "z": 14000,
-    "height": 232.02416918429003,
-    "width": 312.26586102719034,
+    "x": 943.33333333333326,
+    "y": 250,
+    "z": 15000,
+    "height": 225.55555555555554,
+    "width": 312.22222222222223,
     "tabOrder": 6000
   },
   "visual": {
     "visualType": "donutChart",
     "query": {
       "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "LegendeOccupation"
+                    }
+                  },
+                  "Property": "Catégorie"
+                }
+              },
+              "queryRef": "LegendeOccupation.Catégorie",
+              "nativeQueryRef": "Catégorie",
+              "active": true
+            }
+          ]
+        },
         "Y": {
           "projections": [
             {
@@ -20,61 +39,14 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Mesures"
+                      "Entity": "AMesures"
                     }
                   },
-                  "Property": "Heures RDV annulés"
+                  "Property": "Heures par catégorie"
                 }
               },
-              "queryRef": "Mesures.Heures RDV annulés",
-              "nativeQueryRef": "RDV annulés",
-              "displayName": "RDV annulés",
-              "format": "0"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Mesures"
-                    }
-                  },
-                  "Property": "Heures RDV réalisés"
-                }
-              },
-              "queryRef": "Mesures.Heures RDV réalisés",
-              "nativeQueryRef": "RDV réalisés",
-              "displayName": "RDV réalisés"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Mesures"
-                    }
-                  },
-                  "Property": "Heures RDV no-show"
-                }
-              },
-              "queryRef": "Mesures.Heures RDV no-show",
-              "nativeQueryRef": "RDV no-show",
-              "displayName": "RDV no-show"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Mesures"
-                    }
-                  },
-                  "Property": "Heures non facturées (admin)"
-                }
-              },
-              "queryRef": "Mesures.Heures non facturées (admin)",
-              "nativeQueryRef": "Temps admin",
-              "displayName": "Temps admin"
+              "queryRef": "AMesures.Heures par catégorie",
+              "nativeQueryRef": "Heures par catégorie"
             }
           ]
         }
@@ -86,15 +58,16 @@
               "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "Mesures"
+                    "Entity": "AMesures"
                   }
                 },
-                "Property": "Heures RDV réalisés"
+                "Property": "Heures par catégorie"
               }
             },
             "direction": "Descending"
           }
-        ]
+        ],
+        "isDefaultSort": true
       }
     },
     "objects": {
@@ -233,7 +206,7 @@
                   "expr": {
                     "ThemeDataColor": {
                       "ColorId": 9,
-                      "Percent": 0.2
+                      "Percent": 0.4
                     }
                   }
                 }
@@ -241,7 +214,30 @@
             }
           },
           "selector": {
-            "metadata": "Mesures.Heures RDV réalisés"
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "LegendeOccupation"
+                          }
+                        },
+                        "Property": "Catégorie"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'RDV réalisés'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
           }
         },
         {
@@ -251,8 +247,8 @@
                 "color": {
                   "expr": {
                     "ThemeDataColor": {
-                      "ColorId": 5,
-                      "Percent": -0.5
+                      "ColorId": 4,
+                      "Percent": 0.6
                     }
                   }
                 }
@@ -260,7 +256,30 @@
             }
           },
           "selector": {
-            "metadata": "Mesures.Heures RDV annulés"
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "LegendeOccupation"
+                          }
+                        },
+                        "Property": "Catégorie"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Temps admin'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
           }
         },
         {
@@ -270,7 +289,7 @@
                 "color": {
                   "expr": {
                     "ThemeDataColor": {
-                      "ColorId": 2,
+                      "ColorId": 0,
                       "Percent": -0.5
                     }
                   }
@@ -279,7 +298,72 @@
             }
           },
           "selector": {
-            "metadata": "Mesures.Heures RDV no-show"
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "LegendeOccupation"
+                          }
+                        },
+                        "Property": "Catégorie"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'RDV annulés'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.6
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "LegendeOccupation"
+                          }
+                        },
+                        "Property": "Catégorie"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'RDV no-show'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
           }
         }
       ],

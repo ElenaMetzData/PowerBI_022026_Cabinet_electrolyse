@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
   "name": "d3e1fb4207e7759763cd",
   "position": {
-    "x": 943.92220421393836,
-    "y": 489.59481361426253,
-    "z": 17000,
-    "height": 220.94003241491086,
-    "width": 312.22042139384115,
+    "x": 940,
+    "y": 481.11111111111109,
+    "z": 18000,
+    "height": 225.55555555555554,
+    "width": 308.88888888888886,
     "tabOrder": 17000
   },
   "visual": {
@@ -40,7 +40,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Mesures"
+                      "Entity": "AMesures"
                     }
                   },
                   "Property": "Taux remplissage par zone (réalisé)"
@@ -59,7 +59,7 @@
               "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "Mesures"
+                    "Entity": "AMesures"
                   }
                 },
                 "Property": "Taux remplissage par zone (réalisé)"
@@ -173,7 +173,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Mesures"
+                      "Entity": "AMesures"
                     }
                   },
                   "Property": "% CA par zone (label)"
@@ -185,7 +185,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Mesures"
+                      "Entity": "AMesures"
                     }
                   },
                   "Property": "% CA par zone (label)"
@@ -491,7 +491,7 @@
                       },
                       {
                         "Name": "m",
-                        "Entity": "Mesures",
+                        "Entity": "AMesures",
                         "Type": 0
                       }
                     ],

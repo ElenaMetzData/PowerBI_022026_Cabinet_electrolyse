@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
   "name": "39d6d608c7bbd4879c36",
   "position": {
-    "x": 31.903323262839876,
-    "y": 229.12386706948641,
-    "z": 12000,
-    "height": 477.58308157099697,
-    "width": 868.1570996978852,
+    "x": 32,
+    "y": 281,
+    "z": 13000,
+    "height": 426,
+    "width": 868,
     "tabOrder": 5000
   },
   "visual": {
@@ -39,7 +39,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Mesures"
+                      "Entity": "AMesures"
                     }
                   },
                   "Property": "CA - Réel (mensuel)"
@@ -54,7 +54,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Mesures"
+                      "Entity": "AMesures"
                     }
                   },
                   "Property": "CA - Prévision (6M, mensuel)"
@@ -73,7 +73,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Mesures"
+                      "Entity": "AMesures"
                     }
                   },
                   "Property": "Marge - Réel (mensuel)"
@@ -88,7 +88,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Mesures"
+                      "Entity": "AMesures"
                     }
                   },
                   "Property": "Marge - Prévision (6M, mensuel)"
@@ -169,6 +169,13 @@
                   }
                 }
               }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
             }
           }
         }
@@ -218,7 +225,7 @@
             "showAxisTitle": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             },
@@ -242,6 +249,91 @@
               }
             },
             "gridlineShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "secShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "start": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "secStart": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "secEnd": {
+              "expr": {
+                "Literal": {
+                  "Value": "12000D"
+                }
+              }
+            },
+            "secLabelColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.3
+                    }
+                  }
+                }
+              }
+            },
+            "titleText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'CA'"
+                }
+              }
+            },
+            "titleColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.3
+                    }
+                  }
+                }
+              }
+            },
+            "secTitleText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Marge'"
+                }
+              }
+            },
+            "secTitleColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.3
+                    }
+                  }
+                }
+              }
+            },
+            "secShowAxisTitle": {
               "expr": {
                 "Literal": {
                   "Value": "false"
@@ -302,6 +394,13 @@
                   "Value": "42D"
                 }
               }
+            },
+            "areaShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
             }
           },
           "selector": {
@@ -330,10 +429,28 @@
                   "Value": "4D"
                 }
               }
+            },
+            "areaShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
             }
           },
           "selector": {
             "metadata": "Mesures.Marge - Réel (mensuel)"
+          }
+        },
+        {
+          "properties": {
+            "areaShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
           }
         }
       ],
@@ -437,7 +554,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Mesures"
+                      "Entity": "AMesures"
                     }
                   },
                   "Property": "Aujourd_hui"
@@ -517,7 +634,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'CA et marge sur 12 mois + 6 mois prévisionnels'"
+                  "Value": "'CA & marge sur 12 mois + 6 mois prévisionnels'"
                 }
               }
             },
@@ -808,7 +925,7 @@
           "Measure": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Mesures"
+                "Entity": "AMesures"
               }
             },
             "Property": "Fenêtre Graph Remplissage (12M + 6M)"
@@ -820,7 +937,7 @@
           "From": [
             {
               "Name": "m",
-              "Entity": "Mesures",
+              "Entity": "AMesures",
               "Type": 0
             }
           ],

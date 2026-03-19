@@ -1,10 +1,10 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
   "name": "f4df9094dc835bec687b",
   "position": {
-    "x": 27.069486404833835,
-    "y": 31.903323262839876,
-    "z": 11000,
+    "x": 26.819486404833835,
+    "y": 62.653323262839876,
+    "z": 12000,
     "height": 139.21450151057402,
     "width": 220.42296072507551,
     "tabOrder": 4000
@@ -20,7 +20,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Mesures"
+                      "Entity": "AMesures"
                     }
                   },
                   "Property": "CA M-1 (ignore filtres)"
@@ -35,7 +35,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Mesures"
+                      "Entity": "AMesures"
                     }
                   },
                   "Property": "Sous-titre Var MoM"
@@ -54,7 +54,7 @@
               "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "Mesures"
+                    "Entity": "AMesures"
                   }
                 },
                 "Property": "CA M-1 (ignore filtres)"
@@ -170,7 +170,7 @@
                                 "Measure": {
                                   "Expression": {
                                     "SourceRef": {
-                                      "Entity": "Mesures"
+                                      "Entity": "AMesures"
                                     }
                                   },
                                   "Property": "Var % MoM (ignore filtres)"
@@ -185,7 +185,7 @@
                           },
                           "Value": {
                             "Literal": {
-                              "Value": "'#DA0909'"
+                              "Value": "'#FA3636'"
                             }
                           }
                         }
@@ -237,7 +237,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Mesures"
+                      "Entity": "AMesures"
                     }
                   },
                   "Property": "Sous-titre Var MoM"
@@ -263,7 +263,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Mesures"
+                      "Entity": "AMesures"
                     }
                   },
                   "Property": "Sous-titre Var YoY"
@@ -333,7 +333,7 @@
                                 "Measure": {
                                   "Expression": {
                                     "SourceRef": {
-                                      "Entity": "Mesures"
+                                      "Entity": "AMesures"
                                     }
                                   },
                                   "Property": "Var % YoY (ignore filtres)"
@@ -360,7 +360,7 @@
                                 "Measure": {
                                   "Expression": {
                                     "SourceRef": {
-                                      "Entity": "Mesures"
+                                      "Entity": "AMesures"
                                     }
                                   },
                                   "Property": "Var % YoY (ignore filtres)"
@@ -411,7 +411,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Mesures"
+                      "Entity": "AMesures"
                     }
                   },
                   "Property": "Sous-titre Var YoY - Taux remplissage"
@@ -749,7 +749,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Mesures"
+                      "Entity": "AMesures"
                     }
                   },
                   "Property": "Titre Dernier Mois Terminé"

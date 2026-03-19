@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/2.0.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/2.1.0/schema.json",
   "displayName": "Approche clientèle",
   "name": "f3a6560b06063c9a3d34",
   "options": {
@@ -214,7 +214,7 @@
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Mesures"
+                          "Entity": "AMesures"
                         }
                       },
                       "Property": "Nouveaux clients du mois"
@@ -229,7 +229,7 @@
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Mesures"
+                          "Entity": "AMesures"
                         }
                       },
                       "Property": "Fins de traitement du mois"
@@ -244,7 +244,7 @@
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Mesures"
+                          "Entity": "AMesures"
                         }
                       },
                       "Property": "Clients récurrents du mois"
@@ -341,7 +341,7 @@
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Mesures"
+                          "Entity": "AMesures"
                         }
                       },
                       "Property": "Taux remplissage M-1 (ignore filtres)"
@@ -356,7 +356,7 @@
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Mesures"
+                          "Entity": "AMesures"
                         }
                       },
                       "Property": "Sous-titre Var MoM - Taux remplissage"
@@ -376,7 +376,7 @@
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Mesures"
+                          "Entity": "AMesures"
                         }
                       },
                       "Property": "Taux remplissage M-1 (ignore filtres)"
@@ -396,7 +396,7 @@
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Mesures"
+                          "Entity": "AMesures"
                         }
                       },
                       "Property": "Durée traitement moyenne (mois) (label)"
@@ -421,7 +421,7 @@
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Mesures"
+                          "Entity": "AMesures"
                         }
                       },
                       "Property": "Clients actifs par canal"
@@ -456,7 +456,7 @@
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Mesures"
+                          "Entity": "AMesures"
                         }
                       },
                       "Property": "Clients actifs par canal"
@@ -490,7 +490,7 @@
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Mesures"
+                          "Entity": "AMesures"
                         }
                       },
                       "Property": "CA M-1 (ignore filtres)"
@@ -505,7 +505,7 @@
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Mesures"
+                          "Entity": "AMesures"
                         }
                       },
                       "Property": "Sous-titre Var MoM"
@@ -525,7 +525,7 @@
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Mesures"
+                          "Entity": "AMesures"
                         }
                       },
                       "Property": "CA M-1 (ignore filtres)"
@@ -545,7 +545,7 @@
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Mesures"
+                          "Entity": "AMesures"
                         }
                       },
                       "Property": "LTV estimée (12 mois après 1re consult)"
@@ -565,7 +565,7 @@
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Mesures"
+                          "Entity": "AMesures"
                         }
                       },
                       "Property": "LTV estimée (12 mois après 1re consult)"
@@ -585,7 +585,7 @@
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Mesures"
+                          "Entity": "AMesures"
                         }
                       },
                       "Property": "Heures RDV annulés"
@@ -600,7 +600,7 @@
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Mesures"
+                          "Entity": "AMesures"
                         }
                       },
                       "Property": "Heures RDV réalisés"
@@ -615,7 +615,7 @@
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Mesures"
+                          "Entity": "AMesures"
                         }
                       },
                       "Property": "Heures RDV no-show"
@@ -630,7 +630,7 @@
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Mesures"
+                          "Entity": "AMesures"
                         }
                       },
                       "Property": "Heures non facturées (admin)"
@@ -650,7 +650,7 @@
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Mesures"
+                          "Entity": "AMesures"
                         }
                       },
                       "Property": "Heures RDV annulés"
@@ -686,7 +686,7 @@
                                 },
                                 {
                                   "Name": "m",
-                                  "Entity": "Mesures",
+                                  "Entity": "AMesures",
                                   "Type": 0
                                 }
                               ],
@@ -775,7 +775,7 @@
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Mesures"
+                          "Entity": "AMesures"
                         }
                       },
                       "Property": "CA"
@@ -795,7 +795,7 @@
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Mesures"
+                          "Entity": "AMesures"
                         }
                       },
                       "Property": "CA"
@@ -983,7 +983,7 @@
                     "From": [
                       {
                         "Name": "m",
-                        "Entity": "Mesures",
+                        "Entity": "AMesures",
                         "Type": 0
                       }
                     ],
@@ -1016,7 +1016,7 @@
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Mesures"
+                          "Entity": "AMesures"
                         }
                       },
                       "Property": "Fenêtre Graph Remplissage (12M + 6M)"
@@ -1051,7 +1051,7 @@
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Mesures"
+                          "Entity": "AMesures"
                         }
                       },
                       "Property": "CA - Réel (mensuel)"
@@ -1066,7 +1066,7 @@
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Mesures"
+                          "Entity": "AMesures"
                         }
                       },
                       "Property": "CA - Prévision (6M, mensuel)"
@@ -1081,7 +1081,7 @@
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Mesures"
+                          "Entity": "AMesures"
                         }
                       },
                       "Property": "Marge - Réel (mensuel)"
@@ -1096,7 +1096,7 @@
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Mesures"
+                          "Entity": "AMesures"
                         }
                       },
                       "Property": "Marge - Prévision (6M, mensuel)"

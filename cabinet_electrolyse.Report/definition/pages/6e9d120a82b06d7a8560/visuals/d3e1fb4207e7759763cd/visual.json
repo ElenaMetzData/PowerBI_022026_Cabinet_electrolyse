@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
-  "name": "b9db3f96ebec68806800",
+  "name": "d3e1fb4207e7759763cd",
   "position": {
-    "x": 943.97984886649863,
-    "y": 487.85894206549114,
-    "z": 16000,
-    "height": 219.44584382871534,
-    "width": 311.93954659949623,
-    "tabOrder": 7000
+    "x": 940,
+    "y": 481.11111111111109,
+    "z": 18000,
+    "height": 225.55555555555554,
+    "width": 308.88888888888886,
+    "tabOrder": 17000
   },
   "visual": {
     "visualType": "clusteredColumnChart",
@@ -43,13 +43,11 @@
                       "Entity": "AMesures"
                     }
                   },
-                  "Property": "CA"
+                  "Property": "Taux remplissage par zone (réalisé)"
                 }
               },
-              "queryRef": "Mesures.CA",
-              "nativeQueryRef": "Chiffre d'affaire",
-              "displayName": "Chiffre d'affaire",
-              "format": "#,0"
+              "queryRef": "Mesures.Taux remplissage par zone (réalisé)",
+              "nativeQueryRef": "Taux remplissage par zone (réalisé)"
             }
           ]
         }
@@ -64,7 +62,7 @@
                     "Entity": "AMesures"
                   }
                 },
-                "Property": "CA"
+                "Property": "Taux remplissage par zone (réalisé)"
               }
             },
             "direction": "Descending"
@@ -373,7 +371,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Chiffre d''affaire par zone traitée'"
+                  "Value": "'Tx de remplissage par zone traitée'"
                 }
               }
             },
@@ -565,5 +563,6 @@
         }
       }
     ]
-  }
+  },
+  "isHidden": true
 }

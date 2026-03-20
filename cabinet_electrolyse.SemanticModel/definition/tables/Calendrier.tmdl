@@ -99,6 +99,27 @@ table Calendrier
 
 		annotation SummarizationSetBy = Automatic
 
+	column Column
+		type: calculated
+		lineageTag: 3e602513-321f-4152-b1a7-ff67cd32dfef
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation 43dbc3e8-3a1c-4b6f-9923-b49ff7d6691c = True
+
+	column StartOfMonth = DATE(YEAR('Calendrier'[Date]), MONTH('Calendrier'[Date]), 1)
+		formatString: General Date
+		lineageTag: 57b312db-abcf-4cd4-9e97-85bb3a6c66ef
+		summarizeBy: none
+
+		variation Variation
+			isDefault
+			relationship: b097090e-d72a-41fa-bdf2-ced9a071ed92
+			defaultHierarchy: LocalDateTable_7a53ce29-6223-48de-954f-1b6ab4f02ad7.'Hiérarchie de dates'
+
+		annotation SummarizationSetBy = Automatic
+
 	hierarchy 'Annee Hiérarchie'
 		lineageTag: 7e98bcea-faa9-426c-a7b6-8e313ef0dfbd
 

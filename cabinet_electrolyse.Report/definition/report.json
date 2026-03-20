@@ -11,13 +11,13 @@
       "type": "SharedResources"
     },
     "customTheme": {
-      "name": "AccessibleOrchid",
+      "name": "Accessible_Orchid07151054220053576.json",
       "reportVersionAtImport": {
         "visual": "2.6.0",
         "report": "3.1.0",
         "page": "2.3.0"
       },
-      "type": "SharedResources"
+      "type": "RegisteredResources"
     }
   },
   "objects": {
@@ -57,10 +57,16 @@
           "name": "CY26SU02",
           "path": "BaseThemes/CY26SU02.json",
           "type": "BaseTheme"
-        },
+        }
+      ]
+    },
+    {
+      "name": "RegisteredResources",
+      "type": "RegisteredResources",
+      "items": [
         {
-          "name": "AccessibleOrchid",
-          "path": "BuiltInThemes/AccessibleOrchid.json",
+          "name": "Accessible_Orchid07151054220053576.json",
+          "path": "Accessible_Orchid07151054220053576.json",
           "type": "CustomTheme"
         }
       ]

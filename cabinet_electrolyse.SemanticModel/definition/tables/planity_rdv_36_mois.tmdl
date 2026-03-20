@@ -93,6 +93,20 @@ table planity_rdv_36_mois
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	column OrdreStatut =
+			
+			SWITCH(
+			    TRUE(),
+			    planity_rdv_36_mois[OrdreStatut] = "Réalisé", 1,
+			    planity_rdv_36_mois[OrdreStatut] = "Temps admin", 2,
+			    planity_rdv_36_mois[OrdreStatut] = "Annulé", 3,
+			    planity_rdv_36_mois[OrdreStatut] = "no-show", 4
+			)
+		lineageTag: bbace7bb-244c-4d14-a1a3-df150b9df30f
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
 	partition planity_rdv_36_mois = m
 		mode: import
 		source =

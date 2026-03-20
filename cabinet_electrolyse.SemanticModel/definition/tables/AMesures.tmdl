@@ -1,4 +1,4 @@
-table Mesures
+table AMesures
 	lineageTag: 5ec9c2b6-cbae-403a-8412-70ec3be84bf5
 
 	/// Chiffre d'affaire dans le contexte de filtre
@@ -1279,25 +1279,165 @@ table Mesures
 		formatString: 0
 		lineageTag: 757d18c9-935e-458a-9734-26fdc3819fe3
 
-	measure Aujourd_hui = TODAY()
+	measure Aujourd_hui = DATE(YEAR(TODAY()), MONTH(TODAY()), -15)
 		formatString: General Date
 		lineageTag: 87b64d39-5517-44cc-9c53-6e83e1ce04fd
 
-	column Placeholder
-		isHidden
+	measure 'Filtre 18 mois' =
+			
+			VAR DateMin = EDATE(TODAY(), -18)
+			RETURN
+			IF(
+			    MAX(Calendrier[Date]) >= DateMin &&
+			    MAX(Calendrier[Date]) <= TODAY(),
+			    1,
+			    0
+			)
 		formatString: 0
-		lineageTag: eb838ea6-440d-4f28-ab20-681de9989c74
+		lineageTag: 5a310ac0-9ae5-46e8-b621-8f41ef634362
+
+	measure FinDernierMoisReel = EOMONTH(TODAY(),-1)
+		formatString: General Date
+		lineageTag: 1dcd28d1-ca33-4690-9b5b-45dc894b0127
+
+	measure 'Taux remplissage par zone (réalisé)' =
+			
+			
+			VAR HeuresZone =
+			    DIVIDE(
+			        CALCULATE(
+			            SUM(planity_rdv_36_mois[duree_prestation_min]),
+			            planity_rdv_36_mois[statut] IN {"Réalisé", "Honoré"}
+			        ),
+			        60
+			    )
+			
+			VAR HeuresOuverture = [Heures ouverture théoriques]
+			
+			RETURN
+			DIVIDE(HeuresZone, HeuresOuverture)
+		lineageTag: 82076f55-e15b-4d26-8927-0cc6a908b3c9
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Taux conversion web → client' =
+			
+			
+			VAR MoisFin   = [Date Fin M-1 (today)]
+			VAR MoisDebut = DATE(YEAR(MoisFin), MONTH(MoisFin), 1)
+			
+			VAR NouveauxSiteWeb =
+			    CALCULATE(
+			        DISTINCTCOUNT(planity_rdv_36_mois[client_id]),
+			        REMOVEFILTERS(),
+			        FILTER(
+			            ALL(planity_rdv_36_mois[client_id]),
+			            VAR FirstVisit =
+			                CALCULATE(
+			                    MIN(planity_rdv_36_mois[date]),
+			                    planity_rdv_36_mois[statut] IN {"Réalisé", "Honoré"},
+			                    ALL(Calendrier)
+			                )
+			            VAR FirstType =
+			                CALCULATE(
+			                    FIRSTNONBLANK(planity_rdv_36_mois[type_prestation], 1),
+			                    planity_rdv_36_mois[date] = FirstVisit,
+			                    ALL(Calendrier)
+			                )
+			            RETURN
+			                FirstVisit >= MoisDebut
+			                && FirstVisit <= MoisFin
+			                && FirstType = "Consultation préalable"
+			        ),
+			        FILTER(
+			            ALL(clients_36_mois),
+			            clients_36_mois[canal_acquisition] = "Site internet"
+			        )
+			    )
+			
+			RETURN
+			DIVIDE(NouveauxSiteWeb, [Utilisateurs web M-1 (ignore filtres)])
+		lineageTag: d19081b8-888f-4d43-bff2-3441896ae3d0
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Sessions web (mensuel)' =
+			
+			SUM(google_analytics_36_mois[sessions])
+		formatString: 0
+		lineageTag: 86d3832d-df85-4442-9a2f-d0a010f49310
+
+	measure 'Utilisateurs web M-1 (ignore filtres)' =
+			
+			VAR EndDate   = [Date Fin M-1 (today)]
+			VAR StartDate = DATE(YEAR(EndDate), MONTH(EndDate), 1)
+			RETURN
+			CALCULATE(
+			    [Utilisateurs web],
+			    REMOVEFILTERS(Calendrier),
+			    DATESBETWEEN(Calendrier[Date], StartDate, EndDate)
+			)
+		formatString: 0
+		lineageTag: df237699-bedf-4683-a3ca-a08e4757949c
+
+	measure 'Nouveaux clients M-1 (carte)' =
+			
+			
+			VAR MoisFin   = [Date Fin M-1 (today)]
+			VAR MoisDebut = DATE(YEAR(MoisFin), MONTH(MoisFin), 1)
+			RETURN
+			CALCULATE(
+			    DISTINCTCOUNT(planity_rdv_36_mois[client_id]),
+			    FILTER(
+			        VALUES(planity_rdv_36_mois[client_id]),
+			        VAR FirstVisit =
+			            CALCULATE(
+			                MIN(planity_rdv_36_mois[date]),
+			                planity_rdv_36_mois[statut] IN {"Réalisé", "Honoré"},
+			                ALL(Calendrier)
+			            )
+			        VAR FirstType =
+			            CALCULATE(
+			                FIRSTNONBLANK(planity_rdv_36_mois[type_prestation], 1),
+			                planity_rdv_36_mois[date] = FirstVisit,
+			                ALL(Calendrier)
+			            )
+			        RETURN
+			            FirstVisit >= MoisDebut
+			            && FirstVisit <= MoisFin
+			            && FirstType = "Consultation préalable"
+			    )
+			)
+		formatString: 0
+		lineageTag: ec9580b2-5f2a-443a-aa6b-5d0e39905881
+
+	measure 'Utilisateurs web' = SUM(google_analytics_36_mois[users])
+		formatString: 0
+		lineageTag: bcb52e3b-e66d-4dad-8133-ca6ab2bd9413
+
+	measure 'Heures par catégorie' =
+			
+			SWITCH(
+			    MAX(LegendeOccupation[Catégorie]),
+			    "RDV réalisés", [Heures RDV réalisés],
+			    "Temps admin",  [Heures non facturées (admin)],
+			    "RDV annulés",  [Heures RDV annulés],
+			    "RDV no-show",  [Heures RDV no-show]
+			)
+		lineageTag: e364605a-ec9a-4475-8168-6b28fe675826
+
+	column Dummy
+		formatString: 0
+		lineageTag: e17ba9c4-1dc0-4e83-8966-fda21e5eaede
 		summarizeBy: sum
 		isNameInferred
-		sourceColumn: [Placeholder]
+		sourceColumn: [Dummy]
 
 		annotation SummarizationSetBy = Automatic
 
-	partition Mesures = calculated
+	partition AMesures = calculated
 		mode: import
-		source = Row("Placeholder", BLANK())
+		source = DATATABLE("Dummy", INTEGER, {{1}})
 
 	annotation PBI_Id = b61b37aa52d94a28aea5cd28dba662c4
-
-	annotation 436ba87b-9c83-4389-a31b-ebd06a36be98 = {"Expression":""}
 

@@ -1,0 +1,37 @@
+table LegendeOccupation
+	lineageTag: 17d0389c-78ca-42f2-8173-b0935d34bbe3
+
+	column Catégorie
+		lineageTag: 38e16d78-ad85-4857-8902-8eaef2df82e8
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Catégorie]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ordre
+		formatString: 0
+		lineageTag: bb766a9c-efef-4325-8e60-f1e23c931987
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Ordre]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition LegendeOccupation = calculated
+		mode: import
+		source =
+				
+				DATATABLE(
+				    "Catégorie", STRING,
+				    "Ordre",     INTEGER,
+				    {
+				        { "RDV réalisés", 1 },
+				        { "Temps admin",  2 },
+				        { "RDV annulés",  3 },
+				        { "RDV no-show",  4 }
+				    }
+				)
+
+	annotation PBI_Id = 2874e3d5c2484b809997a75bdc0534a4
+

@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
   "name": "72bb54ec71ad0d159ce0",
   "position": {
-    "x": 268.57142857142861,
-    "y": 19,
-    "z": 1000,
-    "height": 164.28571428571431,
-    "width": 222.14285714285717,
+    "x": 251.98221586263287,
+    "y": 62.148201144726087,
+    "z": 7000,
+    "height": 139.19869174161897,
+    "width": 221.880621422731,
     "tabOrder": 1000
   },
   "visual": {
@@ -20,7 +20,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Mesures"
+                      "Entity": "AMesures"
                     }
                   },
                   "Property": "Taux remplissage M-1 (ignore filtres)"
@@ -35,7 +35,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Mesures"
+                      "Entity": "AMesures"
                     }
                   },
                   "Property": "Sous-titre Var MoM - Taux remplissage"
@@ -54,7 +54,7 @@
               "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "Mesures"
+                    "Entity": "AMesures"
                   }
                 },
                 "Property": "Taux remplissage M-1 (ignore filtres)"
@@ -85,6 +85,18 @@
               "expr": {
                 "Literal": {
                   "Value": "10D"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
                 }
               }
             }
@@ -158,7 +170,7 @@
                                 "Measure": {
                                   "Expression": {
                                     "SourceRef": {
-                                      "Entity": "Mesures"
+                                      "Entity": "AMesures"
                                     }
                                   },
                                   "Property": "Var % MoM (ignore filtres)"
@@ -225,7 +237,7 @@
                                 "Measure": {
                                   "Expression": {
                                     "SourceRef": {
-                                      "Entity": "Mesures"
+                                      "Entity": "AMesures"
                                     }
                                   },
                                   "Property": "Var % MoM - Taux remplissage (ignore filtres)"
@@ -252,7 +264,7 @@
                                 "Measure": {
                                   "Expression": {
                                     "SourceRef": {
-                                      "Entity": "Mesures"
+                                      "Entity": "AMesures"
                                     }
                                   },
                                   "Property": "Var % MoM - Taux remplissage (ignore filtres)"
@@ -267,7 +279,7 @@
                           },
                           "Value": {
                             "Literal": {
-                              "Value": "'#D00E0E'"
+                              "Value": "'#FA4646'"
                             }
                           }
                         }
@@ -333,7 +345,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Mesures"
+                      "Entity": "AMesures"
                     }
                   },
                   "Property": "Sous-titre Var MoM"
@@ -359,7 +371,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Mesures"
+                      "Entity": "AMesures"
                     }
                   },
                   "Property": "Sous-titre Var YoY"
@@ -429,7 +441,7 @@
                                 "Measure": {
                                   "Expression": {
                                     "SourceRef": {
-                                      "Entity": "Mesures"
+                                      "Entity": "AMesures"
                                     }
                                   },
                                   "Property": "Var % YoY (ignore filtres)"
@@ -456,7 +468,7 @@
                                 "Measure": {
                                   "Expression": {
                                     "SourceRef": {
-                                      "Entity": "Mesures"
+                                      "Entity": "AMesures"
                                     }
                                   },
                                   "Property": "Var % YoY (ignore filtres)"
@@ -507,7 +519,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Mesures"
+                      "Entity": "AMesures"
                     }
                   },
                   "Property": "Sous-titre Var YoY - Taux remplissage"
@@ -563,7 +575,7 @@
                                 "Measure": {
                                   "Expression": {
                                     "SourceRef": {
-                                      "Entity": "Mesures"
+                                      "Entity": "AMesures"
                                     }
                                   },
                                   "Property": "Var % YoY - Taux remplissage (ignore filtres)"
@@ -578,7 +590,7 @@
                           },
                           "Value": {
                             "Literal": {
-                              "Value": "'#0AA40F'"
+                              "Value": "'#12B13F'"
                             }
                           }
                         },
@@ -590,7 +602,7 @@
                                 "Measure": {
                                   "Expression": {
                                     "SourceRef": {
-                                      "Entity": "Mesures"
+                                      "Entity": "AMesures"
                                     }
                                   },
                                   "Property": "Var % YoY - Taux remplissage (ignore filtres)"
@@ -681,6 +693,13 @@
               "expr": {
                 "Literal": {
                   "Value": "0L"
+                }
+              }
+            },
+            "backgroundShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }
@@ -874,6 +893,22 @@
             "metadata": "Mesures.Sous-titre Var MoM - Taux remplissage"
           }
         }
+      ],
+      "smallMultiplesBorder": [
+        {
+          "properties": {
+            "gridlineShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
       ]
     },
     "visualContainerObjects": {
@@ -914,6 +949,18 @@
                   "Value": "15D"
                 }
               }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
             }
           }
         }
@@ -939,7 +986,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Mesures"
+                      "Entity": "AMesures"
                     }
                   },
                   "Property": "Titre Dernier Mois Terminé"
@@ -950,6 +997,32 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'wf_standard-font, helvetica, arial, sans-serif'"
                 }
               }
             }
@@ -1030,7 +1103,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },

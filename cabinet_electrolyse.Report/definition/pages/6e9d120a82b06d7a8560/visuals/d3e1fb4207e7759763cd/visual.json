@@ -33,6 +33,24 @@
             }
           ]
         },
+        "Tooltips": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "AMesures"
+                    }
+                  },
+                  "Property": "% Heures par zone (label)"
+                }
+              },
+              "queryRef": "AMesures.% Heures par zone (label)",
+              "nativeQueryRef": "% Heures par zone (label)"
+            }
+          ]
+        },
         "Y": {
           "projections": [
             {
@@ -43,11 +61,11 @@
                       "Entity": "AMesures"
                     }
                   },
-                  "Property": "Taux remplissage par zone (réalisé)"
+                  "Property": "Heures RDV réalisés"
                 }
               },
-              "queryRef": "Mesures.Taux remplissage par zone (réalisé)",
-              "nativeQueryRef": "Taux remplissage par zone (réalisé)"
+              "queryRef": "AMesures.Heures RDV réalisés",
+              "nativeQueryRef": "Heures RDV réalisés"
             }
           ]
         }
@@ -62,7 +80,7 @@
                     "Entity": "AMesures"
                   }
                 },
-                "Property": "Taux remplissage par zone (réalisé)"
+                "Property": "Heures RDV réalisés"
               }
             },
             "direction": "Descending"
@@ -163,6 +181,13 @@
                   "Value": "51D"
                 }
               }
+            },
+            "labelDisplayUnits": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
             }
           }
         },
@@ -188,7 +213,7 @@
                       "Entity": "AMesures"
                     }
                   },
-                  "Property": "% CA par zone (label)"
+                  "Property": "% Heures par zone (label)"
                 }
               }
             }
@@ -410,7 +435,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             }
@@ -561,8 +586,21 @@
             }
           ]
         }
+      },
+      {
+        "name": "145cf11ed99f9a4e1499",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "AMesures"
+              }
+            },
+            "Property": "Heures RDV réalisés"
+          }
+        },
+        "type": "Advanced"
       }
     ]
-  },
-  "isHidden": true
+  }
 }

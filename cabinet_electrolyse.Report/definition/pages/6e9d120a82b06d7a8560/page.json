@@ -5,6 +5,11 @@
   "displayOption": "FitToPage",
   "height": 720,
   "width": 1280,
+  "pageBinding": {
+    "name": "feb1adc76773a3c631b4",
+    "type": "Default",
+    "parameters": []
+  },
   "objects": {
     "outspacePane": [
       {
@@ -40,6 +45,61 @@
       "source": "d3e1fb4207e7759763cd",
       "target": "4ae95fadadaa4a5226a7",
       "type": "NoFilter"
+    },
+    {
+      "source": "691e8028beee85007a94",
+      "target": "1d0b7864a979d5e09514",
+      "type": "NoFilter"
+    },
+    {
+      "source": "691e8028beee85007a94",
+      "target": "4ae95fadadaa4a5226a7",
+      "type": "NoFilter"
+    },
+    {
+      "source": "04d3843b05dd64777c0a",
+      "target": "d3e1fb4207e7759763cd",
+      "type": "DataFilter"
+    },
+    {
+      "source": "d3e1fb4207e7759763cd",
+      "target": "04d3843b05dd64777c0a",
+      "type": "DataFilter"
+    },
+    {
+      "source": "691e8028beee85007a94",
+      "target": "04d3843b05dd64777c0a",
+      "type": "DataFilter"
+    },
+    {
+      "source": "691e8028beee85007a94",
+      "target": "d3e1fb4207e7759763cd",
+      "type": "DataFilter"
+    },
+    {
+      "source": "04d3843b05dd64777c0a",
+      "target": "691e8028beee85007a94",
+      "type": "DataFilter"
+    },
+    {
+      "source": "d3e1fb4207e7759763cd",
+      "target": "691e8028beee85007a94",
+      "type": "DataFilter"
+    },
+    {
+      "source": "b9db3f96ebec68806800",
+      "target": "9764bf5d242267019e96",
+      "type": "DataFilter"
+    },
+    {
+      "source": "9764bf5d242267019e96",
+      "target": "b9db3f96ebec68806800",
+      "type": "DataFilter"
+    },
+    {
+      "source": "39d6d608c7bbd4879c36",
+      "target": "9764bf5d242267019e96",
+      "type": "DataFilter"
     }
   ]
 }

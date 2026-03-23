@@ -26,7 +26,7 @@
                   "Property": "Durée traitement moyenne (mois) (label)"
                 }
               },
-              "queryRef": "Mesures.Durée traitement moyenne (mois) (label)",
+              "queryRef": "AMesures.Durée traitement moyenne (mois) (label)",
               "nativeQueryRef": "Durée traitement moyenne (mois) (label)"
             }
           ]
@@ -904,7 +904,7 @@
             }
           },
           "selector": {
-            "metadata": "Mesures.Durée traitement moyenne (mois) (label)"
+            "metadata": "AMesures.Durée traitement moyenne (mois) (label)"
           }
         }
       ]

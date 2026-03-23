@@ -1176,16 +1176,6 @@ cultureInfo fr-FR
 			          "heures RDV réalisés": {
 			            "State": "Generated"
 			          }
-			        },
-			        {
-			          "RDV réalisés": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
 			        }
 			      ]
 			    },
@@ -3153,16 +3143,6 @@ cultureInfo fr-FR
 			          "nouveaux clients du mois": {
 			            "State": "Generated"
 			          }
-			        },
-			        {
-			          "Nouveaux clients": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
 			        }
 			      ]
 			    },
@@ -3320,16 +3300,6 @@ cultureInfo fr-FR
 			          "heures RDV annulés": {
 			            "State": "Generated"
 			          }
-			        },
-			        {
-			          "RDV annulés": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
 			        }
 			      ]
 			    },
@@ -3452,16 +3422,6 @@ cultureInfo fr-FR
 			            },
 			            "Weight": 0.514
 			          }
-			        },
-			        {
-			          "RDV no-show": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
 			        }
 			      ]
 			    },
@@ -3483,16 +3443,6 @@ cultureInfo fr-FR
 			          "heures non facturées": {
 			            "State": "Generated",
 			            "Weight": 0.75
-			          }
-			        },
-			        {
-			          "Temps admin": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -5079,16 +5029,6 @@ cultureInfo fr-FR
 			          "clients récurrents du mois": {
 			            "State": "Generated"
 			          }
-			        },
-			        {
-			          "Base clients": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
 			        }
 			      ]
 			    },
@@ -5104,16 +5044,6 @@ cultureInfo fr-FR
 			        {
 			          "fins de traitement du mois": {
 			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "Fins de traitement": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
 			          }
 			        }
 			      ]

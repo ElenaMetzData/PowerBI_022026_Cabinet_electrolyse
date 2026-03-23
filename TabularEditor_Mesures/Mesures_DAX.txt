@@ -552,26 +552,42 @@ Durée traitement moyenne (mois) =
 
 VAR SeuilInactivite = EDATE(TODAY(), -6)
 
+VAR ClientsDuCanal =
+    VALUES(clients_36_mois[client_id])
+
+VAR ClientsDeLaZone =
+    CALCULATETABLE(
+        VALUES(planity_rdv_36_mois[client_id]),
+        ALL(Calendrier)
+    )
+
+VAR ClientsFiltres =
+    INTERSECT(ClientsDuCanal, ClientsDeLaZone)
+
 VAR T =
     ADDCOLUMNS(
-        ALL(clients_36_mois[client_id]),
+        ClientsFiltres,
         "FirstDate",
+            VAR CurrentID = [client_id]
+            RETURN
             CALCULATE(
                 MIN(planity_rdv_36_mois[date]),
                 REMOVEFILTERS(Calendrier),
                 FILTER(
                     ALL(planity_rdv_36_mois),
-                    planity_rdv_36_mois[client_id] = EARLIER(clients_36_mois[client_id])
+                    planity_rdv_36_mois[client_id] = CurrentID
                     && planity_rdv_36_mois[statut] IN {"Réalisé", "Honoré"}
                 )
             ),
         "LastDate",
+            VAR CurrentID = [client_id]
+            RETURN
             CALCULATE(
                 MAX(planity_rdv_36_mois[date]),
                 REMOVEFILTERS(Calendrier),
                 FILTER(
                     ALL(planity_rdv_36_mois),
-                    planity_rdv_36_mois[client_id] = EARLIER(clients_36_mois[client_id])
+                    planity_rdv_36_mois[client_id] = CurrentID
                     && planity_rdv_36_mois[statut] IN {"Réalisé", "Honoré"}
                 )
             )
@@ -750,20 +766,10 @@ Heures non facturées (admin) =
 
 DIVIDE(
     CALCULATE(
-        SUM(planity_rdv_36_mois[temps_non_facture_min]),
-        planity_rdv_36_mois[statut] IN {"Réalisé","Honoré"}
+        SUM(planity_rdv_36_mois[temps_non_facture_min])
     ),
     60
 )
-```
-
-
-- 
-
-```
-Heures occupées =
-
-[Heures RDV réalisés] + [Heures non facturées (admin)]
 ```
 
 
@@ -782,6 +788,21 @@ SUMX(
             dow = 6, 5,
             0
         )
+)
+```
+
+
+- 
+
+```
+Heures par catégorie =
+
+SWITCH(
+    MAX(LegendeOccupation[Catégorie]),
+    "RDV réalisés", [Heures RDV réalisés],
+    "Temps admin",  [Heures non facturées (admin)],
+    "RDV annulés",  [Heures RDV annulés],
+    "RDV no-show",  [Heures RDV no-show]
 )
 ```
 
@@ -1054,6 +1075,40 @@ CALCULATE(
 ```
 
 
+- 
+
+```
+Nouveaux clients M-1 (carte) =
+
+
+VAR MoisFin   = [Date Fin M-1 (today)]
+VAR MoisDebut = DATE(YEAR(MoisFin), MONTH(MoisFin), 1)
+RETURN
+CALCULATE(
+    DISTINCTCOUNT(planity_rdv_36_mois[client_id]),
+    FILTER(
+        VALUES(planity_rdv_36_mois[client_id]),
+        VAR FirstVisit =
+            CALCULATE(
+                MIN(planity_rdv_36_mois[date]),
+                planity_rdv_36_mois[statut] IN {"Réalisé", "Honoré"},
+                ALL(Calendrier)
+            )
+        VAR FirstType =
+            CALCULATE(
+                FIRSTNONBLANK(planity_rdv_36_mois[type_prestation], 1),
+                planity_rdv_36_mois[date] = FirstVisit,
+                ALL(Calendrier)
+            )
+        RETURN
+            FirstVisit >= MoisDebut
+            && FirstVisit <= MoisFin
+            && FirstType = "Consultation préalable"
+    )
+)
+```
+
+
 - Total des revenus apparaissant sur le compte bancaire dans le contexte de filtre
 
 ```
@@ -1086,6 +1141,15 @@ DIVIDE(
 ```
 Résultat net =
 [Paiements]-[Charges]
+```
+
+
+- 
+
+```
+Sessions web (mensuel) =
+
+SUM(google_analytics_36_mois[sessions])
 ```
 
 
@@ -1238,6 +1302,57 @@ DIVIDE([Heures RDV annulés], [Heures ouverture théoriques])
 - 
 
 ```
+Taux conversion web → client =
+
+
+VAR MoisFin   = [Date Fin M-1 (today)]
+VAR MoisDebut = DATE(YEAR(MoisFin), MONTH(MoisFin), 1)
+
+VAR NouveauxSiteWeb =
+    CALCULATE(
+        DISTINCTCOUNT(planity_rdv_36_mois[client_id]),
+        ALL(clients_36_mois),
+        ALL(planity_rdv_36_mois),
+        ALL(Calendrier),
+        FILTER(
+            ALL(planity_rdv_36_mois[client_id]),
+            VAR CurrentID = planity_rdv_36_mois[client_id]
+            VAR FirstVisit =
+                CALCULATE(
+                    MIN(planity_rdv_36_mois[date]),
+                    planity_rdv_36_mois[statut] IN {"Réalisé", "Honoré"},
+                    ALL(Calendrier),
+                    planity_rdv_36_mois[client_id] = CurrentID
+                )
+            VAR FirstType =
+                CALCULATE(
+                    FIRSTNONBLANK(planity_rdv_36_mois[type_prestation], 1),
+                    planity_rdv_36_mois[date] = FirstVisit,
+                    ALL(Calendrier),
+                    planity_rdv_36_mois[client_id] = CurrentID
+                )
+            VAR Canal =
+                CALCULATE(
+                    MAX(clients_36_mois[canal_acquisition]),
+                    ALL(clients_36_mois),
+                    clients_36_mois[client_id] = CurrentID
+                )
+            RETURN
+                FirstVisit >= MoisDebut
+                && FirstVisit <= MoisFin
+                && FirstType = "Consultation préalable"
+                && Canal = "Site internet"
+        )
+    )
+
+RETURN
+DIVIDE(NouveauxSiteWeb, [Utilisateurs web M-1 (ignore filtres)])
+```
+
+
+- 
+
+```
 Taux de marge (12M) =
 
 
@@ -1262,7 +1377,7 @@ DIVIDE(RN12M, CA12M)
 ```
 Taux de remplissage =
 
-DIVIDE([Heures occupées], [Heures ouverture théoriques])
+DIVIDE([Heures RDV réalisés], [Heures ouverture théoriques])
 ```
 
 
@@ -1410,6 +1525,30 @@ IF(
         [Heures ouverture théoriques]
     ),
     BLANK()
+)
+```
+
+
+- 
+
+```
+Utilisateurs web =
+SUM(google_analytics_36_mois[users])
+```
+
+
+- 
+
+```
+Utilisateurs web M-1 (ignore filtres) =
+
+VAR EndDate   = [Date Fin M-1 (today)]
+VAR StartDate = DATE(YEAR(EndDate), MONTH(EndDate), 1)
+RETURN
+CALCULATE(
+    [Utilisateurs web],
+    REMOVEFILTERS(Calendrier),
+    DATESBETWEEN(Calendrier[Date], StartDate, EndDate)
 )
 ```
 

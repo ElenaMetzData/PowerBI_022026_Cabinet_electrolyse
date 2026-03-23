@@ -328,26 +328,42 @@ table AMesures
 			
 			VAR SeuilInactivite = EDATE(TODAY(), -6)
 			
+			VAR ClientsDuCanal =
+			    VALUES(clients_36_mois[client_id])
+			
+			VAR ClientsDeLaZone =
+			    CALCULATETABLE(
+			        VALUES(planity_rdv_36_mois[client_id]),
+			        ALL(Calendrier)
+			    )
+			
+			VAR ClientsFiltres =
+			    INTERSECT(ClientsDuCanal, ClientsDeLaZone)
+			
 			VAR T =
 			    ADDCOLUMNS(
-			        ALL(clients_36_mois[client_id]),
+			        ClientsFiltres,
 			        "FirstDate",
+			            VAR CurrentID = [client_id]
+			            RETURN
 			            CALCULATE(
 			                MIN(planity_rdv_36_mois[date]),
 			                REMOVEFILTERS(Calendrier),
 			                FILTER(
 			                    ALL(planity_rdv_36_mois),
-			                    planity_rdv_36_mois[client_id] = EARLIER(clients_36_mois[client_id])
+			                    planity_rdv_36_mois[client_id] = CurrentID
 			                    && planity_rdv_36_mois[statut] IN {"Réalisé", "Honoré"}
 			                )
 			            ),
 			        "LastDate",
+			            VAR CurrentID = [client_id]
+			            RETURN
 			            CALCULATE(
 			                MAX(planity_rdv_36_mois[date]),
 			                REMOVEFILTERS(Calendrier),
 			                FILTER(
 			                    ALL(planity_rdv_36_mois),
-			                    planity_rdv_36_mois[client_id] = EARLIER(clients_36_mois[client_id])
+			                    planity_rdv_36_mois[client_id] = CurrentID
 			                    && planity_rdv_36_mois[statut] IN {"Réalisé", "Honoré"}
 			                )
 			            )
@@ -364,8 +380,9 @@ table AMesures
 			    ),
 			    DIVIDE(DATEDIFF([FirstDate], [LastDate], DAY), 30.4375)
 			)
-		formatString: 0
 		lineageTag: b62b0dd4-5d52-48a0-97f8-fa1e639eca01
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	/// Dernière date du dernier mois civil terminé
 	measure 'Date Dernier Mois Terminé' = EOMONTH(TODAY(), -1)
@@ -1303,6 +1320,7 @@ table AMesures
 	measure 'Taux remplissage par zone (réalisé)' =
 			
 			
+			
 			VAR HeuresZone =
 			    DIVIDE(
 			        CALCULATE(
@@ -1329,29 +1347,37 @@ table AMesures
 			VAR NouveauxSiteWeb =
 			    CALCULATE(
 			        DISTINCTCOUNT(planity_rdv_36_mois[client_id]),
-			        REMOVEFILTERS(),
+			        ALL(clients_36_mois),
+			        ALL(planity_rdv_36_mois),
+			        ALL(Calendrier),
 			        FILTER(
 			            ALL(planity_rdv_36_mois[client_id]),
+			            VAR CurrentID = planity_rdv_36_mois[client_id]
 			            VAR FirstVisit =
 			                CALCULATE(
 			                    MIN(planity_rdv_36_mois[date]),
 			                    planity_rdv_36_mois[statut] IN {"Réalisé", "Honoré"},
-			                    ALL(Calendrier)
+			                    ALL(Calendrier),
+			                    planity_rdv_36_mois[client_id] = CurrentID
 			                )
 			            VAR FirstType =
 			                CALCULATE(
 			                    FIRSTNONBLANK(planity_rdv_36_mois[type_prestation], 1),
 			                    planity_rdv_36_mois[date] = FirstVisit,
-			                    ALL(Calendrier)
+			                    ALL(Calendrier),
+			                    planity_rdv_36_mois[client_id] = CurrentID
+			                )
+			            VAR Canal =
+			                CALCULATE(
+			                    MAX(clients_36_mois[canal_acquisition]),
+			                    ALL(clients_36_mois),
+			                    clients_36_mois[client_id] = CurrentID
 			                )
 			            RETURN
 			                FirstVisit >= MoisDebut
 			                && FirstVisit <= MoisFin
 			                && FirstType = "Consultation préalable"
-			        ),
-			        FILTER(
-			            ALL(clients_36_mois),
-			            clients_36_mois[canal_acquisition] = "Site internet"
+			                && Canal = "Site internet"
 			        )
 			    )
 			
@@ -1425,6 +1451,42 @@ table AMesures
 			    "RDV no-show",  [Heures RDV no-show]
 			)
 		lineageTag: e364605a-ec9a-4475-8168-6b28fe675826
+
+	measure '% Heures par zone' =
+			
+			
+			VAR HeuresZone = [Heures RDV réalisés]
+			
+			VAR HeuresTotal =
+			    CALCULATE(
+			        [Heures RDV réalisés],
+			        ALL(planity_rdv_36_mois[zone]),
+			        KEEPFILTERS(ALLSELECTED(Calendrier[Date]))
+			    )
+			
+			RETURN
+			DIVIDE(HeuresZone, HeuresTotal)
+		lineageTag: 3b303d7d-c3f4-4c4a-a93e-6bd9db8d23b0
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '% Heures par zone (label)' =
+			
+			
+			VAR Pct = [% Heures par zone]
+			RETURN
+			IF(
+			    ISBLANK(Pct),
+			    BLANK(),
+			    FORMAT(Pct, "0%")
+			)
+		lineageTag: 5e1a27ff-98c3-4f45-80ca-1d3b04561bf4
+
+	measure 'Test filtre date' =
+			
+			COUNTROWS(VALUES(Calendrier[Date]))
+		formatString: 0
+		lineageTag: f8e93e59-2961-4559-a0ea-8185a396d56d
 
 	column Dummy
 		formatString: 0
